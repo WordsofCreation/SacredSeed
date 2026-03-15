@@ -6,6 +6,26 @@ function asList(items) {
   return `<ul class="subtle-list">${items.map((item) => `<li>${item}</li>`).join('')}</ul>`;
 }
 
+function renderTaxonomy(herb) {
+  const taxonomyRows = [
+    ['Status', herb.taxonomyStatus],
+    ['Kingdom', herb.kingdom],
+    ['Phylum', herb.phylum],
+    ['Class', herb.class],
+    ['Order', herb.order],
+    ['Genus', herb.genus],
+    ['Species', herb.species]
+  ].filter(([, value]) => value);
+
+  if (!taxonomyRows.length) {
+    return '<p class="muted">Taxonomy verification will appear as secondary sources are available.</p>';
+  }
+
+  return `<dl class="taxonomy-list">${taxonomyRows
+    .map(([term, value]) => `<div><dt>${term}</dt><dd>${value}</dd></div>`)
+    .join('')}</dl>`;
+}
+
 export function renderHerbProfileCard(herb, sourceMeta) {
   return `
     <article class="herb-profile">
@@ -19,8 +39,14 @@ export function renderHerbProfileCard(herb, sourceMeta) {
         <p>${herb.family}</p>
         <p class="label">Synonyms</p>
         ${asList(herb.synonyms)}
+
+        <p class="label" style="margin-top: 0.8rem;">Taxonomy Verification</p>
+        ${renderTaxonomy(herb)}
+
         <p class="label" style="margin-top: 0.8rem;">Data Source</p>
         <p>${sourceMeta.source}</p>
+        ${herb.dataSources?.length ? `<p class="meta-note">Referenced datasets: ${herb.dataSources.join(', ')}.</p>` : ''}
+        ${sourceMeta.gbif?.available ? '' : '<p class="meta-note">GBIF enrichment temporarily unavailable; curated profile details shown.</p>'}
       </aside>
 
       <section class="card grid">
@@ -31,6 +57,11 @@ export function renderHerbProfileCard(herb, sourceMeta) {
         <div>
           <h3>Distribution</h3>
           <p>${herb.distribution}</p>
+        </div>
+        <div>
+          <h3>Native Range & Occurrence</h3>
+          <p>${herb.nativeRange ?? herb.habitat}</p>
+          ${herb.occurrenceNotes ? `<p class="meta-note" style="margin-top: 0.35rem;">${herb.occurrenceNotes}</p>` : ''}
         </div>
         <div>
           <h3>Habitat</h3>
