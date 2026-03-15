@@ -255,6 +255,28 @@ export function getEditorialArticleSeo(article) {
   };
 }
 
+
+export function getSearchSeo() {
+  const title = 'SacredSeed Search | Find Herbs, Preparations, and Editorial Guides';
+  const description =
+    'Use SacredSeed search to quickly find herb profiles, preparation guides, and editorial articles across the botanical knowledge library.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/search',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'SearchResultsPage',
+        title,
+        description,
+        canonicalUrl: new URL('/#/search', window.location.origin).toString()
+      })
+    ]
+  };
+}
+
 export function getAboutSeo() {
   const title = 'About SacredSeed | Botanical Education and Data Transparency';
   const description =

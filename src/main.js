@@ -15,7 +15,6 @@ import { renderLearningPathwayPage } from './pages/learningPathwayPage.js';
 import { renderSeasonalCollectionsPage } from './pages/seasonalCollectionsPage.js';
 import { renderSeasonalCollectionPage } from './pages/seasonalCollectionPage.js';
 import { renderEditorialArticlesPage } from './pages/editorialArticlesPage.js';
-import { renderEditorialArticlePage } from './pages/editorialArticlePage.js';
 import { applyPageSeo } from './utils/seo.js';
 import {
   getAboutSeo,
@@ -32,8 +31,7 @@ import {
   getEditorialArticleSeo,
   getPrivacySeo,
   getTermsSeo,
-  getSearchSeo,
-  getEditorialArticleSeo
+  getSearchSeo
 } from './utils/pageSeo.js';
 
 const app = document.getElementById('app');
@@ -50,7 +48,6 @@ async function renderRoute() {
 
   const [section, slug] = getRouteParts();
 
-
   if (section === 'home' || !section) {
     renderHomePage(app);
     return;
@@ -61,20 +58,9 @@ async function renderRoute() {
     return;
   }
 
-
   if (section === 'search') {
     renderAdvancedSearchPage(app);
     applyPageSeo(getSearchSeo());
-    return;
-  }
-
-  if (section === 'articles' && slug) {
-    const article = renderEditorialArticlePage(app, decodeURIComponent(slug));
-    if (article) {
-      applyPageSeo(getEditorialArticleSeo(article));
-    } else {
-      applyPageSeo(getNotFoundSeo());
-    }
     return;
   }
 
@@ -99,7 +85,6 @@ async function renderRoute() {
     }
     return;
   }
-
 
   if (section === 'pathways' && !slug) {
     renderLearningPathwaysPage(app);
@@ -167,7 +152,7 @@ async function renderRoute() {
     return;
   }
 
-  if (!section || section === 'materia-medica') {
+  if (section === 'materia-medica') {
     renderMateriaMedicaIndexPage(app);
     applyPageSeo(getMateriaMedicaSeo());
     return;
