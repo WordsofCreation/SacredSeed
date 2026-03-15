@@ -5,20 +5,12 @@ import { renderPreparationLibraryPage } from './pages/preparationLibraryPage.js'
 import { renderAboutPage } from './pages/aboutPage.js';
 import { renderPrivacyPolicyPage } from './pages/privacyPolicyPage.js';
 import { renderTermsOfUsePage } from './pages/termsOfUsePage.js';
-import { applyPageSeo } from './utils/seo.js';
-import {
-  getAboutSeo,
-  getMateriaMedicaSeo,
-  getNotFoundSeo,
-  getPreparationLibrarySeo,
-  getPrivacySeo,
-  getTermsSeo
-} from './utils/pageSeo.js';
+import { renderHomePage } from './pages/homePage.js';
 
 const app = document.getElementById('app');
 
 function getRouteParts() {
-  const hash = window.location.hash || '#/materia-medica';
+  const hash = window.location.hash || '#/home';
   return hash.replace(/^#\//, '').split('/').filter(Boolean);
 }
 
@@ -28,6 +20,12 @@ async function renderRoute() {
   }
 
   const [section, slug] = getRouteParts();
+
+
+  if (section === 'home' || !section) {
+    renderHomePage(app);
+    return;
+  }
 
   if (section === 'herbs' && slug) {
     await renderHerbProfilePage(app, decodeURIComponent(slug));
