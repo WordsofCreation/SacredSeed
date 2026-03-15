@@ -1,5 +1,6 @@
 import { renderDisclaimerBlock, renderSourceAttributionBlock } from './complianceBlocks.js';
 import { getComplianceContext } from '../services/complianceService.js';
+import { fallbackOnErrorAttr, resolveHerbImage } from '../utils/imageAssets.js';
 
 function asList(items, emptyText = 'Not yet documented.') {
   if (!items?.length) {
@@ -103,7 +104,7 @@ export function renderHerbProfileCard(herb, sourceMeta) {
   return `
     <article class="herb-profile">
       <aside class="card">
-        ${herb.image ? `<img class="hero-image" src="${herb.image}" alt="${herb.commonName}" />` : ''}
+        <img class="hero-image" src="${resolveHerbImage(herb, { variant: 'profile' })}" alt="${herb.commonName}" onerror="${fallbackOnErrorAttr('profile')}" />
         <p class="label">Common Name</p>
         <h1 class="title">${herb.commonName}</h1>
         <p class="label">Botanical Name</p>

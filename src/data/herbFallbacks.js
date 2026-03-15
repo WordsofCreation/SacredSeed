@@ -10,6 +10,10 @@
  * - bodySystems
  * - safetyCategory
  * - safetySummary
+ *
+ * Image notes:
+ * - You may use absolute URLs or local asset paths (e.g. /assets/images/herbs/stinging-nettle-profile.jpg).
+ * - If image is omitted, UI components will automatically try slug-based local assets and then fall back to placeholders.
  */
 export const herbFallbacks = {
   'urtica-dioica': {

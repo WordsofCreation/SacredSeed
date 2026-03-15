@@ -136,3 +136,13 @@ Then open `http://localhost:4173`.
 - Reuse `herbSlug` references to auto-link ingredients to existing herb profiles.
 - Extend taxonomy dictionaries in `src/data/preparationTaxonomy.js` as new categories emerge.
 - Add educational article routes and glossary cross-links using the preparation collection IDs.
+
+## Image asset workflow
+
+SacredSeed now includes a dedicated image architecture under `assets/images/`:
+
+- Add originals to `assets/images/raw/<category>/`
+- Generate web-ready variants with `python3 scripts/process_images.py`
+- Use published site paths in `assets/images/<category>/`
+
+Full usage instructions and naming conventions are documented in `assets/images/README.md`.

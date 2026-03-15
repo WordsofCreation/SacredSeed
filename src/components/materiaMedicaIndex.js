@@ -1,5 +1,6 @@
 import { renderDisclaimerBlock, renderSourceAttributionBlock } from './complianceBlocks.js';
 import { getComplianceContext } from '../services/complianceService.js';
+import { fallbackOnErrorAttr, resolveHerbImage } from '../utils/imageAssets.js';
 
 function escapeHtml(value) {
   return String(value ?? '')
@@ -38,7 +39,12 @@ function renderCheckboxGroup(field, label, options, selectedValues) {
 function renderHerbCard(herb) {
   return `
     <article class="herb-index-card card">
-      ${herb.image ? `<img class="herb-index-image" src="${escapeHtml(herb.image)}" alt="${escapeHtml(herb.commonName)}" />` : ''}
+      <img
+        class="herb-index-image"
+        src="${escapeHtml(resolveHerbImage(herb, { variant: 'card' }))}"
+        alt="${escapeHtml(herb.commonName)}"
+        onerror="${escapeHtml(fallbackOnErrorAttr('card'))}"
+      />
       <div class="herb-index-content">
         <h3>${escapeHtml(herb.commonName)}</h3>
         <p class="botanical"><em>${escapeHtml(herb.botanicalName)}</em></p>
