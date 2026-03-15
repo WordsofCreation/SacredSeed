@@ -1,3 +1,5 @@
+import { withAssetVersion } from './assetVersion.js';
+
 const IMAGE_BASE = '/assets/images';
 
 const PLACEHOLDER_BY_VARIANT = {
@@ -27,11 +29,11 @@ export function buildImagePath({ category, slug, variant = 'hero', extension = '
     return '';
   }
 
-  return `${IMAGE_BASE}/${safeCategory}/${safeSlug}-${safeVariant}.${safeExtension}`;
+  return withAssetVersion(`${IMAGE_BASE}/${safeCategory}/${safeSlug}-${safeVariant}.${safeExtension}`);
 }
 
 export function getPlaceholderImagePath(variant = 'hero') {
-  return PLACEHOLDER_BY_VARIANT[variant] || PLACEHOLDER_BY_VARIANT.hero;
+  return withAssetVersion(PLACEHOLDER_BY_VARIANT[variant] || PLACEHOLDER_BY_VARIANT.hero);
 }
 
 export function resolveHerbImage(herb, { variant = 'hero' } = {}) {
@@ -39,10 +41,10 @@ export function resolveHerbImage(herb, { variant = 'hero' } = {}) {
 
   if (providedImage) {
     if (ABSOLUTE_URL.test(providedImage) || providedImage.startsWith('/')) {
-      return providedImage;
+      return withAssetVersion(providedImage);
     }
 
-    return `/${providedImage.replace(/^\/+/, '')}`;
+    return withAssetVersion(`/${providedImage.replace(/^\/+/, '')}`);
   }
 
   if (herb?.slug) {

@@ -158,3 +158,23 @@ Expected production URL:
 If your GitHub org/user or repository name differs, use:
 
 - `https://<owner>.github.io/<repo>/`
+
+## Cache busting for GitHub Pages assets
+
+SacredSeed uses a centralized asset version string to bust browser caches for static files served by GitHub Pages.
+
+- Version source: `<meta name="sacredseed-asset-version" ...>` in `index.html`
+- Core loader behavior:
+  - `styles.css` is loaded with `?v=<version>`
+  - `src/main.js` is dynamically imported with `?v=<version>`
+- Reusable helper: `src/utils/assetVersion.js`
+  - `withAssetVersion(url)` appends the current version to local/static asset URLs.
+  - Used by image resolution helpers so herb images/placeholders also receive versioned URLs.
+
+### How to bump cache version
+
+1. Open `index.html`.
+2. Update `sacredseed-asset-version` (for example from `2026.03.15.1` to `2026.03.20.1`).
+3. Deploy to GitHub Pages.
+
+After bumping the version, browsers request fresh copies of CSS, JavaScript, and local image assets without requiring users to hard refresh.

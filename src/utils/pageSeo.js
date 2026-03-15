@@ -1,4 +1,5 @@
 import { buildBaseSchema, buildSiteSchema, getSiteSeoConfig } from './seo.js';
+import { withAssetVersion } from './assetVersion.js';
 
 const site = getSiteSeoConfig();
 
@@ -36,7 +37,7 @@ export function getHerbProfileSeo(herb) {
     description,
     pageType: 'article',
     canonicalPath: `#/herbs/${encodeURIComponent(herb.slug)}`,
-    image: herb.image || site.defaultImage,
+    image: withAssetVersion(herb.image || site.defaultImage),
     schemaEntries: [
       buildBaseSchema({
         pageType: 'Article',
