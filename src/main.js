@@ -6,12 +6,16 @@ import { renderAboutPage } from './pages/aboutPage.js';
 import { renderPrivacyPolicyPage } from './pages/privacyPolicyPage.js';
 import { renderTermsOfUsePage } from './pages/termsOfUsePage.js';
 import { renderHomePage } from './pages/homePage.js';
+import { renderHerbCollectionsPage } from './pages/herbCollectionsPage.js';
+import { renderHerbCollectionPage } from './pages/herbCollectionPage.js';
 import { applyPageSeo } from './utils/seo.js';
 import {
   getAboutSeo,
   getMateriaMedicaSeo,
   getNotFoundSeo,
   getPreparationLibrarySeo,
+  getCollectionsSeo,
+  getCollectionDetailSeo,
   getPrivacySeo,
   getTermsSeo
 } from './utils/pageSeo.js';
@@ -44,6 +48,22 @@ async function renderRoute() {
   if (section === 'preparations') {
     renderPreparationLibraryPage(app);
     applyPageSeo(getPreparationLibrarySeo());
+    return;
+  }
+
+  if (section === 'collections' && !slug) {
+    renderHerbCollectionsPage(app);
+    applyPageSeo(getCollectionsSeo());
+    return;
+  }
+
+  if (section === 'collections' && slug) {
+    const collection = renderHerbCollectionPage(app, decodeURIComponent(slug));
+    if (collection) {
+      applyPageSeo(getCollectionDetailSeo(collection));
+    } else {
+      applyPageSeo(getNotFoundSeo());
+    }
     return;
   }
 

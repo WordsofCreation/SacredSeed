@@ -1,4 +1,5 @@
 import { renderFeatureCard, renderTrustItem } from '../components/homePageSections.js';
+import { getFeaturedCollectionSummaries } from '../services/herbCollectionService.js';
 
 const featureAreas = [
   {
@@ -33,6 +34,22 @@ const featureAreas = [
   }
 ];
 
+
+function renderFeaturedCollectionCard(collection) {
+  const preview = collection.featuredHerbs?.map((herb) => herb.commonName).join(', ');
+
+  return `
+    <article class="card collection-card">
+      <p class="label">Featured Collection</p>
+      <h3>${collection.title}</h3>
+      <p>${collection.shortIntro}</p>
+      <p class="meta-line"><strong>${collection.herbCount}</strong> herbs in this guide.</p>
+      ${preview ? `<p class="meta-note"><strong>Includes:</strong> ${preview}.</p>` : ''}
+      <a class="profile-link" href="#/collections/${encodeURIComponent(collection.slug)}">Open collection →</a>
+    </article>
+  `;
+}
+
 const trustPrinciples = [
   {
     title: 'Careful sourcing and attribution',
@@ -52,6 +69,8 @@ const trustPrinciples = [
 ];
 
 export function renderHomePage(rootElement) {
+  const featuredCollections = getFeaturedCollectionSummaries().slice(0, 3);
+
   rootElement.innerHTML = `
     <section class="home-hero card">
       <div class="home-hero-grid">
@@ -90,6 +109,24 @@ export function renderHomePage(rootElement) {
       </div>
       <div class="home-feature-grid">
         ${featureAreas.map((feature) => renderFeatureCard(feature)).join('')}
+      </div>
+    </section>
+
+
+    <section class="home-section section-shell" aria-labelledby="featured-collections-title">
+      <div class="home-section-heading section-header">
+        <p class="eyebrow">Guided Collections</p>
+        <h3 id="featured-collections-title">Curated pathways into the herb library</h3>
+        <p>
+          Explore SacredSeed through editorial collection guides designed for thematic learning, regional context,
+          and preparation-oriented study.
+        </p>
+      </div>
+      <div class="collection-grid">
+        ${featuredCollections.map((collection) => renderFeaturedCollectionCard(collection)).join('')}
+      </div>
+      <div class="hero-actions">
+        <a class="primary-link" href="#/collections">Browse all collections</a>
       </div>
     </section>
 
