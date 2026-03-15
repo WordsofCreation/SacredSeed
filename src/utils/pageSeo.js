@@ -112,6 +112,48 @@ export function getCollectionDetailSeo(collection) {
   };
 }
 
+
+export function getLearningPathwaysSeo() {
+  const title = 'SacredSeed Beginner Learning Pathways | Guided Herbal Study';
+  const description =
+    'Start with SacredSeed beginner learning pathways featuring curated herb sequences, preparation links, and approachable materia medica education.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/pathways',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'CollectionPage',
+        title,
+        description,
+        canonicalUrl: new URL('/#/pathways', window.location.origin).toString()
+      })
+    ]
+  };
+}
+
+export function getLearningPathwayDetailSeo(pathway) {
+  const title = `${pathway.title} | SacredSeed Beginner Herbal Pathway`;
+  const description = pathway.intro || pathway.educationalGoal;
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: `#/pathways/${encodeURIComponent(pathway.slug)}`,
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'CollectionPage',
+        title,
+        description,
+        canonicalUrl: new URL(`/#/pathways/${encodeURIComponent(pathway.slug)}`, window.location.origin).toString()
+      })
+    ]
+  };
+}
+
 export function getAboutSeo() {
   const title = 'About SacredSeed | Botanical Education and Data Transparency';
   const description =

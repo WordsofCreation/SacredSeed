@@ -126,5 +126,55 @@ export const herbCategoryAssignments = {
     herbCategoryTaxonomy.calmingHerbs,
     herbCategoryTaxonomy.teaFriendlyHerbs,
     herbCategoryTaxonomy.regionalPnw
+  ],
+  'verbascum-thapsus': [
+    herbCategoryTaxonomy.respiratorySupportHerbs,
+    herbCategoryTaxonomy.skinSupportHerbs,
+    herbCategoryTaxonomy.teaFriendlyHerbs,
+    herbCategoryTaxonomy.regionalPnw
+  ],
+  'withania-somnifera': [
+    herbCategoryTaxonomy.calmingHerbs,
+    herbCategoryTaxonomy.immuneSupportHerbs
+  ],
+  'arctium-lappa': [
+    herbCategoryTaxonomy.digestiveHerbs,
+    herbCategoryTaxonomy.skinSupportHerbs,
+    herbCategoryTaxonomy.nutritiveHerbs
+  ],
+  'silybum-marianum': [
+    herbCategoryTaxonomy.digestiveHerbs,
+    herbCategoryTaxonomy.bitterHerbs
+  ],
+  'hibiscus-sabdariffa': [
+    herbCategoryTaxonomy.nutritiveHerbs,
+    herbCategoryTaxonomy.teaFriendlyHerbs
+  ],
+  'thymus-vulgaris': [
+    herbCategoryTaxonomy.aromaticHerbs,
+    herbCategoryTaxonomy.respiratorySupportHerbs,
+    herbCategoryTaxonomy.digestiveHerbs,
+    herbCategoryTaxonomy.teaFriendlyHerbs
+  ],
+  'salvia-officinalis': [
+    herbCategoryTaxonomy.aromaticHerbs,
+    herbCategoryTaxonomy.digestiveHerbs,
+    herbCategoryTaxonomy.respiratorySupportHerbs,
+    herbCategoryTaxonomy.teaFriendlyHerbs
+  ],
+  'glycyrrhiza-glabra': [
+    herbCategoryTaxonomy.digestiveHerbs,
+    herbCategoryTaxonomy.respiratorySupportHerbs,
+    herbCategoryTaxonomy.immuneSupportHerbs
+  ],
+  'rubus-idaeus': [
+    herbCategoryTaxonomy.nutritiveHerbs,
+    herbCategoryTaxonomy.teaFriendlyHerbs,
+    herbCategoryTaxonomy.regionalPnw
+  ],
+  'tilia-cordata': [
+    herbCategoryTaxonomy.calmingHerbs,
+    herbCategoryTaxonomy.respiratorySupportHerbs,
+    herbCategoryTaxonomy.teaFriendlyHerbs
   ]
 };

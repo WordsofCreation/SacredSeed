@@ -869,3 +869,23 @@ main section + section {
     padding: 1.05rem;
   }
 }
+
+.pathway-card {
+  border-top-color: rgba(78, 120, 94, 0.45);
+}
+
+.pathway-step-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.pathway-step {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.92), rgba(240, 247, 236, 0.84));
+}
+
+.pathway-step-site {
+  border-left: 3px solid rgba(112, 140, 92, 0.45);
+}

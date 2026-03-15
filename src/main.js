@@ -8,6 +8,8 @@ import { renderTermsOfUsePage } from './pages/termsOfUsePage.js';
 import { renderHomePage } from './pages/homePage.js';
 import { renderHerbCollectionsPage } from './pages/herbCollectionsPage.js';
 import { renderHerbCollectionPage } from './pages/herbCollectionPage.js';
+import { renderLearningPathwaysPage } from './pages/learningPathwaysPage.js';
+import { renderLearningPathwayPage } from './pages/learningPathwayPage.js';
 import { applyPageSeo } from './utils/seo.js';
 import {
   getAboutSeo,
@@ -16,6 +18,8 @@ import {
   getPreparationLibrarySeo,
   getCollectionsSeo,
   getCollectionDetailSeo,
+  getLearningPathwaysSeo,
+  getLearningPathwayDetailSeo,
   getPrivacySeo,
   getTermsSeo
 } from './utils/pageSeo.js';
@@ -61,6 +65,23 @@ async function renderRoute() {
     const collection = renderHerbCollectionPage(app, decodeURIComponent(slug));
     if (collection) {
       applyPageSeo(getCollectionDetailSeo(collection));
+    } else {
+      applyPageSeo(getNotFoundSeo());
+    }
+    return;
+  }
+
+
+  if (section === 'pathways' && !slug) {
+    renderLearningPathwaysPage(app);
+    applyPageSeo(getLearningPathwaysSeo());
+    return;
+  }
+
+  if (section === 'pathways' && slug) {
+    const pathway = renderLearningPathwayPage(app, decodeURIComponent(slug));
+    if (pathway) {
+      applyPageSeo(getLearningPathwayDetailSeo(pathway));
     } else {
       applyPageSeo(getNotFoundSeo());
     }

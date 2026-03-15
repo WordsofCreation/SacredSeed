@@ -1,5 +1,6 @@
 import { renderFeatureCard, renderTrustItem } from '../components/homePageSections.js';
 import { getFeaturedCollectionSummaries } from '../services/herbCollectionService.js';
+import { getFeaturedLearningPathways } from '../services/learningPathwayService.js';
 
 const featureAreas = [
   {
@@ -9,7 +10,7 @@ const featureAreas = [
       'Search by medicinal action, body system, preparation type, and safety category to find entries relevant to study or practice.',
     actions: [
       { label: 'Browse the Materia Medica', href: '#/materia-medica' },
-      { label: 'View a full herb profile', href: '#/herbs/urtica-dioica', variant: 'secondary' }
+      { label: 'Start a beginner pathway', href: '#/pathways', variant: 'secondary' }
     ]
   },
   {
@@ -50,6 +51,22 @@ function renderFeaturedCollectionCard(collection) {
   `;
 }
 
+
+function renderFeaturedPathwayCard(pathway) {
+  const preview = pathway.featuredHerbs?.map((herb) => herb.commonName).join(', ');
+
+  return `
+    <article class="card collection-card pathway-card">
+      <p class="label">Start Here Pathway</p>
+      <h3>${pathway.title}</h3>
+      <p>${pathway.intro}</p>
+      <p class="meta-line"><strong>${pathway.herbCount}</strong> herbs · ${pathway.estimatedDuration}</p>
+      ${preview ? `<p class="meta-note"><strong>Includes:</strong> ${preview}.</p>` : ''}
+      <a class="profile-link" href="#/pathways/${encodeURIComponent(pathway.slug)}">Begin pathway →</a>
+    </article>
+  `;
+}
+
 const trustPrinciples = [
   {
     title: 'Careful sourcing and attribution',
@@ -70,6 +87,7 @@ const trustPrinciples = [
 
 export function renderHomePage(rootElement) {
   const featuredCollections = getFeaturedCollectionSummaries().slice(0, 3);
+  const featuredPathways = getFeaturedLearningPathways(3);
 
   rootElement.innerHTML = `
     <section class="home-hero card">
@@ -112,6 +130,23 @@ export function renderHomePage(rootElement) {
       </div>
     </section>
 
+
+
+    <section class="home-section section-shell" aria-labelledby="beginner-pathways-title">
+      <div class="home-section-heading section-header">
+        <p class="eyebrow">Start Here for Beginners</p>
+        <h3 id="beginner-pathways-title">Guided learning pathways for first-time herbal study</h3>
+        <p>
+          Follow curated step-by-step pathways that connect herb profiles, collections, and preparation pages in a clear educational sequence.
+        </p>
+      </div>
+      <div class="collection-grid">
+        ${featuredPathways.map((pathway) => renderFeaturedPathwayCard(pathway)).join('')}
+      </div>
+      <div class="hero-actions">
+        <a class="primary-link" href="#/pathways">Explore all beginner pathways</a>
+      </div>
+    </section>
 
     <section class="home-section section-shell" aria-labelledby="featured-collections-title">
       <div class="home-section-heading section-header">
