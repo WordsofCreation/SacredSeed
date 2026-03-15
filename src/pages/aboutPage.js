@@ -7,7 +7,7 @@ export function renderAboutPage(rootElement) {
 
   rootElement.innerHTML = `
     <section class="card about-page">
-      <h2>About SacredSeed</h2>
+      <h1>About SacredSeed</h1>
       <p>
         SacredSeed is a professional botanical knowledge platform designed to support thoughtful herbal education.
         Our goal is to make traditional herbal knowledge, modern plant science, and structured materia medica architecture

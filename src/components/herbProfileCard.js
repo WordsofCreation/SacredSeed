@@ -105,7 +105,7 @@ export function renderHerbProfileCard(herb, sourceMeta) {
       <aside class="card">
         ${herb.image ? `<img class="hero-image" src="${herb.image}" alt="${herb.commonName}" />` : ''}
         <p class="label">Common Name</p>
-        <h2 class="title">${herb.commonName}</h2>
+        <h1 class="title">${herb.commonName}</h1>
         <p class="label">Botanical Name</p>
         <p><em>${herb.botanicalName}</em></p>
         <p class="label">Family</p>
