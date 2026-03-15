@@ -6,6 +6,15 @@ import { renderAboutPage } from './pages/aboutPage.js';
 import { renderPrivacyPolicyPage } from './pages/privacyPolicyPage.js';
 import { renderTermsOfUsePage } from './pages/termsOfUsePage.js';
 import { renderHomePage } from './pages/homePage.js';
+import { applyPageSeo } from './utils/seo.js';
+import {
+  getAboutSeo,
+  getMateriaMedicaSeo,
+  getNotFoundSeo,
+  getPreparationLibrarySeo,
+  getPrivacySeo,
+  getTermsSeo
+} from './utils/pageSeo.js';
 
 const app = document.getElementById('app');
 
