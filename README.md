@@ -1,17 +1,19 @@
-# SacredSeed — Foundational Herbal Data System (Phase 3)
+# SacredSeed — Materia Medica Index Foundation (Phase 4)
 
-This implementation keeps iNaturalist as the **primary botanical source**, GBIF as a **secondary enrichment source**, and now adds **PubChem as a chemistry enrichment layer** for active compound context.
+This phase introduces SacredSeed's first **searchable Materia Medica index** while preserving the existing unified herb profile architecture.
 
 ## What was added
 
-- PubChem API adapter module (`src/services/apis/pubchemApi.js`).
-- PubChem orchestration service with graceful fallback behavior (`src/services/pubchemService.js`).
-- Curated herb-to-compound chemistry mapping for resilient retrieval (`src/data/herbChemistryMappings.js`).
-- Expanded normalization layer to support PubChem compound fields (`src/services/herbNormalizer.js`).
-- Updated profile orchestration to fetch and merge iNaturalist + GBIF + PubChem into one herb object (`src/services/herbProfileService.js`).
-- Minimal, professional UI additions for a user-friendly chemistry section (`src/components/herbProfileCard.js`, `styles.css`).
+- Dedicated Materia Medica index page with searchable/filterable herb discovery UI.
+- Modular index service layer for seed collection loading, taxonomy generation, and composable filters.
+- Reusable taxonomy utilities for normalized labels and option extraction.
+- Reusable index rendering component with result count and empty-state reset action.
+- Hash-based navigation between index and individual herb profile pages.
+- Expanded curated fallback herb seed entries to demonstrate scalable filtering with multiple herbs.
 
 ## Internal herb object contract
+
+The profile contract remains the source-of-truth object shape. The index now reads from the same unified object model and optional index-specific fields.
 
 ```js
 {
@@ -42,24 +44,29 @@ This implementation keeps iNaturalist as the **primary botanical source**, GBIF 
   compoundSummaries,
   chemistryNotes,
   chemistrySources,
-  dataSources
+  dataSources,
+
+  // optional index-oriented fields
+  slug,
+  summary,
+  medicinalActions,
+  bodySystems,
+  safetyCategory,
+  safetySummary
 }
 ```
 
-## Multi-source behavior
+## Materia Medica filtering model
 
-1. `getHerbProfile('urtica-dioica')` loads curated fallback data.
-2. It requests iNaturalist (primary), GBIF (secondary), and PubChem (chemistry) in parallel.
-3. Source-specific normalizers map each response shape into the SacredSeed contract.
-4. `mergeHerbData` overlays meaningful enriched fields while preserving curated medicinal context.
-5. If PubChem lookups are partial/ambiguous, curated chemistry mappings provide stable compound anchors.
-6. If APIs are unavailable, the profile still renders using curated fallback data.
+The index currently supports combined filtering by:
 
-## Future source hooks
+- Keyword search (`commonName`, `botanicalName`)
+- Medicinal actions
+- Body systems
+- Preparation types
+- Safety categories
 
-- `src/services/herbProfileService.js`
-  - MedicinalActionService: evidence-graded therapeutic actions/mechanisms.
-  - SafetyTaxonomyService: contraindications, interactions, and dosage cautions.
+All filter values are normalized before being rendered and evaluated.
 
 ## Local run
 
@@ -68,3 +75,9 @@ python3 -m http.server 4173
 ```
 
 Then open `http://localhost:4173`.
+
+## Future extension notes
+
+- Add additional herbs in `src/data/herbFallbacks.js` using the same unified herb object format.
+- Replace/augment fallback collection with source-fed registry data in `getMateriaMedicaCollection()`.
+- Add pagination/sorting in the index service without reworking card rendering.

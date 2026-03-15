@@ -47,17 +47,180 @@ body {
   color: var(--muted);
 }
 
-.herb-profile {
-  display: grid;
-  grid-template-columns: minmax(260px, 360px) 1fr;
-  gap: 1.25rem;
-}
-
 .card {
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 1.1rem;
+}
+
+.materia-intro {
+  margin-bottom: 1rem;
+}
+
+.materia-intro h2 {
+  margin: 0;
+}
+
+.materia-intro p {
+  margin: 0.5rem 0 0;
+  color: #2b352d;
+  line-height: 1.5;
+}
+
+.filter-panel {
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.search-row {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.search-row label {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.search-row input {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+  font: inherit;
+}
+
+.filter-group {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-group legend {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.filter-option {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.3rem 0.55rem;
+  background: #fbfcfa;
+  font-size: 0.85rem;
+}
+
+.filter-option input {
+  margin: 0;
+}
+
+.filter-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.filter-actions button,
+.empty-state button {
+  border: 1px solid var(--accent);
+  background: #eff5f1;
+  color: var(--accent);
+  border-radius: 8px;
+  padding: 0.4rem 0.7rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.result-count {
+  margin: 0;
+  color: var(--muted);
+}
+
+.herb-index-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.herb-index-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.herb-index-image {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+}
+
+.herb-index-content {
+  padding: 1rem;
+}
+
+.herb-index-content h3 {
+  margin: 0;
+}
+
+.botanical {
+  margin: 0.2rem 0 0.6rem;
+  color: var(--muted);
+}
+
+.chip-row {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin: 0.65rem 0;
+}
+
+.chip {
+  background: #edf3ef;
+  color: #294c3a;
+  border-radius: 999px;
+  padding: 0.2rem 0.45rem;
+  font-size: 0.78rem;
+}
+
+.meta-line {
+  margin: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+.profile-link,
+.back-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.profile-link:hover,
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.empty-state h3 {
+  margin-top: 0;
+}
+
+.herb-profile {
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) 1fr;
+  gap: 1.25rem;
 }
 
 .hero-image {
@@ -118,7 +281,6 @@ body {
   color: #2b352d;
   line-height: 1.45;
 }
-
 
 .compound-list {
   display: grid;
