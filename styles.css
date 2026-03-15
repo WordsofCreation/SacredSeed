@@ -1,0 +1,120 @@
+:root {
+  --bg: #f7f6f1;
+  --panel: #ffffff;
+  --ink: #1f2b20;
+  --muted: #5d655f;
+  --accent: #37644d;
+  --border: #dde2db;
+  --warning: #8b4c3a;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.site-shell {
+  width: min(1080px, 92vw);
+  margin: 0 auto;
+  padding: 2.5rem 0 3rem;
+}
+
+.site-header {
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-size: 0.78rem;
+}
+
+.site-header h1 {
+  margin: 0.5rem 0;
+}
+
+.intro {
+  margin: 0;
+  max-width: 65ch;
+  color: var(--muted);
+}
+
+.herb-profile {
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) 1fr;
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.1rem;
+}
+
+.hero-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.label {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.title {
+  margin: 0.25rem 0;
+}
+
+.subtle-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.grid {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.grid h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.grid p,
+.grid ul {
+  margin: 0;
+  color: #2b352d;
+  line-height: 1.45;
+}
+
+.status,
+.error {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.error {
+  border-color: #d8b6ab;
+  color: var(--warning);
+}
+
+@media (max-width: 800px) {
+  .herb-profile {
+    grid-template-columns: 1fr;
+  }
+}
