@@ -1,3 +1,4 @@
+import { renderRelatedContentBlock } from './relatedContent.js';
 import { fallbackOnErrorAttr, resolveHerbImage } from '../utils/imageAssets.js';
 
 function escapeHtml(value) {
@@ -88,7 +89,7 @@ export function renderLearningPathwaysIndex(pathways) {
   `;
 }
 
-export function renderLearningPathwayDetail(pathway) {
+export function renderLearningPathwayDetail(pathway, relatedContent = {}) {
   return `
     <section class="section-shell materia-intro" aria-labelledby="pathway-title">
       <div class="section-header">
@@ -129,6 +130,15 @@ export function renderLearningPathwayDetail(pathway) {
         </div>
       </section>
     ` : ''}
+
+    ${renderRelatedContentBlock({
+      title: 'Continue learning',
+      sections: [
+        { title: 'Related articles', items: relatedContent.relatedArticles ?? [] },
+        { title: 'Related collections', items: relatedContent.relatedCollections ?? [] },
+        { title: 'Next pathways', items: relatedContent.relatedPathways ?? [] }
+      ]
+    })}
 
     ${pathway.relatedLinks?.length ? `
       <section class="section-shell" aria-label="Related learning routes">

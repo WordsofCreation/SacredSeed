@@ -52,10 +52,13 @@ export function getLearningPathways() {
       const sequence = (definition.sequence ?? []).map((step) => resolveSequenceStep(step, herbsBySlug));
       const herbsInPath = sequence.filter((step) => step.kind === 'herb').map((step) => step.herb);
 
+      const educationalThemes = [...new Set(herbsInPath.flatMap((herb) => herb.herbalCategories ?? []))];
+
       return {
         ...definition,
         sequence,
-        herbs: herbsInPath
+        herbs: herbsInPath,
+        educationalThemes
       };
     })
     .sort(byTitle);

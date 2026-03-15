@@ -3,6 +3,8 @@ import { renderMateriaMedicaIndexPage } from './pages/materiaMedicaIndexPage.js'
 import { renderHerbProfilePage } from './pages/herbProfilePage.js';
 import { renderPreparationLibraryPage } from './pages/preparationLibraryPage.js';
 import { renderAboutPage } from './pages/aboutPage.js';
+import { renderAdvancedSearchPage } from './pages/advancedSearchPage.js';
+import { renderEditorialArticlePage } from './pages/editorialArticlePage.js';
 import { renderPrivacyPolicyPage } from './pages/privacyPolicyPage.js';
 import { renderTermsOfUsePage } from './pages/termsOfUsePage.js';
 import { renderHomePage } from './pages/homePage.js';
@@ -21,7 +23,9 @@ import {
   getLearningPathwaysSeo,
   getLearningPathwayDetailSeo,
   getPrivacySeo,
-  getTermsSeo
+  getTermsSeo,
+  getSearchSeo,
+  getEditorialArticleSeo
 } from './utils/pageSeo.js';
 
 const app = document.getElementById('app');
@@ -46,6 +50,23 @@ async function renderRoute() {
 
   if (section === 'herbs' && slug) {
     await renderHerbProfilePage(app, decodeURIComponent(slug));
+    return;
+  }
+
+
+  if (section === 'search') {
+    renderAdvancedSearchPage(app);
+    applyPageSeo(getSearchSeo());
+    return;
+  }
+
+  if (section === 'articles' && slug) {
+    const article = renderEditorialArticlePage(app, decodeURIComponent(slug));
+    if (article) {
+      applyPageSeo(getEditorialArticleSeo(article));
+    } else {
+      applyPageSeo(getNotFoundSeo());
+    }
     return;
   }
 

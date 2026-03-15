@@ -889,3 +889,31 @@ main section + section {
 .pathway-step-site {
   border-left: 3px solid rgba(112, 140, 92, 0.45);
 }
+
+.search-row select {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 11px;
+  padding: 0.65rem 0.78rem;
+  font: inherit;
+}
+
+.search-group + .search-group {
+  margin-top: 1rem;
+}
+
+.search-result-grid,
+.related-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.search-result-card h3,
+.related-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.related-content-shell {
+  margin-top: 1.1rem;
+}

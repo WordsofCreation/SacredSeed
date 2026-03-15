@@ -154,6 +154,48 @@ export function getLearningPathwayDetailSeo(pathway) {
   };
 }
 
+
+export function getSearchSeo() {
+  const title = 'SacredSeed Knowledge Search | Herbs, Collections, Preparations, and Articles';
+  const description =
+    'Search across SacredSeed herbs, collections, regional guides, preparations, formulas, pathways, and editorial learning articles.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/search',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'SearchResultsPage',
+        title,
+        description,
+        canonicalUrl: new URL('/#/search', window.location.origin).toString()
+      })
+    ]
+  };
+}
+
+export function getEditorialArticleSeo(article) {
+  const title = `${article.title} | SacredSeed Editorial Article`;
+  const description = article.summary || article.body;
+
+  return {
+    title,
+    description,
+    pageType: 'article',
+    canonicalPath: `#/articles/${encodeURIComponent(article.slug)}`,
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'Article',
+        title,
+        description,
+        canonicalUrl: new URL(`/#/articles/${encodeURIComponent(article.slug)}`, window.location.origin).toString()
+      })
+    ]
+  };
+}
+
 export function getAboutSeo() {
   const title = 'About SacredSeed | Botanical Education and Data Transparency';
   const description =

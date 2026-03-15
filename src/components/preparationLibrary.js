@@ -62,6 +62,11 @@ function renderPreparationCard(item, typeLabel = 'Preparation Guide') {
       <p class="meta-line"><strong>Duration:</strong> ${escapeHtml(item.duration)}</p>
       <p class="meta-line"><strong>Storage:</strong> ${escapeHtml(item.storageNotes)}</p>
       <p class="chip-row">${item.preparationTags.map((tag) => `<span class="chip">${escapeHtml(tag)}</span>`).join('')}</p>
+      <p class="meta-note"><strong>Explore related:</strong>
+        <a href="#/search">Knowledge search</a>
+        ${item.ingredientHerbs[0]?.commonName ? `· <a href="#/search">${escapeHtml(item.ingredientHerbs[0].commonName)} study links</a>` : ''}
+        · <a href="#/articles/how-to-read-herb-profiles">Preparation literacy article</a>
+      </p>
     </article>
   `;
 }
