@@ -3,6 +3,59 @@ import { getFeaturedCollectionSummaries } from '../services/herbCollectionServic
 import { getFeaturedLearningPathways } from '../services/learningPathwayService.js';
 import { getSeasonalCollectionSummaries, getFeaturedSeasonalCollection } from '../services/seasonalCollectionService.js';
 import { getEditorialArticleSummaries, getStartHereArticle } from '../services/editorialArticleService.js';
+import { fallbackOnErrorAttr, resolveHerbImage } from '../utils/imageAssets.js';
+import { fetchTaxonByBotanicalName } from '../services/apis/inaturalistApi.js';
+
+
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+
+const homeCardImageCache = new Map();
+
+async function hydrateHomeCardLeadImages(rootElement) {
+  const imageNodes = Array.from(rootElement.querySelectorAll('[data-home-card-botanical]'));
+
+  await Promise.all(
+    imageNodes.map(async (imageNode) => {
+      const botanicalName = imageNode.dataset.homeCardBotanical;
+      if (!botanicalName) {
+        return;
+      }
+
+      const cachedImage = homeCardImageCache.get(botanicalName);
+      if (cachedImage === null) {
+        return;
+      }
+
+      if (typeof cachedImage === 'string' && cachedImage) {
+        imageNode.src = cachedImage;
+        return;
+      }
+
+      try {
+        const taxon = await fetchTaxonByBotanicalName(botanicalName);
+        const apiImage = taxon?.default_photo?.medium_url?.trim?.() || '';
+
+        if (!apiImage) {
+          homeCardImageCache.set(botanicalName, null);
+          return;
+        }
+
+        homeCardImageCache.set(botanicalName, apiImage);
+        imageNode.src = apiImage;
+      } catch {
+        homeCardImageCache.set(botanicalName, null);
+      }
+    })
+  );
+}
 
 const featureAreas = [
   {
@@ -40,9 +93,11 @@ const featureAreas = [
 
 function renderFeaturedCollectionCard(collection) {
   const preview = collection.featuredHerbs?.map((herb) => herb.commonName).join(', ');
+  const leadHerb = collection.featuredHerbs?.[0] ?? null;
 
   return `
     <article class="card collection-card">
+      ${leadHerb ? `<img class="collection-card-image" src="${resolveHerbImage(leadHerb, { variant: 'card' })}" alt="${escapeHtml(leadHerb.commonName)} illustration" loading="lazy" decoding="async" data-home-card-botanical="${escapeHtml(leadHerb.botanicalName)}" data-image-fallback="card" onerror="${fallbackOnErrorAttr('card')}" />` : ''}
       <p class="label">Featured Collection</p>
       <h3>${collection.title}</h3>
       <p>${collection.shortIntro}</p>
@@ -56,9 +111,11 @@ function renderFeaturedCollectionCard(collection) {
 
 function renderFeaturedPathwayCard(pathway) {
   const preview = pathway.featuredHerbs?.map((herb) => herb.commonName).join(', ');
+  const leadHerb = pathway.featuredHerbs?.[0] ?? null;
 
   return `
     <article class="card collection-card pathway-card">
+      ${leadHerb ? `<img class="collection-card-image" src="${resolveHerbImage(leadHerb, { variant: 'card' })}" alt="${escapeHtml(leadHerb.commonName)} illustration" loading="lazy" decoding="async" data-home-card-botanical="${escapeHtml(leadHerb.botanicalName)}" data-image-fallback="card" onerror="${fallbackOnErrorAttr('card')}" />` : ''}
       <p class="label">Start Here Pathway</p>
       <h3>${pathway.title}</h3>
       <p>${pathway.intro}</p>
@@ -70,8 +127,11 @@ function renderFeaturedPathwayCard(pathway) {
 }
 
 function renderSeasonalCard(collection) {
+  const leadHerb = collection.featuredHerbs?.[0] ?? null;
+
   return `
     <article class="card collection-card seasonal-collection-card">
+      ${leadHerb ? `<img class="collection-card-image" src="${resolveHerbImage(leadHerb, { variant: 'card' })}" alt="${escapeHtml(leadHerb.commonName)} illustration" loading="lazy" decoding="async" data-home-card-botanical="${escapeHtml(leadHerb.botanicalName)}" data-image-fallback="card" onerror="${fallbackOnErrorAttr('card')}" />` : ''}
       <p class="label">${collection.season} Collection</p>
       <h3>${collection.title}</h3>
       <p>${collection.shortIntro}</p>
@@ -258,4 +318,6 @@ export function renderHomePage(rootElement) {
       </div>
     </section>
   `;
+
+  hydrateHomeCardLeadImages(rootElement);
 }
