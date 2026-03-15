@@ -82,13 +82,6 @@ export function renderMateriaMedicaIndex({ herbs, taxonomy, filters }) {
       </div>
     </section>
 
-    <section class="card empty-state" aria-live="polite">
-      <h3>Herb cards are hidden on this page</h3>
-      <p>
-        Use the filter dropdowns above to narrow your study set without rendering the full herb list below.
-      </p>
-    </section>
-
     <section class="compliance-stack">
       ${renderDisclaimerBlock({
         title: 'Materia Medica Use Notice',
