@@ -3,6 +3,7 @@ import { herbCategoryAssignments } from './herbCategoryAssignments.js';
 import { herbBatchStarter } from './herbStarterBatch.js';
 import { herbBatch3 } from './herbBatch3.js';
 import { herbBatch4 } from './herbBatch4.js';
+import { herbBatch5 } from './herbBatch5.js';
 
 /**
  * Curated fallback monographs keep SacredSeed resilient if upstream APIs fail
@@ -18,7 +19,7 @@ import { herbBatch4 } from './herbBatch4.js';
  * - safetySummary
  * - herbalCategories
  */
-const fallbackBatches = [herbBatchStarter, herbBatch2, herbBatch3, herbBatch4];
+const fallbackBatches = [herbBatchStarter, herbBatch2, herbBatch3, herbBatch4, herbBatch5];
 
 function withCategoryTags(herb) {
   const herbalCategories = herbCategoryAssignments[herb.slug] ?? herb.herbalCategories ?? [];
