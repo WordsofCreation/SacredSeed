@@ -73,6 +73,9 @@ function renderHerbResultCard(herb, filters) {
         class="herb-index-image"
         src="${resolveHerbImage(herb, { variant: 'profile' })}"
         alt="${escapeHtml(herb.commonName)}"
+        loading="lazy"
+        decoding="async"
+        data-materia-botanical="${escapeHtml(herb.botanicalName)}"
         data-image-fallback="profile" onerror="${fallbackOnErrorAttr('profile')}"
       />
       <div class="herb-index-content">
