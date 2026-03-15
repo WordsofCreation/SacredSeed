@@ -27,6 +27,7 @@ export function getMateriaMedicaCollection() {
 
 export function getMateriaMedicaTaxonomy(herbs) {
   return {
+    herbNames: [...new Set(herbs.map((herb) => herb.commonName))].sort((a, b) => a.localeCompare(b)),
     medicinalActions: [...new Set(collectTaxonomyOptions(herbs, 'medicinalActions'))],
     bodySystems: [...new Set(collectTaxonomyOptions(herbs, 'bodySystems'))],
     preparations: [...new Set(collectTaxonomyOptions(herbs, 'preparations'))],
@@ -41,6 +42,7 @@ export function applyMateriaMedicaFilters(herbs, filters) {
   return herbs.filter((herb) => {
     const searchableText = `${herb.commonName} ${herb.botanicalName}`.toLowerCase();
     const queryMatch = !query || searchableText.includes(query);
+    const herbNameMatch = !filters.herbNames.length || filters.herbNames.includes(herb.commonName);
 
     const actionsMatch = !filters.medicinalActions.length
       || filters.medicinalActions.every((action) => herb.medicinalActions.includes(action));
@@ -54,6 +56,7 @@ export function applyMateriaMedicaFilters(herbs, filters) {
       || filters.safetyCategories.includes(herb.safetyCategory);
 
     return queryMatch
+      && herbNameMatch
       && actionsMatch
       && systemsMatch
       && preparationsMatch
@@ -65,6 +68,7 @@ export function applyMateriaMedicaFilters(herbs, filters) {
 export function createDefaultMateriaFilters() {
   return {
     query: '',
+    herbNames: [],
     medicinalActions: [],
     bodySystems: [],
     preparations: [],

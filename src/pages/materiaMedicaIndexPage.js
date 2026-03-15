@@ -27,7 +27,7 @@ export function renderMateriaMedicaIndexPage(rootElement) {
       });
     }
 
-    ['medicinalActions', 'bodySystems', 'preparations', 'herbalCategories', 'safetyCategories'].forEach((field) => {
+    ['herbNames', 'medicinalActions', 'bodySystems', 'preparations', 'herbalCategories', 'safetyCategories'].forEach((field) => {
       rootElement.querySelectorAll(`input[name="${field}"]`).forEach((input) => {
         input.addEventListener('change', () => {
           filters = { ...filters, [field]: readCheckedValues(rootElement, field) };

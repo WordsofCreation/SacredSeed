@@ -11,28 +11,38 @@ function escapeHtml(value) {
     .replaceAll("'", '&#39;');
 }
 
-function renderCheckboxGroup(field, label, options, selectedValues) {
+function renderFilterDropdown(field, label, options, selectedValues) {
+  const selectedText = selectedValues.length
+    ? `${selectedValues.length} selected`
+    : `All ${label.toLowerCase()}`;
+
   return `
-    <fieldset class="filter-group">
-      <legend>${label}</legend>
-      <div class="filter-options">
-        ${options
-          .map(
-            (option) => `
-              <label class="filter-option">
-                <input
-                  type="checkbox"
-                  name="${field}"
-                  value="${escapeHtml(option)}"
-                  ${selectedValues.includes(option) ? 'checked' : ''}
-                />
-                <span>${escapeHtml(option)}</span>
-              </label>
-            `
-          )
-          .join('')}
-      </div>
-    </fieldset>
+    <details class="filter-dropdown">
+      <summary>
+        <span>${escapeHtml(label)}</span>
+        <span class="filter-dropdown-meta">${escapeHtml(selectedText)}</span>
+      </summary>
+      <fieldset class="filter-group">
+        <legend class="visually-hidden">${escapeHtml(label)}</legend>
+        <div class="filter-options">
+          ${options
+            .map(
+              (option) => `
+                <label class="filter-option">
+                  <input
+                    type="checkbox"
+                    name="${field}"
+                    value="${escapeHtml(option)}"
+                    ${selectedValues.includes(option) ? 'checked' : ''}
+                  />
+                  <span>${escapeHtml(option)}</span>
+                </label>
+              `
+            )
+            .join('')}
+        </div>
+      </fieldset>
+    </details>
   `;
 }
 
@@ -85,11 +95,14 @@ export function renderMateriaMedicaIndex({ herbs, taxonomy, filters }) {
         <input id="herb-search" name="query" type="search" value="${escapeHtml(filters.query)}" placeholder="e.g., nettle, Urtica dioica" />
       </div>
 
-      ${renderCheckboxGroup('medicinalActions', 'Medicinal actions', taxonomy.medicinalActions, filters.medicinalActions)}
-      ${renderCheckboxGroup('bodySystems', 'Body systems', taxonomy.bodySystems, filters.bodySystems)}
-      ${renderCheckboxGroup('preparations', 'Preparation types', taxonomy.preparations, filters.preparations)}
-      ${renderCheckboxGroup('herbalCategories', 'Herbal categories', taxonomy.herbalCategories, filters.herbalCategories)}
-      ${renderCheckboxGroup('safetyCategories', 'Safety categories', taxonomy.safetyCategories, filters.safetyCategories)}
+      <div class="filter-dropdown-grid">
+        ${renderFilterDropdown('herbNames', 'Herbs', taxonomy.herbNames, filters.herbNames)}
+        ${renderFilterDropdown('medicinalActions', 'Medicinal actions', taxonomy.medicinalActions, filters.medicinalActions)}
+        ${renderFilterDropdown('bodySystems', 'Body systems', taxonomy.bodySystems, filters.bodySystems)}
+        ${renderFilterDropdown('preparations', 'Preparation types', taxonomy.preparations, filters.preparations)}
+        ${renderFilterDropdown('herbalCategories', 'Herbal categories', taxonomy.herbalCategories, filters.herbalCategories)}
+        ${renderFilterDropdown('safetyCategories', 'Safety categories', taxonomy.safetyCategories, filters.safetyCategories)}
+      </div>
 
       <div class="filter-actions">
         <p class="result-count">${selectedCount} ${selectedCount === 1 ? 'herb' : 'herbs'} found</p>
