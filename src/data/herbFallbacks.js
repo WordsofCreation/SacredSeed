@@ -22,6 +22,10 @@ export const herbFallbacks = {
     preparations: ['Infusion (leaf)', 'Fresh juice', 'Cooked food herb', 'Root tincture'],
     safetyNotes:
       'Fresh plant hairs may irritate skin. Use caution with diuretic therapies, antihypertensive agents, and where renal pathology requires physician supervision.',
+    chemistryNotes:
+      'Nettle chemistry contains flavonoids, phenolic acids, and phytosterols, with composition varying by plant part and extraction method.',
+    chemistrySources: ['Curated fallback monograph'],
+    activeCompounds: ['Quercetin', 'Rutin', 'Caffeic acid', 'Beta-sitosterol'],
     image:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Urtica_dioica_001.jpg/640px-Urtica_dioica_001.jpg'
   }

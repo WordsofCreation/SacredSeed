@@ -42,6 +42,13 @@ export function normalizeInaturalistTaxon(taxon, fallback) {
     species: null,
     nativeRange: null,
     occurrenceNotes: null,
+    activeCompounds: fallback?.activeCompounds ?? [],
+    phytochemicals: fallback?.activeCompounds ?? [],
+    compoundDetails: [],
+    compoundNames: fallback?.activeCompounds ?? [],
+    compoundSummaries: [],
+    chemistryNotes: fallback?.chemistryNotes ?? null,
+    chemistrySources: fallback?.chemistrySources ?? [],
     dataSources: []
   };
 }
@@ -74,5 +81,41 @@ export function normalizeGbifData(speciesMatch, occurrenceSummary) {
       ? `GBIF currently indexes approximately ${occurrenceCount.toLocaleString()} occurrence records for this taxon.`
       : 'GBIF occurrence records are currently limited for this taxon.',
     dataSources: ['GBIF']
+  };
+}
+
+export function normalizePubchemData(pubchemProfile) {
+  if (!pubchemProfile?.compounds?.length) {
+    return null;
+  }
+
+  const activeCompounds = pubchemProfile.compounds.map((compound) => compound.name).filter(Boolean);
+  const compoundSummaries = pubchemProfile.compounds
+    .map((compound) => ({
+      name: compound.name,
+      summary: compound.summary,
+      relevance: compound.relevance
+    }))
+    .filter((item) => item.summary || item.relevance);
+
+  return {
+    activeCompounds,
+    phytochemicals: activeCompounds,
+    compoundDetails: pubchemProfile.compounds.map((compound) => ({
+      name: compound.name,
+      molecularFormula: compound.molecularFormula,
+      molecularWeight: compound.molecularWeight,
+      category: compound.category,
+      summary: compound.summary,
+      iupacName: compound.iupacName,
+      cid: compound.cid
+    })),
+    compoundNames: activeCompounds,
+    compoundSummaries,
+    chemistryNotes: pubchemProfile.strategy?.usedCuratedFallback
+      ? 'Chemistry includes PubChem-supported compound records with curated herb-to-compound mapping fallback.'
+      : 'Chemistry includes compounds discoverable through direct PubChem herb-name lookups.',
+    chemistrySources: ['PubChem'],
+    dataSources: ['PubChem']
   };
 }
