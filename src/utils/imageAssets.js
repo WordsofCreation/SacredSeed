@@ -1,6 +1,6 @@
 import { withAssetVersion } from './assetVersion.js';
 
-const IMAGE_BASE = '/assets/images';
+const IMAGE_BASE = 'assets/images';
 
 const PLACEHOLDER_BY_VARIANT = {
   hero: `${IMAGE_BASE}/site/placeholders/herb-fallback-profile.svg`,
@@ -10,6 +10,10 @@ const PLACEHOLDER_BY_VARIANT = {
 };
 
 const ABSOLUTE_URL = /^https?:\/\//i;
+
+function normalizeLocalAssetPath(path) {
+  return String(path || '').replace(/^\/+/, '');
+}
 
 function sanitizeSegment(value) {
   return String(value ?? '')
@@ -40,11 +44,11 @@ export function resolveHerbImage(herb, { variant = 'hero' } = {}) {
   const providedImage = herb?.image?.trim?.() || '';
 
   if (providedImage) {
-    if (ABSOLUTE_URL.test(providedImage) || providedImage.startsWith('/')) {
+    if (ABSOLUTE_URL.test(providedImage)) {
       return withAssetVersion(providedImage);
     }
 
-    return withAssetVersion(`/${providedImage.replace(/^\/+/, '')}`);
+    return withAssetVersion(normalizeLocalAssetPath(providedImage));
   }
 
   if (herb?.slug) {
