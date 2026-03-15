@@ -12,6 +12,7 @@ const PLACEHOLDER_BY_VARIANT = {
 const PLACEHOLDER_ASSET_PATHS = new Set(Object.values(PLACEHOLDER_BY_VARIANT).map((path) => normalizeLocalAssetPath(path)));
 
 const ABSOLUTE_URL = /^https?:\/\//i;
+const EXTERNAL_HERB_FALLBACK_BASE = 'https://picsum.photos/seed';
 
 function normalizeLocalAssetPath(path) {
   return String(path || '').replace(/^\/+/, '');
@@ -42,6 +43,19 @@ export function getPlaceholderImagePath(variant = 'hero') {
   return withAssetVersion(PLACEHOLDER_BY_VARIANT[variant] || PLACEHOLDER_BY_VARIANT.hero);
 }
 
+
+function buildExternalHerbFallbackImage(herb) {
+  const fallbackSeed = sanitizeSegment(herb?.slug)
+    || sanitizeSegment(herb?.botanicalName)
+    || sanitizeSegment(herb?.commonName);
+
+  if (!fallbackSeed) {
+    return '';
+  }
+
+  return `${EXTERNAL_HERB_FALLBACK_BASE}/sacredseed-${fallbackSeed}/960/720`;
+}
+
 export function resolveHerbImage(herb, { variant = 'hero' } = {}) {
   const providedImage = herb?.image?.trim?.() || '';
   const normalizedProvidedImage = normalizeLocalAssetPath(providedImage);
@@ -54,8 +68,13 @@ export function resolveHerbImage(herb, { variant = 'hero' } = {}) {
     return withAssetVersion(normalizedProvidedImage);
   }
 
+  if (providedImage && PLACEHOLDER_ASSET_PATHS.has(normalizedProvidedImage)) {
+    return buildExternalHerbFallbackImage(herb) || getPlaceholderImagePath(variant);
+  }
+
   if (herb?.slug) {
-    return buildImagePath({ category: 'herbs', slug: herb.slug, variant }) || getPlaceholderImagePath(variant);
+    const externalFallback = buildExternalHerbFallbackImage(herb);
+    return externalFallback || buildImagePath({ category: 'herbs', slug: herb.slug, variant }) || getPlaceholderImagePath(variant);
   }
 
   return getPlaceholderImagePath(variant);
