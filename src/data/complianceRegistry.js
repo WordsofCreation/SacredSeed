@@ -84,6 +84,7 @@ export const sourceNameMap = {
   PubChem: 'pubchem',
   'Curated SacredSeed monograph notes': 'curatedSacredseed',
   'Traditional Western herbal materia medica references': 'curatedSacredseed',
+  'Curated fallback monograph': 'curatedSacredseed',
   'SacredSeed Medicinal Layer': 'curatedSacredseed',
   'Fallback dataset': 'fallbackDataset'
 };

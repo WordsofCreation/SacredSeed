@@ -9,7 +9,20 @@ export const medicinalActionTaxonomy = {
   diuretic: 'Diuretic',
   antiInflammatory: 'Anti-inflammatory',
   astringent: 'Astringent',
-  trophorestorative: 'Trophorestorative'
+  trophorestorative: 'Trophorestorative',
+  aromatic: 'Aromatic',
+  diaphoretic: 'Diaphoretic',
+  bitter: 'Bitter',
+  alterative: 'Alterative',
+  antimicrobial: 'Antimicrobial',
+  nervine: 'Nervine',
+  carminative: 'Carminative',
+  antispasmodic: 'Antispasmodic',
+  immuneSupportive: 'Immune supportive',
+  antioxidant: 'Antioxidant',
+  lymphatic: 'Lymphatic',
+  demulcent: 'Demulcent',
+  vulnerary: 'Vulnerary'
 };
 
 export const bodySystemTaxonomy = {
@@ -17,7 +30,13 @@ export const bodySystemTaxonomy = {
   musculoskeletal: 'Musculoskeletal system',
   immune: 'Immune system',
   integumentary: 'Skin and connective tissue',
-  reproductive: 'Reproductive system'
+  reproductive: 'Reproductive system',
+  digestive: 'Digestive system',
+  circulatory: 'Circulatory system',
+  hepatobiliary: 'Hepatobiliary system',
+  nervous: 'Nervous system',
+  respiratory: 'Respiratory system',
+  lymphatic: 'Lymphatic system'
 };
 
 export const preparationTaxonomy = {
@@ -25,7 +44,11 @@ export const preparationTaxonomy = {
   decoction: 'Decoction',
   tincture: 'Tincture',
   freshFood: 'Fresh/cooked food herb',
-  juice: 'Fresh expressed juice'
+  juice: 'Fresh expressed juice',
+  topicalWash: 'Topical wash',
+  syrup: 'Syrup',
+  topicalCompress: 'Topical compress',
+  freshPoultice: 'Fresh poultice'
 };
 
 export const safetyCategoryTaxonomy = {
