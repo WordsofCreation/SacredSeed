@@ -61,8 +61,8 @@ export function renderMateriaMedicaIndex({ herbs, taxonomy, filters }) {
   const compliance = getComplianceContext('materiaMedica');
 
   return `
-    <section class="card materia-intro">
-      <h2>SacredSeed Materia Medica</h2>
+    <section class="card materia-intro" aria-labelledby="materia-medica-heading">
+      <h1 id="materia-medica-heading">SacredSeed Materia Medica</h1>
       <p>
         Explore our growing professional herbal library using searchable, taxonomy-based filters.
         Each entry is structured through SacredSeed's unified herb object architecture to support
