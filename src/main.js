@@ -10,6 +10,10 @@ import { renderHerbCollectionsPage } from './pages/herbCollectionsPage.js';
 import { renderHerbCollectionPage } from './pages/herbCollectionPage.js';
 import { renderLearningPathwaysPage } from './pages/learningPathwaysPage.js';
 import { renderLearningPathwayPage } from './pages/learningPathwayPage.js';
+import { renderSeasonalCollectionsPage } from './pages/seasonalCollectionsPage.js';
+import { renderSeasonalCollectionPage } from './pages/seasonalCollectionPage.js';
+import { renderEditorialArticlesPage } from './pages/editorialArticlesPage.js';
+import { renderEditorialArticlePage } from './pages/editorialArticlePage.js';
 import { applyPageSeo } from './utils/seo.js';
 import {
   getAboutSeo,
@@ -20,6 +24,10 @@ import {
   getCollectionDetailSeo,
   getLearningPathwaysSeo,
   getLearningPathwayDetailSeo,
+  getSeasonalCollectionsSeo,
+  getSeasonalCollectionDetailSeo,
+  getEditorialArticlesSeo,
+  getEditorialArticleSeo,
   getPrivacySeo,
   getTermsSeo
 } from './utils/pageSeo.js';
@@ -82,6 +90,38 @@ async function renderRoute() {
     const pathway = renderLearningPathwayPage(app, decodeURIComponent(slug));
     if (pathway) {
       applyPageSeo(getLearningPathwayDetailSeo(pathway));
+    } else {
+      applyPageSeo(getNotFoundSeo());
+    }
+    return;
+  }
+
+  if (section === 'seasons' && !slug) {
+    renderSeasonalCollectionsPage(app);
+    applyPageSeo(getSeasonalCollectionsSeo());
+    return;
+  }
+
+  if (section === 'seasons' && slug) {
+    const collection = renderSeasonalCollectionPage(app, decodeURIComponent(slug));
+    if (collection) {
+      applyPageSeo(getSeasonalCollectionDetailSeo(collection));
+    } else {
+      applyPageSeo(getNotFoundSeo());
+    }
+    return;
+  }
+
+  if (section === 'articles' && !slug) {
+    renderEditorialArticlesPage(app);
+    applyPageSeo(getEditorialArticlesSeo());
+    return;
+  }
+
+  if (section === 'articles' && slug) {
+    const article = renderEditorialArticlePage(app, decodeURIComponent(slug));
+    if (article) {
+      applyPageSeo(getEditorialArticleSeo(article));
     } else {
       applyPageSeo(getNotFoundSeo());
     }

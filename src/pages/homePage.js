@@ -1,6 +1,8 @@
 import { renderFeatureCard, renderTrustItem } from '../components/homePageSections.js';
 import { getFeaturedCollectionSummaries } from '../services/herbCollectionService.js';
 import { getFeaturedLearningPathways } from '../services/learningPathwayService.js';
+import { getSeasonalCollectionSummaries, getFeaturedSeasonalCollection } from '../services/seasonalCollectionService.js';
+import { getEditorialArticleSummaries, getStartHereArticle } from '../services/editorialArticleService.js';
 
 const featureAreas = [
   {
@@ -67,6 +69,29 @@ function renderFeaturedPathwayCard(pathway) {
   `;
 }
 
+function renderSeasonalCard(collection) {
+  return `
+    <article class="card collection-card seasonal-collection-card">
+      <p class="label">${collection.season} Collection</p>
+      <h3>${collection.title}</h3>
+      <p>${collection.shortIntro}</p>
+      <p class="meta-line"><strong>${collection.herbCount}</strong> herbs in this seasonal guide.</p>
+      <a class="profile-link" href="#/seasons/${encodeURIComponent(collection.slug)}">Explore season →</a>
+    </article>
+  `;
+}
+
+function renderArticleCard(article) {
+  return `
+    <article class="card collection-card editorial-card">
+      <p class="label">Editorial Guide · ${article.estimatedReadMinutes ?? 'Self-paced'} min</p>
+      <h3>${article.title}</h3>
+      <p>${article.summary ?? article.intro}</p>
+      <a class="profile-link" href="#/articles/${encodeURIComponent(article.slug)}">Read article →</a>
+    </article>
+  `;
+}
+
 const trustPrinciples = [
   {
     title: 'Careful sourcing and attribution',
@@ -88,6 +113,10 @@ const trustPrinciples = [
 export function renderHomePage(rootElement) {
   const featuredCollections = getFeaturedCollectionSummaries().slice(0, 3);
   const featuredPathways = getFeaturedLearningPathways(3);
+  const seasonalCollections = getSeasonalCollectionSummaries().slice(0, 4);
+  const featuredSeason = getFeaturedSeasonalCollection();
+  const editorialArticles = getEditorialArticleSummaries().slice(0, 3);
+  const startHereArticle = getStartHereArticle();
 
   rootElement.innerHTML = `
     <section class="home-hero card">
@@ -165,17 +194,51 @@ export function renderHomePage(rootElement) {
       </div>
     </section>
 
+    <section class="home-section section-shell" aria-labelledby="seasonal-collections-title">
+      <div class="home-section-heading section-header">
+        <p class="eyebrow">Seasonal Learning</p>
+        <h3 id="seasonal-collections-title">Study herbs through spring, summer, autumn, and winter</h3>
+        <p>
+          Seasonal collections pair herb profiles, preparation links, and educational context so SacredSeed can be explored as a living year-round botanical platform.
+        </p>
+      </div>
+      <div class="collection-grid">
+        ${seasonalCollections.map((collection) => renderSeasonalCard(collection)).join('')}
+      </div>
+      <div class="hero-actions">
+        <a class="primary-link" href="#/seasons">Browse all seasonal collections</a>
+      </div>
+    </section>
+
+    <section class="home-section section-shell" aria-labelledby="editorial-library-title">
+      <div class="home-section-heading section-header">
+        <p class="eyebrow">Editorial Education</p>
+        <h3 id="editorial-library-title">Foundational reading for practical herbal literacy</h3>
+        <p>
+          Explore structured editorial guides on materia medica learning, profile interpretation, preparation methods, and beginner home practice.
+        </p>
+      </div>
+      ${startHereArticle ? `<p class="meta-note"><strong>Start here:</strong> <a href="#/articles/${encodeURIComponent(startHereArticle.slug)}">${startHereArticle.title}</a>.</p>` : ''}
+      <div class="collection-grid">
+        ${editorialArticles.map((article) => renderArticleCard(article)).join('')}
+      </div>
+      <div class="hero-actions">
+        <a class="primary-link" href="#/articles">Read all editorial articles</a>
+      </div>
+    </section>
+
     <section class="home-section home-highlight" aria-labelledby="spotlight-title">
       <div class="spotlight-grid">
         <div class="home-section-heading">
           <p class="eyebrow">Seasonal Spotlight</p>
-          <h3 id="spotlight-title">Featured herb: Stinging Nettle</h3>
+          <h3 id="spotlight-title">${featuredSeason ? `Featured season: ${featuredSeason.title}` : 'Featured herb: Stinging Nettle'}</h3>
           <p>
-            A nutrient-dense spring ally commonly studied for mineral support and tonic preparation traditions.
-            Explore the full monograph for chemistry context, actions, and safety framing.
+            ${featuredSeason
+    ? `${featuredSeason.shortIntro} Open the full seasonal collection for curated herbs, preparation ideas, and educational context.`
+    : 'A nutrient-dense spring ally commonly studied for mineral support and tonic preparation traditions. Explore the full monograph for chemistry context, actions, and safety framing.'}
           </p>
         </div>
-        <a class="primary-link" href="#/herbs/urtica-dioica">Read the Stinging Nettle profile</a>
+        <a class="primary-link" href="${featuredSeason ? `#/seasons/${encodeURIComponent(featuredSeason.slug)}` : '#/herbs/urtica-dioica'}">${featuredSeason ? 'Open seasonal collection' : 'Read the Stinging Nettle profile'}</a>
       </div>
     </section>
 
