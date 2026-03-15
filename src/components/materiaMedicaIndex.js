@@ -1,3 +1,6 @@
+import { renderDisclaimerBlock, renderSourceAttributionBlock } from './complianceBlocks.js';
+import { getComplianceContext } from '../services/complianceService.js';
+
 function escapeHtml(value) {
   return String(value ?? '')
     .replaceAll('&', '&amp;')
@@ -55,6 +58,7 @@ function renderHerbCard(herb) {
 
 export function renderMateriaMedicaIndex({ herbs, taxonomy, filters }) {
   const selectedCount = herbs.length;
+  const compliance = getComplianceContext('materiaMedica');
 
   return `
     <section class="card materia-intro">
@@ -92,5 +96,26 @@ export function renderMateriaMedicaIndex({ herbs, taxonomy, filters }) {
           <button type="button" data-reset-filters>Reset filters</button>
         </section>
       `}
+
+    <section class="compliance-stack">
+      ${renderDisclaimerBlock({
+        title: 'Materia Medica Use Notice',
+        educationalUseNotice: compliance.educationalUseNotice,
+        medicalDisclaimer: compliance.medicalDisclaimer,
+        disclaimers: compliance.disclaimers
+      })}
+      ${renderSourceAttributionBlock({
+        title: 'Platform Attribution Framework',
+        sourceAttribution: [
+          {
+            name: 'Profile-level source disclosures',
+            category: 'architecture',
+            attribution:
+              'Detailed source and license notes are shown within each herb profile, formula, regional guide, or educational page using a shared compliance component.'
+          }
+        ],
+        showLicenseNotes: false
+      })}
+    </section>
   `;
 }

@@ -1,5 +1,6 @@
 import { renderHerbProfilePage } from './pages/herbProfilePage.js';
 import { renderMateriaMedicaIndexPage } from './pages/materiaMedicaIndexPage.js';
+import { renderAboutPage } from './pages/aboutPage.js';
 
 const app = document.getElementById('app');
 
@@ -17,6 +18,11 @@ function renderRoute() {
 
   if (section === 'herbs' && slug) {
     renderHerbProfilePage(app, decodeURIComponent(slug));
+    return;
+  }
+
+  if (section === 'about') {
+    renderAboutPage(app);
     return;
   }
 
