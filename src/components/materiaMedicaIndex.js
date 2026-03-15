@@ -73,7 +73,7 @@ function renderHerbResultCard(herb, filters) {
         class="herb-index-image"
         src="${resolveHerbImage(herb)}"
         alt="${escapeHtml(herb.commonName)}"
-        onerror="${fallbackOnErrorAttr('card')}"
+        data-image-fallback="card" onerror="${fallbackOnErrorAttr('card')}"
       />
       <div class="herb-index-content">
         <h3>${escapeHtml(herb.commonName)}</h3>

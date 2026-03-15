@@ -62,3 +62,35 @@ export function fallbackOnErrorAttr(variant = 'hero') {
   const fallback = getPlaceholderImagePath(variant);
   return `this.onerror=null;this.src='${fallback}'`;
 }
+
+
+let imageFallbackHandlerBound = false;
+
+export function initializeImageFallbackHandling() {
+  if (imageFallbackHandlerBound || typeof document === 'undefined') {
+    return;
+  }
+
+  document.addEventListener(
+    'error',
+    (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLImageElement)) {
+        return;
+      }
+
+      const variant = target.dataset.imageFallback || 'hero';
+      const fallback = getPlaceholderImagePath(variant);
+      const currentSrc = target.getAttribute('src') || '';
+
+      if (currentSrc === fallback) {
+        return;
+      }
+
+      target.setAttribute('src', fallback);
+    },
+    true
+  );
+
+  imageFallbackHandlerBound = true;
+}

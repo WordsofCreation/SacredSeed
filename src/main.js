@@ -16,6 +16,7 @@ import { renderSeasonalCollectionsPage } from './pages/seasonalCollectionsPage.j
 import { renderSeasonalCollectionPage } from './pages/seasonalCollectionPage.js';
 import { renderEditorialArticlesPage } from './pages/editorialArticlesPage.js';
 import { applyPageSeo } from './utils/seo.js';
+import { initializeImageFallbackHandling } from './utils/imageAssets.js';
 import {
   getAboutSeo,
   getMateriaMedicaSeo,
@@ -197,5 +198,6 @@ window.addEventListener('hashchange', () => {
   renderRoute();
 });
 
+initializeImageFallbackHandling();
 renderRoute();
 initializeCookieConsentBanner();
