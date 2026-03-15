@@ -26,6 +26,7 @@ Put originals in:
 - `assets/images/raw/regions/`
 - `assets/images/raw/preparations/`
 - `assets/images/raw/site/`
+- `assets/images/raw/site/logos/` (**logo originals drop zone**)
 
 You can either:
 
