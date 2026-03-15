@@ -71,6 +71,47 @@ export function getPreparationLibrarySeo() {
   };
 }
 
+export function getCollectionsSeo() {
+  const title = 'SacredSeed Herb Collections | Guided Botanical Learning Paths';
+  const description =
+    'Discover SacredSeed featured herb collections organized by themes like calming, digestive, nutritive, aromatic, immune support, and Pacific Northwest tea study.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/collections',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'CollectionPage',
+        title,
+        description,
+        canonicalUrl: new URL('/#/collections', window.location.origin).toString()
+      })
+    ]
+  };
+}
+
+export function getCollectionDetailSeo(collection) {
+  const title = `${collection.title} | SacredSeed Herb Collection`;
+  const description = collection.shortIntro || collection.educationalSummary;
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: `#/collections/${encodeURIComponent(collection.slug)}`,
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'CollectionPage',
+        title,
+        description,
+        canonicalUrl: new URL(`/#/collections/${encodeURIComponent(collection.slug)}`, window.location.origin).toString()
+      })
+    ]
+  };
+}
+
 export function getAboutSeo() {
   const title = 'About SacredSeed | Botanical Education and Data Transparency';
   const description =
