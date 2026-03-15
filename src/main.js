@@ -1,6 +1,6 @@
 import { renderHerbProfilePage } from './pages/herbProfilePage.js';
 import { renderMateriaMedicaIndexPage } from './pages/materiaMedicaIndexPage.js';
-import { renderAboutPage } from './pages/aboutPage.js';
+import { renderPreparationLibraryPage } from './pages/preparationLibraryPage.js';
 
 const app = document.getElementById('app');
 
@@ -21,8 +21,8 @@ function renderRoute() {
     return;
   }
 
-  if (section === 'about') {
-    renderAboutPage(app);
+  if (section === 'preparations') {
+    renderPreparationLibraryPage(app);
     return;
   }
 
