@@ -86,6 +86,7 @@ export function renderPreparationLibrary({ guides, formulas, collections, taxono
 
   return `
     <section class="card materia-intro">
+      <div class="section-header">
       <h1>SacredSeed Preparations</h1>
       <p>
         Explore structured preparation guides, tea formulas, and remedy collections built on SacredSeed's unified herb object architecture.
@@ -94,6 +95,7 @@ export function renderPreparationLibrary({ guides, formulas, collections, taxono
       <p class="meta-line">
         Looking for plant monographs? Return to the <a href="#/materia-medica">Materia Medica Index</a>.
       </p>
+      </div>
     </section>
 
     <section class="card filter-panel">
@@ -112,21 +114,27 @@ export function renderPreparationLibrary({ guides, formulas, collections, taxono
       </div>
     </section>
 
-    <section class="preparation-section">
+    <section class="preparation-section section-shell">
+      <div class="preparation-section-intro section-header">
       <h3>Preparation Guides</h3>
       <p class="muted">Single-herb preparation references for foundational techniques such as infusions, teas, and decoctions.</p>
+      </div>
       <div class="preparation-grid">${guides.map((guide) => renderPreparationCard(guide)).join('')}</div>
     </section>
 
-    <section class="preparation-section">
+    <section class="preparation-section section-shell">
+      <div class="preparation-section-intro section-header">
       <h3>Tea Formulas</h3>
       <p class="muted">Multi-herb formulas categorized by therapeutic intent and preparation style.</p>
+      </div>
       <div class="preparation-grid">${formulas.map((formula) => renderPreparationCard(formula, 'Formula')).join('')}</div>
     </section>
 
-    <section class="preparation-section">
+    <section class="preparation-section section-shell">
+      <div class="preparation-section-intro section-header">
       <h3>Remedy Collections</h3>
       <p class="muted">Curated groupings for seasonal protocols and educational pathways. Future recipe and protocol modules can connect here.</p>
+      </div>
       <div class="preparation-grid">${collections.map(renderCollectionCard).join('')}</div>
     </section>
   `;
