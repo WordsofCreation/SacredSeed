@@ -109,13 +109,35 @@ function renderFeaturedCollectionCard(collection) {
 }
 
 
-function renderFeaturedPathwayCard(pathway) {
+function selectUniqueLeadHerbs(items) {
+  const usedBotanicalNames = new Set();
+
+  return items.map((item) => {
+    const candidates = item.featuredHerbs ?? [];
+    const uniqueCandidate = candidates.find((herb) => {
+      const botanicalName = herb?.botanicalName;
+      return botanicalName && !usedBotanicalNames.has(botanicalName);
+    });
+
+    const leadHerb = uniqueCandidate ?? candidates[0] ?? null;
+    if (leadHerb?.botanicalName) {
+      usedBotanicalNames.add(leadHerb.botanicalName);
+    }
+
+    return {
+      item,
+      leadHerb
+    };
+  });
+}
+
+function renderFeaturedPathwayCard(pathway, leadHerb = null) {
   const preview = pathway.featuredHerbs?.map((herb) => herb.commonName).join(', ');
-  const leadHerb = pathway.featuredHerbs?.[0] ?? null;
+  const resolvedLeadHerb = leadHerb ?? pathway.featuredHerbs?.[0] ?? null;
 
   return `
     <article class="card collection-card pathway-card">
-      ${leadHerb ? `<img class="collection-card-image" src="${resolveHerbImage(leadHerb, { variant: 'card' })}" alt="${escapeHtml(leadHerb.commonName)} illustration" loading="lazy" decoding="async" data-home-card-botanical="${escapeHtml(leadHerb.botanicalName)}" data-image-fallback="card" onerror="${fallbackOnErrorAttr('card')}" />` : ''}
+      ${resolvedLeadHerb ? `<img class="collection-card-image" src="${resolveHerbImage(resolvedLeadHerb, { variant: 'card' })}" alt="${escapeHtml(resolvedLeadHerb.commonName)} illustration" loading="lazy" decoding="async" data-home-card-botanical="${escapeHtml(resolvedLeadHerb.botanicalName)}" data-image-fallback="card" onerror="${fallbackOnErrorAttr('card')}" />` : ''}
       <p class="label">Start Here Pathway</p>
       <h3>${pathway.title}</h3>
       <p>${pathway.intro}</p>
@@ -173,6 +195,7 @@ const trustPrinciples = [
 export function renderHomePage(rootElement) {
   const featuredCollections = getFeaturedCollectionSummaries().slice(0, 3);
   const featuredPathways = getFeaturedLearningPathways(3);
+  const featuredPathwayCards = selectUniqueLeadHerbs(featuredPathways);
   const seasonalCollections = getSeasonalCollectionSummaries().slice(0, 4);
   const featuredSeason = getFeaturedSeasonalCollection();
   const editorialArticles = getEditorialArticleSummaries().slice(0, 3);
@@ -231,7 +254,7 @@ export function renderHomePage(rootElement) {
         </p>
       </div>
       <div class="collection-grid">
-        ${featuredPathways.map((pathway) => renderFeaturedPathwayCard(pathway)).join('')}
+        ${featuredPathwayCards.map(({ item, leadHerb }) => renderFeaturedPathwayCard(item, leadHerb)).join('')}
       </div>
       <div class="hero-actions">
         <a class="primary-link" href="#/pathways">Explore all beginner pathways</a>
