@@ -42,7 +42,7 @@ export function normalizeInaturalistTaxon(taxon, fallback) {
         : item
     ),
     dosageNotes: [],
-    herbalCategories: [],
+    herbalCategories: fallback?.herbalCategories ?? [],
     regionTags: fallback?.regionTags ?? [],
     preparationReferences: fallback?.preparationReferences ?? [],
     safetySummary: null,

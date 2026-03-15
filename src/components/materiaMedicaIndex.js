@@ -54,6 +54,7 @@ function renderHerbCard(herb) {
         </p>
         <p class="meta-line"><strong>Systems:</strong> ${herb.bodySystems.join(', ') || 'Not yet documented'}</p>
         <p class="meta-line"><strong>Preparations:</strong> ${herb.preparations.join(', ') || 'Not yet documented'}</p>
+        <p class="meta-line"><strong>Categories:</strong> ${herb.herbalCategories.join(', ') || 'Not yet categorized'}</p>
         <p class="meta-line"><strong>Safety:</strong> ${escapeHtml(herb.safetyCategory)}</p>
         ${herb.safetySummary ? `<p class="meta-note">${escapeHtml(herb.safetySummary)}</p>` : ''}
         <a class="profile-link" href="#/herbs/${encodeURIComponent(herb.slug)}">View full profile</a>
@@ -87,6 +88,7 @@ export function renderMateriaMedicaIndex({ herbs, taxonomy, filters }) {
       ${renderCheckboxGroup('medicinalActions', 'Medicinal actions', taxonomy.medicinalActions, filters.medicinalActions)}
       ${renderCheckboxGroup('bodySystems', 'Body systems', taxonomy.bodySystems, filters.bodySystems)}
       ${renderCheckboxGroup('preparations', 'Preparation types', taxonomy.preparations, filters.preparations)}
+      ${renderCheckboxGroup('herbalCategories', 'Herbal categories', taxonomy.herbalCategories, filters.herbalCategories)}
       ${renderCheckboxGroup('safetyCategories', 'Safety categories', taxonomy.safetyCategories, filters.safetyCategories)}
 
       <div class="filter-actions">

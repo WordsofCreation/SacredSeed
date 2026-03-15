@@ -1,3 +1,5 @@
+import { herbBatch2 } from './herbBatch2.js';
+import { herbCategoryAssignments } from './herbCategoryAssignments.js';
 import { herbBatchStarter } from './herbStarterBatch.js';
 
 /**
@@ -12,5 +14,22 @@ import { herbBatchStarter } from './herbStarterBatch.js';
  * - bodySystems
  * - safetyCategory
  * - safetySummary
+ * - herbalCategories
  */
-export const herbFallbacks = Object.fromEntries(herbBatchStarter.map((herb) => [herb.slug, herb]));
+const fallbackBatches = [herbBatchStarter, herbBatch2];
+
+function withCategoryTags(herb) {
+  const herbalCategories = herbCategoryAssignments[herb.slug] ?? herb.herbalCategories ?? [];
+
+  return {
+    ...herb,
+    herbalCategories
+  };
+}
+
+export const herbFallbacks = Object.fromEntries(
+  fallbackBatches
+    .flat()
+    .map(withCategoryTags)
+    .map((herb) => [herb.slug, herb])
+);

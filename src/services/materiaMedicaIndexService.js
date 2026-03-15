@@ -15,6 +15,7 @@ function toIndexHerb(fallbackHerb, slug) {
     medicinalActions: normalizeTaxonomyList(fallbackHerb.medicinalActions),
     bodySystems: normalizeTaxonomyList(fallbackHerb.bodySystems),
     preparations: normalizeTaxonomyList(fallbackHerb.preparations),
+    herbalCategories: normalizeTaxonomyList(fallbackHerb.herbalCategories),
     safetyCategory: normalizeTaxonomyLabel(fallbackHerb.safetyCategory) || 'Unclassified',
     safetySummary: fallbackHerb.safetySummary ?? fallbackHerb.safetyNotes ?? null
   };
@@ -29,6 +30,7 @@ export function getMateriaMedicaTaxonomy(herbs) {
     medicinalActions: [...new Set(collectTaxonomyOptions(herbs, 'medicinalActions'))],
     bodySystems: [...new Set(collectTaxonomyOptions(herbs, 'bodySystems'))],
     preparations: [...new Set(collectTaxonomyOptions(herbs, 'preparations'))],
+    herbalCategories: [...new Set(collectTaxonomyOptions(herbs, 'herbalCategories'))],
     safetyCategories: [...new Set(collectTaxonomyOptions(herbs, 'safetyCategory'))]
   };
 }
@@ -46,10 +48,17 @@ export function applyMateriaMedicaFilters(herbs, filters) {
       || filters.bodySystems.every((system) => herb.bodySystems.includes(system));
     const preparationsMatch = !filters.preparations.length
       || filters.preparations.every((prep) => herb.preparations.includes(prep));
+    const categoriesMatch = !filters.herbalCategories.length
+      || filters.herbalCategories.every((category) => herb.herbalCategories.includes(category));
     const safetyMatch = !filters.safetyCategories.length
       || filters.safetyCategories.includes(herb.safetyCategory);
 
-    return queryMatch && actionsMatch && systemsMatch && preparationsMatch && safetyMatch;
+    return queryMatch
+      && actionsMatch
+      && systemsMatch
+      && preparationsMatch
+      && categoriesMatch
+      && safetyMatch;
   });
 }
 
@@ -59,6 +68,7 @@ export function createDefaultMateriaFilters() {
     medicinalActions: [],
     bodySystems: [],
     preparations: [],
+    herbalCategories: [],
     safetyCategories: []
   };
 }
