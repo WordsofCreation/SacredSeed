@@ -119,6 +119,29 @@ body {
   line-height: 1.45;
 }
 
+
+.compound-list {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.55rem;
+}
+
+.compound-item {
+  border-left: 2px solid var(--border);
+  padding-left: 0.6rem;
+}
+
+.compound-item h4 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.compound-meta {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin: 0.1rem 0 0.2rem;
+}
+
 .meta-note,
 .muted {
   color: var(--muted);

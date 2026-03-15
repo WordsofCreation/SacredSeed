@@ -26,6 +26,27 @@ function renderTaxonomy(herb) {
     .join('')}</dl>`;
 }
 
+function renderCompoundDetails(herb) {
+  if (!herb.compoundDetails?.length) {
+    return '<p class="muted">Detailed records are not yet available for this herb.</p>';
+  }
+
+  const featured = herb.compoundDetails.slice(0, 4);
+
+  return `<div class="compound-list">${featured
+    .map((compound) => {
+      const meta = [compound.category, compound.molecularFormula].filter(Boolean).join(' · ');
+      return `
+        <article class="compound-item">
+          <h4>${compound.name}</h4>
+          ${meta ? `<p class="compound-meta">${meta}</p>` : ''}
+          ${compound.summary ? `<p>${compound.summary}</p>` : ''}
+        </article>
+      `;
+    })
+    .join('')}</div>`;
+}
+
 export function renderHerbProfileCard(herb, sourceMeta) {
   return `
     <article class="herb-profile">
@@ -47,6 +68,7 @@ export function renderHerbProfileCard(herb, sourceMeta) {
         <p>${sourceMeta.source}</p>
         ${herb.dataSources?.length ? `<p class="meta-note">Referenced datasets: ${herb.dataSources.join(', ')}.</p>` : ''}
         ${sourceMeta.gbif?.available ? '' : '<p class="meta-note">GBIF enrichment temporarily unavailable; curated profile details shown.</p>'}
+        ${sourceMeta.pubchem?.available ? '' : '<p class="meta-note">PubChem chemistry enrichment is limited; curated chemistry context is shown when possible.</p>'}
       </aside>
 
       <section class="card grid">
@@ -74,6 +96,13 @@ export function renderHerbProfileCard(herb, sourceMeta) {
         <div>
           <h3>Preparations</h3>
           ${asList(herb.preparations)}
+        </div>
+        <div>
+          <h3>Plant Chemistry</h3>
+          ${herb.activeCompounds?.length ? `<p><strong>Active compounds:</strong> ${herb.activeCompounds.slice(0, 6).join(', ')}.</p>` : '<p class="muted">Chemistry data is pending source enrichment.</p>'}
+          ${herb.chemistryNotes ? `<p class="meta-note" style="margin-top: 0.35rem;">${herb.chemistryNotes}</p>` : ''}
+          ${renderCompoundDetails(herb)}
+          ${herb.chemistrySources?.length ? `<p class="meta-note" style="margin-top: 0.35rem;">Chemistry sources: ${herb.chemistrySources.join(', ')}.</p>` : ''}
         </div>
         <div>
           <h3>Safety Notes</h3>
