@@ -1,6 +1,5 @@
 import { renderDisclaimerBlock, renderSourceAttributionBlock } from './complianceBlocks.js';
 import { getComplianceContext } from '../services/complianceService.js';
-import { fallbackOnErrorAttr, resolveHerbImage } from '../utils/imageAssets.js';
 
 function escapeHtml(value) {
   return String(value ?? '')
@@ -46,33 +45,6 @@ function renderFilterDropdown(field, label, options, selectedValues) {
   `;
 }
 
-function renderHerbCard(herb) {
-  return `
-    <article class="herb-index-card card">
-      <img
-        class="herb-index-image"
-        src="${escapeHtml(resolveHerbImage(herb, { variant: 'card' }))}"
-        alt="${escapeHtml(herb.commonName)}"
-        onerror="${escapeHtml(fallbackOnErrorAttr('card'))}"
-      />
-      <div class="herb-index-content">
-        <h3>${escapeHtml(herb.commonName)}</h3>
-        <p class="botanical"><em>${escapeHtml(herb.botanicalName)}</em></p>
-        <p>${escapeHtml(herb.summary)}</p>
-        <p class="chip-row">
-          ${herb.medicinalActions.slice(0, 3).map((action) => `<span class="chip">${escapeHtml(action)}</span>`).join('')}
-        </p>
-        <p class="meta-line"><strong>Systems:</strong> ${herb.bodySystems.join(', ') || 'Not yet documented'}</p>
-        <p class="meta-line"><strong>Preparations:</strong> ${herb.preparations.join(', ') || 'Not yet documented'}</p>
-        <p class="meta-line"><strong>Categories:</strong> ${herb.herbalCategories.join(', ') || 'Not yet categorized'}</p>
-        <p class="meta-line"><strong>Safety:</strong> ${escapeHtml(herb.safetyCategory)}</p>
-        ${herb.safetySummary ? `<p class="meta-note">${escapeHtml(herb.safetySummary)}</p>` : ''}
-        <a class="profile-link" href="#/herbs/${encodeURIComponent(herb.slug)}">View full profile</a>
-      </div>
-    </article>
-  `;
-}
-
 export function renderMateriaMedicaIndex({ herbs, taxonomy, filters }) {
   const selectedCount = herbs.length;
   const compliance = getComplianceContext('materiaMedica');
@@ -110,15 +82,12 @@ export function renderMateriaMedicaIndex({ herbs, taxonomy, filters }) {
       </div>
     </section>
 
-    ${herbs.length
-      ? `<section class="herb-index-grid">${herbs.map(renderHerbCard).join('')}</section>`
-      : `
-        <section class="card empty-state">
-          <h3>No herbs match your current filters</h3>
-          <p>Try broadening your search terms or clear the active filters to explore the full index.</p>
-          <button type="button" data-reset-filters>Reset filters</button>
-        </section>
-      `}
+    <section class="card empty-state" aria-live="polite">
+      <h3>Herb cards are hidden on this page</h3>
+      <p>
+        Use the filter dropdowns above to narrow your study set without rendering the full herb list below.
+      </p>
+    </section>
 
     <section class="compliance-stack">
       ${renderDisclaimerBlock({
