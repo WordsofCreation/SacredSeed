@@ -19,7 +19,9 @@ export async function fetchTaxonByBotanicalName(botanicalName) {
   const response = await fetch(`${INATURALIST_BASE_URL}/taxa?${query.toString()}`);
 
   if (!response.ok) {
-    throw new Error(`iNaturalist request failed with ${response.status}`);
+    const error = new Error(`iNaturalist request failed with ${response.status}`);
+    error.status = response.status;
+    throw error;
   }
 
   const payload = await response.json();
