@@ -81,6 +81,32 @@ h4,
   pointer-events: none;
 }
 
+
+.site-logo-lockup {
+  position: absolute;
+  inset: 1rem 1.2rem auto auto;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 0.62rem;
+  border-radius: 999px;
+  border: 1px solid rgba(93, 117, 88, 0.25);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 10px 22px rgba(27, 52, 39, 0.12);
+}
+
+.site-logo-mark {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.site-logo-banner {
+  width: 132px;
+  height: auto;
+  object-fit: contain;
+}
+
 .eyebrow {
   margin: 0;
   text-transform: uppercase;
@@ -651,6 +677,37 @@ main section + section {
   box-shadow: var(--shadow-soft);
 }
 
+
+.home-hero-grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 330px);
+  align-items: center;
+}
+
+.home-hero-art {
+  margin: 0;
+  padding: 0.95rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(109, 135, 103, 0.32);
+  background: linear-gradient(150deg, rgba(255, 253, 249, 0.96), rgba(230, 240, 224, 0.88));
+  box-shadow: 0 14px 24px rgba(39, 68, 50, 0.14);
+}
+
+.home-hero-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 12px rgba(30, 59, 42, 0.24));
+}
+
+.home-hero-caption {
+  margin: 0.6rem 0 0;
+  font-size: 0.83rem;
+  color: #445448;
+  text-align: center;
+}
+
 .home-hero h2 {
   margin: 0.45rem 0 0.75rem;
   max-width: 24ch;
@@ -752,11 +809,25 @@ main section + section {
   .spotlight-grid {
     grid-template-columns: 1fr;
   }
+
+  .home-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero-art {
+    max-width: 430px;
+  }
 }
 
 @media (max-width: 800px) {
   .herb-profile {
     grid-template-columns: 1fr;
+  }
+
+  .site-logo-lockup {
+    position: static;
+    width: fit-content;
+    margin: 0 0 0.72rem;
   }
 }
 

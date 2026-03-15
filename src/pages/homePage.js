@@ -54,16 +54,28 @@ const trustPrinciples = [
 export function renderHomePage(rootElement) {
   rootElement.innerHTML = `
     <section class="home-hero card">
-      <p class="eyebrow">Welcome to SacredSeed</p>
-      <h2>A modern herbal reference platform rooted in botanical scholarship</h2>
-      <p class="home-lead">
-        SacredSeed helps practitioners, students, and curious learners navigate medicinal plants with trusted context,
-        thoughtful structure, and practical educational pathways.
-      </p>
-      <p class="home-quote">"Where careful plant knowledge meets everyday herbal learning."</p>
-      <div class="hero-actions">
-        <a class="primary-link" href="#/materia-medica">Begin with the Materia Medica</a>
-        <a class="secondary-link" href="#/about">Learn about our mission</a>
+      <div class="home-hero-grid">
+        <div>
+          <p class="eyebrow">Welcome to SacredSeed</p>
+          <h2>A modern herbal reference platform rooted in botanical scholarship</h2>
+          <p class="home-lead">
+            SacredSeed helps practitioners, students, and curious learners navigate medicinal plants with trusted context,
+            thoughtful structure, and practical educational pathways.
+          </p>
+          <p class="home-quote">"Where careful plant knowledge meets everyday herbal learning."</p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#/materia-medica">Begin with the Materia Medica</a>
+            <a class="secondary-link" href="#/about">Learn about our mission</a>
+          </div>
+        </div>
+        <aside class="home-hero-art" aria-label="SacredSeed logo artwork">
+          <img
+            class="home-hero-logo"
+            src="assets/images/raw/site/logos/sacred_seed_clean.png"
+            alt="SacredSeed logo with botanical accents"
+          />
+          <p class="home-hero-caption">Botanical knowledge architecture for modern herbal study.</p>
+        </aside>
       </div>
     </section>
 
