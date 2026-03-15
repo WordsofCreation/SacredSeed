@@ -103,7 +103,7 @@ export function renderHerbProfileCard(herb, sourceMeta) {
 
   return `
     <article class="herb-profile">
-      <aside class="card">
+      <aside class="card profile-sidebar">
         <img class="hero-image" src="${resolveHerbImage(herb, { variant: 'profile' })}" alt="${herb.commonName}" onerror="${fallbackOnErrorAttr('profile')}" />
         <p class="label">Common Name</p>
         <h1 class="title">${herb.commonName}</h1>
@@ -114,61 +114,61 @@ export function renderHerbProfileCard(herb, sourceMeta) {
         <p class="label">Synonyms</p>
         ${asList(herb.synonyms)}
 
-        <p class="label" style="margin-top: 0.8rem;">Taxonomy Verification</p>
+        <p class="label">Taxonomy Verification</p>
         ${renderTaxonomy(herb)}
 
-        <p class="label" style="margin-top: 0.8rem;">Data Source</p>
+        <p class="label">Data Source</p>
         <p>${sourceMeta.source}</p>
         ${herb.dataSources?.length ? `<p class="meta-note">Referenced datasets: ${herb.dataSources.join(', ')}.</p>` : ''}
         ${sourceMeta.gbif?.available ? '' : '<p class="meta-note">GBIF enrichment temporarily unavailable; curated profile details shown.</p>'}
         ${sourceMeta.pubchem?.available ? '' : '<p class="meta-note">PubChem chemistry enrichment is limited; curated chemistry context is shown when possible.</p>'}
       </aside>
 
-      <section class="card grid">
-        <div>
+      <section class="card grid profile-content">
+        <div class="grid-block">
           <h3>Description</h3>
           <p>${herb.description}</p>
         </div>
-        <div>
+        <div class="grid-block">
           <h3>Distribution</h3>
           <p>${herb.distribution}</p>
         </div>
-        <div>
+        <div class="grid-block">
           <h3>Native Range & Occurrence</h3>
           <p>${herb.nativeRange ?? herb.habitat}</p>
-          ${herb.occurrenceNotes ? `<p class="meta-note" style="margin-top: 0.35rem;">${herb.occurrenceNotes}</p>` : ''}
+          ${herb.occurrenceNotes ? `<p class="meta-note">${herb.occurrenceNotes}</p>` : ''}
         </div>
-        <div>
+        <div class="grid-block">
           <h3>Habitat</h3>
           <p>${herb.habitat}</p>
         </div>
-        <div>
+        <div class="grid-block">
           <h3>Medicinal Actions</h3>
           ${asList(herb.medicinalActions, 'Medicinal action taxonomy has not yet been mapped for this herb.')}
           ${herb.herbalCategories?.length ? `<p class="meta-note"><strong>Categories:</strong> ${herb.herbalCategories.join(', ')}.</p>` : ''}
           ${herb.bodySystems?.length ? `<p class="meta-note"><strong>Body systems:</strong> ${herb.bodySystems.join(', ')}.</p>` : ''}
           ${herb.energetics?.length ? `<p class="meta-note"><strong>Energetics:</strong> ${herb.energetics.join(', ')}.</p>` : ''}
         </div>
-        <div>
+        <div class="grid-block">
           <h3>Traditional Uses</h3>
           ${asList(herb.traditionalUses, 'Traditional use notes are still being expanded for this herb.')}
         </div>
-        <div>
+        <div class="grid-block">
           <h3>Preparations</h3>
           ${renderPreparations(herb.preparations)}
           ${asList(herb.dosageNotes, 'Dosage notes are not yet available in this profile layer.')}
         </div>
-        <div>
+        <div class="grid-block">
           <h3>Plant Chemistry</h3>
           ${herb.activeCompounds?.length ? `<p><strong>Active compounds:</strong> ${herb.activeCompounds.slice(0, 6).join(', ')}.</p>` : '<p class="muted">Chemistry data is pending source enrichment.</p>'}
-          ${herb.chemistryNotes ? `<p class="meta-note" style="margin-top: 0.35rem;">${herb.chemistryNotes}</p>` : ''}
+          ${herb.chemistryNotes ? `<p class="meta-note">${herb.chemistryNotes}</p>` : ''}
           ${renderCompoundDetails(herb)}
         </div>
-        <div class="full-width">
+        <div class="full-width grid-block">
           <h3>Safety</h3>
           ${renderSafetySection(herb)}
         </div>
-        <div class="full-width">
+        <div class="full-width grid-block">
           ${renderSourceAttributionBlock(compliance)}
           ${renderDisclaimerBlock(compliance)}
         </div>

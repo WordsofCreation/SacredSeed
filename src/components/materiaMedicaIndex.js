@@ -68,12 +68,14 @@ export function renderMateriaMedicaIndex({ herbs, taxonomy, filters }) {
 
   return `
     <section class="card materia-intro" aria-labelledby="materia-medica-heading">
+      <div class="section-header">
       <h1 id="materia-medica-heading">SacredSeed Materia Medica</h1>
       <p>
         Explore our growing professional herbal library using searchable, taxonomy-based filters.
         Each entry is structured through SacredSeed's unified herb object architecture to support
         scholarly consistency as the materia medica expands.
       </p>
+      </div>
     </section>
 
     <section class="card filter-panel">

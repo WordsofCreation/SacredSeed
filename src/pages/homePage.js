@@ -13,9 +13,9 @@ const featureAreas = [
   },
   {
     eyebrow: 'Pacific Northwest Field Guide',
-    title: 'Regional plant literacy, with practical context',
+    title: 'Regional plant literacy with ecological context',
     description:
-      'A dedicated regional guide is being expanded for Pacific Northwest landscapes. Start with our current herbs while regional pathways are curated.',
+      'Our regional layer is expanding to support place-based study across Pacific Northwest landscapes, habitats, and seasonal observation.',
     actions: [
       { label: 'Start with regional-ready herbs', href: '#/materia-medica' },
       { label: 'Read our educational mission', href: '#/about', variant: 'secondary' }
@@ -67,8 +67,8 @@ export function renderHomePage(rootElement) {
       </div>
     </section>
 
-    <section class="home-section" aria-labelledby="explore-library-title">
-      <div class="home-section-heading">
+    <section class="home-section section-shell" aria-labelledby="explore-library-title">
+      <div class="home-section-heading section-header">
         <p class="eyebrow">Explore the Herbal Library</p>
         <h3 id="explore-library-title">Start where you need to learn next</h3>
         <p>
@@ -79,23 +79,24 @@ export function renderHomePage(rootElement) {
       <div class="home-feature-grid">
         ${featureAreas.map((feature) => renderFeatureCard(feature)).join('')}
       </div>
-      <!-- Future featured content slots can be inserted here for seasonal herbs, spotlight formulas, or new educational essays. -->
     </section>
 
     <section class="home-section home-highlight" aria-labelledby="spotlight-title">
-      <div class="home-section-heading">
-        <p class="eyebrow">Seasonal Spotlight</p>
-        <h3 id="spotlight-title">Featured herb: Stinging Nettle</h3>
-        <p>
-          A nutrient-dense spring ally commonly studied for mineral support and tonic preparation traditions.
-          Explore the full monograph for chemistry context, actions, and safety framing.
-        </p>
+      <div class="spotlight-grid">
+        <div class="home-section-heading">
+          <p class="eyebrow">Seasonal Spotlight</p>
+          <h3 id="spotlight-title">Featured herb: Stinging Nettle</h3>
+          <p>
+            A nutrient-dense spring ally commonly studied for mineral support and tonic preparation traditions.
+            Explore the full monograph for chemistry context, actions, and safety framing.
+          </p>
+        </div>
+        <a class="primary-link" href="#/herbs/urtica-dioica">Read the Stinging Nettle profile</a>
       </div>
-      <a class="primary-link" href="#/herbs/urtica-dioica">Read the Stinging Nettle profile</a>
     </section>
 
-    <section class="home-section" aria-labelledby="trust-title">
-      <div class="home-section-heading">
+    <section class="home-section section-shell" aria-labelledby="trust-title">
+      <div class="home-section-heading section-header">
         <p class="eyebrow">Education, Trust, and Transparency</p>
         <h3 id="trust-title">Designed for responsible herbal learning</h3>
       </div>
