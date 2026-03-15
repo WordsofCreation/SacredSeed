@@ -45,7 +45,6 @@ export function getHerbProfileSeo(herb) {
         description,
         canonicalUrl: new URL(`/#/herbs/${encodeURIComponent(herb.slug)}`, window.location.origin).toString()
       })
-      // Future extension: add herb-specific JSON-LD (e.g., MedicalEntity/DefinedTerm) once content model is finalized.
     ]
   };
 }
@@ -112,7 +111,6 @@ export function getCollectionDetailSeo(collection) {
   };
 }
 
-
 export function getLearningPathwaysSeo() {
   const title = 'SacredSeed Beginner Learning Pathways | Guided Herbal Study';
   const description =
@@ -154,31 +152,72 @@ export function getLearningPathwayDetailSeo(pathway) {
   };
 }
 
-
-export function getSearchSeo() {
-  const title = 'SacredSeed Knowledge Search | Herbs, Collections, Preparations, and Articles';
+export function getSeasonalCollectionsSeo() {
+  const title = 'SacredSeed Seasonal Herbal Collections | Spring to Winter Learning';
   const description =
-    'Search across SacredSeed herbs, collections, regional guides, preparations, formulas, pathways, and editorial learning articles.';
+    'Browse SacredSeed seasonal herbal collections for spring, summer, autumn, and winter with curated herbs, preparations, and educational guidance.';
 
   return {
     title,
     description,
     pageType: 'website',
-    canonicalPath: '#/search',
+    canonicalPath: '#/seasons',
     schemaEntries: [
       buildBaseSchema({
-        pageType: 'SearchResultsPage',
+        pageType: 'CollectionPage',
         title,
         description,
-        canonicalUrl: new URL('/#/search', window.location.origin).toString()
+        canonicalUrl: new URL('/#/seasons', window.location.origin).toString()
+      })
+    ]
+  };
+}
+
+export function getSeasonalCollectionDetailSeo(collection) {
+  const title = `${collection.title} | SacredSeed Seasonal Collection`;
+  const description = collection.shortIntro || collection.educationalOverview;
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: `#/seasons/${encodeURIComponent(collection.slug)}`,
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'CollectionPage',
+        title,
+        description,
+        canonicalUrl: new URL(`/#/seasons/${encodeURIComponent(collection.slug)}`, window.location.origin).toString()
+      })
+    ]
+  };
+}
+
+export function getEditorialArticlesSeo() {
+  const title = 'SacredSeed Editorial Articles | Foundational Herbal Learning';
+  const description =
+    'Read SacredSeed editorial articles on materia medica literacy, preparation methods, and beginner-friendly home herbal practice.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/articles',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'CollectionPage',
+        title,
+        description,
+        canonicalUrl: new URL('/#/articles', window.location.origin).toString()
       })
     ]
   };
 }
 
 export function getEditorialArticleSeo(article) {
-  const title = `${article.title} | SacredSeed Editorial Article`;
-  const description = article.summary || article.body;
+  const title = `${article.title} | SacredSeed Editorial Guide`;
+  const description = article.summary || article.intro;
+  const canonicalUrl = new URL(`/#/articles/${encodeURIComponent(article.slug)}`, window.location.origin).toString();
 
   return {
     title,
@@ -190,8 +229,28 @@ export function getEditorialArticleSeo(article) {
         pageType: 'Article',
         title,
         description,
-        canonicalUrl: new URL(`/#/articles/${encodeURIComponent(article.slug)}`, window.location.origin).toString()
-      })
+        canonicalUrl
+      }),
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: title,
+        description,
+        url: canonicalUrl,
+        author: {
+          '@type': 'Organization',
+          name: 'SacredSeed'
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'SacredSeed'
+        },
+        isPartOf: {
+          '@type': 'WebSite',
+          name: site.siteName,
+          url: window.location.origin
+        }
+      }
     ]
   };
 }
