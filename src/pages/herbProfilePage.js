@@ -1,5 +1,7 @@
 import { renderHerbProfileCard } from '../components/herbProfileCard.js';
+import { renderRelatedContentBlock } from '../components/relatedContent.js';
 import { getHerbProfile } from '../services/herbProfileService.js';
+import { getHerbRelatedContent } from '../services/relatedContentService.js';
 import { getHerbProfileSeo, getNotFoundSeo } from '../utils/pageSeo.js';
 import { applyPageSeo } from '../utils/seo.js';
 
@@ -16,9 +18,21 @@ export async function renderHerbProfilePage(rootElement, slug) {
 
   try {
     const { herb, sourceMeta } = await getHerbProfile(slug);
+    const related = getHerbRelatedContent(herb, 3);
+
     rootElement.innerHTML = `
       <p><a class="back-link" href="#/materia-medica">← Back to Materia Medica index</a></p>
       ${renderHerbProfileCard(herb, sourceMeta)}
+      ${renderRelatedContentBlock({
+        title: 'Related herbal knowledge',
+        sections: [
+          { title: 'Related herbs', items: related.relatedHerbs },
+          { title: 'Related collections', items: related.relatedCollections },
+          { title: 'Related preparations', items: related.relatedPreparations },
+          { title: 'Related articles', items: related.relatedArticles },
+          { title: 'Beginner pathways', items: related.relatedPathways }
+        ]
+      })}
     `;
 
     applyPageSeo(getHerbProfileSeo(herb));

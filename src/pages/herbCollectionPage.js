@@ -1,5 +1,6 @@
 import { renderHerbCollectionDetail } from '../components/herbCollections.js';
 import { getHerbCollectionBySlug } from '../services/herbCollectionService.js';
+import { getCollectionRelatedContent } from '../services/relatedContentService.js';
 
 export function renderHerbCollectionPage(rootElement, slug) {
   const collection = getHerbCollectionBySlug(slug);
@@ -15,6 +16,7 @@ export function renderHerbCollectionPage(rootElement, slug) {
     return null;
   }
 
-  rootElement.innerHTML = renderHerbCollectionDetail(collection);
+  const related = getCollectionRelatedContent(collection);
+  rootElement.innerHTML = renderHerbCollectionDetail(collection, related);
   return collection;
 }

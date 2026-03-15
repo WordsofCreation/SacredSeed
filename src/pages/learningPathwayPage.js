@@ -1,5 +1,6 @@
 import { renderLearningPathwayDetail } from '../components/learningPathways.js';
 import { getLearningPathwayBySlug } from '../services/learningPathwayService.js';
+import { getPathwayRelatedContent } from '../services/relatedContentService.js';
 
 export function renderLearningPathwayPage(rootElement, slug) {
   const pathway = getLearningPathwayBySlug(slug);
@@ -15,6 +16,7 @@ export function renderLearningPathwayPage(rootElement, slug) {
     return null;
   }
 
-  rootElement.innerHTML = renderLearningPathwayDetail(pathway);
+  const related = getPathwayRelatedContent(pathway);
+  rootElement.innerHTML = renderLearningPathwayDetail(pathway, related);
   return pathway;
 }

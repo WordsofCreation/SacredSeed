@@ -12,7 +12,7 @@ const featureAreas = [
       'Search by medicinal action, body system, preparation type, and safety category to find entries relevant to study or practice.',
     actions: [
       { label: 'Browse the Materia Medica', href: '#/materia-medica' },
-      { label: 'Start a beginner pathway', href: '#/pathways', variant: 'secondary' }
+      { label: 'Site-wide knowledge search', href: '#/search', variant: 'secondary' }
     ]
   },
   {
@@ -132,6 +132,7 @@ export function renderHomePage(rootElement) {
           <div class="hero-actions">
             <a class="primary-link" href="#/materia-medica">Begin with the Materia Medica</a>
             <a class="secondary-link" href="#/about">Learn about our mission</a>
+            <a class="secondary-link" href="#/search">Search the knowledge library</a>
           </div>
         </div>
         <aside class="home-hero-art" aria-label="SacredSeed logo artwork">

@@ -890,46 +890,30 @@ main section + section {
   border-left: 3px solid rgba(112, 140, 92, 0.45);
 }
 
-.seasonal-collection-card {
-  background: linear-gradient(155deg, rgba(255, 252, 246, 0.96), rgba(232, 241, 229, 0.82));
+.search-row select {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 11px;
+  padding: 0.65rem 0.78rem;
+  font: inherit;
 }
 
-.editorial-card {
-  background: linear-gradient(160deg, rgba(255, 253, 249, 0.98), rgba(239, 244, 236, 0.86));
-}
-
-.editorial-article {
-  background: linear-gradient(165deg, rgba(255, 253, 248, 0.96), rgba(239, 245, 235, 0.9));
-}
-
-.article-content {
-  display: grid;
-  gap: 1rem;
+.search-group + .search-group {
   margin-top: 1rem;
 }
 
-.article-section h2 {
+.search-result-grid,
+.related-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.search-result-card h3,
+.related-card h3 {
   margin-bottom: 0.4rem;
 }
 
-.article-section p {
-  margin: 0.3rem 0;
-  color: #334238;
-}
-
-.article-disclaimer {
-  margin-top: 1rem;
-  padding-top: 0.75rem;
-  border-top: 1px dashed rgba(99, 116, 95, 0.3);
-}
-
-.chip-link {
-  text-decoration: none;
-  color: var(--forest-deep);
-  border: 1px solid rgba(98, 118, 95, 0.3);
-}
-
-.chip-link:hover {
-  border-color: rgba(59, 84, 65, 0.55);
-  background: #eef5ea;
+.related-content-shell {
+  margin-top: 1.1rem;
 }

@@ -1,3 +1,4 @@
+import { renderRelatedContentBlock } from './relatedContent.js';
 import { fallbackOnErrorAttr, resolveHerbImage } from '../utils/imageAssets.js';
 
 function escapeHtml(value) {
@@ -62,7 +63,7 @@ export function renderHerbCollectionsIndex(collections) {
   `;
 }
 
-export function renderHerbCollectionDetail(collection) {
+export function renderHerbCollectionDetail(collection, relatedContent = { relatedCollections: [] }) {
   return `
     <section class="section-shell materia-intro" aria-labelledby="collection-title">
       <div class="section-header">
@@ -96,6 +97,15 @@ export function renderHerbCollectionDetail(collection) {
         ${collection.herbs.map(renderHerbMiniCard).join('')}
       </div>
     </section>
+
+
+    ${renderRelatedContentBlock({
+      title: 'Related collection links',
+      sections: [
+        { title: 'Related collections', items: relatedContent.relatedCollections ?? [] }
+      ]
+    })}
+
 
     ${collection.relatedRoutes?.length ? `
       <section class="section-shell" aria-label="Related learning routes">
