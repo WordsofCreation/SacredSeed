@@ -150,6 +150,35 @@ body {
   margin: 0.25rem 0 0;
 }
 
+
+.preparation-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.safety-panel {
+  background: #f9faf7;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.85rem;
+}
+
+.safety-grid {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 0.55rem;
+}
+
+.safety-grid h4 {
+  margin: 0 0 0.2rem;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
 .status,
 .error {
   background: var(--panel);
@@ -161,6 +190,16 @@ body {
 .error {
   border-color: #d8b6ab;
   color: var(--warning);
+}
+
+.safety-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .safety-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 800px) {

@@ -28,10 +28,29 @@ export function normalizeInaturalistTaxon(taxon, fallback) {
     habitat:
       fallback?.habitat ?? 'Habitat details will be expanded in future data integrations.',
     medicinalProperties: fallback?.medicinalProperties ?? [],
-    preparations: fallback?.preparations ?? [],
-    safetyNotes:
-      fallback?.safetyNotes ??
-      'Safety and contraindication guidance pending additional datasets.',
+    medicinalActions: [],
+    traditionalUses: [],
+    bodySystems: [],
+    energetics: [],
+    preparations: (fallback?.preparations ?? []).map((item) =>
+      typeof item === 'string'
+        ? {
+            type: item,
+            part: null,
+            guidance: null
+          }
+        : item
+    ),
+    dosageNotes: [],
+    herbalCategories: [],
+    safetySummary: null,
+    safetyNotes: fallback?.safetyNotes ? [fallback.safetyNotes] : [],
+    contraindications: [],
+    cautions: [],
+    interactions: [],
+    pregnancyLactationNotes: null,
+    toxicityNotes: null,
+    medicinalSources: [],
     image: withFallback(taxon?.default_photo?.medium_url, fallback?.image ?? ''),
     taxonomyStatus: null,
     kingdom: null,

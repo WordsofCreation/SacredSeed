@@ -8,6 +8,7 @@ import {
   normalizePubchemData
 } from './herbNormalizer.js';
 import { fetchPubchemProfileForHerb } from './pubchemService.js';
+import { getNormalizedMedicinalProfile } from './medicinalProfileService.js';
 
 /**
  * Source registry for phase 2.
@@ -40,7 +41,8 @@ export async function getHerbProfile(slug) {
   const baseHerb = normalizeInaturalistTaxon(inaturalistTaxon, fallback);
   const gbifHerb = normalizeGbifData(gbifProfile?.speciesMatch, gbifProfile?.occurrenceSummary);
   const pubchemHerb = normalizePubchemData(pubchemProfile);
-  const herb = mergeHerbData(baseHerb, gbifHerb, pubchemHerb);
+  const medicinalHerb = getNormalizedMedicinalProfile(slug);
+  const herb = mergeHerbData(baseHerb, gbifHerb, pubchemHerb, medicinalHerb);
 
   if (inaturalistTaxon) {
     herb.dataSources = [...new Set([...(herb.dataSources ?? []), 'iNaturalist'])];
