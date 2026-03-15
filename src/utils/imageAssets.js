@@ -9,6 +9,8 @@ const PLACEHOLDER_BY_VARIANT = {
   thumbnail: `${IMAGE_BASE}/site/placeholders/herb-fallback-card.svg`
 };
 
+const PLACEHOLDER_ASSET_PATHS = new Set(Object.values(PLACEHOLDER_BY_VARIANT).map((path) => normalizeLocalAssetPath(path)));
+
 const ABSOLUTE_URL = /^https?:\/\//i;
 
 function normalizeLocalAssetPath(path) {
@@ -42,13 +44,14 @@ export function getPlaceholderImagePath(variant = 'hero') {
 
 export function resolveHerbImage(herb, { variant = 'hero' } = {}) {
   const providedImage = herb?.image?.trim?.() || '';
+  const normalizedProvidedImage = normalizeLocalAssetPath(providedImage);
 
-  if (providedImage) {
+  if (providedImage && !PLACEHOLDER_ASSET_PATHS.has(normalizedProvidedImage)) {
     if (ABSOLUTE_URL.test(providedImage)) {
       return withAssetVersion(providedImage);
     }
 
-    return withAssetVersion(normalizeLocalAssetPath(providedImage));
+    return withAssetVersion(normalizedProvidedImage);
   }
 
   if (herb?.slug) {
