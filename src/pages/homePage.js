@@ -3,6 +3,17 @@ import { getFeaturedCollectionSummaries } from '../services/herbCollectionServic
 import { getFeaturedLearningPathways } from '../services/learningPathwayService.js';
 import { getSeasonalCollectionSummaries, getFeaturedSeasonalCollection } from '../services/seasonalCollectionService.js';
 import { getEditorialArticleSummaries, getStartHereArticle } from '../services/editorialArticleService.js';
+import { fallbackOnErrorAttr, resolveHerbImage } from '../utils/imageAssets.js';
+
+
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
 
 const featureAreas = [
   {
@@ -40,9 +51,11 @@ const featureAreas = [
 
 function renderFeaturedCollectionCard(collection) {
   const preview = collection.featuredHerbs?.map((herb) => herb.commonName).join(', ');
+  const leadHerb = collection.featuredHerbs?.[0] ?? null;
 
   return `
     <article class="card collection-card">
+      ${leadHerb ? `<img class="collection-card-image" src="${resolveHerbImage(leadHerb, { variant: 'card' })}" alt="${escapeHtml(leadHerb.commonName)} illustration" data-image-fallback="card" onerror="${fallbackOnErrorAttr('card')}" />` : ''}
       <p class="label">Featured Collection</p>
       <h3>${collection.title}</h3>
       <p>${collection.shortIntro}</p>
@@ -56,9 +69,11 @@ function renderFeaturedCollectionCard(collection) {
 
 function renderFeaturedPathwayCard(pathway) {
   const preview = pathway.featuredHerbs?.map((herb) => herb.commonName).join(', ');
+  const leadHerb = pathway.featuredHerbs?.[0] ?? null;
 
   return `
     <article class="card collection-card pathway-card">
+      ${leadHerb ? `<img class="collection-card-image" src="${resolveHerbImage(leadHerb, { variant: 'card' })}" alt="${escapeHtml(leadHerb.commonName)} illustration" data-image-fallback="card" onerror="${fallbackOnErrorAttr('card')}" />` : ''}
       <p class="label">Start Here Pathway</p>
       <h3>${pathway.title}</h3>
       <p>${pathway.intro}</p>
@@ -70,8 +85,11 @@ function renderFeaturedPathwayCard(pathway) {
 }
 
 function renderSeasonalCard(collection) {
+  const leadHerb = collection.featuredHerbs?.[0] ?? null;
+
   return `
     <article class="card collection-card seasonal-collection-card">
+      ${leadHerb ? `<img class="collection-card-image" src="${resolveHerbImage(leadHerb, { variant: 'card' })}" alt="${escapeHtml(leadHerb.commonName)} illustration" data-image-fallback="card" onerror="${fallbackOnErrorAttr('card')}" />` : ''}
       <p class="label">${collection.season} Collection</p>
       <h3>${collection.title}</h3>
       <p>${collection.shortIntro}</p>
