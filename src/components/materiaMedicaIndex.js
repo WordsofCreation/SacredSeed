@@ -1,5 +1,6 @@
 import { renderDisclaimerBlock, renderSourceAttributionBlock } from './complianceBlocks.js';
 import { getComplianceContext } from '../services/complianceService.js';
+import { fallbackOnErrorAttr, resolveHerbImage } from '../utils/imageAssets.js';
 
 function escapeHtml(value) {
   return String(value ?? '')
@@ -45,6 +46,46 @@ function renderFilterDropdown(field, label, options, selectedValues) {
   `;
 }
 
+function renderMatchedConsiderations(herb, filters) {
+  const matches = [
+    ...(filters.medicinalActions ?? []).filter((action) => herb.medicinalActions?.includes(action)),
+    ...(filters.bodySystems ?? []).filter((system) => herb.bodySystems?.includes(system)),
+    ...(filters.preparations ?? []).filter((prep) => herb.preparations?.includes(prep)),
+    ...(filters.herbalCategories ?? []).filter((category) => herb.herbalCategories?.includes(category)),
+    ...(filters.safetyCategories ?? []).filter((category) => herb.safetyCategory === category)
+  ];
+
+  if (!matches.length) {
+    return '';
+  }
+
+  return `
+    <div class="chip-row">
+      ${matches.slice(0, 6).map((match) => `<span class="chip">${escapeHtml(match)}</span>`).join('')}
+    </div>
+  `;
+}
+
+function renderHerbResultCard(herb, filters) {
+  return `
+    <article class="card herb-index-card">
+      <img
+        class="herb-index-image"
+        src="${resolveHerbImage(herb)}"
+        alt="${escapeHtml(herb.commonName)}"
+        onerror="${fallbackOnErrorAttr('card')}"
+      />
+      <div class="herb-index-content">
+        <h3>${escapeHtml(herb.commonName)}</h3>
+        <p class="botanical">${escapeHtml(herb.botanicalName)}</p>
+        <p>${escapeHtml(herb.summary ?? 'Profile summary forthcoming.')}</p>
+        ${renderMatchedConsiderations(herb, filters)}
+        <a class="profile-link" href="#/herbs/${encodeURIComponent(herb.slug)}">Read herb profile →</a>
+      </div>
+    </article>
+  `;
+}
+
 export function renderMateriaMedicaIndex({ herbs, taxonomy, filters }) {
   const selectedCount = herbs.length;
   const compliance = getComplianceContext('materiaMedica');
@@ -79,6 +120,19 @@ export function renderMateriaMedicaIndex({ herbs, taxonomy, filters }) {
       <div class="filter-actions">
         <p class="result-count">${selectedCount} ${selectedCount === 1 ? 'herb' : 'herbs'} found</p>
         <button type="button" data-reset-filters>Reset filters</button>
+      </div>
+    </section>
+
+    <section class="home-section" aria-label="Filtered herb results">
+      <div class="herb-index-grid">
+        ${herbs.length
+    ? herbs.map((herb) => renderHerbResultCard(herb, filters)).join('')
+    : `
+            <article class="card empty-state">
+              <h2>No herbs matched those filters</h2>
+              <p>Try removing one or more considerations to broaden your results.</p>
+            </article>
+          `}
       </div>
     </section>
 
