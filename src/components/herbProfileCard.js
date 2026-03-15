@@ -104,7 +104,7 @@ export function renderHerbProfileCard(herb, sourceMeta) {
   return `
     <article class="herb-profile">
       <aside class="card profile-sidebar">
-        <img class="hero-image" src="${resolveHerbImage(herb, { variant: 'profile' })}" alt="${herb.commonName}" onerror="${fallbackOnErrorAttr('profile')}" />
+        <img class="hero-image" src="${resolveHerbImage(herb, { variant: 'profile' })}" alt="${herb.commonName}" data-image-fallback="profile" onerror="${fallbackOnErrorAttr('profile')}" />
         <p class="label">Common Name</p>
         <h1 class="title">${herb.commonName}</h1>
         <p class="label">Botanical Name</p>
