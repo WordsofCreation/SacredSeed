@@ -1,0 +1,96 @@
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+function renderCheckboxGroup(field, label, options, selectedValues) {
+  return `
+    <fieldset class="filter-group">
+      <legend>${label}</legend>
+      <div class="filter-options">
+        ${options
+          .map(
+            (option) => `
+              <label class="filter-option">
+                <input
+                  type="checkbox"
+                  name="${field}"
+                  value="${escapeHtml(option)}"
+                  ${selectedValues.includes(option) ? 'checked' : ''}
+                />
+                <span>${escapeHtml(option)}</span>
+              </label>
+            `
+          )
+          .join('')}
+      </div>
+    </fieldset>
+  `;
+}
+
+function renderHerbCard(herb) {
+  return `
+    <article class="herb-index-card card">
+      ${herb.image ? `<img class="herb-index-image" src="${escapeHtml(herb.image)}" alt="${escapeHtml(herb.commonName)}" />` : ''}
+      <div class="herb-index-content">
+        <h3>${escapeHtml(herb.commonName)}</h3>
+        <p class="botanical"><em>${escapeHtml(herb.botanicalName)}</em></p>
+        <p>${escapeHtml(herb.summary)}</p>
+        <p class="chip-row">
+          ${herb.medicinalActions.slice(0, 3).map((action) => `<span class="chip">${escapeHtml(action)}</span>`).join('')}
+        </p>
+        <p class="meta-line"><strong>Systems:</strong> ${herb.bodySystems.join(', ') || 'Not yet documented'}</p>
+        <p class="meta-line"><strong>Preparations:</strong> ${herb.preparations.join(', ') || 'Not yet documented'}</p>
+        <p class="meta-line"><strong>Safety:</strong> ${escapeHtml(herb.safetyCategory)}</p>
+        ${herb.safetySummary ? `<p class="meta-note">${escapeHtml(herb.safetySummary)}</p>` : ''}
+        <a class="profile-link" href="#/herbs/${encodeURIComponent(herb.slug)}">View full profile</a>
+      </div>
+    </article>
+  `;
+}
+
+export function renderMateriaMedicaIndex({ herbs, taxonomy, filters }) {
+  const selectedCount = herbs.length;
+
+  return `
+    <section class="card materia-intro">
+      <h2>SacredSeed Materia Medica</h2>
+      <p>
+        Explore our growing professional herbal library using searchable, taxonomy-based filters.
+        Each entry is structured through SacredSeed's unified herb object architecture to support
+        scholarly consistency as the materia medica expands.
+      </p>
+    </section>
+
+    <section class="card filter-panel">
+      <div class="search-row">
+        <label for="herb-search">Search by common or botanical name</label>
+        <input id="herb-search" name="query" type="search" value="${escapeHtml(filters.query)}" placeholder="e.g., nettle, Urtica dioica" />
+      </div>
+
+      ${renderCheckboxGroup('medicinalActions', 'Medicinal actions', taxonomy.medicinalActions, filters.medicinalActions)}
+      ${renderCheckboxGroup('bodySystems', 'Body systems', taxonomy.bodySystems, filters.bodySystems)}
+      ${renderCheckboxGroup('preparations', 'Preparation types', taxonomy.preparations, filters.preparations)}
+      ${renderCheckboxGroup('safetyCategories', 'Safety categories', taxonomy.safetyCategories, filters.safetyCategories)}
+
+      <div class="filter-actions">
+        <p class="result-count">${selectedCount} ${selectedCount === 1 ? 'herb' : 'herbs'} found</p>
+        <button type="button" data-reset-filters>Reset filters</button>
+      </div>
+    </section>
+
+    ${herbs.length
+      ? `<section class="herb-index-grid">${herbs.map(renderHerbCard).join('')}</section>`
+      : `
+        <section class="card empty-state">
+          <h3>No herbs match your current filters</h3>
+          <p>Try broadening your search terms or clear the active filters to explore the full index.</p>
+          <button type="button" data-reset-filters>Reset filters</button>
+        </section>
+      `}
+  `;
+}
