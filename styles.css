@@ -369,3 +369,46 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+.site-nav {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  border: 1px solid var(--border);
+  background: var(--panel);
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+.preparation-section {
+  margin-top: 1.2rem;
+}
+
+.preparation-section h3 {
+  margin: 0 0 0.2rem;
+}
+
+.preparation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.preparation-card h3 {
+  margin: 0.2rem 0 0.4rem;
+}
+
+.preparation-card .subtle-list {
+  margin-top: 0.2rem;
+}

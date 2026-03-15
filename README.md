@@ -1,72 +1,55 @@
-# SacredSeed — Materia Medica Index Foundation (Phase 4)
+# SacredSeed — Materia Medica + Preparation Library (Phase 5)
 
-This phase introduces SacredSeed's first **searchable Materia Medica index** while preserving the existing unified herb profile architecture.
+This phase introduces a structured **Herbal Preparations and Remedies layer** while preserving SacredSeed's unified herb profile architecture, searchable Materia Medica index, and regional-ready expansion model.
 
 ## What was added
 
-- Dedicated Materia Medica index page with searchable/filterable herb discovery UI.
-- Modular index service layer for seed collection loading, taxonomy generation, and composable filters.
-- Reusable taxonomy utilities for normalized labels and option extraction.
-- Reusable index rendering component with result count and empty-state reset action.
-- Hash-based navigation between index and individual herb profile pages.
-- Expanded curated fallback herb seed entries to demonstrate scalable filtering with multiple herbs.
+- Dedicated `#/preparations` experience for:
+  - SacredSeed Preparations (single-herb guides)
+  - Tea Formulas (single- and multi-herb formulas)
+  - Remedy Collections (curated formula groupings)
+- Structured preparation data model with reusable fields for:
+  - `preparationType`, `preparationDescription`, `methodSteps`
+  - `ingredientHerbs`, `ingredientAmounts`
+  - `dosageGuidance`, `safetyNotes`, `duration`, `storageNotes`
+  - `preparationTags`, `formulaCategory`
+- Formula and guide linking to the existing unified herb object via herb slug references.
+- Modular service and taxonomy helpers for normalization, filtering, and grouped browsing.
+- UI filters for preparation type, formula category, and formula tags.
 
-## Internal herb object contract
+## Architecture notes
 
-The profile contract remains the source-of-truth object shape. The index now reads from the same unified object model and optional index-specific fields.
+The herb profile contract remains intact and unchanged. Preparation and formula modules extend—not replace—the existing data system.
 
-```js
-{
-  commonName,
-  botanicalName,
-  family,
-  synonyms,
-  description,
-  distribution,
-  habitat,
-  medicinalProperties,
-  preparations,
-  safetyNotes,
-  image,
-  taxonomyStatus,
-  kingdom,
-  phylum,
-  class,
-  order,
-  genus,
-  species,
-  nativeRange,
-  occurrenceNotes,
-  activeCompounds,
-  phytochemicals,
-  compoundDetails,
-  compoundNames,
-  compoundSummaries,
-  chemistryNotes,
-  chemistrySources,
-  dataSources,
+New modules:
 
-  // optional index-oriented fields
-  slug,
-  summary,
-  medicinalActions,
-  bodySystems,
-  safetyCategory,
-  safetySummary
-}
-```
+- `src/data/preparationTaxonomy.js`
+- `src/data/preparationLibrary.js`
+- `src/utils/preparationTaxonomy.js`
+- `src/services/preparationLibraryService.js`
+- `src/components/preparationLibrary.js`
+- `src/pages/preparationLibraryPage.js`
 
-## Materia Medica filtering model
+These modules are intentionally small and reusable to support future recipe libraries, seasonal protocols, and educational pathways.
 
-The index currently supports combined filtering by:
+## Initial preparation guides and formulas
 
-- Keyword search (`commonName`, `botanicalName`)
-- Medicinal actions
-- Body systems
-- Preparation types
-- Safety categories
+Preparation guides include:
 
-All filter values are normalized before being rendered and evaluated.
+- Nettle Infusion
+- Yarrow Tea
+- Oregon Grape Decoction
+
+Formula/remedy examples include:
+
+- Nutritive Mineral Tea
+- Calming Evening Tea
+- Seasonal Immune Support Tea
+
+Collections include:
+
+- Seasonal Wellness Basics
+- Calm and Restore Evening Collection
 
 ## Local run
 
@@ -78,6 +61,7 @@ Then open `http://localhost:4173`.
 
 ## Future extension notes
 
-- Add additional herbs in `src/data/herbFallbacks.js` using the same unified herb object format.
-- Replace/augment fallback collection with source-fed registry data in `getMateriaMedicaCollection()`.
-- Add pagination/sorting in the index service without reworking card rendering.
+- Add new guides/formulas in `src/data/preparationLibrary.js`.
+- Reuse `herbSlug` references to auto-link ingredients to existing herb profiles.
+- Extend taxonomy dictionaries in `src/data/preparationTaxonomy.js` as new categories emerge.
+- Add educational article routes and glossary cross-links using the preparation collection IDs.
