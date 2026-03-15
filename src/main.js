@@ -36,6 +36,21 @@ import {
 
 const app = document.getElementById('app');
 
+function syncActiveNav() {
+  const [section] = getRouteParts();
+  const normalized = section || 'home';
+  const navLinks = document.querySelectorAll('.site-nav a');
+
+  navLinks.forEach((link) => {
+    const target = (link.getAttribute('href') || '').replace(/^#\//, '').split('/')[0] || 'home';
+    if (target === normalized) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
+}
+
 function getRouteParts() {
   const hash = window.location.hash || '#/home';
   return hash.replace(/^#\//, '').split('/').filter(Boolean);
@@ -50,6 +65,7 @@ async function renderRoute() {
 
   if (section === 'home' || !section) {
     renderHomePage(app);
+    syncActiveNav();
     return;
   }
 
@@ -61,18 +77,21 @@ async function renderRoute() {
   if (section === 'search') {
     renderAdvancedSearchPage(app);
     applyPageSeo(getSearchSeo());
+    syncActiveNav();
     return;
   }
 
   if (section === 'preparations') {
     renderPreparationLibraryPage(app);
     applyPageSeo(getPreparationLibrarySeo());
+    syncActiveNav();
     return;
   }
 
   if (section === 'collections' && !slug) {
     renderHerbCollectionsPage(app);
     applyPageSeo(getCollectionsSeo());
+    syncActiveNav();
     return;
   }
 
@@ -83,12 +102,14 @@ async function renderRoute() {
     } else {
       applyPageSeo(getNotFoundSeo());
     }
+    syncActiveNav();
     return;
   }
 
   if (section === 'pathways' && !slug) {
     renderLearningPathwaysPage(app);
     applyPageSeo(getLearningPathwaysSeo());
+    syncActiveNav();
     return;
   }
 
@@ -99,12 +120,14 @@ async function renderRoute() {
     } else {
       applyPageSeo(getNotFoundSeo());
     }
+    syncActiveNav();
     return;
   }
 
   if (section === 'seasons' && !slug) {
     renderSeasonalCollectionsPage(app);
     applyPageSeo(getSeasonalCollectionsSeo());
+    syncActiveNav();
     return;
   }
 
@@ -115,12 +138,14 @@ async function renderRoute() {
     } else {
       applyPageSeo(getNotFoundSeo());
     }
+    syncActiveNav();
     return;
   }
 
   if (section === 'articles' && !slug) {
     renderEditorialArticlesPage(app);
     applyPageSeo(getEditorialArticlesSeo());
+    syncActiveNav();
     return;
   }
 
@@ -131,35 +156,41 @@ async function renderRoute() {
     } else {
       applyPageSeo(getNotFoundSeo());
     }
+    syncActiveNav();
     return;
   }
 
   if (section === 'about') {
     renderAboutPage(app);
     applyPageSeo(getAboutSeo());
+    syncActiveNav();
     return;
   }
 
   if (section === 'privacy-policy') {
     renderPrivacyPolicyPage(app);
     applyPageSeo(getPrivacySeo());
+    syncActiveNav();
     return;
   }
 
   if (section === 'terms-of-use') {
     renderTermsOfUsePage(app);
     applyPageSeo(getTermsSeo());
+    syncActiveNav();
     return;
   }
 
   if (section === 'materia-medica') {
     renderMateriaMedicaIndexPage(app);
     applyPageSeo(getMateriaMedicaSeo());
+    syncActiveNav();
     return;
   }
 
   app.innerHTML = '<section class="card"><h2>Page not found</h2><p>The requested section is unavailable.</p></section>';
   applyPageSeo(getNotFoundSeo());
+  syncActiveNav();
 }
 
 window.addEventListener('hashchange', () => {
