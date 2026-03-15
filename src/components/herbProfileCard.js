@@ -1,3 +1,6 @@
+import { renderDisclaimerBlock, renderSourceAttributionBlock } from './complianceBlocks.js';
+import { getComplianceContext } from '../services/complianceService.js';
+
 function asList(items, emptyText = 'Not yet documented.') {
   if (!items?.length) {
     return `<p class="muted">${emptyText}</p>`;
@@ -95,6 +98,8 @@ function renderSafetySection(herb) {
 }
 
 export function renderHerbProfileCard(herb, sourceMeta) {
+  const compliance = getComplianceContext('herbProfile', { herb, sourceMeta });
+
   return `
     <article class="herb-profile">
       <aside class="card">
@@ -114,7 +119,6 @@ export function renderHerbProfileCard(herb, sourceMeta) {
         <p class="label" style="margin-top: 0.8rem;">Data Source</p>
         <p>${sourceMeta.source}</p>
         ${herb.dataSources?.length ? `<p class="meta-note">Referenced datasets: ${herb.dataSources.join(', ')}.</p>` : ''}
-        ${herb.medicinalSources?.length ? `<p class="meta-note">Medicinal references: ${herb.medicinalSources.join('; ')}.</p>` : ''}
         ${sourceMeta.gbif?.available ? '' : '<p class="meta-note">GBIF enrichment temporarily unavailable; curated profile details shown.</p>'}
         ${sourceMeta.pubchem?.available ? '' : '<p class="meta-note">PubChem chemistry enrichment is limited; curated chemistry context is shown when possible.</p>'}
       </aside>
@@ -158,11 +162,14 @@ export function renderHerbProfileCard(herb, sourceMeta) {
           ${herb.activeCompounds?.length ? `<p><strong>Active compounds:</strong> ${herb.activeCompounds.slice(0, 6).join(', ')}.</p>` : '<p class="muted">Chemistry data is pending source enrichment.</p>'}
           ${herb.chemistryNotes ? `<p class="meta-note" style="margin-top: 0.35rem;">${herb.chemistryNotes}</p>` : ''}
           ${renderCompoundDetails(herb)}
-          ${herb.chemistrySources?.length ? `<p class="meta-note" style="margin-top: 0.35rem;">Chemistry sources: ${herb.chemistrySources.join(', ')}.</p>` : ''}
         </div>
         <div class="full-width">
           <h3>Safety</h3>
           ${renderSafetySection(herb)}
+        </div>
+        <div class="full-width">
+          ${renderSourceAttributionBlock(compliance)}
+          ${renderDisclaimerBlock(compliance)}
         </div>
       </section>
     </article>
