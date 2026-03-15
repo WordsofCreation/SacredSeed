@@ -86,7 +86,7 @@ export function renderPreparationLibrary({ guides, formulas, collections, taxono
 
   return `
     <section class="card materia-intro">
-      <h2>SacredSeed Preparations</h2>
+      <h1>SacredSeed Preparations</h1>
       <p>
         Explore structured preparation guides, tea formulas, and remedy collections built on SacredSeed's unified herb object architecture.
         This library is designed for clinical clarity, scholarship, and practical household application.

@@ -5,6 +5,15 @@ import { renderPreparationLibraryPage } from './pages/preparationLibraryPage.js'
 import { renderAboutPage } from './pages/aboutPage.js';
 import { renderPrivacyPolicyPage } from './pages/privacyPolicyPage.js';
 import { renderTermsOfUsePage } from './pages/termsOfUsePage.js';
+import { applyPageSeo } from './utils/seo.js';
+import {
+  getAboutSeo,
+  getMateriaMedicaSeo,
+  getNotFoundSeo,
+  getPreparationLibrarySeo,
+  getPrivacySeo,
+  getTermsSeo
+} from './utils/pageSeo.js';
 
 const app = document.getElementById('app');
 
@@ -13,7 +22,7 @@ function getRouteParts() {
   return hash.replace(/^#\//, '').split('/').filter(Boolean);
 }
 
-function renderRoute() {
+async function renderRoute() {
   if (!app) {
     return;
   }
@@ -21,33 +30,47 @@ function renderRoute() {
   const [section, slug] = getRouteParts();
 
   if (section === 'herbs' && slug) {
-    renderHerbProfilePage(app, decodeURIComponent(slug));
+    await renderHerbProfilePage(app, decodeURIComponent(slug));
     return;
   }
 
   if (section === 'preparations') {
     renderPreparationLibraryPage(app);
+    applyPageSeo(getPreparationLibrarySeo());
     return;
   }
 
   if (section === 'about') {
     renderAboutPage(app);
+    applyPageSeo(getAboutSeo());
     return;
   }
 
   if (section === 'privacy-policy') {
     renderPrivacyPolicyPage(app);
+    applyPageSeo(getPrivacySeo());
     return;
   }
 
   if (section === 'terms-of-use') {
     renderTermsOfUsePage(app);
+    applyPageSeo(getTermsSeo());
     return;
   }
 
-  renderMateriaMedicaIndexPage(app);
+  if (!section || section === 'materia-medica') {
+    renderMateriaMedicaIndexPage(app);
+    applyPageSeo(getMateriaMedicaSeo());
+    return;
+  }
+
+  app.innerHTML = '<section class="card"><h2>Page not found</h2><p>The requested section is unavailable.</p></section>';
+  applyPageSeo(getNotFoundSeo());
 }
 
-window.addEventListener('hashchange', renderRoute);
+window.addEventListener('hashchange', () => {
+  renderRoute();
+});
+
 renderRoute();
 initializeCookieConsentBanner();

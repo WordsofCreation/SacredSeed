@@ -18,7 +18,7 @@ export function renderLegalPageLayout({
   return `
     <article class="card legal-page">
       <p class="eyebrow legal-eyebrow">SacredSeed Legal</p>
-      <h2>${title}</h2>
+      <h1>${title}</h1>
       <p class="legal-subtitle">${subtitle}</p>
       <p class="meta-note legal-updated">${updatedLabel}</p>
       <div class="legal-content">
