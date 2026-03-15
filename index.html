@@ -17,7 +17,37 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="/" />
-    <link rel="stylesheet" href="styles.css" />
+
+    <!--
+      Central cache-busting version for static assets.
+      Bump this value on deploys that modify CSS/JS/images to force fast client refresh.
+    -->
+    <meta name="sacredseed-asset-version" content="2026.03.15.1" />
+    <script>
+      (() => {
+        const versionTag = document.head.querySelector('meta[name="sacredseed-asset-version"]');
+        const version = versionTag?.content?.trim() || 'dev';
+
+        const addVersionParam = (inputUrl) => {
+          if (!inputUrl || /^data:/i.test(inputUrl)) {
+            return inputUrl;
+          }
+
+          const [base, hash = ''] = inputUrl.split('#');
+          const separator = base.includes('?') ? '&' : '?';
+          const versioned = `${base}${separator}v=${encodeURIComponent(version)}`;
+          return hash ? `${versioned}#${hash}` : versioned;
+        };
+
+        window.__SACREDSEED_ASSET_VERSION__ = version;
+        window.__sacredseedAssetUrl = addVersionParam;
+
+        const stylesheet = document.createElement('link');
+        stylesheet.rel = 'stylesheet';
+        stylesheet.href = addVersionParam('styles.css');
+        document.head.append(stylesheet);
+      })();
+    </script>
   </head>
   <body>
     <main class="site-shell">
@@ -48,6 +78,9 @@
       </footer>
     </main>
 
-    <script type="module" src="src/main.js"></script>
+    <script type="module">
+      const entrypoint = window.__sacredseedAssetUrl?.('src/main.js') || 'src/main.js';
+      import(entrypoint);
+    </script>
   </body>
 </html>
