@@ -146,3 +146,15 @@ SacredSeed now includes a dedicated image architecture under `assets/images/`:
 - Use published site paths in `assets/images/<category>/`
 
 Full usage instructions and naming conventions are documented in `assets/images/README.md`.
+
+## Deployment (main branch)
+
+SacredSeed is configured to auto-deploy to **GitHub Pages** whenever `main` receives a push. The workflow is defined in `.github/workflows/deploy-pages.yml`.
+
+Expected production URL:
+
+- `https://wordsofcreation.github.io/SacredSeed/`
+
+If your GitHub org/user or repository name differs, use:
+
+- `https://<owner>.github.io/<repo>/`
