@@ -178,3 +178,32 @@ SacredSeed uses a centralized asset version string to bust browser caches for st
 3. Deploy to GitHub Pages.
 
 After bumping the version, browsers request fresh copies of CSS, JavaScript, and local image assets without requiring users to hard refresh.
+
+## Sitemap and robots automation
+
+SacredSeed generates `sitemap.xml` and `robots.txt` from route/content sources rather than a hardcoded URL list.
+
+- Generator script: `scripts/generate-sitemap.mjs`
+- Canonical URL configuration: `src/config/siteConfig.js` (`canonicalBaseUrl`)
+- Automatic deploy integration: `.github/workflows/deploy-pages.yml` runs sitemap generation before uploading the Pages artifact.
+
+### Included URLs
+
+The generator includes only canonical public routes:
+
+- Static sections (home, materia medica, collections, pathways, seasons, articles, preparations, about)
+- Herb detail routes from herb batch data files
+- Collection/pathway/season/article detail routes from their data definitions
+
+It excludes hash/query variants, duplicate URLs, localhost URLs, and noindex utility pages (search, privacy policy, terms, 404).
+
+### Regenerate locally
+
+```bash
+npm run generate:sitemap
+```
+
+This rewrites:
+
+- `sitemap.xml`
+- `robots.txt`
