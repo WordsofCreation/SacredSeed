@@ -77,5 +77,5 @@ export function getEditorialArticleBySlug(slug) {
 }
 
 export function getStartHereArticle() {
-  return getEditorialArticles().find((article) => article.slug === 'how-to-start-learning-herbs') ?? null;
+  return getEditorialArticles().find((article) => article.slug === 'what-is-herbalism') ?? null;
 }
