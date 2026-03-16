@@ -803,6 +803,147 @@ export const editorialArticleDefinitions = [
     ]
   },
   {
+    slug: 'how-to-read-an-herb-monograph',
+    title: 'How to Read an Herb Monograph: A Beginner’s Guide to Understanding Herbal Profiles',
+    summary:
+      'Learn how to read herb monographs with confidence, including names, plant parts, actions, energetics, preparations, safety notes, and comparison across sources.',
+    intro:
+      'An herb monograph is a structured plant profile. Once you understand each section, herbal books become easier to read and your study becomes more precise, practical, and safety-aware.',
+    estimatedReadMinutes: 16,
+    tags: [
+      'how to read an herb monograph',
+      'beginner herbalism',
+      'materia medica basics',
+      'herbal actions explained',
+      'herbal preparations',
+      'herbal safety notes'
+    ],
+    relatedCategories: ['Foundational literacy', 'Beginner herbal study', 'Herbal medicine basics'],
+    relatedTags: ['materia medica basics', 'pattern recognition', 'safety-first learning'],
+    searchKeywords: [
+      'how to read an herb monograph',
+      'herb monograph for beginners',
+      'understanding herbal profiles',
+      'how to study materia medica',
+      'herbal actions and energetics',
+      'herbal safety notes beginners'
+    ],
+    sections: [
+      {
+        heading: 'What Is an Herb Monograph?',
+        paragraphs: [
+          'An herb monograph is a detailed reference entry focused on one plant. It gathers key information into a study format so learners can compare plants, revisit notes, and build pattern recognition over time.',
+          'Most monographs include common and Latin names, plant family, parts used, taste, energetics, actions, preparations, and safety notes. Some sources also add botany, history, constituents, dosage ranges, and research context.'
+        ]
+      },
+      {
+        heading: 'Why Monographs Matter for Beginners',
+        paragraphs: [
+          'Short herb summaries can spark interest but often create fragmented understanding. Monographs provide a fuller picture of the plant and how it is traditionally understood in practice.',
+          'The beginner goal is not memorizing every detail at once. It is learning what each monograph section is trying to communicate so study feels coherent instead of overwhelming.'
+        ]
+      },
+      {
+        heading: 'Start With Names and Plant Family',
+        paragraphs: [
+          'Read the common name and Latin name together. Latin names reduce confusion because common names can overlap across multiple plants or regions.',
+          'Plant family adds useful context for pattern recognition. It does not define everything about an herb, but it helps learners notice shared aromatic, structural, or traditional tendencies across related plants.'
+        ]
+      },
+      {
+        heading: 'Parts Used: Core Study Detail',
+        paragraphs: [
+          'Monographs usually specify the part used—leaf, flower, root, bark, seed, berry, resin, or aerial parts. This detail is essential because different parts are not interchangeable.',
+          'The part used influences taste, energetics, preparation style, and safety framing. A root may be decocted while a leaf is infused, and each material can carry different practical implications.'
+        ]
+      },
+      {
+        heading: 'Taste, Energetics, and Actions',
+        paragraphs: [
+          'Taste and energetics describe how an herb is experienced and traditionally interpreted. Terms like bitter, aromatic, astringent, warming, cooling, drying, or moistening offer practical clues.',
+          'Actions such as nervine, carminative, demulcent, diaphoretic, and tonic show a cluster of tendencies rather than a single use claim. This helps beginners move beyond one-herb-one-problem thinking.'
+        ]
+      },
+      {
+        heading: 'Preparations and Real-World Use',
+        paragraphs: [
+          'Preparation sections translate theory into practice by showing how herbs are commonly worked with: tea, infusion, decoction, tincture, syrup, vinegar, oxymel, oils, salves, and compresses.',
+          'A useful reading habit is checking whether the preparation matches the plant material and intended context. Preparation is part of the herb’s identity, not a minor afterthought.'
+        ]
+      },
+      {
+        heading: 'Never Skip Safety Notes',
+        paragraphs: [
+          'Safety sections include contraindications, cautions, interaction considerations, and context boundaries. Beginners should read these with the same attention given to actions and uses.',
+          'Traditional use language does not mean universal guarantee. Responsible monograph reading distinguishes history of use from blanket promises and keeps claims grounded.'
+        ]
+      },
+      {
+        heading: 'Comparing Sources and Taking Notes',
+        paragraphs: [
+          'Comparing monographs from careful sources builds discernment. Look for agreement on names, parts used, actions, preparations, and cautions, then note where frameworks differ.',
+          'Keep a simple notebook template: common and Latin names, family, part used, taste and energetics, actions, preparations, safety notes, and personal observations. Repetition and review matter more than cramming.'
+        ]
+      },
+      {
+        heading: 'A Beginner Reading Strategy',
+        paragraphs: [
+          'Read in sequence: names, part used, taste and energetics, actions, preparations, safety, and a short personal summary. If possible, compare with a second trusted source.',
+          'This structured approach turns dense monographs into understandable pieces and helps herbal learning become practical, accurate, and sustainable over time.'
+        ]
+      },
+      {
+        heading: 'Final Thoughts',
+        paragraphs: [
+          'Learning to read monographs is a foundational herbal skill. It teaches precision through naming, discernment through safety, and relationship through sensory and preparation-based study.',
+          'With repeated use, monographs become less technical and more meaningful, helping beginners move from scattered facts into grounded understanding.'
+        ]
+      },
+      {
+        heading: 'Quick Answer',
+        paragraphs: [
+          'An herb monograph is a structured herbal profile that explains a plant’s name, part used, actions, energetics, preparations, and safety notes, and learning to read one helps beginners understand herbs more deeply.'
+        ]
+      },
+      {
+        heading: 'Key Takeaways',
+        paragraphs: [
+          'Monographs are detailed plant references; Latin name, part used, and family improve accuracy; taste, energetics, and actions clarify traditional understanding; preparation and safety are essential; and comparing sources over time builds stronger herbal discernment.'
+        ]
+      }
+    ],
+    disclaimer:
+      'This article is for educational purposes only and is not medical advice. Consult a qualified professional for diagnosis, treatment decisions, pregnancy and breastfeeding questions, potential drug-herb interactions, and serious or persistent symptoms.',
+    relatedHerbSlugs: [
+      'mentha-x-piperita',
+      'matricaria-chamomilla',
+      'melissa-officinalis',
+      'zingiber-officinale',
+      'althea-officinalis',
+      'glycyrrhiza-glabra'
+    ],
+    relatedSeasonalCollectionSlugs: ['spring-herbs', 'winter-tea-and-comfort-herbs'],
+    relatedRoutes: [
+      { label: 'What Herbalism Is: A Beginner’s Introduction', href: '#/articles/what-is-herbalism' },
+      {
+        label: 'How to Start Learning Herbs Without Getting Overwhelmed',
+        href: '#/articles/how-to-start-learning-herbs-without-getting-overwhelmed'
+      },
+      {
+        label: 'Tea, Tincture, Infusion, Decoction, and Salve',
+        href: '#/articles/tea-tincture-infusion-decoction-and-salve'
+      },
+      {
+        label: 'Herbal Actions Explained in Plain English',
+        href: '#/articles/herbal-actions-explained-in-plain-english'
+      },
+      {
+        label: 'Safety First: Contraindications, Dosage, and Responsible Use',
+        href: '#/articles/safety-first-contraindications-dosage-and-responsible-use'
+      }
+    ]
+  },
+  {
     slug: 'how-to-read-herb-profiles',
     title: 'How to Read Herb Profiles with Clinical Clarity',
     summary:
