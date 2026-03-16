@@ -658,6 +658,151 @@ export const editorialArticleDefinitions = [
     ]
   },
   {
+    slug: 'safety-first-contraindications-dosage-and-responsible-use',
+    title: 'Safety First: Contraindications, Dosage, and Why Natural Does Not Always Mean Safe',
+    summary:
+      'Learn the basics of herbal safety, including contraindications, dosage, interactions, plant identification, and why natural does not automatically mean safe in beginner herbalism.',
+    intro:
+      'Good beginner herbalism is grounded in safety: correct plant identification, context-aware contraindications, preparation literacy, and conservative use boundaries.',
+    estimatedReadMinutes: 18,
+    tags: [
+      'herbal safety for beginners',
+      'contraindications and dosage',
+      'natural does not mean safe',
+      'herb and medication interactions',
+      'responsible herbal use',
+      'beginner herbal safety mindset'
+    ],
+    relatedCategories: ['Foundational literacy', 'Beginner herbal study', 'Safety and responsible use'],
+    relatedTags: ['contraindications', 'dose awareness', 'safety-first learning'],
+    searchKeywords: [
+      'herbal safety for beginners',
+      'what is a contraindication in herbalism',
+      'herbal dosage basics',
+      'natural does not always mean safe',
+      'herb interactions with medication',
+      'safe herbalism mindset'
+    ],
+    sections: [
+      {
+        heading: 'Why Safety Belongs at the Beginning',
+        paragraphs: [
+          'One of the most important lessons in beginner herbal education is that natural does not automatically mean safe. Plants can be nourishing, medicinal, irritating, or inappropriate depending on person, preparation, amount, and context.',
+          'Good herbalism is not careless herbalism. Trustworthy study includes asking whether identification is certain, preparation is appropriate, and the situation is suitable for home learning or professional support.'
+        ]
+      },
+      {
+        heading: 'What Contraindications Mean',
+        paragraphs: [
+          'A contraindication is a reason an herb may be inappropriate in a specific situation. This may involve pregnancy, breastfeeding, medications, age, medical conditions, sensitivities, or limits on duration and concentration.',
+          'Contraindication does not always mean danger in every setting. It means caution belongs to context, and practical herbal decisions should always ask: for whom, in what form, and under what conditions?'
+        ]
+      },
+      {
+        heading: 'Dosage, Duration, and Form All Change Effect',
+        paragraphs: [
+          'A common beginner mistake is assuming more is better. In herbal practice, dosage is part of the preparation and significantly changes effects and tolerability.',
+          'A light tea, long infusion, strong decoction, concentrated tincture, and culinary use are not interchangeable. Duration matters too: some herbs are suitable short term but less appropriate as long-term daily habits.'
+        ]
+      },
+      {
+        heading: 'Preparation Is a Safety Variable',
+        paragraphs: [
+          'Safety cannot be separated from method. A topical salve is not the same as an internal extract, and a kitchen herb in food is not equivalent to a concentrated supplement.',
+          'Without form and dose context, online safety claims become misleading. Beginners are safest when every herb question includes the preparation method.'
+        ]
+      },
+      {
+        heading: 'Correct Plant Identification Comes First',
+        paragraphs: [
+          'Accurate plant identification is foundational. If identification is uncertain, every claim about safety or use becomes unreliable.',
+          'Common-name confusion, lookalikes, and poor sourcing can create serious risk. Beginners should prioritize Latin names, reliable suppliers, and never use a plant medicinally when identity is unclear.'
+        ]
+      },
+      {
+        heading: 'Medication Interactions and Medical Complexity',
+        paragraphs: [
+          'Herbs can affect blood clotting, blood pressure, blood sugar, sedation, digestion, and metabolic pathways. Some may amplify or interfere with prescription medications.',
+          'People with chronic conditions, planned surgeries, or complex drug regimens should use extra caution and qualified guidance before adding medicinal herbs.'
+        ]
+      },
+      {
+        heading: 'Extra Caution for Pregnancy, Breastfeeding, and Children',
+        paragraphs: [
+          'Family contexts require stronger safety boundaries. Herbs appropriate for healthy adults may be unsuitable in pregnancy, unclear for breastfeeding, or inappropriate for children.',
+          'Children are not small adults. Responsible family herbal care requires more conservative decision-making and often professional consultation.'
+        ]
+      },
+      {
+        heading: 'Quality and Sourcing Affect Safety',
+        paragraphs: [
+          'Even a well-chosen herb can become risky when quality is poor. Contamination, mislabeling, adulteration, mold, and degraded storage conditions all matter.',
+          'Safety includes buying from reputable sources, checking freshness and integrity, and treating sourcing as part of responsible herbal craft.'
+        ]
+      },
+      {
+        heading: 'Use Discernment With Online Advice',
+        paragraphs: [
+          'Online herbal content can be a useful doorway, but many claims omit contraindications, flatten preparation nuance, or overpromise outcomes.',
+          'Better sources include context, limits, and safety framing. Beginners should be cautious of simple one-line recommendations that skip dose, duration, and population cautions.'
+        ]
+      },
+      {
+        heading: 'A Practical Beginner Safety Mindset',
+        paragraphs: [
+          'Strong safety habits include confirming plant identity, learning Latin names and plant parts, understanding preparation, checking contraindications and interactions, and staying conservative with dose and duration.',
+          'Responsible use also means knowing when beginner education is not enough. Severe symptoms, worsening patterns, allergy risk, toxic exposure, and medically complex situations require qualified care.'
+        ]
+      },
+      {
+        heading: 'Final Thoughts',
+        paragraphs: [
+          'Herbalism can be gentle and deeply supportive, but only when it is practiced with respect for potency, context, and boundaries.',
+          'Contraindications, identification, preparation, dosage, duration, interaction awareness, and sourcing are not side notes. They are core herbal literacy.'
+        ]
+      },
+      {
+        heading: 'Quick Answer',
+        paragraphs: [
+          'Herbal safety means understanding that plants can have contraindications, dosage limits, interactions, and special cautions, so natural does not automatically mean safe.'
+        ]
+      },
+      {
+        heading: 'Key Takeaways',
+        paragraphs: [
+          'Natural does not always mean harmless; contraindications explain context-based caution; dose, preparation, and duration influence safety; correct identification is foundational; pregnancy, breastfeeding, medications, children, and chronic illness require extra care; and responsible herbalism includes knowing when to seek qualified support.'
+        ]
+      }
+    ],
+    disclaimer:
+      'This article is for educational purposes only and is not medical advice. Consult a qualified professional for diagnosis, treatment decisions, pregnancy and breastfeeding questions, potential drug-herb interactions, and serious or persistent symptoms.',
+    relatedHerbSlugs: [
+      'urtica-dioica',
+      'matricaria-chamomilla',
+      'mentha-x-piperita',
+      'zingiber-officinale',
+      'glycyrrhiza-glabra',
+      'hypericum-perforatum'
+    ],
+    relatedSeasonalCollectionSlugs: ['spring-herbs', 'winter-tea-and-comfort-herbs'],
+    relatedRoutes: [
+      { label: 'What Herbalism Is: A Beginner’s Introduction', href: '#/articles/what-is-herbalism' },
+      {
+        label: 'How to Start Learning Herbs Without Getting Overwhelmed',
+        href: '#/articles/how-to-start-learning-herbs-without-getting-overwhelmed'
+      },
+      {
+        label: 'Tea, Tincture, Infusion, Decoction, and Salve',
+        href: '#/articles/tea-tincture-infusion-decoction-and-salve'
+      },
+      {
+        label: 'Herbal Actions Explained in Plain English',
+        href: '#/articles/herbal-actions-explained-in-plain-english'
+      },
+      { label: 'How to Read an Herb Monograph', href: '#/articles/how-to-read-an-herb-monograph' }
+    ]
+  },
+  {
     slug: 'how-to-read-herb-profiles',
     title: 'How to Read Herb Profiles with Clinical Clarity',
     summary:
