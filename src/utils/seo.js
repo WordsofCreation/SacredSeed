@@ -1,3 +1,5 @@
+import { getCanonicalBaseUrl, getCanonicalPageUrl } from '../config/siteConfig.js';
+
 const SITE_SEO = {
   siteName: 'SacredSeed',
   baseTitle: 'SacredSeed | Professional Herbal Knowledge Platform',
@@ -14,25 +16,32 @@ const SITE_SEO = {
   }
 };
 
-function getOrigin() {
-  return window.location.origin || 'http://localhost:4173';
+function normalizeCanonicalPath(pathname = '/') {
+  if (!pathname) {
+    return '/';
+  }
+
+  if (pathname.startsWith('#/')) {
+    return pathname.slice(1);
+  }
+
+  if (pathname === '#') {
+    return '/';
+  }
+
+  return pathname.startsWith('/') ? pathname : `/${pathname}`;
 }
 
 function buildAbsoluteUrl(pathname = '/') {
-  const normalized = pathname.startsWith('/') ? pathname : `/${pathname}`;
-  return new URL(normalized, getOrigin()).toString();
+  return getCanonicalPageUrl(normalizeCanonicalPath(pathname));
 }
 
 function getCanonicalUrl(canonicalPath) {
   if (canonicalPath) {
-    if (canonicalPath.startsWith('#')) {
-      return `${window.location.origin}/${canonicalPath}`;
-    }
-
     return buildAbsoluteUrl(canonicalPath);
   }
 
-  return `${window.location.origin}${window.location.pathname}${window.location.search}${window.location.hash}`;
+  return buildAbsoluteUrl(window.location.pathname || '/');
 }
 
 function upsertMetaTag(selector, attributeName, attributeValue, content) {

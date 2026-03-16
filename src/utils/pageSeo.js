@@ -1,4 +1,5 @@
 import { buildBaseSchema, buildSiteSchema, getSiteSeoConfig } from './seo.js';
+import { getCanonicalPageUrl } from '../config/siteConfig.js';
 import { withAssetVersion } from './assetVersion.js';
 
 const site = getSiteSeoConfig();
@@ -19,7 +20,7 @@ export function getMateriaMedicaSeo() {
         pageType: 'CollectionPage',
         title,
         description,
-        canonicalUrl: new URL('/#/materia-medica', window.location.origin).toString()
+        canonicalUrl: getCanonicalPageUrl('/materia-medica')
       })
     ]
   };
@@ -43,7 +44,7 @@ export function getHerbProfileSeo(herb) {
         pageType: 'Article',
         title,
         description,
-        canonicalUrl: new URL(`/#/herbs/${encodeURIComponent(herb.slug)}`, window.location.origin).toString()
+        canonicalUrl: getCanonicalPageUrl(`/herbs/${encodeURIComponent(herb.slug)}`)
       })
     ]
   };
@@ -64,7 +65,7 @@ export function getPreparationLibrarySeo() {
         pageType: 'CollectionPage',
         title,
         description,
-        canonicalUrl: new URL('/#/preparations', window.location.origin).toString()
+        canonicalUrl: getCanonicalPageUrl('/preparations')
       })
     ]
   };
@@ -85,7 +86,7 @@ export function getCollectionsSeo() {
         pageType: 'CollectionPage',
         title,
         description,
-        canonicalUrl: new URL('/#/collections', window.location.origin).toString()
+        canonicalUrl: getCanonicalPageUrl('/collections')
       })
     ]
   };
@@ -105,7 +106,7 @@ export function getCollectionDetailSeo(collection) {
         pageType: 'CollectionPage',
         title,
         description,
-        canonicalUrl: new URL(`/#/collections/${encodeURIComponent(collection.slug)}`, window.location.origin).toString()
+        canonicalUrl: getCanonicalPageUrl(`/collections/${encodeURIComponent(collection.slug)}`)
       })
     ]
   };
@@ -126,7 +127,7 @@ export function getLearningPathwaysSeo() {
         pageType: 'CollectionPage',
         title,
         description,
-        canonicalUrl: new URL('/#/pathways', window.location.origin).toString()
+        canonicalUrl: getCanonicalPageUrl('/pathways')
       })
     ]
   };
@@ -146,7 +147,7 @@ export function getLearningPathwayDetailSeo(pathway) {
         pageType: 'CollectionPage',
         title,
         description,
-        canonicalUrl: new URL(`/#/pathways/${encodeURIComponent(pathway.slug)}`, window.location.origin).toString()
+        canonicalUrl: getCanonicalPageUrl(`/pathways/${encodeURIComponent(pathway.slug)}`)
       })
     ]
   };
@@ -167,7 +168,7 @@ export function getSeasonalCollectionsSeo() {
         pageType: 'CollectionPage',
         title,
         description,
-        canonicalUrl: new URL('/#/seasons', window.location.origin).toString()
+        canonicalUrl: getCanonicalPageUrl('/seasons')
       })
     ]
   };
@@ -187,7 +188,7 @@ export function getSeasonalCollectionDetailSeo(collection) {
         pageType: 'CollectionPage',
         title,
         description,
-        canonicalUrl: new URL(`/#/seasons/${encodeURIComponent(collection.slug)}`, window.location.origin).toString()
+        canonicalUrl: getCanonicalPageUrl(`/seasons/${encodeURIComponent(collection.slug)}`)
       })
     ]
   };
@@ -208,7 +209,7 @@ export function getEditorialArticlesSeo() {
         pageType: 'CollectionPage',
         title,
         description,
-        canonicalUrl: new URL('/#/articles', window.location.origin).toString()
+        canonicalUrl: getCanonicalPageUrl('/articles')
       })
     ]
   };
@@ -217,7 +218,7 @@ export function getEditorialArticlesSeo() {
 export function getEditorialArticleSeo(article) {
   const title = `${article.title} | SacredSeed Editorial Guide`;
   const description = article.summary || article.intro;
-  const canonicalUrl = new URL(`/#/articles/${encodeURIComponent(article.slug)}`, window.location.origin).toString();
+  const canonicalUrl = getCanonicalPageUrl(`/articles/${encodeURIComponent(article.slug)}`);
 
   return {
     title,
@@ -248,7 +249,7 @@ export function getEditorialArticleSeo(article) {
         isPartOf: {
           '@type': 'WebSite',
           name: site.siteName,
-          url: window.location.origin
+          url: getCanonicalPageUrl('/')
         }
       }
     ]
@@ -271,7 +272,7 @@ export function getSearchSeo() {
         pageType: 'SearchResultsPage',
         title,
         description,
-        canonicalUrl: new URL('/#/search', window.location.origin).toString()
+        canonicalUrl: getCanonicalPageUrl('/search')
       })
     ]
   };
@@ -292,7 +293,7 @@ export function getAboutSeo() {
         pageType: 'AboutPage',
         title,
         description,
-        canonicalUrl: new URL('/#/about', window.location.origin).toString()
+        canonicalUrl: getCanonicalPageUrl('/about')
       })
     ]
   };
@@ -314,7 +315,7 @@ export function getPrivacySeo() {
         pageType: 'WebPage',
         title,
         description,
-        canonicalUrl: new URL('/#/privacy-policy', window.location.origin).toString()
+        canonicalUrl: getCanonicalPageUrl('/privacy-policy')
       })
     ]
   };
@@ -336,7 +337,7 @@ export function getTermsSeo() {
         pageType: 'WebPage',
         title,
         description,
-        canonicalUrl: new URL('/#/terms-of-use', window.location.origin).toString()
+        canonicalUrl: getCanonicalPageUrl('/terms-of-use')
       })
     ]
   };
@@ -356,7 +357,7 @@ export function getNotFoundSeo() {
         pageType: 'WebPage',
         title,
         description,
-        canonicalUrl: `${window.location.origin}${window.location.pathname}${window.location.search}`
+        canonicalUrl: getCanonicalPageUrl(window.location.pathname || '/')
       })
     ]
   };
