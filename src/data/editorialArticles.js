@@ -324,6 +324,169 @@ export const editorialArticleDefinitions = [
     ]
   },
   {
+    slug: 'tea-tincture-infusion-decoction-and-salve',
+    title: 'Tea, Tincture, Infusion, Decoction, and Salve: Understanding Herbal Preparations',
+    summary:
+      'Learn the difference between herbal teas, tinctures, infusions, decoctions, and salves, and why preparation method is foundational in beginner herbalism.',
+    intro:
+      'An herb cannot be understood apart from how it is prepared. Each method changes what is extracted, how concentrated it is, and how it is traditionally used.',
+    estimatedReadMinutes: 16,
+    tags: [
+      'herbal preparations',
+      'tea vs infusion',
+      'decoction basics',
+      'what is a tincture',
+      'what is a salve',
+      'beginner herbalism'
+    ],
+    relatedCategories: ['Foundational literacy', 'Beginner herbal study', 'Preparation literacy'],
+    relatedTags: ['preparation literacy', 'beginner herbal education', 'herbal methods'],
+    searchKeywords: [
+      'tea tincture infusion decoction salve',
+      'difference between tea and infusion',
+      'what is an herbal decoction',
+      'what is herbal tincture',
+      'what is herbal salve',
+      'herbal preparation methods'
+    ],
+    sections: [
+      {
+        heading: 'Why Herbal Preparations Matter',
+        paragraphs: [
+          'Plants contain many constituents, and those constituents are not all extracted in the same way. Some are drawn out well in hot water, some are better extracted in alcohol, and some are most useful when infused into oil for external use.',
+          'Preparation is not merely about convenience. It affects concentration, application, and the character of the final product. A quick mint tea is not the same as a long nettle infusion, and a root decoction is not the same as an alcohol extract.',
+          'Once beginners understand this, herbs become less one-dimensional. A single plant can be approached through multiple forms, each with a distinct purpose and tradition of use.'
+        ]
+      },
+      {
+        heading: 'What Is an Herbal Tea?',
+        paragraphs: [
+          'In everyday use, tea can mean any herb steeped in hot water. In herbal education, tea often means a simpler short-steep hot-water preparation.',
+          'Herbal teas are commonly made with leaves, flowers, and aromatic plants like chamomile, peppermint, lemon balm, and tulsi that release qualities readily into water.',
+          'Tea is approachable for beginners because it is familiar and sensory. It is often a starting point, though it is not always the strongest or most appropriate form for every plant.'
+        ]
+      },
+      {
+        heading: 'What Is an Infusion?',
+        paragraphs: [
+          'An infusion is also water-based, but usually implies longer steeping and often a stronger preparation than a casual tea.',
+          'Nettle, oatstraw, and red clover are common examples where a longer infusion is used in beginner practice.',
+          'This distinction helps students understand that when a source recommends an infusion, preparation time and strength are often part of the recommendation.'
+        ]
+      },
+      {
+        heading: 'What Is a Decoction?',
+        paragraphs: [
+          'A decoction is made by simmering herbs in water rather than only steeping. It is commonly used for tougher plant material such as roots, bark, seeds, or woody stems.',
+          'Ginger root, burdock root, cinnamon bark, and astragalus root are frequently prepared this way because sustained heat helps extract constituents from dense material.',
+          'For beginners, decoctions illustrate a practical principle: delicate herbs often steep, while tougher herbs often need longer heat and time.'
+        ]
+      },
+      {
+        heading: 'What Is a Tincture?',
+        paragraphs: [
+          'A tincture is a concentrated liquid herbal extract usually made with alcohol or a mix of alcohol and water.',
+          'Tinctures are valued for portability, shelf stability, and small serving size. They can also extract a broader range of constituents for some herbs compared with water alone.',
+          'Tinctures are not automatically better than tea or infusion; they are a different method with different tradeoffs and use cases.'
+        ]
+      },
+      {
+        heading: 'What Is a Salve?',
+        paragraphs: [
+          'A salve is a topical preparation made by infusing herbs into oil and then thickening that oil, often with beeswax, into a semi-solid form.',
+          'Salves are usually intended for external use. This helps beginners see that herbal preparation is not only about what is consumed internally.',
+          'Calendula is a classic beginner example for infused oils and salves, often alongside other topical herbs depending on tradition and purpose.'
+        ]
+      },
+      {
+        heading: 'Tea vs. Infusion: Why the Difference Matters',
+        paragraphs: [
+          'In casual language tea and infusion overlap, but in herbal education the distinction can clarify strength and intention.',
+          'Tea is often lighter and shorter-steeped. Infusion is often longer-steeped and potentially stronger, depending on material and ratio.',
+          'This helps beginners reconcile why different sources describe the same herb differently without necessarily contradicting each other.'
+        ]
+      },
+      {
+        heading: 'Decoction vs. Infusion: Choosing by Plant Material',
+        paragraphs: [
+          'A practical beginner framework is to match method to texture: leaves and flowers often suit infusion, while roots, bark, seeds, and mushrooms often suit decoction.',
+          'This is not absolute, but it creates useful intuition for selecting an appropriate water-based method.',
+          'Asking both what the herb is and what plant part is being prepared leads to better decisions than relying on herb names alone.'
+        ]
+      },
+      {
+        heading: 'Internal and External Preparations',
+        paragraphs: [
+          'Teas, infusions, decoctions, and tinctures are usually discussed as internal preparations, while salves are typically topical and external.',
+          'Purpose and preparation are linked. Some plants are best known for skin-focused preparations, while others are more commonly prepared for internal contexts.',
+          'Beginners build clearer judgment when they ask how a preparation is used and where it is applied, not only which plant is involved.'
+        ]
+      },
+      {
+        heading: 'Why the Same Herb May Be Described Differently',
+        paragraphs: [
+          'A frequent beginner confusion is seeing the same herb described as gentle in one source and potent in another, or recommended in different forms.',
+          'The preparation method is often the missing context. Fresh versus dried material, short steep versus long infusion, decoction versus tincture, and topical oil versus internal water prep can all change the experience.',
+          'Preparation, dose, duration, and tradition shape description; this is why context matters in herbal reading.'
+        ]
+      },
+      {
+        heading: 'A Good Beginner Approach to Preparations',
+        paragraphs: [
+          'Beginners do not need to master every method at once. A gradual sequence can reduce overwhelm while building practical skill.',
+          'A useful progression is: simple teas, then one or two longer infusions, then a basic root decoction, then tincture literacy, and finally infused oils and salves for topical work.',
+          'This stepwise approach builds confidence and helps students connect terminology to real craft practice.'
+        ]
+      },
+      {
+        heading: 'Final Thoughts',
+        paragraphs: [
+          'Tea, tincture, infusion, decoction, and salve are not just technical labels. They are different ways of relating to plants, each shaping extraction, concentration, and application.',
+          'Once preparation literacy clicks, herbalism becomes more coherent and grounded. Method, material, and context start to make practical sense together.'
+        ]
+      },
+      {
+        heading: 'Quick Answer',
+        paragraphs: [
+          'Tea, infusion, decoction, tincture, and salve are distinct herbal preparation methods, and each changes how an herb is extracted, applied, and traditionally used.'
+        ]
+      },
+      {
+        heading: 'Key Takeaways',
+        paragraphs: [
+          'Preparation method is part of herbal knowledge; tea and infusion differ mainly by steeping style and strength; decoctions are simmered and usually used for tougher material; tinctures are concentrated liquid extracts often made with alcohol; salves are oil-based topical preparations; and the same herb may be interpreted differently depending on form.'
+        ]
+      }
+    ],
+    disclaimer:
+      'This article is for educational purposes only and is not medical advice. Consult a qualified professional for diagnosis, treatment decisions, pregnancy and breastfeeding questions, potential drug-herb interactions, and serious or persistent symptoms.',
+    relatedHerbSlugs: [
+      'matricaria-chamomilla',
+      'mentha-x-piperita',
+      'zingiber-officinale',
+      'urtica-dioica',
+      'calendula-officinalis',
+      'althaea-officinalis'
+    ],
+    relatedSeasonalCollectionSlugs: ['winter-tea-and-comfort-herbs', 'spring-herbs'],
+    relatedRoutes: [
+      { label: 'What Herbalism Is: A Beginner’s Introduction', href: '#/articles/what-is-herbalism' },
+      {
+        label: 'How to Start Learning Herbs Without Getting Overwhelmed',
+        href: '#/articles/how-to-start-learning-herbs-without-getting-overwhelmed'
+      },
+      {
+        label: 'Herbal Actions Explained in Plain English',
+        href: '#/articles/herbal-actions-explained-in-plain-english'
+      },
+      {
+        label: 'Safety First: Contraindications, Dosage, and Responsible Use',
+        href: '#/articles/safety-first-contraindications-dosage-and-responsible-use'
+      },
+      { label: 'How to Read an Herb Monograph', href: '#/articles/how-to-read-an-herb-monograph' }
+    ]
+  },
+  {
     slug: 'how-to-read-herb-profiles',
     title: 'How to Read Herb Profiles with Clinical Clarity',
     summary:
