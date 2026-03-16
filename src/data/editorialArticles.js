@@ -944,6 +944,154 @@ export const editorialArticleDefinitions = [
     ]
   },
   {
+    slug: 'food-herbs-medicinal-herbs-and-toxic-plants',
+    title: 'The Difference Between Food Herbs, Medicinal Herbs, and Toxic Plants',
+    summary:
+      'Learn how food herbs, medicinal herbs, and toxic plants differ in beginner herbalism, and why dose, preparation, identification, and context guide safe use.',
+    intro:
+      'A strong beginner foundation starts with categories: some plants are used like foods, some as intentional medicines, and some are toxic and should not be used casually.',
+    estimatedReadMinutes: 16,
+    tags: [
+      'food herbs vs medicinal herbs',
+      'toxic plants herbalism',
+      'beginner herbal safety',
+      'herbal dosage basics',
+      'plant identification safety',
+      'herbal preparation context'
+    ],
+    relatedCategories: ['Foundational literacy', 'Beginner herbal study', 'Herbal safety basics'],
+    relatedTags: ['safety-first learning', 'dosage awareness', 'preparation literacy'],
+    searchKeywords: [
+      'food herbs medicinal herbs toxic plants',
+      'difference between food herbs and medicinal herbs',
+      'beginner herbalism safety categories',
+      'toxic plants in herbalism',
+      'why dose and preparation matter with herbs',
+      'plant identification herbal safety'
+    ],
+    sections: [
+      {
+        heading: 'Why These Categories Matter',
+        paragraphs: [
+          'Not all plants belong in one safety category. Some are used daily as foods, some are used more intentionally as medicines, and some are toxic or inappropriate for ordinary home practice.',
+          'When beginners flatten every herb into a natural remedy, they miss the practical differences that prevent mistakes. Category-based thinking builds better judgment from the beginning.'
+        ]
+      },
+      {
+        heading: 'What Are Food Herbs?',
+        paragraphs: [
+          'Food herbs are plants commonly used in cooking, beverages, and nourishment. Familiar examples include parsley, basil, rosemary, thyme, mint, cinnamon, ginger, garlic, and fennel.',
+          'These herbs are often a gentle doorway into plant learning, but context still matters: culinary use is not automatically equivalent to concentrated extract use.'
+        ]
+      },
+      {
+        heading: 'Food Herbs Can Still Have Herbal Effects',
+        paragraphs: [
+          'Food herbs are not just flavor. Many culinary plants are traditionally associated with recognizable actions, which is one reason food and herbalism often overlap.',
+          'For beginners, this overlap is useful because it supports sensory learning through familiar preparations before moving into more concentrated forms.'
+        ]
+      },
+      {
+        heading: 'What Are Medicinal Herbs?',
+        paragraphs: [
+          'Medicinal herbs are used more intentionally for traditional health support. They may be prepared as teas, infusions, tinctures, oils, salves, or other forms depending on context.',
+          'This category ranges from gentle everyday herbs to more potent plants that demand stronger dosage clarity and safety literacy.'
+        ]
+      },
+      {
+        heading: 'Not All Medicinal Herbs Are Equal in Strength',
+        paragraphs: [
+          'Medicinal herbs exist on a spectrum of intensity. Some are mild and nourishing, while others are active enough that casual use is inappropriate.',
+          'Beginner education works best when it starts with gentler medicinal herbs and builds discernment before increasing complexity.'
+        ]
+      },
+      {
+        heading: 'What Makes a Plant Toxic?',
+        paragraphs: [
+          'A toxic plant can cause harm because of its chemistry, sometimes even at relatively small amounts or under particular preparation conditions.',
+          'Historical mention does not cancel toxicity. A long record of use is not the same as broad suitability for modern beginner practice.'
+        ]
+      },
+      {
+        heading: 'Why Dose and Preparation Change the Category',
+        paragraphs: [
+          'Dose can shift how a plant behaves. A food-level amount may be acceptable in meals while concentrated extracts, repeated high doses, or essential oil forms can change the safety picture.',
+          'Preparation also matters because water, alcohol, and concentrated distillation extract different compounds and potencies. Form is part of safety, not a minor detail.'
+        ]
+      },
+      {
+        heading: 'Identification Comes Before Use',
+        paragraphs: [
+          'Correct identification is foundational. Common names overlap, toxic lookalikes exist, and guessing at identity is a major preventable risk.',
+          'Use reliable sourcing, pay attention to Latin names, and do not ingest plants you cannot confidently identify.'
+        ]
+      },
+      {
+        heading: 'Some Plants Cross Categories',
+        paragraphs: [
+          'Some plants can be culinary in one context, medicinal in another, and problematic in excessive or inappropriate forms.',
+          'This is why labels alone are insufficient. The practical questions are what plant, which part, what preparation, how much, and for whom.'
+        ]
+      },
+      {
+        heading: 'A Practical Beginner Approach',
+        paragraphs: [
+          'Start with familiar food herbs and gentle medicinal herbs. Build preparation skill and safety habits through teas, infusions, and simple topical work before exploring stronger territory.',
+          'Study toxic plants as a respect category rather than an experimentation category. Learn to recognize risk without normalizing casual use.'
+        ]
+      },
+      {
+        heading: 'Final Thoughts',
+        paragraphs: [
+          'The distinction between food herbs, medicinal herbs, and toxic plants gives beginners a safer, more realistic map of herbal practice.',
+          'When identity, dose, preparation, and context are treated as core factors, herbal learning becomes clearer, more responsible, and more mature.'
+        ]
+      },
+      {
+        heading: 'Quick Answer',
+        paragraphs: [
+          'Food herbs are commonly used in everyday cooking, medicinal herbs are used more intentionally for traditional health support, and toxic plants can cause harm and should not be approached casually, especially by beginners.'
+        ]
+      },
+      {
+        heading: 'Key Takeaways',
+        paragraphs: [
+          'Not all plants belong in the same safety category; food herbs can still require caution in concentrated forms; medicinal herbs range from gentle to potent; toxic plants are not suitable for casual experimentation; and dose, preparation, and identification determine safe context.'
+        ]
+      }
+    ],
+    disclaimer:
+      'This article is for educational purposes only and is not medical advice. Consult a qualified professional for diagnosis, treatment decisions, pregnancy and breastfeeding questions, potential drug-herb interactions, and serious or persistent symptoms.',
+    relatedHerbSlugs: [
+      'mentha-x-piperita',
+      'zingiber-officinale',
+      'glycyrrhiza-glabra',
+      'urtica-dioica',
+      'matricaria-chamomilla',
+      'symphytum-officinale'
+    ],
+    relatedSeasonalCollectionSlugs: ['spring-herbs', 'winter-tea-and-comfort-herbs'],
+    relatedRoutes: [
+      { label: 'What Herbalism Is: A Beginner’s Introduction', href: '#/articles/what-is-herbalism' },
+      {
+        label: 'How to Start Learning Herbs Without Getting Overwhelmed',
+        href: '#/articles/how-to-start-learning-herbs-without-getting-overwhelmed'
+      },
+      {
+        label: 'Tea, Tincture, Infusion, Decoction, and Salve',
+        href: '#/articles/tea-tincture-infusion-decoction-and-salve'
+      },
+      {
+        label: 'Safety First: Contraindications, Dosage, and Responsible Use',
+        href: '#/articles/safety-first-contraindications-dosage-and-responsible-use'
+      },
+      {
+        label: 'How to Read an Herb Monograph',
+        href: '#/articles/how-to-read-an-herb-monograph'
+      }
+    ]
+  },
+  {
     slug: 'how-to-read-herb-profiles',
     title: 'How to Read Herb Profiles with Clinical Clarity',
     summary:
