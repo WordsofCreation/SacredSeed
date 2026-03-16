@@ -185,6 +185,7 @@ SacredSeed generates `sitemap.xml` and `robots.txt` from route/content sources r
 
 - Generator script: `scripts/generate-sitemap.mjs`
 - Canonical URL configuration: `src/config/siteConfig.js` (`canonicalBaseUrl`)
+- Build-time override: set `SACREDSEED_CANONICAL_BASE_URL` when generating sitemap files (used by GitHub Actions to match owner/repo automatically).
 - Automatic deploy integration: `.github/workflows/deploy-pages.yml` runs sitemap generation before uploading the Pages artifact.
 
 ### Included URLs
