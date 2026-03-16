@@ -79,3 +79,16 @@ export function getEditorialArticleBySlug(slug) {
 export function getStartHereArticle() {
   return getEditorialArticles().find((article) => article.slug === 'what-is-herbalism') ?? null;
 }
+
+export function getEditorialStartHereLinks() {
+  const preferredOrder = [
+    'what-is-herbalism',
+    'how-to-start-learning-herbs-without-getting-overwhelmed'
+  ];
+  const bySlug = new Map(getEditorialArticles().map((article) => [article.slug, article]));
+
+  return preferredOrder
+    .map((slug) => bySlug.get(slug))
+    .filter(Boolean)
+    .map((article) => ({ slug: article.slug, title: article.title }));
+}

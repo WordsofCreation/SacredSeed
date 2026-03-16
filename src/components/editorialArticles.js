@@ -25,7 +25,7 @@ function renderArticleSection(section) {
   `;
 }
 
-export function renderEditorialArticlesIndex(articles, startHereArticle) {
+export function renderEditorialArticlesIndex(articles, startHereArticle, startHereLinks = []) {
   return `
     <section class="section-shell materia-intro" aria-labelledby="articles-title">
       <div class="section-header">
@@ -37,6 +37,7 @@ export function renderEditorialArticlesIndex(articles, startHereArticle) {
         </p>
       </div>
       ${startHereArticle ? `<p class="meta-note"><strong>Start here:</strong> <a href="#/articles/${encodeURIComponent(startHereArticle.slug)}">${escapeHtml(startHereArticle.title)}</a>.</p>` : ''}
+      ${startHereLinks.length > 1 ? `<p class="meta-note"><strong>Then read:</strong> ${startHereLinks.slice(1).map((article) => `<a href="#/articles/${encodeURIComponent(article.slug)}">${escapeHtml(article.title)}</a>`).join(' · ')}.</p>` : ''}
     </section>
 
     <section class="home-section" aria-label="Editorial article list">
