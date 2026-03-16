@@ -164,6 +164,166 @@ export const editorialArticleDefinitions = [
     ]
   },
   {
+    slug: 'how-to-start-learning-herbs-without-getting-overwhelmed',
+    title: 'How to Start Learning Herbs Without Getting Overwhelmed',
+    summary:
+      'Learn a simple beginner path for studying herbs without overwhelm, including core preparations, safety, source quality, and practical note-taking habits.',
+    intro:
+      'A strong herbal foundation starts small: study a manageable group of herbs, build direct preparation experience, and practice safety-first learning over time.',
+    estimatedReadMinutes: 15,
+    tags: [
+      'learning herbs for beginners',
+      'beginner herbal education',
+      'herbalism study plan',
+      'how to learn herbalism',
+      'herbal safety basics',
+      'materia medica notebook'
+    ],
+    relatedCategories: ['Foundational literacy', 'Beginner herbal study', 'Herbal medicine basics'],
+    relatedTags: ['study rhythm', 'preparation literacy', 'safety-first learning'],
+    searchKeywords: [
+      'how to start learning herbs',
+      'learning herbs without overwhelm',
+      'beginner herbalism plan',
+      'how to study herbalism',
+      'herbal materia medica notebook',
+      'herbal safety for beginners'
+    ],
+    sections: [
+      {
+        heading: 'Why Beginners Feel Overwhelmed',
+        paragraphs: [
+          'Herbalism is broad by nature and touches botany, tradition, preparation methods, safety, ecology, and lived experience. That richness can feel overwhelming when beginners try to decide where to start.',
+          'Many learners take in too many herbs at once, mix conflicting frameworks without context, and assume they should master advanced concepts immediately. Herbal education becomes manageable when approached as a gradual discipline rather than a race.'
+        ]
+      },
+      {
+        heading: 'Start With a Small Group of Herbs',
+        paragraphs: [
+          'A practical beginning is to study five to ten gentle, commonly used herbs instead of trying to memorize large lists. This creates room for pattern recognition and depth.',
+          'Beginner-friendly examples include peppermint, chamomile, lemon balm, ginger, nettle, calendula, rose, and oatstraw. Learning fewer herbs early makes scent, taste, preparation, and common use easier to remember.'
+        ]
+      },
+      {
+        heading: 'Learn Each Herb Through Several Lenses',
+        paragraphs: [
+          'Avoid reducing herbs to one-line labels. For each herb, study common and Latin names, part used, taste and aroma, typical preparations, traditional actions, energetics, and safety notes.',
+          'This multi-lens approach turns an herb from a vague concept into a plant with character and context, which is how durable herbal memory is built.'
+        ]
+      },
+      {
+        heading: 'Let Direct Experience Be Part of Your Study',
+        paragraphs: [
+          'Books and teachers matter, but herbal learning strengthens through tasting, smelling, steeping, and observing. Direct experience makes study embodied rather than abstract.',
+          'Simple comparisons—such as tea versus long infusion, fresh versus dried plant, or culinary versus tincture preparation—teach practical differences that memorization alone cannot provide.'
+        ]
+      },
+      {
+        heading: 'Organize Your Learning in Simple Categories',
+        paragraphs: [
+          'Use basic categories to reduce information overload: preparation type, body-system focus, or core actions like bitters, nervines, demulcents, astringents, and aromatics.',
+          'Category-based learning helps you recognize patterns across related herbs and prevents the feeling that every new plant must be learned from zero.'
+        ]
+      },
+      {
+        heading: 'Keep a Beginner Materia Medica Notebook',
+        paragraphs: [
+          'Maintain notes in a consistent format—paper or digital—to build your own beginner materia medica over time.',
+          'Useful fields include common and Latin names, family, part used, energetics or taste, actions, preparations, safety notes, and personal observations. The goal is clarity and continuity, not perfection.'
+        ]
+      },
+      {
+        heading: 'Learn a Few Basic Preparation Methods Early',
+        paragraphs: [
+          'Many beginners feel stuck because they read about herbs without practicing basic preparation methods. Start with teas, long infusions, decoctions, tinctures, infused oils, and salves.',
+          'Preparation literacy clarifies why the same herb can be used differently by form and context, which reduces confusion and improves practical understanding.'
+        ]
+      },
+      {
+        heading: 'Do Not Confuse Information Volume With Mastery',
+        paragraphs: [
+          'Modern content volume can create the illusion of progress without grounding. Endless browsing rarely replaces repeated hands-on practice.',
+          'Confidence grows from revisiting core herbs, comparing sources, preparing herbs in real life, and building familiarity through repetition rather than novelty.'
+        ]
+      },
+      {
+        heading: 'Respect Safety From the Beginning',
+        paragraphs: [
+          'Safety is foundational, not advanced. Learn accurate naming, context-based cautions, contraindications, and the limits of self-study from day one.',
+          'Natural does not mean harmless; medication interactions, pregnancy considerations, population-specific cautions, and lookalike risks all require attention.'
+        ]
+      },
+      {
+        heading: 'Choose Trustworthy Sources and Compare Them',
+        paragraphs: [
+          'Different traditions and preparation styles can describe herbs differently. Compare careful sources and pay attention to where they align or diverge.',
+          'Reliable sources use context, distinguish traditional use from evidence, and avoid miracle language. Source discernment protects beginners from confusion.'
+        ]
+      },
+      {
+        heading: 'Create a Gentle Learning Rhythm',
+        paragraphs: [
+          'Use a repeatable cadence—such as one herb weekly or biweekly—with a simple loop: read, prepare, note, and review.',
+          'Consistent short study sessions build stronger long-term knowledge than occasional intense bursts driven by overwhelm.'
+        ]
+      },
+      {
+        heading: 'A Simple Beginner Plan',
+        paragraphs: [
+          'Choose five to ten gentle herbs, learn names and parts used, practice common preparations, and keep notes in a personal materia medica.',
+          'Study major actions in plain language, prioritize safety and contraindications, compare trustworthy sources, review regularly, and expand slowly as familiarity grows.'
+        ]
+      },
+      {
+        heading: 'Final Thoughts',
+        paragraphs: [
+          'Herbal learning does not need to feel chaotic. A small and steady beginning creates stronger roots than trying to know everything quickly.',
+          'Depth matters more than quantity at the start. Slow, structured learning often leads to the most lasting confidence.'
+        ]
+      },
+      {
+        heading: 'Quick Answer',
+        paragraphs: [
+          'The best way to start learning herbs without overwhelm is to study a small group of gentle herbs, learn basic preparations, keep notes, practice direct observation, and build knowledge gradually with safety in mind.'
+        ]
+      },
+      {
+        heading: 'Key Takeaways',
+        paragraphs: [
+          'You do not need to learn every herb at once: start small, study through multiple lenses, gain direct preparation experience, keep a materia medica notebook, and prioritize safety and source quality from the beginning.'
+        ]
+      }
+    ],
+    disclaimer:
+      'This article is for educational purposes only and is not medical advice. Consult a qualified professional for diagnosis, treatment decisions, pregnancy and breastfeeding questions, potential drug-herb interactions, and serious or persistent symptoms.',
+    relatedHerbSlugs: [
+      'mentha-x-piperita',
+      'matricaria-chamomilla',
+      'melissa-officinalis',
+      'zingiber-officinale',
+      'urtica-dioica',
+      'calendula-officinalis',
+      'rosa-rugosa'
+    ],
+    relatedSeasonalCollectionSlugs: ['spring-herbs', 'winter-tea-and-comfort-herbs'],
+    relatedRoutes: [
+      { label: 'What Herbalism Is: A Beginner’s Introduction', href: '#/articles/what-is-herbalism' },
+      {
+        label: 'Tea, Tincture, Infusion, Decoction, and Salve',
+        href: '#/articles/tea-tincture-infusion-decoction-and-salve'
+      },
+      {
+        label: 'Herbal Actions Explained in Plain English',
+        href: '#/articles/herbal-actions-explained-in-plain-english'
+      },
+      {
+        label: 'Safety First: Contraindications, Dosage, and Responsible Use',
+        href: '#/articles/safety-first-contraindications-dosage-and-responsible-use'
+      },
+      { label: 'How to Read an Herb Monograph', href: '#/articles/how-to-read-an-herb-monograph' }
+    ]
+  },
+  {
     slug: 'how-to-read-herb-profiles',
     title: 'How to Read Herb Profiles with Clinical Clarity',
     summary:
