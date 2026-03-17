@@ -301,6 +301,28 @@ export function getBuyerIntentTemplatesSeo() {
   };
 }
 
+
+export function getBestTeaInfusersSeo() {
+  const title = 'Best Tea Infusers for Herbal Tea and Loose-Leaf Blends | SacredSeed';
+  const description =
+    'Discover the best tea infuser options for loose-leaf tea and herbal blends, plus beginner tips for cleaner, better home brewing.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/buyer-guides/best-tea-infusers',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'Article',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl('/buyer-guides/best-tea-infusers')
+      })
+    ]
+  };
+}
+
 export function getSearchSeo() {
   const title = 'SacredSeed Search | Find Herbs, Preparations, and Editorial Guides';
   const description =

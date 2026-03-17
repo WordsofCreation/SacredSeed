@@ -9,6 +9,7 @@ import { renderPrivacyPolicyPage } from './pages/privacyPolicyPage.js';
 import { renderTermsOfUsePage } from './pages/termsOfUsePage.js';
 import { renderAffiliateDisclosurePage } from './pages/affiliateDisclosurePage.js';
 import { renderBuyerIntentTemplatePage } from './pages/buyerIntentTemplatesPage.js';
+import { renderBestTeaInfusersPage } from './pages/bestTeaInfusersPage.js';
 import { renderHomePage } from './pages/homePage.js';
 import { renderHerbCollectionsPage } from './pages/herbCollectionsPage.js';
 import { renderHerbCollectionPage } from './pages/herbCollectionPage.js';
@@ -36,6 +37,7 @@ import {
   getTermsSeo,
   getAffiliateDisclosureSeo,
   getBuyerIntentTemplatesSeo,
+  getBestTeaInfusersSeo,
   getSearchSeo
 } from './utils/pageSeo.js';
 
@@ -195,6 +197,13 @@ async function renderRoute() {
 
 
   if (section === 'buyer-guides') {
+    if (slug === 'best-tea-infusers') {
+      renderBestTeaInfusersPage(app);
+      applyPageSeo(getBestTeaInfusersSeo());
+      syncActiveNav();
+      return;
+    }
+
     renderBuyerIntentTemplatePage(app);
     applyPageSeo(getBuyerIntentTemplatesSeo());
     syncActiveNav();
