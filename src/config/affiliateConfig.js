@@ -196,6 +196,21 @@ export const affiliateProductCatalog = {
       'https://www.amazon.com/s?k=apothecary+shelves+%2F+organizers&crid=20INETNBNMSZ9&sprefix=apothecary+shelves+%2F+organizers%2Caps%2C425&linkCode=ll2&tag=sacredseed-20&linkId=48fd6afa8417f208643414e194d88b2a&language=en_US&ref_=as_li_ss_tl',
     note: 'Choose layouts that keep labels visible and frequently used tools within easy reach.'
   },
+  apothecarySupplies: {
+    key: 'apothecarySupplies',
+    title: 'Beginner Apothecary Supplies',
+    description:
+      'Browse practical jars, bottles, labels, and starter tools that can help you build a clean, organized home apothecary setup.',
+    image:
+      'https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=900&q=80',
+    imageAlt: 'Apothecary jars and herbal prep tools arranged on open shelves',
+    ctaLabel: 'Browse Apothecary Supplies',
+    whyWeRecommend:
+      'Useful for beginners who want to compare basic storage and prep tools without overbuying all at once.',
+    affiliateUrl:
+      'https://www.amazon.com/s?k=apothecary+supplies&crid=2A9OW6YG6ID4K&sprefix=apothecary+sup%2Caps%2C593&linkCode=ll2&tag=sacredseed-20&linkId=030e62f4f39e50005110e06c8650331b&language=en_US&ref_=as_li_ss_tl',
+    note: 'Start small and choose only the containers and tools you can maintain consistently.'
+  },
   herbalReferenceBook: {
     key: 'herbalReferenceBook',
     title: 'Best Herbal Books',

@@ -1232,6 +1232,174 @@ export const editorialArticleDefinitions = [
       }
     ]
   },
+
+  {
+    slug: 'how-to-build-a-home-apothecary',
+    title: 'How to Build a Home Apothecary for Herbal Learning and Daily Use',
+    summary:
+      'Learn how to build a home apothecary with simple jars, herbs, tools, labels, and storage so your herbal learning stays organized and practical.',
+    intro:
+      'A home apothecary does not need to be large, expensive, or elaborate to be useful. The strongest beginner setups are often simple: a few foundational herbs, clear labels, clean storage, and practical tools you can maintain.',
+    estimatedReadMinutes: 15,
+    tags: ['home apothecary', 'beginner herbal setup', 'apothecary supplies', 'herbal organization'],
+    relatedCategories: ['Beginner herbal study', 'Home apothecary skills'],
+    relatedTags: ['storage and labeling', 'beginner workflows', 'practical setup'],
+    affiliateProductKeys: ['apothecarySupplies'],
+    searchKeywords: [
+      'how to build a home apothecary',
+      'beginner home apothecary setup',
+      'apothecary supplies for beginners',
+      'how to organize herbal jars and tools'
+    ],
+    sections: [
+      {
+        heading: 'What Is a Home Apothecary?',
+        paragraphs: [
+          'A home apothecary is a dedicated collection of herbs, preparations, containers, and tools used to support herbal practice at home. It can be a single kitchen shelf, a cabinet, or one well-organized corner.',
+          'A beginner apothecary works best as both a storage system and a learning system. It helps you track what you have, how old it is, how it is used, and what safety notes belong to it.'
+        ]
+      },
+      {
+        heading: 'Why Beginners Benefit From a Simple Setup',
+        paragraphs: [
+          'A simple setup reduces overwhelm and makes consistent practice easier. Labeled herbs, a tea strainer, and a notebook often teach more than a crowded shelf full of unfamiliar supplies.',
+          'Good beginner apothecaries are built for use, not display. The goal is calm repetition, clear organization, and responsible learning over time.'
+        ]
+      },
+      {
+        heading: 'What You Actually Need to Start',
+        paragraphs: [
+          'Most beginners need only a small group of gentle herbs, clean jars, clear labels, a tea strainer or infuser, and a notebook for tracking observations.',
+          'A few basic tools such as measuring spoons, funnels, and an optional scale can support cleaner, repeatable preparation without turning your setup into an expensive project.'
+        ]
+      },
+      {
+        heading: 'Optional: Browse Beginner Apothecary Supplies Thoughtfully',
+        paragraphs: [
+          'If you are setting up your first herbal workspace, it can help to compare basic jars, bottles, labels, and prep tools in one place before you buy. Start small and choose supplies you will realistically use and maintain.',
+          'This page contains affiliate links. As an Amazon Associate, we earn from qualifying purchases.'
+        ]
+      },
+      {
+        heading: 'Choose a Small Group of Foundational Herbs',
+        paragraphs: [
+          'Beginner-focused herbs such as chamomile, peppermint, lemon balm, ginger, nettle, calendula, rose, and oatstraw can provide a practical range for tea, infusions, and simple topical learning.',
+          'Depth beats volume. Learning fewer herbs well usually builds better confidence than buying many herbs you barely know.'
+        ]
+      },
+      {
+        heading: 'Jars, Containers, and Bottles Matter',
+        paragraphs: [
+          'Storage quality directly affects freshness and usability. Use clean containers that seal well, fit your quantities, and are easy to label and rotate.',
+          'A small consistent set of jars and bottles is usually more useful than collecting many random container types.'
+        ]
+      },
+      {
+        heading: 'How to Label Herbs Clearly',
+        paragraphs: [
+          'Good labels should include common name, Latin name when possible, plant part used, and date obtained or prepared. Supplier details are also useful for traceability.',
+          'Clear labeling protects memory, reduces mistakes, and keeps your learning tied to actual materials on your shelf.'
+        ]
+      },
+      {
+        heading: 'Simple Tools for a Beginner Home Apothecary',
+        paragraphs: [
+          'A tea strainer or infuser, measuring spoons, small funnels, and an optional digital scale can handle most beginner workflows. A mortar and pestle can be useful for small-batch grinding when appropriate.',
+          'Your notebook is still the core tool. Record what you used, how you prepared it, and what you observed so your skills compound over time.'
+        ]
+      },
+      {
+        heading: 'How to Organize Your Space',
+        paragraphs: [
+          'Group your apothecary by simple categories like dried herbs, liquid preparations, topical materials, tools, and study notes. Choose a system you can maintain consistently.',
+          'Organization should reduce friction. If the setup is hard to use, it becomes decorative instead of functional.'
+        ]
+      },
+      {
+        heading: 'Where to Keep Your Home Apothecary',
+        paragraphs: [
+          'Store herbs away from direct light, excess heat, and moisture whenever possible. Cabinets, shaded shelves, and pantry areas are often better than hot or sunny spots.',
+          'Keep the space accessible enough for daily use so learning stays active and practical.'
+        ]
+      },
+      {
+        heading: 'How to Build a Home Apothecary Slowly and Wisely',
+        paragraphs: [
+          'Build in layers: start with a few herbs, basic storage, and a small tool set. Add supplies as your real practice expands, not as impulse purchases.',
+          'This approach lowers cost, reduces waste, and keeps your apothecary aligned with actual skill development.'
+        ]
+      },
+      {
+        heading: 'Common Mistakes to Avoid',
+        paragraphs: [
+          'Common mistakes include overbuying, poor labeling, and storing herbs in conditions that degrade quality. These issues create confusion and waste.',
+          'A home apothecary should support cautious, informed learning. It is not a cure-all station and does not replace qualified medical care when needed.'
+        ]
+      },
+      {
+        heading: 'Final Thoughts',
+        paragraphs: [
+          'A strong home apothecary is measured by clarity, usefulness, and sustainability—not by quantity. Start with intention, keep systems simple, and let knowledge guide expansion.',
+          'When built slowly and cared for well, your apothecary becomes a practical foundation for daily herbal learning and long-term confidence.'
+        ]
+      },
+      {
+        heading: 'Quick Answer',
+        paragraphs: [
+          'To build a home apothecary, start with a small group of gentle herbs, clean jars and bottles, clear labels, a few basic tools, and an organized shelf or cabinet that supports everyday herbal learning and use.'
+        ]
+      },
+      {
+        heading: 'Key Takeaways',
+        paragraphs: [
+          'Keep your setup simple and maintainable; begin with foundational herbs; prioritize clean storage and labeling; use tools that support daily practice; and expand gradually as your knowledge deepens.'
+        ]
+      }
+    ],
+    disclaimer:
+      'This article is for educational purposes only and is not medical advice. Consult a qualified professional for diagnosis, treatment decisions, pregnancy and breastfeeding questions, potential drug-herb interactions, and serious or persistent symptoms.',
+    relatedHerbSlugs: ['mentha-x-piperita', 'urtica-dioica', 'calendula-officinalis', 'matricaria-chamomilla'],
+    relatedSeasonalCollectionSlugs: ['spring-herbs'],
+    relatedRoutes: [
+      { label: 'What Herbalism Is: A Beginner’s Introduction', href: '#/articles/what-is-herbalism' },
+      {
+        label: 'How to Start Learning Herbs Without Getting Overwhelmed',
+        href: '#/articles/how-to-start-learning-herbs-without-getting-overwhelmed'
+      },
+      {
+        label: 'Tea, Tincture, Infusion, Decoction, and Salve',
+        href: '#/articles/tea-tincture-infusion-decoction-and-salve'
+      },
+      {
+        label: 'Safety First: Contraindications, Dosage, and Responsible Use',
+        href: '#/articles/safety-first-contraindications-dosage-and-responsible-use'
+      },
+      {
+        label: 'How to Read an Herb Monograph',
+        href: '#/articles/how-to-read-an-herb-monograph'
+      },
+      {
+        label: 'Best Beginner Apothecary Kits for Starting a Home Herbal Practice',
+        href: '#/buyer-guides/best-beginner-apothecary-kits'
+      },
+      {
+        label: 'Best Jars and Storage for Dried Herbs',
+        href: '#/buyer-guides/best-jars-and-storage-for-dried-herbs'
+      },
+      {
+        label: 'Best Dropper Bottles for Herbal Preparations',
+        href: '#/buyer-guides/best-dropper-bottles-for-herbal-preparations'
+      },
+      {
+        label: 'Best Tools for a Beginner Home Apothecary',
+        href: '#/buyer-guides/best-tools-for-a-beginner-home-apothecary'
+      },
+      {
+        label: 'How to Build a Simple Home Apothecary Shelf',
+        href: '#/buyer-guides/how-to-build-a-simple-home-apothecary-shelf'
+      }
+    ]
+  },
   {
     slug: 'how-to-read-herb-profiles',
     title: 'How to Read Herb Profiles with Clinical Clarity',
