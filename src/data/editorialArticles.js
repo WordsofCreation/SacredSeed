@@ -1093,6 +1093,146 @@ export const editorialArticleDefinitions = [
     ]
   },
   {
+    slug: 'how-to-label-and-organize-your-herbal-materia-medica',
+    title: 'How to Label and Organize Your Herbal Materia Medica',
+    summary:
+      'Learn how to organize your herbal materia medica with clear labels, consistent notes, preparation logs, and a simple system that grows with your practice.',
+    intro:
+      'A materia medica is your living record of herbal learning. When your notes, jars, and preparation records are organized clearly, study becomes easier, safer, and more useful over time.',
+    estimatedReadMinutes: 13,
+    tags: [
+      'herbal materia medica',
+      'how to organize a materia medica',
+      'herbal study notes',
+      'how to label dried herbs',
+      'organize herbal supplies'
+    ],
+    relatedCategories: ['Foundational literacy', 'Beginner herbal study', 'Materia medica skills'],
+    relatedTags: ['organization systems', 'labeling practices', 'safety-first learning'],
+    searchKeywords: [
+      'how to label and organize your herbal materia medica',
+      'how to organize a materia medica notebook',
+      'how to label dried herbs clearly',
+      'organize herbal notes and preparations',
+      'beginner herbal study organization system',
+      'digital vs paper materia medica'
+    ],
+    sections: [
+      {
+        heading: 'What a Materia Medica Is and Why Organization Matters',
+        paragraphs: [
+          'Your materia medica is more than a list of herbs. It can include herb monograph notes, tasting and sensory notes, preparation logs, sourcing notes, storage labels, and observations over time.',
+          'Organization matters because herbal learning is cumulative. A clear system helps you find information quickly, track what you prepared, and avoid preventable mistakes with labeling or safety context.'
+        ]
+      },
+      {
+        heading: 'Storing Herbs vs Organizing Herbal Knowledge',
+        paragraphs: [
+          'Storing herbs and organizing knowledge are related but different tasks. Storage protects plant material quality, while knowledge organization protects accuracy and decision-making clarity.',
+          'For example, a well-sealed jar in a dark cabinet supports shelf life, while complete notes support safe use: Latin name, plant part, source, preparation date, and key cautions. Build both systems side by side.'
+        ]
+      },
+      {
+        heading: 'What to Record for Each Herb',
+        paragraphs: [
+          'Use one repeatable note template for every herb. Consistency beats complexity. Start with common name, Latin name, plant family, part used, taste profile, primary actions, and common preparations.',
+          'Then add practical fields: sourcing details, date obtained, preparation strengths or ratios, safety notes, contraindications, dose ranges from trusted references, and your personal observations. A stable format makes review much easier.'
+        ]
+      },
+      {
+        heading: 'How to Label Jars, Bottles, and Stored Herbs Clearly',
+        paragraphs: [
+          'Every container should be easy to identify at a glance. Include common and Latin name, plant part used, date packed or prepared, source, and preparation type where relevant.',
+          'For tinctures, oils, vinegars, and glycerites, include menstruum type and ratio or concentration if known. For dried herbs, include purchase or harvest date and a simple rotate-first reminder so older stock is used first.'
+        ]
+      },
+      {
+        heading: 'How to Organize Notes for Preparations, Safety, and Observations',
+        paragraphs: [
+          'Keep preparation logs separate from herb overview pages. This prevents clutter and helps you compare batches over time. Log the method, amounts, dates, sensory observations, and any outcome notes.',
+          'Create a dedicated safety section in your system so cautions are never buried. Include contraindications, interaction concerns, population-specific notes, and references used. Safety details should always be faster to find than inspirational notes.'
+        ]
+      },
+      {
+        heading: 'A Beginner-Friendly System That Does Not Cause Overwhelm',
+        paragraphs: [
+          'Beginners do best with a simple three-part structure: herb profiles, preparation logs, and safety/reference notes. Start with five to ten herbs rather than trying to catalog everything at once.',
+          'Set a small routine, such as one weekly herb update and one labeling check. A system that you can maintain consistently is better than a perfect system you abandon after two weeks.'
+        ]
+      },
+      {
+        heading: 'Digital vs Paper Materia Medica Systems',
+        paragraphs: [
+          'Paper systems are tactile, memorable, and easy to use during tasting or medicine making. Digital systems are searchable, easy to duplicate, and strong for tagging herbs by action, body system, or preparation type.',
+          'Many home herbalists use a hybrid approach: paper for field and sensory notes, digital for indexed records and backups. Choose the format you will actually keep updated, then refine gradually.'
+        ]
+      },
+      {
+        heading: 'Common Organization Mistakes to Avoid',
+        paragraphs: [
+          'Common mistakes include missing dates, using only common names, inconsistent abbreviations, and unlabeled bottles. These create confusion quickly, especially once your shelves expand.',
+          'Other frequent issues are mixing personal impressions with reference facts without marking the difference, and skipping safety documentation because it feels repetitive. Keep your system plain, dated, and specific.'
+        ]
+      },
+      {
+        heading: 'Build Your Foundation, Then Add Tools Naturally',
+        paragraphs: [
+          'If you need to strengthen fundamentals first, revisit beginner core pages on herbalism, actions, monograph reading, and safety. These references make your materia medica notes more accurate from day one.',
+          'If you are ready to improve your setup, it is reasonable to add practical tools such as journals, storage jars, dropper bottles, and basic apothecary organization supplies. Use tools to support your system, not replace it.'
+        ]
+      },
+      {
+        heading: 'Quick Answer',
+        paragraphs: [
+          'To organize a herbal materia medica, use a consistent template for each herb, label every container with key details, keep separate preparation and safety logs, and build a simple system that you can maintain over time.'
+        ]
+      }
+    ],
+    disclaimer:
+      'This article is for educational purposes only and is not medical advice. Consult a qualified professional for diagnosis, treatment decisions, pregnancy and breastfeeding questions, potential drug-herb interactions, and serious or persistent symptoms.',
+    relatedHerbSlugs: ['mentha-x-piperita', 'urtica-dioica', 'calendula-officinalis', 'matricaria-chamomilla'],
+    relatedSeasonalCollectionSlugs: ['spring-herbs'],
+    relatedRoutes: [
+      { label: 'What Herbalism Is', href: '#/articles/what-is-herbalism' },
+      {
+        label: 'How to Start Learning Herbs Without Getting Overwhelmed',
+        href: '#/articles/how-to-start-learning-herbs-without-getting-overwhelmed'
+      },
+      {
+        label: 'Herbal Actions Explained in Plain English',
+        href: '#/articles/herbal-actions-explained-in-plain-english'
+      },
+      {
+        label: 'Safety First: Contraindications, Dosage, and Responsible Use',
+        href: '#/articles/safety-first-contraindications-dosage-and-responsible-use'
+      },
+      {
+        label: 'How to Read an Herb Monograph',
+        href: '#/articles/how-to-read-an-herb-monograph'
+      },
+      {
+        label: 'Best Plant Journals and Notebooks for Herbal Study',
+        href: '#/buyer-guides/best-plant-journals-and-notebooks-for-herbal-study'
+      },
+      {
+        label: 'Best Jars and Storage for Dried Herbs',
+        href: '#/buyer-guides/best-jars-and-storage-for-dried-herbs'
+      },
+      {
+        label: 'Best Dropper Bottles for Herbal Preparations',
+        href: '#/buyer-guides/best-dropper-bottles-for-herbal-preparations'
+      },
+      {
+        label: 'Best Tools for a Beginner Home Apothecary',
+        href: '#/buyer-guides/best-tools-for-a-beginner-home-apothecary'
+      },
+      {
+        label: 'How to Build a Simple Home Apothecary Shelf',
+        href: '#/buyer-guides/how-to-build-a-simple-home-apothecary-shelf'
+      }
+    ]
+  },
+  {
     slug: 'how-to-read-herb-profiles',
     title: 'How to Read Herb Profiles with Clinical Clarity',
     summary:
