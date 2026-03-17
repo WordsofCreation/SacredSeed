@@ -118,6 +118,50 @@ export const preparationGuides = [
     duration: 'Preparation time: 8 hours passive steep',
     storageNotes: 'Refrigerate and use within 24 hours.',
     preparationTags: [formulaTagTaxonomy.demulcent, formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'holy-basil-citrus-tea',
+    title: 'Holy Basil Citrus Tea',
+    preparationType: preparationTypeTaxonomy.teas,
+    preparationDescription:
+      'A bright aromatic tea with tulsi and citrus peel that works well as an uplifting afternoon reset.',
+    methodSteps: [
+      'Combine holy basil leaf and a small strip of dried citrus peel in a teapot.',
+      'Pour just-boiled water over the herbs and steep covered for 8-10 minutes.',
+      'Strain, then add a squeeze of fresh lemon if desired.'
+    ],
+    ingredientHerbs: [
+      { herbName: 'Holy Basil', botanicalName: 'Ocimum tenuiflorum', herbPart: 'Leaf' },
+      { herbName: 'Orange Peel', botanicalName: 'Citrus sinensis', herbPart: 'Peel' }
+    ],
+    ingredientAmounts: ['1 tablespoon dried holy basil leaf', '1 teaspoon dried orange peel', '10 ounces hot water'],
+    dosageGuidance: 'Traditionally enjoyed as 1 cup once or twice daily.',
+    safetyNotes: 'Use practitioner guidance for concentrated tulsi use alongside blood-sugar medications.',
+    duration: 'Preparation time: 10 minutes',
+    storageNotes: 'Best served fresh; refrigerate leftovers and use within 24 hours.',
+    preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'hibiscus-rosehip-cooler',
+    title: 'Hibiscus Rosehip Cooler',
+    preparationType: preparationTypeTaxonomy.infusions,
+    preparationDescription:
+      'A tart ruby infusion that can be chilled for warm-weather hydration and seasonal antioxidant support.',
+    methodSteps: [
+      'Add hibiscus and rosehip to a heat-safe jar and cover with hot water.',
+      'Steep covered for 20 minutes, then strain thoroughly.',
+      'Cool to room temperature and refrigerate; serve over ice if desired.'
+    ],
+    ingredientHerbs: [
+      { herbName: 'Hibiscus', botanicalName: 'Hibiscus sabdariffa', herbPart: 'Calyx' },
+      { herbName: 'Rosehip', botanicalName: 'Rosa canina', herbPart: 'Fruit' }
+    ],
+    ingredientAmounts: ['1 tablespoon hibiscus', '1 tablespoon rosehip', '16 ounces hot water'],
+    dosageGuidance: 'Use as 1 cup up to 2 times daily as a refreshing herbal beverage.',
+    safetyNotes: 'Review regular hibiscus intake with clinicians when using blood-pressure medication.',
+    duration: 'Preparation time: 25 minutes including cooling',
+    storageNotes: 'Refrigerate for up to 48 hours in a sealed glass jar.',
+    preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.caffeineFree]
   }
 ];
 
@@ -241,6 +285,54 @@ export const formulas = [
     duration: 'Preparation time: 15 minutes',
     storageNotes: 'Use same day for best aromatic quality.',
     preparationTags: [formulaTagTaxonomy.demulcent, formulaTagTaxonomy.aromatic]
+  },
+  {
+    id: 'golden-spice-milk-tea',
+    title: 'Golden Spice Milk Tea',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    formulaCategory: formulaCategoryTaxonomy.calmingTeas,
+    preparationDescription:
+      'A cozy evening decoction of warming spices finished with milk for a grounded, kitchen-friendly ritual.',
+    ingredientHerbs: [
+      { herbName: 'Turmeric', botanicalName: 'Curcuma longa', herbPart: 'Rhizome' },
+      { herbName: 'Cinnamon', botanicalName: 'Cinnamomum verum', herbPart: 'Bark' },
+      { herbName: 'Cardamom', botanicalName: 'Elettaria cardamomum', herbPart: 'Seed' }
+    ],
+    ingredientAmounts: ['1 teaspoon turmeric powder', '1 small cinnamon stick', '2 crushed cardamom pods'],
+    methodSteps: [
+      'Simmer spices in 10 ounces of water for 10 minutes.',
+      'Add 4 ounces milk or plant milk and warm gently for 2-3 more minutes.',
+      'Strain and sweeten lightly if desired.'
+    ],
+    dosageGuidance: 'Enjoy as 1 warm cup in the evening or during cold weather.',
+    safetyNotes: 'Review concentrated turmeric use with clinicians when taking anticoagulants or before surgery.',
+    duration: 'Preparation time: 15 minutes',
+    storageNotes: 'Best served immediately; refrigerate unused decoction base for 24 hours.',
+    preparationTags: [formulaTagTaxonomy.warming, formulaTagTaxonomy.aromatic]
+  },
+  {
+    id: 'focus-and-clarity-infusion',
+    title: 'Focus and Clarity Infusion',
+    preparationType: preparationTypeTaxonomy.infusions,
+    formulaCategory: formulaCategoryTaxonomy.nutritiveBlends,
+    preparationDescription:
+      'An aromatic-nutritive daytime blend designed for gentle cognitive steadiness without caffeine.',
+    ingredientHerbs: [
+      { herbName: 'Lemon Balm', botanicalName: 'Melissa officinalis', herbPart: 'Leaf' },
+      { herbName: 'Gotu Kola', botanicalName: 'Centella asiatica', herbPart: 'Aerial parts' },
+      { herbName: 'Oatstraw', botanicalName: 'Avena sativa', herbPart: 'Milky tops/straw' }
+    ],
+    ingredientAmounts: ['1 part lemon balm', '1 part gotu kola', '2 parts oatstraw'],
+    methodSteps: [
+      'Blend dried herbs and add 1 tablespoon blend to 10 ounces hot water.',
+      'Steep covered for 15 minutes.',
+      'Strain and sip warm or at room temperature.'
+    ],
+    dosageGuidance: '1 cup in the morning or early afternoon, up to 2 cups daily.',
+    safetyNotes: 'Use individualized guidance for gotu kola in pregnancy or with hepatic conditions.',
+    duration: 'Preparation time: 15 minutes',
+    storageNotes: 'Use same day for best taste and aromatic quality.',
+    preparationTags: [formulaTagTaxonomy.nutritive, formulaTagTaxonomy.caffeineFree]
   }
 ];
 
@@ -260,7 +352,7 @@ export const remedyCollections = [
     description:
       'Gentle evening-oriented options for nervous system decompression and sleep transition rituals.',
     formulaCategory: formulaCategoryTaxonomy.calmingTeas,
-    featuredFormulaIds: ['calming-evening-tea'],
+    featuredFormulaIds: ['calming-evening-tea', 'golden-spice-milk-tea'],
     preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.caffeineFree]
   },
   {
@@ -280,5 +372,14 @@ export const remedyCollections = [
     formulaCategory: formulaCategoryTaxonomy.respiratorySupport,
     featuredFormulaIds: ['respiratory-soothing-tea', 'seasonal-immune-support-tea'],
     preparationTags: [formulaTagTaxonomy.demulcent, formulaTagTaxonomy.warming]
+  },
+  {
+    id: 'daytime-focus-routines',
+    title: 'Daytime Focus Routine Collection',
+    description:
+      'Caffeine-free daytime options that pair nutritive support with aromatic clarity.',
+    formulaCategory: formulaCategoryTaxonomy.nutritiveBlends,
+    featuredFormulaIds: ['focus-and-clarity-infusion', 'nutritive-mineral-tea'],
+    preparationTags: [formulaTagTaxonomy.nutritive, formulaTagTaxonomy.caffeineFree]
   }
 ];
