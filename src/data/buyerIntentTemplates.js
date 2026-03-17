@@ -1,12 +1,12 @@
 export const buyerIntentTemplates = [
   {
-    slug: 'best-herbal-starter-tools',
-    title: 'Best Herbal Starter Tools',
+    slug: 'beginner-apothecary-kits',
+    title: 'Beginner Apothecary Kits',
     summary:
-      'A practical buyer-intent template for foundational home herbal tools that support safe measurement, organized storage, and repeatable preparation habits.',
+      'Starter apothecary kit recommendations for beginners building a simple, organized home herbal setup.',
     intentNote:
-      'Focus on practical, durable essentials that reduce friction for beginners building their first home setup.',
-    productKeys: ['herbalStarterKit', 'amberGlassJarSet']
+      'Look for practical essentials that make measuring, labeling, and daily preparation easier for new herbal learners.',
+    productKeys: ['herbalStarterKit']
   },
   {
     slug: 'best-tea-infusers',
@@ -18,13 +18,13 @@ export const buyerIntentTemplates = [
     productKeys: ['teaInfuserBasket']
   },
   {
-    slug: 'best-jars-for-dried-herbs',
-    title: 'Best Jars for Dried Herbs',
+    slug: 'best-herb-dryers',
+    title: 'Best Herb Dryers',
     summary:
-      'Template for recommending herb storage jars with attention to light protection, airtight seals, and labeling workflow.',
+      'Educational recommendations for herb dryers that support consistent drying before long-term storage.',
     intentNote:
-      'Choose jars that protect quality while making inventory and rotation simple.',
-    productKeys: ['amberGlassJarSet']
+      'Choose drying tools that protect aroma, support airflow, and fit home materia medica routines.',
+    productKeys: ['herbDryer']
   },
   {
     slug: 'best-herbal-books',
