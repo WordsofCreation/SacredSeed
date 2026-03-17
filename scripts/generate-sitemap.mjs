@@ -39,7 +39,8 @@ const staticRoutes = [
   { path: '/buyer-guides/best-herb-dryers', sourceFiles: ['src/pages/bestHerbDryersPage.js', 'src/config/affiliateConfig.js'] },
   { path: '/buyer-guides/best-herbal-books', sourceFiles: ['src/pages/bestHerbalBooksPage.js', 'src/config/affiliateConfig.js'] },
   { path: '/buyer-guides/best-jars-and-storage-for-dried-herbs', sourceFiles: ['src/pages/bestHerbStorageJarsPage.js', 'src/config/affiliateConfig.js'] },
-  { path: '/buyer-guides/best-dropper-bottles-for-herbal-preparations', sourceFiles: ['src/pages/bestDropperBottlesPage.js', 'src/config/affiliateConfig.js'] }
+  { path: '/buyer-guides/best-dropper-bottles-for-herbal-preparations', sourceFiles: ['src/pages/bestDropperBottlesPage.js', 'src/config/affiliateConfig.js'] },
+  { path: '/buyer-guides/best-tools-for-a-beginner-home-apothecary', sourceFiles: ['src/pages/bestToolsBeginnerHomeApothecaryPage.js', 'src/config/affiliateConfig.js'] }
 ];
 
 const herbBatches = [

@@ -387,6 +387,27 @@ export function getBestHerbStorageJarsSeo() {
     ]
   };
 }
+export function getBestToolsBeginnerHomeApothecarySeo() {
+  const title = 'Best Tools for a Beginner Home Apothecary | SacredSeed';
+  const description =
+    'Discover beginner apothecary tools for measuring, grinding, transferring, and tracking herbal preparations in a practical home setup.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/buyer-guides/best-tools-for-a-beginner-home-apothecary',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'Article',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl('/buyer-guides/best-tools-for-a-beginner-home-apothecary')
+      })
+    ]
+  };
+}
+
 export function getBestDropperBottlesSeo() {
   const title = 'Best Dropper Bottles for Herbal Preparations | SacredSeed';
   const description =

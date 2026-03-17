@@ -15,6 +15,7 @@ import { renderBestHerbalBooksPage } from './pages/bestHerbalBooksPage.js';
 import { renderBestHerbStorageJarsPage } from './pages/bestHerbStorageJarsPage.js';
 import { renderBestBeginnerApothecaryKitsPage } from './pages/bestBeginnerApothecaryKitsPage.js';
 import { renderBestDropperBottlesPage } from './pages/bestDropperBottlesPage.js';
+import { renderBestToolsBeginnerHomeApothecaryPage } from './pages/bestToolsBeginnerHomeApothecaryPage.js';
 import { renderHomePage } from './pages/homePage.js';
 import { renderHerbCollectionsPage } from './pages/herbCollectionsPage.js';
 import { renderHerbCollectionPage } from './pages/herbCollectionPage.js';
@@ -48,6 +49,7 @@ import {
   getBestHerbStorageJarsSeo,
   getBestBeginnerApothecaryKitsSeo,
   getBestDropperBottlesSeo,
+  getBestToolsBeginnerHomeApothecarySeo,
   getSearchSeo
 } from './utils/pageSeo.js';
 
@@ -245,6 +247,13 @@ async function renderRoute() {
     if (slug === 'best-dropper-bottles-for-herbal-preparations') {
       renderBestDropperBottlesPage(app);
       applyPageSeo(getBestDropperBottlesSeo());
+      syncActiveNav();
+      return;
+    }
+
+    if (slug === 'best-tools-for-a-beginner-home-apothecary') {
+      renderBestToolsBeginnerHomeApothecaryPage(app);
+      applyPageSeo(getBestToolsBeginnerHomeApothecarySeo());
       syncActiveNav();
       return;
     }
