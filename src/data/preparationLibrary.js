@@ -164,6 +164,69 @@ export const preparationGuides = [
     preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.caffeineFree]
   },
   {
+    id: 'cinnamon-clove-winter-decoction',
+    title: 'Cinnamon Clove Winter Decoction',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    preparationDescription:
+      'A fragrant warming decoction of culinary spices traditionally used during cold, damp weather routines.',
+    methodSteps: [
+      'Add cinnamon stick and cloves to cold water in a small covered saucepan.',
+      'Bring to a gentle simmer and decoct for 15-20 minutes.',
+      'Strain, cool slightly, and serve plain or with a small amount of honey.'
+    ],
+    ingredientHerbs: [
+      { herbName: 'Cinnamon', botanicalName: 'Cinnamomum verum', herbPart: 'Bark' },
+      { herbName: 'Clove', botanicalName: 'Syzygium aromaticum', herbPart: 'Flower bud' }
+    ],
+    ingredientAmounts: ['1 small cinnamon stick', '3-4 whole cloves', '12 ounces water'],
+    dosageGuidance: 'Traditionally prepared as 1 warm cup once daily for short seasonal use windows.',
+    safetyNotes: 'Use caution with concentrated cinnamon or clove in people taking anticoagulants or with gastric irritation.',
+    duration: 'Preparation time: 20 minutes',
+    storageNotes: 'Best consumed fresh; refrigerate leftovers and use within 24 hours.',
+    preparationTags: [formulaTagTaxonomy.warming, formulaTagTaxonomy.aromatic, formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'astragalus-root-decoction',
+    title: 'Astragalus Root Decoction',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    preparationDescription:
+      'A classic long-simmer decoction used in traditional practice as a food-like tonic in recovery and resilience seasons.',
+    methodSteps: [
+      'Place sliced astragalus root in a pot with cold water.',
+      'Bring to a low simmer and decoct gently for 30-40 minutes.',
+      'Strain and serve warm, or reserve as a broth base.'
+    ],
+    ingredientHerbs: [{ herbName: 'Astragalus', botanicalName: 'Astragalus membranaceus', herbPart: 'Root' }],
+    ingredientAmounts: ['1 ounce sliced dried astragalus root', '1 quart water'],
+    dosageGuidance: 'Commonly used as 1 cup daily or added to soups during convalescent periods.',
+    safetyNotes: 'Use practitioner review with autoimmune conditions or immunosuppressive therapies.',
+    duration: 'Preparation time: 40 minutes',
+    storageNotes: 'Refrigerate strained decoction and use within 48 hours.',
+    preparationTags: [formulaTagTaxonomy.nutritive, formulaTagTaxonomy.warming]
+  },
+  {
+    id: 'licorice-cinnamon-throat-decoction',
+    title: 'Licorice Cinnamon Throat Decoction',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    preparationDescription:
+      'A sweet-spiced root decoction traditionally sipped for temporary dry throat discomfort during seasonal stress.',
+    methodSteps: [
+      'Combine licorice root and cinnamon in cool water and cover.',
+      'Bring to a gentle simmer for 20 minutes.',
+      'Strain, cool to sipping temperature, and enjoy warm.'
+    ],
+    ingredientHerbs: [
+      { herbName: 'Licorice', botanicalName: 'Glycyrrhiza glabra', herbPart: 'Root' },
+      { herbName: 'Cinnamon', botanicalName: 'Cinnamomum verum', herbPart: 'Bark' }
+    ],
+    ingredientAmounts: ['1 tablespoon cut licorice root', '1/2 small cinnamon stick', '14 ounces water'],
+    dosageGuidance: 'Typically used as 1/2 to 1 cup once or twice daily for short durations.',
+    safetyNotes: 'Avoid prolonged or high-dose licorice in hypertension, kidney disease, or during pregnancy unless supervised.',
+    duration: 'Preparation time: 25 minutes',
+    storageNotes: 'Refrigerate and use within 36-48 hours.',
+    preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.warming]
+  },
+  {
     id: 'elderberry-spice-syrup',
     title: 'Elderberry Spice Syrup',
     preparationType: preparationTypeTaxonomy.syrups,
