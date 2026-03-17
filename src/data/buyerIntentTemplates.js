@@ -1,38 +1,47 @@
-export const buyerIntentTemplates = [
-  {
-    slug: 'best-beginner-apothecary-kits',
-    title: 'Beginner Apothecary Kits',
-    summary:
-      'Starter apothecary kit recommendations for beginners building a simple, organized home herbal setup.',
-    intentNote:
-      'Look for practical essentials that make measuring, labeling, and daily preparation easier for new herbal learners.',
-    productKeys: ['herbalStarterKit']
-  },
-  {
-    slug: 'best-tea-infusers',
-    title: 'Best Tea Infusers',
-    summary:
-      'Template structure for evaluating tea infusers based on mesh quality, ease of cleaning, and extraction performance for loose herbs.',
-    intentNote:
-      'Prioritize infusers that allow herbs to expand and support easy daily use.',
-    productKeys: ['teaInfuserBasket']
-  },
-  {
-    slug: 'best-herb-dryers',
-    title: 'Best Herb Dryers',
-    summary:
-      'Educational recommendations for herb dryers that support consistent drying before long-term storage.',
-    intentNote:
-      'Choose drying tools that protect aroma, support airflow, and fit home materia medica routines.',
-    productKeys: ['herbDryer']
-  },
-  {
-    slug: 'best-herbal-books',
-    title: 'Best Herbal Books',
-    summary:
-      'Template for educational herbal books that balance traditional context, practical preparations, and transparent safety notes.',
-    intentNote:
-      'Prefer references with clear contraindications, indexing, and identifiable sourcing.',
-    productKeys: ['herbalReferenceBook']
-  }
-];
+export const buyerIntentTemplates = {
+  sections: [
+    {
+      slug: 'tea-brewing-tools',
+      title: 'Tea & Brewing Tools',
+      summary:
+        'Practical tools for loose-herb tea routines, from clean straining to repeatable measuring and steeping consistency.',
+      productKeys: ['teaInfuserBasket', 'teaStrainerFineMesh', 'digitalKitchenScale', 'measuringSpoonsAndFunnels']
+    },
+    {
+      slug: 'storage-bottling',
+      title: 'Storage & Bottling',
+      summary:
+        'Storage-focused supplies that help protect freshness and keep dried herbs, oils, and extracts organized for daily use.',
+      productKeys: ['glassHerbJars', 'amberDropperBottles', 'herbStorageContainers']
+    },
+    {
+      slug: 'apothecary-tools',
+      title: 'Apothecary Tools',
+      summary:
+        'Core hands-on preparation tools that support traditional methods and beginner-friendly home apothecary workflows.',
+      productKeys: ['herbalStarterKit', 'mortarAndPestle']
+    },
+    {
+      slug: 'organization-study',
+      title: 'Organization & Study',
+      summary:
+        'Resources for keeping your workspace functional and your learning process documented as your herbal skills grow.',
+      productKeys: ['herbalReferenceBook', 'herbalJournal', 'apothecaryShelves']
+    }
+  ],
+  buyerGuideLinks: [
+    { title: 'Best Tea Infusers', href: '#/buyer-guides/best-tea-infusers' },
+    { title: 'Best Herbal Books', href: '#/buyer-guides/best-herbal-books' },
+    { title: 'Best Herb Dryers', href: '#/buyer-guides/best-herb-dryers' },
+    { title: 'Best Beginner Apothecary Kits', href: '#/buyer-guides/best-beginner-apothecary-kits' }
+  ],
+  foundationalLinks: [
+    { title: 'What Herbalism Is', href: '#/articles/what-is-herbalism' },
+    {
+      title: 'How to Start Learning Herbs Without Getting Overwhelmed',
+      href: '#/articles/how-to-start-learning-herbs-without-getting-overwhelmed'
+    },
+    { title: 'How to Read Herbal Monographs and Why They Matter', href: '#/articles/how-to-read-herbal-monographs-and-why-they-matter' },
+    { title: 'Tea, Tincture, Infusion, Decoction, and Salve', href: '#/articles/tea-tincture-infusion-decoction-and-salve' }
+  ]
+};

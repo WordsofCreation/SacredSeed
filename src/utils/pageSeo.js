@@ -281,9 +281,9 @@ export function getAffiliateDisclosureSeo() {
 
 
 export function getBuyerIntentTemplatesSeo() {
-  const title = 'Herbal Buyer Guide Templates | SacredSeed';
+  const title = 'Recommended Herbal Tools & Supplies | SacredSeed';
   const description =
-    'Reusable static templates for intentional Amazon affiliate buyer guides, including tools, infusers, herb jars, and herbal books.';
+    'Educational herbal tools and supplies hub with grouped Amazon recommendations for tea brewing, storage, apothecary practice, and study.';
 
   return {
     title,
