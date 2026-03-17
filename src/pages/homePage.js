@@ -10,7 +10,7 @@ import {
   getRemedyCollections
 } from '../services/preparationLibraryService.js';
 import { fallbackOnErrorAttr, resolveHerbImage } from '../utils/imageAssets.js';
-import { fetchTaxonByBotanicalName } from '../services/apis/inaturalistApi.js';
+import { fetchHerbImageByBotanicalName } from '../services/herbImageService.js';
 
 
 function escapeHtml(value) {
@@ -36,28 +36,22 @@ async function hydrateHomeCardLeadImages(rootElement) {
       }
 
       const cachedImage = homeCardImageCache.get(botanicalName);
-      if (cachedImage === null) {
-        return;
-      }
-
       if (typeof cachedImage === 'string' && cachedImage) {
         imageNode.src = cachedImage;
         return;
       }
 
       try {
-        const taxon = await fetchTaxonByBotanicalName(botanicalName);
-        const apiImage = taxon?.default_photo?.medium_url?.trim?.() || '';
+        const image = await fetchHerbImageByBotanicalName(botanicalName);
 
-        if (!apiImage) {
-          homeCardImageCache.set(botanicalName, null);
+        if (!image) {
           return;
         }
 
-        homeCardImageCache.set(botanicalName, apiImage);
-        imageNode.src = apiImage;
+        homeCardImageCache.set(botanicalName, image);
+        imageNode.src = image;
       } catch {
-        homeCardImageCache.set(botanicalName, null);
+        // keep fallback placeholder for this render
       }
     })
   );

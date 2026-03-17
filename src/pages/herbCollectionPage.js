@@ -1,7 +1,7 @@
 import { renderHerbCollectionDetail } from '../components/herbCollections.js';
 import { getHerbCollectionBySlug } from '../services/herbCollectionService.js';
 import { getCollectionRelatedContent } from '../services/relatedContentService.js';
-import { fetchTaxonByBotanicalName } from '../services/apis/inaturalistApi.js';
+import { fetchHerbImageByBotanicalName } from '../services/herbImageService.js';
 
 const collectionImageCache = new Map();
 
@@ -16,28 +16,22 @@ async function hydrateCollectionImages(rootElement) {
       }
 
       const cachedImage = collectionImageCache.get(botanicalName);
-      if (cachedImage === null) {
-        return;
-      }
-
       if (typeof cachedImage === 'string' && cachedImage) {
         imageNode.src = cachedImage;
         return;
       }
 
       try {
-        const taxon = await fetchTaxonByBotanicalName(botanicalName);
-        const apiImage = taxon?.default_photo?.medium_url?.trim?.() || '';
+        const image = await fetchHerbImageByBotanicalName(botanicalName);
 
-        if (!apiImage) {
-          collectionImageCache.set(botanicalName, null);
+        if (!image) {
           return;
         }
 
-        collectionImageCache.set(botanicalName, apiImage);
-        imageNode.src = apiImage;
+        collectionImageCache.set(botanicalName, image);
+        imageNode.src = image;
       } catch {
-        collectionImageCache.set(botanicalName, null);
+        // keep fallback placeholder for this render
       }
     })
   );

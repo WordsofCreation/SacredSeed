@@ -5,7 +5,7 @@ import {
   getMateriaMedicaCollection,
   getMateriaMedicaTaxonomy
 } from '../services/materiaMedicaIndexService.js';
-import { fetchTaxonByBotanicalName } from '../services/apis/inaturalistApi.js';
+import { fetchHerbImageByBotanicalName } from '../services/herbImageService.js';
 
 
 const materiaImageCache = new Map();
@@ -21,28 +21,22 @@ async function hydrateMateriaMedicaImages(rootElement) {
       }
 
       const cachedImage = materiaImageCache.get(botanicalName);
-      if (cachedImage === null) {
-        return;
-      }
-
       if (typeof cachedImage === 'string' && cachedImage) {
         imageNode.src = cachedImage;
         return;
       }
 
       try {
-        const taxon = await fetchTaxonByBotanicalName(botanicalName);
-        const apiImage = taxon?.default_photo?.medium_url?.trim?.() || '';
+        const image = await fetchHerbImageByBotanicalName(botanicalName);
 
-        if (!apiImage) {
-          materiaImageCache.set(botanicalName, null);
+        if (!image) {
           return;
         }
 
-        materiaImageCache.set(botanicalName, apiImage);
-        imageNode.src = apiImage;
+        materiaImageCache.set(botanicalName, image);
+        imageNode.src = image;
       } catch {
-        materiaImageCache.set(botanicalName, null);
+        // keep fallback placeholder for this render
       }
     })
   );
