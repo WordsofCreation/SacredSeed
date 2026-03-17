@@ -10,18 +10,38 @@ const INATURALIST_BASE_URL = 'https://api.inaturalist.org/v1';
  * - Regional and medicinal action datasets for clinical context
  */
 export async function fetchTaxonByBotanicalName(botanicalName) {
-  const query = new URLSearchParams({
-    q: botanicalName,
-    rank: 'species',
-    per_page: '1'
-  });
+  const searchTerms = [
+    botanicalName,
+    String(botanicalName ?? '').replaceAll(' x ', ' × '),
+    String(botanicalName ?? '').replaceAll(' × ', ' x ')
+  ].filter(Boolean);
 
-  const response = await fetch(`${INATURALIST_BASE_URL}/taxa?${query.toString()}`);
+  for (const term of new Set(searchTerms)) {
+    const query = new URLSearchParams({
+      q: term,
+      per_page: '10'
+    });
 
-  if (!response.ok) {
-    throw new Error(`iNaturalist request failed with ${response.status}`);
+    const response = await fetch(`${INATURALIST_BASE_URL}/taxa?${query.toString()}`);
+
+    if (!response.ok) {
+      throw new Error(`iNaturalist request failed with ${response.status}`);
+    }
+
+    const payload = await response.json();
+    const results = payload?.results ?? [];
+    const normalizedBotanical = String(botanicalName ?? '').trim().toLowerCase();
+
+    const exactNameMatch = results.find((result) => String(result?.name ?? '').trim().toLowerCase() === normalizedBotanical);
+    if (exactNameMatch?.default_photo?.medium_url) {
+      return exactNameMatch;
+    }
+
+    const firstWithImage = results.find((result) => result?.default_photo?.medium_url);
+    if (firstWithImage) {
+      return firstWithImage;
+    }
   }
 
-  const payload = await response.json();
-  return payload?.results?.[0] ?? null;
+  return null;
 }
