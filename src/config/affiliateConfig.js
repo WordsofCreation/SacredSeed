@@ -187,9 +187,8 @@ export const affiliateProductCatalog = {
     title: 'Apothecary Shelves and Organizers',
     description:
       'Shelves and organizers make it easier to maintain a clean, functional, and visually calm herbal workspace.',
-    image:
-      'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=900&q=80',
-    imageAlt: 'Organized apothecary shelves with jars and bottles',
+    image: '/assets/images/site/placeholders/herb-fallback-card.svg',
+    imageAlt: 'Botanical illustration placeholder for apothecary shelves and organizers',
     ctaLabel: 'View on Amazon',
     whyWeRecommend:
       'A well-organized workspace supports consistency, safer storage habits, and less daily prep friction.',
