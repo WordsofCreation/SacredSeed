@@ -387,6 +387,27 @@ export function getBestHerbStorageJarsSeo() {
     ]
   };
 }
+export function getBestDropperBottlesSeo() {
+  const title = 'Best Dropper Bottles for Herbal Preparations | SacredSeed';
+  const description =
+    'Find the best dropper bottles for herbal preparations with beginner guidance on amber glass, leak resistance, labeling, and safe tincture storage.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/buyer-guides/best-dropper-bottles-for-herbal-preparations',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'Article',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl('/buyer-guides/best-dropper-bottles-for-herbal-preparations')
+      })
+    ]
+  };
+}
+
 export function getBestHerbalBooksSeo() {
   const title = 'Best Herbal Books for Beginners | SacredSeed';
   const description =
