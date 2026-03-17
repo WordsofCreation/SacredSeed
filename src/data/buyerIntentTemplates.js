@@ -37,6 +37,7 @@ export const buyerIntentTemplates = {
     { title: 'Best Jars and Storage for Dried Herbs', href: '#/buyer-guides/best-jars-and-storage-for-dried-herbs' },
     { title: 'Best Dropper Bottles for Herbal Preparations', href: '#/buyer-guides/best-dropper-bottles-for-herbal-preparations' },
     { title: 'Best Tools for a Beginner Home Apothecary', href: '#/buyer-guides/best-tools-for-a-beginner-home-apothecary' },
+    { title: 'How to Build a Simple Home Apothecary Shelf', href: '#/buyer-guides/how-to-build-a-simple-home-apothecary-shelf' },
     { title: 'Best Beginner Apothecary Kits', href: '#/buyer-guides/best-beginner-apothecary-kits' }
   ],
   foundationalLinks: [

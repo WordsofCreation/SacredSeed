@@ -17,6 +17,7 @@ import { renderBestHerbStorageJarsPage } from './pages/bestHerbStorageJarsPage.j
 import { renderBestBeginnerApothecaryKitsPage } from './pages/bestBeginnerApothecaryKitsPage.js';
 import { renderBestDropperBottlesPage } from './pages/bestDropperBottlesPage.js';
 import { renderBestToolsBeginnerHomeApothecaryPage } from './pages/bestToolsBeginnerHomeApothecaryPage.js';
+import { renderHowToBuildSimpleHomeApothecaryShelfPage } from './pages/howToBuildSimpleHomeApothecaryShelfPage.js';
 import { renderHomePage } from './pages/homePage.js';
 import { renderHerbCollectionsPage } from './pages/herbCollectionsPage.js';
 import { renderHerbCollectionPage } from './pages/herbCollectionPage.js';
@@ -52,6 +53,7 @@ import {
   getBestBeginnerApothecaryKitsSeo,
   getBestDropperBottlesSeo,
   getBestToolsBeginnerHomeApothecarySeo,
+  getHowToBuildSimpleHomeApothecaryShelfSeo,
   getSearchSeo
 } from './utils/pageSeo.js';
 
@@ -263,6 +265,13 @@ async function renderRoute() {
     if (slug === 'best-tools-for-a-beginner-home-apothecary') {
       renderBestToolsBeginnerHomeApothecaryPage(app);
       applyPageSeo(getBestToolsBeginnerHomeApothecarySeo());
+      syncActiveNav();
+      return;
+    }
+
+    if (slug === 'how-to-build-a-simple-home-apothecary-shelf') {
+      renderHowToBuildSimpleHomeApothecaryShelfPage(app);
+      applyPageSeo(getHowToBuildSimpleHomeApothecaryShelfSeo());
       syncActiveNav();
       return;
     }
