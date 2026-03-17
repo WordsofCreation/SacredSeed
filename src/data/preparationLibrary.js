@@ -269,6 +269,354 @@ export const preparationGuides = [
     preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.caffeineFree]
   },
   {
+    id: 'arnica-infused-oil',
+    title: 'Arnica Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription:
+      'A traditional external-use oil made with dried arnica flowers for post-activity body care and massage blends.',
+    methodSteps: [
+      'Fill a dry jar one-third to halfway with dried arnica flowers and cover completely with carrier oil.',
+      'Infuse in a dark cabinet for 3-4 weeks, shaking the jar every day or two.',
+      'Strain through fine cloth, bottle, and label clearly for external use only.'
+    ],
+    ingredientHerbs: [{ herbName: 'Arnica', botanicalName: 'Arnica montana', herbPart: 'Flower' }],
+    ingredientAmounts: ['1 part dried arnica flowers', '4-5 parts olive or sunflower oil'],
+    dosageGuidance: 'Apply topically in a thin layer to intact skin as needed after exertion.',
+    safetyNotes: 'External use only; do not apply to broken skin or use internally.',
+    duration: 'Preparation time: 3-4 weeks infusion',
+    storageNotes: 'Store away from heat and light and use within 9-12 months.',
+    preparationTags: [formulaTagTaxonomy.warming, formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'st-johns-wort-infused-oil',
+    title: "St. John\'s Wort Infused Oil",
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription:
+      'A bright red traditional oil created from flowering tops and used externally for nerve-rich tissue comfort.',
+    methodSteps: [
+      'Pack fresh wilted St. John\'s wort flowering tops loosely into a clean, dry jar.',
+      'Cover fully with olive oil and ensure all plant material stays submerged.',
+      'Infuse 3-6 weeks in a warm location, then strain and bottle in amber glass.'
+    ],
+    ingredientHerbs: [{ herbName: "St. John\'s Wort", botanicalName: 'Hypericum perforatum', herbPart: 'Flowering tops' }],
+    ingredientAmounts: ['1 part fresh wilted flowering tops', '2-3 parts olive oil'],
+    dosageGuidance: 'Massage a small amount onto intact skin up to twice daily.',
+    safetyNotes: 'External use only; exposed skin may become photosensitive in some individuals.',
+    duration: 'Preparation time: 3-6 weeks infusion',
+    storageNotes: 'Keep tightly sealed in a dark place and use within 1 year.',
+    preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.warming]
+  },
+  {
+    id: 'plantain-infused-oil',
+    title: 'Plantain Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription: 'A soothing leaf infusion often prepared for dry, weather-exposed skin care routines.',
+    methodSteps: [
+      'Dry plantain leaves thoroughly until crisp to minimize moisture content.',
+      'Cover leaves with olive oil in a dry jar and infuse for 2-4 weeks, shaking regularly.',
+      'Strain, bottle, and label with herb, date, and intended external use.'
+    ],
+    ingredientHerbs: [{ herbName: 'Plantain', botanicalName: 'Plantago major', herbPart: 'Leaf' }],
+    ingredientAmounts: ['1 part dried plantain leaf', '4 parts olive oil'],
+    dosageGuidance: 'Apply to intact skin 1-3 times daily as needed.',
+    safetyNotes: 'Discontinue if irritation occurs; external use only.',
+    duration: 'Preparation time: 2-4 weeks infusion',
+    storageNotes: 'Store in a cool dark cabinet and use within 9-12 months.',
+    preparationTags: [formulaTagTaxonomy.nutritive, formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'lavender-infused-oil',
+    title: 'Lavender Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription: 'A fragrant topical oil used in evening self-care and gentle skin-softening preparations.',
+    methodSteps: [
+      'Place dried lavender flowers in a clean glass jar and cover fully with carrier oil.',
+      'Infuse for 2-3 weeks in a warm, dark spot, shaking the jar every couple of days.',
+      'Strain carefully to remove all flower debris and bottle in amber glass.'
+    ],
+    ingredientHerbs: [{ herbName: 'Lavender', botanicalName: 'Lavandula angustifolia', herbPart: 'Flower' }],
+    ingredientAmounts: ['1 part dried lavender flowers', '5 parts jojoba or olive oil'],
+    dosageGuidance: 'Use a few drops topically for massage or dry skin support.',
+    safetyNotes: 'External use only; patch-test on sensitive skin.',
+    duration: 'Preparation time: 2-3 weeks infusion',
+    storageNotes: 'Store capped away from heat and use within 9 months.',
+    preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'chickweed-infused-oil',
+    title: 'Chickweed Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription: 'A cooling leafy oil traditionally prepared for temporarily itchy, dry skin states.',
+    methodSteps: [
+      'Allow fresh chickweed to wilt 12-24 hours before use to reduce moisture.',
+      'Place wilted herb in a jar, cover fully with oil, and infuse 2-3 weeks with regular agitation.',
+      'Strain thoroughly and bottle only clear, moisture-free oil.'
+    ],
+    ingredientHerbs: [{ herbName: 'Chickweed', botanicalName: 'Stellaria media', herbPart: 'Aerial parts' }],
+    ingredientAmounts: ['1 part fresh wilted chickweed', '2-3 parts olive oil'],
+    dosageGuidance: 'Apply externally to intact skin up to 2 times daily.',
+    safetyNotes: 'External use only; avoid introducing moisture to prevent rancidity.',
+    duration: 'Preparation time: 2-3 weeks infusion',
+    storageNotes: 'Use within 6-9 months and discard if cloudiness or odor develops.',
+    preparationTags: [formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'rose-infused-oil',
+    title: 'Rose Petal Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription: 'A floral skin oil prepared with dried petals for complexion and body oil blends.',
+    methodSteps: [
+      'Add fully dried rose petals to a sanitized dry jar.',
+      'Cover with jojoba or almond oil and infuse in a dark place for 2-4 weeks.',
+      'Strain through fine cloth and store in dark glass dropper bottles.'
+    ],
+    ingredientHerbs: [{ herbName: 'Rose', botanicalName: 'Rosa damascena', herbPart: 'Petal' }],
+    ingredientAmounts: ['1 part dried rose petals', '5 parts jojoba or almond oil'],
+    dosageGuidance: 'Apply several drops to clean, intact skin as desired.',
+    safetyNotes: 'External use only; confirm no sensitivity to rose family plants.',
+    duration: 'Preparation time: 2-4 weeks infusion',
+    storageNotes: 'Store cool and dark and use within 9-12 months.',
+    preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'chamomile-infused-oil',
+    title: 'Chamomile Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription: 'A mild aromatic oil frequently used in calming massage and bedtime body oil preparations.',
+    methodSteps: [
+      'Place dried chamomile flowers into a clean, dry infusion jar.',
+      'Cover completely with oil and infuse for 2-3 weeks, shaking every day or two.',
+      'Strain and rebottle in amber glass to protect aroma and quality.'
+    ],
+    ingredientHerbs: [{ herbName: 'Chamomile', botanicalName: 'Matricaria chamomilla', herbPart: 'Flower' }],
+    ingredientAmounts: ['1 part dried chamomile flowers', '4-5 parts olive or sunflower oil'],
+    dosageGuidance: 'Massage a small amount onto intact skin once or twice daily as needed.',
+    safetyNotes: 'External use only; avoid if known Asteraceae sensitivity occurs on skin.',
+    duration: 'Preparation time: 2-3 weeks infusion',
+    storageNotes: 'Store in a dark cabinet and use within 9 months.',
+    preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'comfrey-leaf-infused-oil',
+    title: 'Comfrey Leaf Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription: 'A traditional external-use leaf oil prepared for short-term tissue-soothing applications.',
+    methodSteps: [
+      'Dry comfrey leaf completely until brittle before combining with oil.',
+      'Infuse dried leaf in olive oil for 3-4 weeks in a dark location.',
+      'Strain very well and label for external use only.'
+    ],
+    ingredientHerbs: [{ herbName: 'Comfrey', botanicalName: 'Symphytum officinale', herbPart: 'Leaf' }],
+    ingredientAmounts: ['1 part dried comfrey leaf', '4 parts olive oil'],
+    dosageGuidance: 'Apply sparingly to intact skin for short-term external care.',
+    safetyNotes: 'External use only; avoid broken skin and prolonged continuous use.',
+    duration: 'Preparation time: 3-4 weeks infusion',
+    storageNotes: 'Store cool, dark, and dry; use within 9 months.',
+    preparationTags: [formulaTagTaxonomy.nutritive, formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'mullein-ear-oil',
+    title: 'Mullein Garlic Ear Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription:
+      'A folk-style infused oil using mullein flower and garlic, traditionally warmed and used externally around ear care routines.',
+    methodSteps: [
+      'Add dried mullein flowers and lightly crushed garlic to a dry jar and cover with oil.',
+      'Infuse gently for 1-2 weeks in a warm dark area, then strain with extra care.',
+      'Bottle and label clearly with date and external-use instructions.'
+    ],
+    ingredientHerbs: [
+      { herbName: 'Mullein', botanicalName: 'Verbascum thapsus', herbPart: 'Flower' },
+      { herbName: 'Garlic', botanicalName: 'Allium sativum', herbPart: 'Bulb' }
+    ],
+    ingredientAmounts: ['1 tablespoon dried mullein flowers', '1 small crushed garlic clove', '1/2 cup olive oil'],
+    dosageGuidance: 'For external topical use only unless directed by a qualified practitioner.',
+    safetyNotes: 'Do not use with suspected eardrum perforation; seek medical guidance for ear pain.',
+    duration: 'Preparation time: 1-2 weeks infusion',
+    storageNotes: 'Refrigerate and use within 1 month due to fresh garlic content.',
+    preparationTags: [formulaTagTaxonomy.warming]
+  },
+  {
+    id: 'lemon-balm-infused-oil',
+    title: 'Lemon Balm Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription: 'A light aromatic oil traditionally prepared for relaxing chest and neck massage.',
+    methodSteps: [
+      'Use fully dried lemon balm leaf and place in a clean jar.',
+      'Cover with oil and infuse for 2-3 weeks in a warm cabinet, shaking regularly.',
+      'Strain and transfer to dark glass bottles.'
+    ],
+    ingredientHerbs: [{ herbName: 'Lemon Balm', botanicalName: 'Melissa officinalis', herbPart: 'Leaf' }],
+    ingredientAmounts: ['1 part dried lemon balm', '5 parts olive oil'],
+    dosageGuidance: 'Apply topically in a small amount once or twice daily as desired.',
+    safetyNotes: 'External use only; patch-test if you have very sensitive skin.',
+    duration: 'Preparation time: 2-3 weeks infusion',
+    storageNotes: 'Store in cool darkness and use within 9 months.',
+    preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'thyme-infused-oil',
+    title: 'Thyme Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription: 'A strong aromatic oil used in diluted chest rub and steam-room body oil blends.',
+    methodSteps: [
+      'Place dried thyme aerial parts into a clean, dry jar.',
+      'Cover with carrier oil and infuse for 2-3 weeks with frequent agitation.',
+      'Strain and optionally blend 1:1 with plain oil before skin application.'
+    ],
+    ingredientHerbs: [{ herbName: 'Thyme', botanicalName: 'Thymus vulgaris', herbPart: 'Aerial parts' }],
+    ingredientAmounts: ['1 part dried thyme', '5 parts olive oil'],
+    dosageGuidance: 'Use sparingly and diluted on intact skin for topical aromatic support.',
+    safetyNotes: 'External use only; may irritate sensitive skin if used undiluted.',
+    duration: 'Preparation time: 2-3 weeks infusion',
+    storageNotes: 'Store away from heat and sunlight; use within 9 months.',
+    preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.warming]
+  },
+  {
+    id: 'rosemary-infused-oil',
+    title: 'Rosemary Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription: 'A stimulating scalp and muscle massage oil made from dried rosemary tops.',
+    methodSteps: [
+      'Add dried rosemary to a jar and cover fully with olive or grapeseed oil.',
+      'Infuse for 2-4 weeks in a warm, dark location with periodic shaking.',
+      'Strain and bottle; label for topical use.'
+    ],
+    ingredientHerbs: [{ herbName: 'Rosemary', botanicalName: 'Salvia rosmarinus', herbPart: 'Leaf' }],
+    ingredientAmounts: ['1 part dried rosemary', '4-5 parts olive or grapeseed oil'],
+    dosageGuidance: 'Massage into scalp or sore muscles in small amounts as needed.',
+    safetyNotes: 'External use only; avoid contact with eyes and irritated skin.',
+    duration: 'Preparation time: 2-4 weeks infusion',
+    storageNotes: 'Keep tightly capped and use within 9-12 months.',
+    preparationTags: [formulaTagTaxonomy.warming, formulaTagTaxonomy.aromatic]
+  },
+  {
+    id: 'sage-infused-oil',
+    title: 'Sage Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription: 'An aromatic topical oil commonly prepared for massage blends during cool, damp weather.',
+    methodSteps: [
+      'Place dried sage leaf into a dry glass jar and cover with oil.',
+      'Infuse for 2-3 weeks, shaking often to encourage even extraction.',
+      'Strain, bottle, and label with date and herb name.'
+    ],
+    ingredientHerbs: [{ herbName: 'Sage', botanicalName: 'Salvia officinalis', herbPart: 'Leaf' }],
+    ingredientAmounts: ['1 part dried sage leaf', '5 parts olive oil'],
+    dosageGuidance: 'Apply externally in a diluted blend once daily or as needed.',
+    safetyNotes: 'External use only; avoid on broken skin.',
+    duration: 'Preparation time: 2-3 weeks infusion',
+    storageNotes: 'Store cool and dark; use within 9 months.',
+    preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.warming]
+  },
+  {
+    id: 'yarrow-infused-oil',
+    title: 'Yarrow Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription: 'A traditional wound-care adjunct oil for intact skin and massage after outdoor activity.',
+    methodSteps: [
+      'Fill a jar with dried yarrow flowering tops and cover fully with oil.',
+      'Infuse 3 weeks in a dark location while shaking every 1-2 days.',
+      'Strain thoroughly through fine cloth and bottle.'
+    ],
+    ingredientHerbs: [{ herbName: 'Yarrow', botanicalName: 'Achillea millefolium', herbPart: 'Flowering tops' }],
+    ingredientAmounts: ['1 part dried yarrow', '4 parts olive oil'],
+    dosageGuidance: 'Apply externally to intact skin up to twice daily.',
+    safetyNotes: 'External use only; avoid with known Asteraceae skin sensitivity.',
+    duration: 'Preparation time: 3 weeks infusion',
+    storageNotes: 'Store in amber glass and use within 9-12 months.',
+    preparationTags: [formulaTagTaxonomy.aromatic]
+  },
+  {
+    id: 'violet-leaf-infused-oil',
+    title: 'Violet Leaf Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription: 'A cooling spring herb oil prepared from dried violet leaf for gentle topical use.',
+    methodSteps: [
+      'Dry violet leaves fully, then crumble loosely into an infusion jar.',
+      'Cover with carrier oil and infuse for 2-3 weeks in a dark cupboard.',
+      'Strain and store in sterilized amber bottles.'
+    ],
+    ingredientHerbs: [{ herbName: 'Violet', botanicalName: 'Viola odorata', herbPart: 'Leaf' }],
+    ingredientAmounts: ['1 part dried violet leaf', '5 parts sunflower or olive oil'],
+    dosageGuidance: 'Use externally in a thin layer on intact skin as needed.',
+    safetyNotes: 'External use only; discontinue if irritation appears.',
+    duration: 'Preparation time: 2-3 weeks infusion',
+    storageNotes: 'Store away from direct light and use within 9 months.',
+    preparationTags: [formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'hellichrysum-infused-oil',
+    title: 'Helichrysum Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription: 'A floral topical infusion often included in restorative facial and body oils.',
+    methodSteps: [
+      'Place dried helichrysum flowers into a clean jar.',
+      'Cover fully with jojoba or olive oil and infuse for 3-4 weeks.',
+      'Strain and bottle in small amber dropper bottles.'
+    ],
+    ingredientHerbs: [{ herbName: 'Helichrysum', botanicalName: 'Helichrysum italicum', herbPart: 'Flower' }],
+    ingredientAmounts: ['1 part dried helichrysum flowers', '5 parts jojoba oil'],
+    dosageGuidance: 'Apply several drops externally once daily or as desired.',
+    safetyNotes: 'External use only; patch-test before regular use.',
+    duration: 'Preparation time: 3-4 weeks infusion',
+    storageNotes: 'Store in dark glass; use within 9-12 months.',
+    preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'holy-basil-infused-oil',
+    title: 'Holy Basil Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription: 'An aromatic tulsi oil prepared for chest, neck, and shoulder massage during stress-heavy periods.',
+    methodSteps: [
+      'Add dried holy basil aerial parts to a dry jar and cover with oil.',
+      'Infuse 2-3 weeks, shaking often to keep plant material submerged.',
+      'Strain and bottle in light-protected containers.'
+    ],
+    ingredientHerbs: [{ herbName: 'Holy Basil', botanicalName: 'Ocimum tenuiflorum', herbPart: 'Aerial parts' }],
+    ingredientAmounts: ['1 part dried tulsi', '5 parts sesame or olive oil'],
+    dosageGuidance: 'Massage externally in small amounts up to twice daily.',
+    safetyNotes: 'External use only; avoid if skin is irritated or freshly shaved.',
+    duration: 'Preparation time: 2-3 weeks infusion',
+    storageNotes: 'Store cool and dark; use within 9 months.',
+    preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.warming]
+  },
+  {
+    id: 'ginger-infused-oil',
+    title: 'Ginger Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription: 'A warming topical oil often used in winter massage blends and abdominal comfort routines.',
+    methodSteps: [
+      'Use dried ginger slices or powdered ginger and combine with oil in a dry jar.',
+      'Infuse for 10-14 days in a warm cabinet, shaking daily.',
+      'Strain to clarity and bottle for external use.'
+    ],
+    ingredientHerbs: [{ herbName: 'Ginger', botanicalName: 'Zingiber officinale', herbPart: 'Rhizome' }],
+    ingredientAmounts: ['1 part dried sliced ginger', '6 parts sesame or olive oil'],
+    dosageGuidance: 'Apply externally in a thin layer for warming topical support.',
+    safetyNotes: 'External use only; may feel hot on sensitive skin.',
+    duration: 'Preparation time: 10-14 days infusion',
+    storageNotes: 'Store capped away from heat; use within 6-9 months.',
+    preparationTags: [formulaTagTaxonomy.warming]
+  },
+  {
+    id: 'peppermint-infused-oil',
+    title: 'Peppermint Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription: 'A cooling aromatic oil typically used in diluted temple, neck, and foot massage blends.',
+    methodSteps: [
+      'Fill a jar with dried peppermint leaf and cover completely with carrier oil.',
+      'Infuse for 2-3 weeks while shaking every 1-2 days.',
+      'Strain thoroughly and blend with plain oil if a milder profile is desired.'
+    ],
+    ingredientHerbs: [{ herbName: 'Peppermint', botanicalName: 'Mentha × piperita', herbPart: 'Leaf' }],
+    ingredientAmounts: ['1 part dried peppermint leaf', '5 parts jojoba or olive oil'],
+    dosageGuidance: 'Apply externally in very small amounts, avoiding eyes and mucosa.',
+    safetyNotes: 'External use only; avoid use on infants and very young children.',
+    duration: 'Preparation time: 2-3 weeks infusion',
+    storageNotes: 'Store in dark glass and use within 9 months.',
+    preparationTags: [formulaTagTaxonomy.aromatic]
+  },
+  {
     id: 'echinacea-fresh-root-tincture',
     title: 'Echinacea Fresh Root Tincture',
     preparationType: preparationTypeTaxonomy.tinctures,
