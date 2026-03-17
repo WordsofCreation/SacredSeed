@@ -12,6 +12,7 @@ import { renderBuyerIntentTemplatePage } from './pages/buyerIntentTemplatesPage.
 import { renderBestTeaInfusersPage } from './pages/bestTeaInfusersPage.js';
 import { renderBestHerbDryersPage } from './pages/bestHerbDryersPage.js';
 import { renderBestHerbalBooksPage } from './pages/bestHerbalBooksPage.js';
+import { renderBestHerbStorageJarsPage } from './pages/bestHerbStorageJarsPage.js';
 import { renderBestBeginnerApothecaryKitsPage } from './pages/bestBeginnerApothecaryKitsPage.js';
 import { renderHomePage } from './pages/homePage.js';
 import { renderHerbCollectionsPage } from './pages/herbCollectionsPage.js';
@@ -43,6 +44,7 @@ import {
   getBestTeaInfusersSeo,
   getBestHerbDryersSeo,
   getBestHerbalBooksSeo,
+  getBestHerbStorageJarsSeo,
   getBestBeginnerApothecaryKitsSeo,
   getSearchSeo
 } from './utils/pageSeo.js';
@@ -227,6 +229,13 @@ async function renderRoute() {
     if (slug === 'best-herbal-books') {
       renderBestHerbalBooksPage(app);
       applyPageSeo(getBestHerbalBooksSeo());
+      syncActiveNav();
+      return;
+    }
+
+    if (slug === 'best-jars-and-storage-for-dried-herbs') {
+      renderBestHerbStorageJarsPage(app);
+      applyPageSeo(getBestHerbStorageJarsSeo());
       syncActiveNav();
       return;
     }

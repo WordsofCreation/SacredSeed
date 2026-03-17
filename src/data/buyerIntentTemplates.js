@@ -33,6 +33,7 @@ export const buyerIntentTemplates = {
     { title: 'Best Tea Infusers', href: '#/buyer-guides/best-tea-infusers' },
     { title: 'Best Herbal Books', href: '#/buyer-guides/best-herbal-books' },
     { title: 'Best Herb Dryers', href: '#/buyer-guides/best-herb-dryers' },
+    { title: 'Best Jars and Storage for Dried Herbs', href: '#/buyer-guides/best-jars-and-storage-for-dried-herbs' },
     { title: 'Best Beginner Apothecary Kits', href: '#/buyer-guides/best-beginner-apothecary-kits' }
   ],
   foundationalLinks: [
