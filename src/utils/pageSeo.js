@@ -366,6 +366,27 @@ export function getBestHerbDryersSeo() {
     ]
   };
 }
+
+export function getBestHerbStorageJarsSeo() {
+  const title = 'Best Jars and Storage for Dried Herbs | SacredSeed';
+  const description =
+    'Explore the best jars for dried herbs, herb storage containers, and apothecary storage ideas with beginner-friendly guidance on freshness and organization.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/buyer-guides/best-jars-and-storage-for-dried-herbs',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'Article',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl('/buyer-guides/best-jars-and-storage-for-dried-herbs')
+      })
+    ]
+  };
+}
 export function getBestHerbalBooksSeo() {
   const title = 'Best Herbal Books for Beginners | SacredSeed';
   const description =
