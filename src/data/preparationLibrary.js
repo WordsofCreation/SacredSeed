@@ -223,6 +223,80 @@ export const preparationGuides = [
     duration: 'Preparation time: 2-4 weeks maceration',
     storageNotes: 'Store tightly capped away from heat and light; alcohol tinctures remain stable for several years.',
     preparationTags: [formulaTagTaxonomy.aromatic]
+  },
+  {
+    id: 'fire-cider-oxymel',
+    title: 'Fire Cider Oxymel',
+    preparationType: preparationTypeTaxonomy.oxymels,
+    preparationDescription:
+      'A classic vinegar-honey kitchen preparation featuring pungent roots and aromatics for seasonal resilience rituals.',
+    methodSteps: [
+      'Fill a clean jar halfway with chopped onion, garlic, ginger, horseradish, and optional chili.',
+      'Cover fully with raw apple cider vinegar, cap with non-reactive lid, and macerate 3-4 weeks with regular shaking.',
+      'Strain, then combine the infused vinegar with honey to taste (about 2:1 vinegar-to-honey) and bottle.'
+    ],
+    ingredientHerbs: [
+      { herbName: 'Ginger', botanicalName: 'Zingiber officinale', herbPart: 'Rhizome' },
+      { herbName: 'Garlic', botanicalName: 'Allium sativum', herbPart: 'Bulb' },
+      { herbName: 'Horseradish', botanicalName: 'Armoracia rusticana', herbPart: 'Root' }
+    ],
+    ingredientAmounts: [
+      '1/4 cup chopped ginger',
+      '1/4 cup chopped garlic',
+      '1/4 cup chopped horseradish',
+      '2 cups apple cider vinegar',
+      '1/2-1 cup honey'
+    ],
+    dosageGuidance: 'Traditionally used as 1 teaspoon to 1 tablespoon once or twice daily during seasonal transitions.',
+    safetyNotes: 'May aggravate reflux or gastritis in sensitive individuals; review with clinicians when managing blood sugar concerns.',
+    duration: 'Preparation time: 3-4 weeks maceration',
+    storageNotes: 'Store refrigerated or in a cool pantry and use within 3-6 months.',
+    preparationTags: [formulaTagTaxonomy.warming, formulaTagTaxonomy.aromatic]
+  },
+  {
+    id: 'plantain-comfrey-poultice',
+    title: 'Plantain Comfrey Poultice',
+    preparationType: preparationTypeTaxonomy.poultices,
+    preparationDescription:
+      'A fresh-leaf external poultice used in folk practice for minor bumps, stings, and temporary skin irritation support.',
+    methodSteps: [
+      'Rinse fresh plantain and comfrey leaves thoroughly and pat dry.',
+      'Bruise or finely chop leaves into a moist mash, adding a small splash of warm water if needed.',
+      'Apply to intact skin, cover with clean cloth, and replace every 2-4 hours as needed.'
+    ],
+    ingredientHerbs: [
+      { herbName: 'Plantain', botanicalName: 'Plantago major', herbPart: 'Leaf' },
+      { herbName: 'Comfrey', botanicalName: 'Symphytum officinale', herbPart: 'Leaf' }
+    ],
+    ingredientAmounts: ['1 handful fresh plantain leaf', '1 handful fresh comfrey leaf'],
+    dosageGuidance: 'For external use only; apply short-term to intact skin and reassess frequently.',
+    safetyNotes: 'Do not use on deep, puncture, or infected wounds; discontinue with irritation and avoid internal comfrey use.',
+    duration: 'Preparation time: 10 minutes',
+    storageNotes: 'Prepare fresh each time; discard unused mash after application window.',
+    preparationTags: [formulaTagTaxonomy.nutritive, formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'lavender-lemon-balm-sleep-syrup',
+    title: 'Lavender Lemon Balm Sleep Syrup',
+    preparationType: preparationTypeTaxonomy.syrups,
+    preparationDescription:
+      'A gentle evening syrup combining aromatic herbs with honey for bedtime wind-down support.',
+    methodSteps: [
+      'Simmer lemon balm and chamomile in water for 15 minutes with the pot covered.',
+      'Remove from heat, add lavender, and steep another 10 minutes before straining.',
+      'Cool to warm and whisk in honey, then bottle and refrigerate.'
+    ],
+    ingredientHerbs: [
+      { herbName: 'Lemon Balm', botanicalName: 'Melissa officinalis', herbPart: 'Leaf' },
+      { herbName: 'Lavender', botanicalName: 'Lavandula angustifolia', herbPart: 'Flower' },
+      { herbName: 'Chamomile', botanicalName: 'Matricaria chamomilla', herbPart: 'Flower' }
+    ],
+    ingredientAmounts: ['2 tablespoons lemon balm', '1 tablespoon chamomile', '1 teaspoon lavender', '2 cups water', '3/4 cup honey'],
+    dosageGuidance: 'Commonly used as 1-2 teaspoons 30-60 minutes before bedtime.',
+    safetyNotes: 'Contains honey; avoid for infants under one year old and use caution with sedative medications.',
+    duration: 'Preparation time: 30 minutes',
+    storageNotes: 'Refrigerate and use within 3 weeks; discard if bubbling, odor, or mold develops.',
+    preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.caffeineFree]
   }
 ];
 
