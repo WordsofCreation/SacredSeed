@@ -302,6 +302,28 @@ export function getBuyerIntentTemplatesSeo() {
 }
 
 
+
+export function getBestBeginnerApothecaryKitsSeo() {
+  const title = 'Best Beginner Apothecary Kits for Starting a Home Herbal Practice | SacredSeed';
+  const description =
+    'Explore beginner apothecary kit recommendations, home apothecary setup tips, and beginner herbalism supplies for a simple, useful starter practice.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/buyer-guides/best-beginner-apothecary-kits',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'Article',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl('/buyer-guides/best-beginner-apothecary-kits')
+      })
+    ]
+  };
+}
+
 export function getBestTeaInfusersSeo() {
   const title = 'Best Tea Infusers for Herbal Tea and Loose-Leaf Blends | SacredSeed';
   const description =

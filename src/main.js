@@ -12,6 +12,7 @@ import { renderBuyerIntentTemplatePage } from './pages/buyerIntentTemplatesPage.
 import { renderBestTeaInfusersPage } from './pages/bestTeaInfusersPage.js';
 import { renderBestHerbDryersPage } from './pages/bestHerbDryersPage.js';
 import { renderBestHerbalBooksPage } from './pages/bestHerbalBooksPage.js';
+import { renderBestBeginnerApothecaryKitsPage } from './pages/bestBeginnerApothecaryKitsPage.js';
 import { renderHomePage } from './pages/homePage.js';
 import { renderHerbCollectionsPage } from './pages/herbCollectionsPage.js';
 import { renderHerbCollectionPage } from './pages/herbCollectionPage.js';
@@ -42,6 +43,7 @@ import {
   getBestTeaInfusersSeo,
   getBestHerbDryersSeo,
   getBestHerbalBooksSeo,
+  getBestBeginnerApothecaryKitsSeo,
   getSearchSeo
 } from './utils/pageSeo.js';
 
@@ -201,6 +203,13 @@ async function renderRoute() {
 
 
   if (section === 'buyer-guides') {
+    if (slug === 'best-beginner-apothecary-kits') {
+      renderBestBeginnerApothecaryKitsPage(app);
+      applyPageSeo(getBestBeginnerApothecaryKitsSeo());
+      syncActiveNav();
+      return;
+    }
+
     if (slug === 'best-tea-infusers') {
       renderBestTeaInfusersPage(app);
       applyPageSeo(getBestTeaInfusersSeo());
