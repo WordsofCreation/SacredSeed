@@ -162,6 +162,67 @@ export const preparationGuides = [
     duration: 'Preparation time: 25 minutes including cooling',
     storageNotes: 'Refrigerate for up to 48 hours in a sealed glass jar.',
     preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'elderberry-spice-syrup',
+    title: 'Elderberry Spice Syrup',
+    preparationType: preparationTypeTaxonomy.syrups,
+    preparationDescription:
+      'A kitchen-style syrup that combines elderberry decoction with warming spices and honey for seasonal use.',
+    methodSteps: [
+      'Simmer dried elderberries, cinnamon, and ginger in water for 30-35 minutes until volume reduces by about half.',
+      'Strain well and allow the liquid to cool until warm rather than hot.',
+      'Whisk in honey, bottle, and refrigerate immediately.'
+    ],
+    ingredientHerbs: [
+      { herbName: 'Elderberry', botanicalName: 'Sambucus nigra', herbPart: 'Berry' },
+      { herbName: 'Cinnamon', botanicalName: 'Cinnamomum verum', herbPart: 'Bark' },
+      { herbName: 'Ginger', botanicalName: 'Zingiber officinale', herbPart: 'Rhizome' }
+    ],
+    ingredientAmounts: ['1 cup dried elderberry', '1 cinnamon stick', '1 tablespoon sliced ginger', '3 cups water', '1 cup honey'],
+    dosageGuidance: 'Commonly used as 1 teaspoon to 1 tablespoon as needed during seasonal exposure windows.',
+    safetyNotes: 'Use caution with blood sugar concerns and avoid giving honey-containing syrups to children under one year old.',
+    duration: 'Preparation time: 45 minutes',
+    storageNotes: 'Refrigerate and use within 3-4 weeks; discard if odor or texture changes.',
+    preparationTags: [formulaTagTaxonomy.warming, formulaTagTaxonomy.aromatic]
+  },
+  {
+    id: 'calendula-infused-oil',
+    title: 'Calendula Infused Oil',
+    preparationType: preparationTypeTaxonomy.infusedOils,
+    preparationDescription:
+      'A gentle topical infusion prepared with dried calendula petals in oil for skin-soothing applications.',
+    methodSteps: [
+      'Fill a dry glass jar halfway with dried calendula flowers and fully cover with olive oil.',
+      'Cap and infuse in a warm, dark place for 2-4 weeks, shaking every 1-2 days.',
+      'Strain through layered cheesecloth and bottle in amber glass.'
+    ],
+    ingredientHerbs: [{ herbName: 'Calendula', botanicalName: 'Calendula officinalis', herbPart: 'Flower' }],
+    ingredientAmounts: ['1 part dried calendula flowers', '4-5 parts olive oil (by volume)'],
+    dosageGuidance: 'Apply a small amount topically to intact skin up to 2-3 times daily.',
+    safetyNotes: 'External use only unless professionally directed; discontinue with any skin irritation.',
+    duration: 'Preparation time: 2-4 weeks infusion',
+    storageNotes: 'Store in a cool, dark cabinet and use within 9-12 months.',
+    preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'echinacea-fresh-root-tincture',
+    title: 'Echinacea Fresh Root Tincture',
+    preparationType: preparationTypeTaxonomy.tinctures,
+    preparationDescription:
+      'A traditional fresh-plant tincture approach for short-term immune-focused protocols under practitioner guidance.',
+    methodSteps: [
+      'Finely chop fresh echinacea root and place into a clean glass jar.',
+      'Cover completely with 50-60% alcohol, leaving at least 1 inch liquid above the plant material.',
+      'Macerate 2-4 weeks, shaking daily, then press and bottle in labeled amber dropper bottles.'
+    ],
+    ingredientHerbs: [{ herbName: 'Echinacea', botanicalName: 'Echinacea purpurea', herbPart: 'Root' }],
+    ingredientAmounts: ['1 part fresh chopped root', '2 parts 50-60% alcohol by volume'],
+    dosageGuidance: 'Often used in short-term dosing windows; follow qualified practitioner recommendations.',
+    safetyNotes: 'Use caution with autoimmune conditions, immunosuppressant therapy, or known Asteraceae allergy.',
+    duration: 'Preparation time: 2-4 weeks maceration',
+    storageNotes: 'Store tightly capped away from heat and light; alcohol tinctures remain stable for several years.',
+    preparationTags: [formulaTagTaxonomy.aromatic]
   }
 ];
 
