@@ -7,6 +7,8 @@ import { renderAdvancedSearchPage } from './pages/advancedSearchPage.js';
 import { renderEditorialArticlePage } from './pages/editorialArticlePage.js';
 import { renderPrivacyPolicyPage } from './pages/privacyPolicyPage.js';
 import { renderTermsOfUsePage } from './pages/termsOfUsePage.js';
+import { renderAffiliateDisclosurePage } from './pages/affiliateDisclosurePage.js';
+import { renderBuyerIntentTemplatePage } from './pages/buyerIntentTemplatesPage.js';
 import { renderHomePage } from './pages/homePage.js';
 import { renderHerbCollectionsPage } from './pages/herbCollectionsPage.js';
 import { renderHerbCollectionPage } from './pages/herbCollectionPage.js';
@@ -32,6 +34,8 @@ import {
   getEditorialArticleSeo,
   getPrivacySeo,
   getTermsSeo,
+  getAffiliateDisclosureSeo,
+  getBuyerIntentTemplatesSeo,
   getSearchSeo
 } from './utils/pageSeo.js';
 
@@ -178,6 +182,21 @@ async function renderRoute() {
   if (section === 'terms-of-use') {
     renderTermsOfUsePage(app);
     applyPageSeo(getTermsSeo());
+    syncActiveNav();
+    return;
+  }
+
+  if (section === 'affiliate-disclosure') {
+    renderAffiliateDisclosurePage(app);
+    applyPageSeo(getAffiliateDisclosureSeo());
+    syncActiveNav();
+    return;
+  }
+
+
+  if (section === 'buyer-guides') {
+    renderBuyerIntentTemplatePage(app);
+    applyPageSeo(getBuyerIntentTemplatesSeo());
     syncActiveNav();
     return;
   }

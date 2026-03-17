@@ -257,6 +257,50 @@ export function getEditorialArticleSeo(article) {
 }
 
 
+
+export function getAffiliateDisclosureSeo() {
+  const title = 'Affiliate Disclosure | SacredSeed';
+  const description =
+    "Read SacredSeed's full Amazon Associates affiliate disclosure, including how recommendations are selected and labeled.";
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/affiliate-disclosure',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'WebPage',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl('/affiliate-disclosure')
+      })
+    ]
+  };
+}
+
+
+export function getBuyerIntentTemplatesSeo() {
+  const title = 'Herbal Buyer Guide Templates | SacredSeed';
+  const description =
+    'Reusable static templates for intentional Amazon affiliate buyer guides, including tools, infusers, herb jars, and herbal books.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/buyer-guides',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'CollectionPage',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl('/buyer-guides')
+      })
+    ]
+  };
+}
+
 export function getSearchSeo() {
   const title = 'SacredSeed Search | Find Herbs, Preparations, and Editorial Guides';
   const description =

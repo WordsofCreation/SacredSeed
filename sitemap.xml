@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wordsofcreation.github.io/SacredSeed/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-03-16</lastmod>
   </url>
   <url>
     <loc>https://wordsofcreation.github.io/SacredSeed/materia-medica</loc>
@@ -31,6 +31,12 @@
   <url>
     <loc>https://wordsofcreation.github.io/SacredSeed/about</loc>
     <lastmod>2026-03-15</lastmod>
+  </url>
+  <url>
+    <loc>https://wordsofcreation.github.io/SacredSeed/affiliate-disclosure</loc>
+  </url>
+  <url>
+    <loc>https://wordsofcreation.github.io/SacredSeed/buyer-guides</loc>
   </url>
   <url>
     <loc>https://wordsofcreation.github.io/SacredSeed/herbs/urtica-dioica</loc>
@@ -1817,7 +1823,23 @@
     <lastmod>2026-03-16</lastmod>
   </url>
   <url>
+    <loc>https://wordsofcreation.github.io/SacredSeed/articles/herbal-actions-explained-in-plain-english</loc>
+    <lastmod>2026-03-16</lastmod>
+  </url>
+  <url>
     <loc>https://wordsofcreation.github.io/SacredSeed/articles/tea-tincture-infusion-decoction-and-salve</loc>
+    <lastmod>2026-03-16</lastmod>
+  </url>
+  <url>
+    <loc>https://wordsofcreation.github.io/SacredSeed/articles/safety-first-contraindications-dosage-and-responsible-use</loc>
+    <lastmod>2026-03-16</lastmod>
+  </url>
+  <url>
+    <loc>https://wordsofcreation.github.io/SacredSeed/articles/how-to-read-an-herb-monograph</loc>
+    <lastmod>2026-03-16</lastmod>
+  </url>
+  <url>
+    <loc>https://wordsofcreation.github.io/SacredSeed/articles/food-herbs-medicinal-herbs-and-toxic-plants</loc>
     <lastmod>2026-03-16</lastmod>
   </url>
   <url>

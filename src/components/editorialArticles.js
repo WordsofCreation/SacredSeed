@@ -1,3 +1,6 @@
+import { renderAffiliateDisclosureBlock, renderAffiliateProductGrid } from './affiliate.js';
+import { getAffiliateProduct } from '../config/affiliateConfig.js';
+
 function escapeHtml(value) {
   return String(value ?? '')
     .replaceAll('&', '&amp;')
@@ -62,6 +65,8 @@ export function renderEditorialArticlesIndex(articles, startHereArticle, startHe
 }
 
 export function renderEditorialArticleDetail(article) {
+  const affiliateProducts = (article.affiliateProductKeys ?? []).map((key) => getAffiliateProduct(key)).filter(Boolean);
+
   return `
     <article class="section-shell editorial-article" aria-labelledby="article-title">
       <header class="section-header">
@@ -69,10 +74,12 @@ export function renderEditorialArticleDetail(article) {
         <h1 id="article-title">${escapeHtml(article.title)}</h1>
         <p>${escapeHtml(article.intro)}</p>
       </header>
+      ${affiliateProducts.length ? renderAffiliateDisclosureBlock({ compact: true, className: 'article-affiliate-disclosure' }) : ''}
       ${article.tags?.length ? `<div class="chip-row">${article.tags.map((tag) => `<span class="chip">${escapeHtml(tag)}</span>`).join('')}</div>` : ''}
       <div class="article-content">
         ${article.sections.map(renderArticleSection).join('')}
       </div>
+      ${affiliateProducts.length ? renderAffiliateProductGrid(affiliateProducts) : ''}
       ${article.disclaimer ? `<p class="meta-note article-disclaimer"><strong>Educational disclaimer:</strong> ${escapeHtml(article.disclaimer)}</p>` : ''}
       <div class="hero-actions">
         <a class="secondary-link" href="#/articles">All editorial articles</a>

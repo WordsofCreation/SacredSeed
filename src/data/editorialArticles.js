@@ -24,6 +24,7 @@ export const editorialArticleDefinitions = [
     ],
     relatedCategories: ['Foundational literacy', 'Beginner herbal study', 'Herbal medicine basics'],
     relatedTags: ['intro to herbalism', 'preparation literacy', 'safety-first learning'],
+    affiliateProductKeys: ['herbalStarterKit', 'herbalReferenceBook'],
     searchKeywords: [
       'what is herbalism',
       'herbalism for beginners',
