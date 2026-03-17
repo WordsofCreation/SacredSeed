@@ -1028,3 +1028,65 @@ main section + section {
 .related-content-shell {
   margin-top: 1.1rem;
 }
+
+.affiliate-disclosure {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(126, 155, 115, 0.45);
+  border-radius: 12px;
+  background: linear-gradient(150deg, rgba(249, 246, 238, 0.86), rgba(255, 253, 252, 0.95));
+}
+
+.affiliate-disclosure-title {
+  margin: 0 0 0.4rem;
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+}
+
+.affiliate-disclosure-compact p {
+  margin: 0.35rem 0;
+}
+
+.affiliate-products {
+  margin-top: 1rem;
+}
+
+.affiliate-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.9rem;
+}
+
+.affiliate-product-card {
+  border: 1px solid var(--line-soft);
+  border-radius: 14px;
+  background: linear-gradient(155deg, rgba(255, 253, 252, 0.96), rgba(245, 240, 230, 0.85));
+  overflow: hidden;
+}
+
+.affiliate-product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.affiliate-product-content {
+  padding: 0.8rem 0.9rem 1rem;
+}
+
+.affiliate-product-content h3 {
+  margin: 0.2rem 0 0.4rem;
+}
+
+.affiliate-note {
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.buyer-intent-template + .buyer-intent-template {
+  margin-top: 1rem;
+}

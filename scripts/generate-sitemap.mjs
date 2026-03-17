@@ -31,7 +31,9 @@ const staticRoutes = [
   { path: '/seasons', sourceFiles: ['src/pages/seasonalCollectionsPage.js', 'src/data/seasonalCollections.js'] },
   { path: '/articles', sourceFiles: ['src/pages/editorialArticlesPage.js', 'src/data/editorialArticles.js'] },
   { path: '/preparations', sourceFiles: ['src/pages/preparationLibraryPage.js', 'src/data/preparationLibrary.js'] },
-  { path: '/about', sourceFiles: ['src/pages/aboutPage.js'] }
+  { path: '/about', sourceFiles: ['src/pages/aboutPage.js'] },
+  { path: '/affiliate-disclosure', sourceFiles: ['src/pages/affiliateDisclosurePage.js'] },
+  { path: '/buyer-guides', sourceFiles: ['src/pages/buyerIntentTemplatesPage.js', 'src/data/buyerIntentTemplates.js'] }
 ];
 
 const herbBatches = [
