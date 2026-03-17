@@ -1087,6 +1087,6 @@ main section + section {
   color: var(--muted);
 }
 
-.buyer-intent-template + .buyer-intent-template {
+.buyer-guide-group + .buyer-guide-group {
   margin-top: 1rem;
 }
