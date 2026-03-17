@@ -1,8 +1,14 @@
-import { renderFeatureCard, renderTrustItem } from '../components/homePageSections.js';
+import { renderFeatureCard, renderQuickStatCard, renderTrustItem } from '../components/homePageSections.js';
 import { getFeaturedCollectionSummaries } from '../services/herbCollectionService.js';
-import { getFeaturedLearningPathways } from '../services/learningPathwayService.js';
+import { getFeaturedLearningPathways, getLearningPathwaySummaries } from '../services/learningPathwayService.js';
 import { getSeasonalCollectionSummaries, getFeaturedSeasonalCollection } from '../services/seasonalCollectionService.js';
 import { getEditorialArticleSummaries, getStartHereArticle } from '../services/editorialArticleService.js';
+import { getMateriaMedicaCollection } from '../services/materiaMedicaIndexService.js';
+import {
+  getFormulaCollection,
+  getPreparationGuides,
+  getRemedyCollections
+} from '../services/preparationLibraryService.js';
 import { fallbackOnErrorAttr, resolveHerbImage } from '../utils/imageAssets.js';
 import { fetchTaxonByBotanicalName } from '../services/apis/inaturalistApi.js';
 
@@ -56,6 +62,15 @@ async function hydrateHomeCardLeadImages(rootElement) {
     })
   );
 }
+
+const homeQuickStats = [
+  { label: 'Herb monographs', getValue: () => getMateriaMedicaCollection().length },
+  { label: 'Learning pathways', getValue: () => getLearningPathwaySummaries().length },
+  { label: 'Preparation guides', getValue: () => getPreparationGuides().length },
+  { label: 'Tea formulas', getValue: () => getFormulaCollection().length },
+  { label: 'Remedy collections', getValue: () => getRemedyCollections().length },
+  { label: 'Editorial articles', getValue: () => getEditorialArticleSummaries().length }
+];
 
 const featureAreas = [
   {
@@ -200,6 +215,10 @@ export function renderHomePage(rootElement) {
   const featuredSeason = getFeaturedSeasonalCollection();
   const editorialArticles = getEditorialArticleSummaries().slice(0, 3);
   const startHereArticle = getStartHereArticle();
+  const quickStats = homeQuickStats.map((stat) => ({
+    label: stat.label,
+    value: String(stat.getValue())
+  }));
 
   rootElement.innerHTML = `
     <section class="home-hero card">
@@ -226,6 +245,16 @@ export function renderHomePage(rootElement) {
           />
           <p class="home-hero-caption">Botanical knowledge architecture for modern herbal study.</p>
         </aside>
+      </div>
+    </section>
+
+    <section class="home-section section-shell" aria-labelledby="home-at-a-glance-title">
+      <div class="home-section-heading section-header">
+        <p class="eyebrow">At a Glance</p>
+        <h3 id="home-at-a-glance-title">A growing study library, organized for practical learning</h3>
+      </div>
+      <div class="quick-stat-grid">
+        ${quickStats.map((stat) => renderQuickStatCard(stat)).join('')}
       </div>
     </section>
 

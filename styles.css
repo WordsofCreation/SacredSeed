@@ -246,7 +246,8 @@ main section + section {
 .trust-item p,
 .home-section-heading p,
 .home-lead,
-.cookie-banner-copy {
+.cookie-banner-copy,
+.quick-stat-label {
   color: var(--color-text-soft);
   line-height: 1.62;
 }
@@ -427,6 +428,7 @@ main section + section {
 .preparation-grid,
 .home-feature-grid,
 .home-trust-grid,
+.quick-stat-grid,
 .about-grid {
   display: grid;
   gap: 1rem;
@@ -879,6 +881,29 @@ main section + section {
 .trust-item,
 .about-card {
   background: linear-gradient(160deg, rgba(255, 253, 252, 0.94), rgba(246, 241, 231, 0.84));
+}
+
+
+
+.quick-stat-card {
+  text-align: center;
+  padding: 1rem 0.85rem;
+  background: linear-gradient(160deg, rgba(255, 253, 252, 0.98), rgba(246, 241, 231, 0.9));
+}
+
+.quick-stat-value {
+  margin: 0;
+  font-family: 'Fraunces', 'Iowan Old Style', 'Baskerville', 'Times New Roman', serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.15;
+  color: var(--color-primary-dark);
+}
+
+.quick-stat-label {
+  margin: 0.35rem 0 0;
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .home-highlight {

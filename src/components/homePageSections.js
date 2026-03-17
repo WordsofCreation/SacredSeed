@@ -34,6 +34,15 @@ export function renderFeatureCard(feature) {
   `;
 }
 
+export function renderQuickStatCard(stat) {
+  return `
+    <article class="card quick-stat-card">
+      <p class="quick-stat-value">${escapeHtml(stat.value)}</p>
+      <p class="quick-stat-label">${escapeHtml(stat.label)}</p>
+    </article>
+  `;
+}
+
 export function renderTrustItem(item) {
   return `
     <article class="card trust-item">
