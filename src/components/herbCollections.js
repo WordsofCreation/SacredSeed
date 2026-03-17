@@ -13,7 +13,16 @@ function escapeHtml(value) {
 function renderHerbMiniCard(herb) {
   return `
     <article class="card herb-index-card">
-      <img class="herb-index-image" src="${resolveHerbImage(herb)}" alt="${escapeHtml(herb.commonName)}" data-image-fallback="card" onerror="${fallbackOnErrorAttr('card')}" />
+      <img
+        class="herb-index-image"
+        src="${resolveHerbImage(herb, { variant: 'card' })}"
+        alt="${escapeHtml(herb.commonName)}"
+        loading="lazy"
+        decoding="async"
+        data-collection-botanical="${escapeHtml(herb.botanicalName)}"
+        data-image-fallback="card"
+        onerror="${fallbackOnErrorAttr('card')}"
+      />
       <div class="herb-index-content">
         <h3>${escapeHtml(herb.commonName)}</h3>
         <p class="botanical">${escapeHtml(herb.botanicalName)}</p>
