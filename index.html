@@ -13,7 +13,7 @@
       gtag('config', 'G-P7J69GCEWT');
     </script>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SacredSeed | Professional Herbal Knowledge Platform</title>
     <meta
       name="description"
@@ -75,7 +75,19 @@
           A refined botanical reference platform for educational materia medica study, transparent sourcing,
           and responsibly presented herbal safety context.
         </p>
-        <nav class="site-nav" aria-label="Primary">
+        <button
+          class="mobile-nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Open navigation menu"
+        >
+          <span class="mobile-nav-toggle-bar" aria-hidden="true"></span>
+          <span class="mobile-nav-toggle-bar" aria-hidden="true"></span>
+          <span class="mobile-nav-toggle-bar" aria-hidden="true"></span>
+          <span class="mobile-nav-toggle-label">Menu</span>
+        </button>
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
           <a href="#/home">Home</a>
           <a href="#/materia-medica">Materia Medica</a>
           <a href="#/collections">Collections</a>

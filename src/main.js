@@ -29,6 +29,7 @@ import { renderSeasonalCollectionPage } from './pages/seasonalCollectionPage.js'
 import { renderEditorialArticlesPage } from './pages/editorialArticlesPage.js';
 import { applyPageSeo } from './utils/seo.js';
 import { initializeImageFallbackHandling } from './utils/imageAssets.js';
+import { initializeDeviceLayoutClass } from './utils/deviceLayout.js';
 import {
   getAboutSeo,
   getMateriaMedicaSeo,
@@ -59,7 +60,60 @@ import {
   getSearchSeo
 } from './utils/pageSeo.js';
 
+
 const app = document.getElementById('app');
+
+function initializeResponsiveNavigation() {
+  const root = document.documentElement;
+  const nav = document.getElementById('primary-nav');
+  const navToggle = document.querySelector('.mobile-nav-toggle');
+
+  if (!nav || !navToggle) {
+    return;
+  }
+
+  const closeNavigation = () => {
+    navToggle.setAttribute('aria-expanded', 'false');
+    root.classList.remove('mobile-nav-open');
+  };
+
+  const openNavigation = () => {
+    navToggle.setAttribute('aria-expanded', 'true');
+    root.classList.add('mobile-nav-open');
+  };
+
+  navToggle.addEventListener('click', () => {
+    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+    if (isExpanded) {
+      closeNavigation();
+      return;
+    }
+
+    openNavigation();
+  });
+
+  nav.addEventListener('click', (event) => {
+    const target = event.target;
+    if (target instanceof HTMLElement && target.closest('a')) {
+      closeNavigation();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeNavigation();
+    }
+  });
+
+  const syncMobileState = () => {
+    if (!root.classList.contains('mobile-layout')) {
+      closeNavigation();
+    }
+  };
+
+  window.addEventListener('resize', syncMobileState, { passive: true });
+  window.addEventListener('orientationchange', syncMobileState, { passive: true });
+}
 
 function syncActiveNav() {
   const [section] = getRouteParts();
@@ -308,5 +362,7 @@ window.addEventListener('hashchange', () => {
 });
 
 initializeImageFallbackHandling();
+initializeDeviceLayoutClass();
+initializeResponsiveNavigation();
 renderRoute();
 initializeCookieConsentBanner();
