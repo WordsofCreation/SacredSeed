@@ -26,9 +26,11 @@ export function renderAffiliateProductCard(product) {
     return '';
   }
 
+  const imageFallback = '/assets/images/site/placeholders/herb-fallback-card.svg';
+
   return `
     <article class="affiliate-product-card" aria-label="Product recommendation: ${escapeHtml(product.title)}">
-      <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.imageAlt || product.title)}" loading="lazy" decoding="async" />
+      <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.imageAlt || product.title)}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${escapeHtml(imageFallback)}';" />
       <div class="affiliate-product-content">
         <p class="label">Recommended tool</p>
         <h3>${escapeHtml(product.title)}</h3>
