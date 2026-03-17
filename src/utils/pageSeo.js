@@ -323,6 +323,28 @@ export function getBestTeaInfusersSeo() {
   };
 }
 
+
+export function getBestHerbalBooksSeo() {
+  const title = 'Best Herbal Books for Beginners | SacredSeed';
+  const description =
+    'Explore the best herbal books for beginners with guidance on safety, materia medica learning, and practical study strategies for new herbalists.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/buyer-guides/best-herbal-books',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'Article',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl('/buyer-guides/best-herbal-books')
+      })
+    ]
+  };
+}
+
 export function getSearchSeo() {
   const title = 'SacredSeed Search | Find Herbs, Preparations, and Editorial Guides';
   const description =
