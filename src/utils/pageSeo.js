@@ -324,6 +324,26 @@ export function getBestTeaInfusersSeo() {
 }
 
 
+export function getBestHerbDryersSeo() {
+  const title = 'Best Herb Dryers for Drying and Storing Medicinal Herbs | SacredSeed';
+  const description =
+    'Find the best herb dryer and herb drying rack options with beginner guidance on airflow, mold prevention, and drying herbs for tea and storage.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/buyer-guides/best-herb-dryers',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'Article',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl('/buyer-guides/best-herb-dryers')
+      })
+    ]
+  };
+}
 export function getBestHerbalBooksSeo() {
   const title = 'Best Herbal Books for Beginners | SacredSeed';
   const description =
