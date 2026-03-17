@@ -450,6 +450,27 @@ export function getBestHerbalBooksSeo() {
   };
 }
 
+export function getBestPlantJournalsSeo() {
+  const title = 'Best Plant Journals and Notebooks for Herbal Study | SacredSeed';
+  const description =
+    'Find the best herbal journal and herbalism notebook options, plus beginner guidance for building a strong materia medica notebook practice.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/buyer-guides/best-plant-journals-and-notebooks-for-herbal-study',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'Article',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl('/buyer-guides/best-plant-journals-and-notebooks-for-herbal-study')
+      })
+    ]
+  };
+}
+
 export function getSearchSeo() {
   const title = 'SacredSeed Search | Find Herbs, Preparations, and Editorial Guides';
   const description =

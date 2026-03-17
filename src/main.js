@@ -12,6 +12,7 @@ import { renderBuyerIntentTemplatePage } from './pages/buyerIntentTemplatesPage.
 import { renderBestTeaInfusersPage } from './pages/bestTeaInfusersPage.js';
 import { renderBestHerbDryersPage } from './pages/bestHerbDryersPage.js';
 import { renderBestHerbalBooksPage } from './pages/bestHerbalBooksPage.js';
+import { renderBestPlantJournalsPage } from './pages/bestPlantJournalsPage.js';
 import { renderBestHerbStorageJarsPage } from './pages/bestHerbStorageJarsPage.js';
 import { renderBestBeginnerApothecaryKitsPage } from './pages/bestBeginnerApothecaryKitsPage.js';
 import { renderBestDropperBottlesPage } from './pages/bestDropperBottlesPage.js';
@@ -46,6 +47,7 @@ import {
   getBestTeaInfusersSeo,
   getBestHerbDryersSeo,
   getBestHerbalBooksSeo,
+  getBestPlantJournalsSeo,
   getBestHerbStorageJarsSeo,
   getBestBeginnerApothecaryKitsSeo,
   getBestDropperBottlesSeo,
@@ -233,6 +235,13 @@ async function renderRoute() {
     if (slug === 'best-herbal-books') {
       renderBestHerbalBooksPage(app);
       applyPageSeo(getBestHerbalBooksSeo());
+      syncActiveNav();
+      return;
+    }
+
+    if (slug === 'best-plant-journals-and-notebooks-for-herbal-study') {
+      renderBestPlantJournalsPage(app);
+      applyPageSeo(getBestPlantJournalsSeo());
       syncActiveNav();
       return;
     }
