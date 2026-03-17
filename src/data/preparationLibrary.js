@@ -61,6 +61,63 @@ export const preparationGuides = [
     duration: 'Preparation time: 30 minutes',
     storageNotes: 'Refrigerate and use within 48 hours.',
     preparationTags: [formulaTagTaxonomy.bitter]
+  },
+  {
+    id: 'peppermint-digestive-tea',
+    title: 'Peppermint Digestive Tea',
+    preparationType: preparationTypeTaxonomy.teas,
+    preparationDescription:
+      'A simple aromatic tea traditionally used after meals to ease occasional digestive tension.',
+    methodSteps: [
+      'Place dried peppermint leaf in a mug or teapot and add freshly boiled water.',
+      'Cover and steep for 8-10 minutes to preserve volatile oils.',
+      'Strain and sip warm after meals.'
+    ],
+    ingredientHerbs: [{ herbName: 'Peppermint', botanicalName: 'Mentha × piperita', herbPart: 'Leaf' }],
+    ingredientAmounts: ['1 tablespoon dried peppermint leaf per 8 ounces water'],
+    dosageGuidance: 'Traditionally enjoyed as 1 cup after meals, up to 3 cups daily.',
+    safetyNotes: 'Use caution with active reflux symptoms, as mint may aggravate some individuals.',
+    duration: 'Preparation time: 10 minutes',
+    storageNotes: 'Best consumed fresh; refrigerate leftovers and use within 24 hours.',
+    preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'ginger-honey-decoction',
+    title: 'Ginger Honey Decoction',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    preparationDescription:
+      'A warming kitchen remedy that combines fresh ginger decoction with honey once cooled to sipping temperature.',
+    methodSteps: [
+      'Slice fresh ginger and add to cold water in a small pot.',
+      'Bring to a gentle simmer and cook 15-20 minutes.',
+      'Strain into a mug, cool briefly, then stir in honey to taste.'
+    ],
+    ingredientHerbs: [{ herbName: 'Ginger', botanicalName: 'Zingiber officinale', herbPart: 'Rhizome' }],
+    ingredientAmounts: ['2 tablespoons sliced fresh ginger per 12 ounces water', '1-2 teaspoons honey (optional)'],
+    dosageGuidance: 'Use as 1 warm cup as needed for occasional cold-weather discomfort.',
+    safetyNotes: 'Review concentrated ginger use when taking anticoagulants or before surgery.',
+    duration: 'Preparation time: 20 minutes',
+    storageNotes: 'Refrigerate strained decoction up to 48 hours; add honey only when serving.',
+    preparationTags: [formulaTagTaxonomy.warming, formulaTagTaxonomy.aromatic]
+  },
+  {
+    id: 'marshmallow-cold-infusion',
+    title: 'Marshmallow Root Cold Infusion',
+    preparationType: preparationTypeTaxonomy.infusions,
+    preparationDescription:
+      'A soothing cold infusion prepared overnight to extract mucilage for throat and digestive demulcent support.',
+    methodSteps: [
+      'Add cut and sifted marshmallow root to a jar of cool water.',
+      'Cover and steep 6-8 hours (or overnight), shaking once or twice.',
+      'Strain through a fine mesh or cloth and sip cool or at room temperature.'
+    ],
+    ingredientHerbs: [{ herbName: 'Marshmallow', botanicalName: 'Althaea officinalis', herbPart: 'Root' }],
+    ingredientAmounts: ['1 tablespoon dried marshmallow root per 12 ounces cool water'],
+    dosageGuidance: 'Commonly consumed as 1 cup up to 2 times daily for short-term soothing support.',
+    safetyNotes: 'Separate from oral medications by at least 2 hours due to potential absorption effects.',
+    duration: 'Preparation time: 8 hours passive steep',
+    storageNotes: 'Refrigerate and use within 24 hours.',
+    preparationTags: [formulaTagTaxonomy.demulcent, formulaTagTaxonomy.caffeineFree]
   }
 ];
 
@@ -136,6 +193,54 @@ export const formulas = [
     duration: 'Preparation time: 30 minutes',
     storageNotes: 'Refrigerate up to 48 hours; reheat gently.',
     preparationTags: [formulaTagTaxonomy.warming, formulaTagTaxonomy.aromatic]
+  },
+  {
+    id: 'digestive-bitters-tea',
+    title: 'Digestive Bitters Tea',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    formulaCategory: formulaCategoryTaxonomy.digestiveSupport,
+    preparationDescription:
+      'A balanced bitter formula that pairs roots with aromatics to support pre-meal digestive readiness.',
+    ingredientHerbs: [
+      { herbName: 'Dandelion', botanicalName: 'Taraxacum officinale', herbPart: 'Root' },
+      { herbName: 'Burdock', botanicalName: 'Arctium lappa', herbPart: 'Root' },
+      { herbName: 'Fennel', botanicalName: 'Foeniculum vulgare', herbPart: 'Seed' }
+    ],
+    ingredientAmounts: ['2 parts dandelion root', '1 part burdock root', '1/2 part fennel seed'],
+    methodSteps: [
+      'Decoct dandelion and burdock roots in covered water for 25 minutes.',
+      'Add fennel in the final 5 minutes.',
+      'Strain and serve warm before meals.'
+    ],
+    dosageGuidance: 'Traditionally used in 1/2 to 1 cup portions 15-20 minutes before meals.',
+    safetyNotes: 'Use practitioner guidance with biliary obstruction or highly sensitive digestion.',
+    duration: 'Preparation time: 30 minutes',
+    storageNotes: 'Refrigerate for up to 48 hours.',
+    preparationTags: [formulaTagTaxonomy.bitter, formulaTagTaxonomy.aromatic]
+  },
+  {
+    id: 'respiratory-soothing-tea',
+    title: 'Respiratory Soothing Tea',
+    preparationType: preparationTypeTaxonomy.infusions,
+    formulaCategory: formulaCategoryTaxonomy.respiratorySupport,
+    preparationDescription:
+      'A moistening and aromatic tea blend used traditionally for seasonal throat and chest comfort.',
+    ingredientHerbs: [
+      { herbName: 'Mullein', botanicalName: 'Verbascum thapsus', herbPart: 'Leaf' },
+      { herbName: 'Thyme', botanicalName: 'Thymus vulgaris', herbPart: 'Leaf' },
+      { herbName: 'Licorice', botanicalName: 'Glycyrrhiza glabra', herbPart: 'Root' }
+    ],
+    ingredientAmounts: ['2 parts mullein leaf', '1 part thyme leaf', '1/2 part licorice root'],
+    methodSteps: [
+      'Steep blend in just-boiled water for 15 minutes, covered.',
+      'Strain carefully through fine cloth to remove mullein hairs.',
+      'Sip warm, optionally with a small amount of honey.'
+    ],
+    dosageGuidance: '1 cup up to 2 times daily during short seasonal use windows.',
+    safetyNotes: 'Licorice is not appropriate for everyone; avoid prolonged use with hypertension unless supervised.',
+    duration: 'Preparation time: 15 minutes',
+    storageNotes: 'Use same day for best aromatic quality.',
+    preparationTags: [formulaTagTaxonomy.demulcent, formulaTagTaxonomy.aromatic]
   }
 ];
 
@@ -157,5 +262,23 @@ export const remedyCollections = [
     formulaCategory: formulaCategoryTaxonomy.calmingTeas,
     featuredFormulaIds: ['calming-evening-tea'],
     preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.caffeineFree]
+  },
+  {
+    id: 'digestive-daily-support',
+    title: 'Digestive Daily Support Collection',
+    description:
+      'Classic bitters and aromatic preparations that can be rotated around meals for digestive resilience.',
+    formulaCategory: formulaCategoryTaxonomy.digestiveSupport,
+    featuredFormulaIds: ['digestive-bitters-tea'],
+    preparationTags: [formulaTagTaxonomy.bitter, formulaTagTaxonomy.aromatic]
+  },
+  {
+    id: 'seasonal-respiratory-care',
+    title: 'Seasonal Respiratory Care Collection',
+    description:
+      'Moistening and warming preparations often used during dry-air and seasonal respiratory discomfort.',
+    formulaCategory: formulaCategoryTaxonomy.respiratorySupport,
+    featuredFormulaIds: ['respiratory-soothing-tea', 'seasonal-immune-support-tea'],
+    preparationTags: [formulaTagTaxonomy.demulcent, formulaTagTaxonomy.warming]
   }
 ];
