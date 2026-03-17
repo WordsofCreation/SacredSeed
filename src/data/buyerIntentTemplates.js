@@ -32,6 +32,7 @@ export const buyerIntentTemplates = {
   buyerGuideLinks: [
     { title: 'Best Tea Infusers', href: '#/buyer-guides/best-tea-infusers' },
     { title: 'Best Herbal Books', href: '#/buyer-guides/best-herbal-books' },
+    { title: 'Best Plant Journals and Notebooks for Herbal Study', href: '#/buyer-guides/best-plant-journals-and-notebooks-for-herbal-study' },
     { title: 'Best Herb Dryers', href: '#/buyer-guides/best-herb-dryers' },
     { title: 'Best Jars and Storage for Dried Herbs', href: '#/buyer-guides/best-jars-and-storage-for-dried-herbs' },
     { title: 'Best Dropper Bottles for Herbal Preparations', href: '#/buyer-guides/best-dropper-bottles-for-herbal-preparations' },
