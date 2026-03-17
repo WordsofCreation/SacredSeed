@@ -1,6 +1,6 @@
 export const buyerIntentTemplates = [
   {
-    slug: 'beginner-apothecary-kits',
+    slug: 'best-beginner-apothecary-kits',
     title: 'Beginner Apothecary Kits',
     summary:
       'Starter apothecary kit recommendations for beginners building a simple, organized home herbal setup.',
