@@ -43,6 +43,12 @@ export function renderBestPlantJournalsPage(rootElement) {
         Your notes can also bridge textbook monographs with lived learning: where you sourced the herb, how you prepared
         it, what changed between batches, and how your observations compare with your reference materials.
       </p>
+      <ul>
+        <li><strong>Herb monograph study:</strong> Capture definitions and key takeaways in your own words so concepts stick.</li>
+        <li><strong>Preparation tracking:</strong> Log teas, infusions, and tinctures with date, ratio, and extraction details.</li>
+        <li><strong>Energetics + actions:</strong> Record taste, temperature quality, and observed herbal actions for pattern review.</li>
+        <li><strong>Safety continuity:</strong> Keep contraindications, dosage context, and sourcing quality in one searchable place.</li>
+      </ul>
     </section>
 
     <section class="section-shell" aria-labelledby="recommended-herbal-journal-title">
@@ -52,6 +58,7 @@ export function renderBestPlantJournalsPage(rootElement) {
         beginners, self-learners, and students building an organized home study routine.
       </p>
       ${product ? renderAffiliateProductCard(product) : ''}
+      ${product ? `<p><a class="profile-link" href="${product.affiliateUrl}" target="_blank" rel="sponsored nofollow noopener noreferrer">Browse herbal journals on Amazon</a></p>` : ''}
       ${renderAffiliateDisclosureBlock({ compact: true })}
     </section>
 
