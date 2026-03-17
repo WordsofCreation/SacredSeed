@@ -36,6 +36,7 @@ const staticRoutes = [
   { path: '/buyer-guides', sourceFiles: ['src/pages/buyerIntentTemplatesPage.js', 'src/data/buyerIntentTemplates.js'] },
   { path: '/buyer-guides/best-beginner-apothecary-kits', sourceFiles: ['src/pages/bestBeginnerApothecaryKitsPage.js', 'src/config/affiliateConfig.js'] },
   { path: '/buyer-guides/best-tea-infusers', sourceFiles: ['src/pages/bestTeaInfusersPage.js', 'src/config/affiliateConfig.js'] },
+  { path: '/buyer-guides/best-tea-strainers-for-loose-herbal-tea', sourceFiles: ['src/pages/bestTeaStrainersPage.js', 'src/config/affiliateConfig.js'] },
   { path: '/buyer-guides/best-herb-dryers', sourceFiles: ['src/pages/bestHerbDryersPage.js', 'src/config/affiliateConfig.js'] },
   { path: '/buyer-guides/best-herbal-books', sourceFiles: ['src/pages/bestHerbalBooksPage.js', 'src/config/affiliateConfig.js'] },
   { path: '/buyer-guides/best-plant-journals-and-notebooks-for-herbal-study', sourceFiles: ['src/pages/bestPlantJournalsPage.js', 'src/config/affiliateConfig.js'] },

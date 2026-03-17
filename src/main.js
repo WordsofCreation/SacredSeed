@@ -10,6 +10,7 @@ import { renderTermsOfUsePage } from './pages/termsOfUsePage.js';
 import { renderAffiliateDisclosurePage } from './pages/affiliateDisclosurePage.js';
 import { renderBuyerIntentTemplatePage } from './pages/buyerIntentTemplatesPage.js';
 import { renderBestTeaInfusersPage } from './pages/bestTeaInfusersPage.js';
+import { renderBestTeaStrainersPage } from './pages/bestTeaStrainersPage.js';
 import { renderBestHerbDryersPage } from './pages/bestHerbDryersPage.js';
 import { renderBestHerbalBooksPage } from './pages/bestHerbalBooksPage.js';
 import { renderBestPlantJournalsPage } from './pages/bestPlantJournalsPage.js';
@@ -46,6 +47,7 @@ import {
   getAffiliateDisclosureSeo,
   getBuyerIntentTemplatesSeo,
   getBestTeaInfusersSeo,
+  getBestTeaStrainersSeo,
   getBestHerbDryersSeo,
   getBestHerbalBooksSeo,
   getBestPlantJournalsSeo,
@@ -223,6 +225,13 @@ async function renderRoute() {
     if (slug === 'best-tea-infusers') {
       renderBestTeaInfusersPage(app);
       applyPageSeo(getBestTeaInfusersSeo());
+      syncActiveNav();
+      return;
+    }
+
+    if (slug === 'best-tea-strainers-for-loose-herbal-tea') {
+      renderBestTeaStrainersPage(app);
+      applyPageSeo(getBestTeaStrainersSeo());
       syncActiveNav();
       return;
     }

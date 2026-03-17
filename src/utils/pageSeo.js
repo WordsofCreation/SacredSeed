@@ -346,6 +346,27 @@ export function getBestTeaInfusersSeo() {
 }
 
 
+export function getBestTeaStrainersSeo() {
+  const title = 'Best Tea Strainers for Loose Herbal Tea | SacredSeed';
+  const description =
+    'Explore practical fine-mesh tea strainers for loose herbal tea with beginner-friendly guidance for cleaner brews and easier cleanup.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/buyer-guides/best-tea-strainers-for-loose-herbal-tea',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'Article',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl('/buyer-guides/best-tea-strainers-for-loose-herbal-tea')
+      })
+    ]
+  };
+}
+
 export function getBestHerbDryersSeo() {
   const title = 'Best Herb Dryers for Drying and Storing Medicinal Herbs | SacredSeed';
   const description =
