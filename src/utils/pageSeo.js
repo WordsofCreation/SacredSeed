@@ -408,6 +408,27 @@ export function getBestToolsBeginnerHomeApothecarySeo() {
   };
 }
 
+export function getHowToBuildSimpleHomeApothecaryShelfSeo() {
+  const title = 'How to Build a Simple Home Apothecary Shelf | SacredSeed';
+  const description =
+    'Learn how to build a home apothecary shelf with beginner-friendly herbal storage, apothecary organization ideas, and simple labeling practices.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/buyer-guides/how-to-build-a-simple-home-apothecary-shelf',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'Article',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl('/buyer-guides/how-to-build-a-simple-home-apothecary-shelf')
+      })
+    ]
+  };
+}
+
 export function getBestDropperBottlesSeo() {
   const title = 'Best Dropper Bottles for Herbal Preparations | SacredSeed';
   const description =
