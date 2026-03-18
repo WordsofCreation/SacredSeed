@@ -1904,6 +1904,100 @@ export const editorialArticleDefinitions = [
 
 
   {
+    slug: 'african-american-herbalism-review',
+    title: 'African American Herbalism Review: A Meaningful Guide to Healing Plants and Folk Traditions?',
+    summary:
+      'A thoughtful review of African American Herbalism: A Practical Guide to Healing Plants and Folk Traditions, a beginner-friendly herbal book that blends plant knowledge with cultural context and folk tradition.',
+    intro:
+      'African American Herbalism: A Practical Guide to Healing Plants and Folk Traditions appears designed for readers who want herbal learning that feels practical, historically rooted, and connected to lived cultural experience.',
+    estimatedReadMinutes: 7,
+    tags: [
+      'african american herbalism review',
+      'best herbal books',
+      'culturally rooted herbalism',
+      'folk traditions',
+      'beginner herbal books'
+    ],
+    relatedCategories: ['Beginner herbal study', 'Traditional herbal knowledge', 'Home apothecary basics'],
+    relatedTags: ['book review', 'folk traditions', 'cultural context'],
+    searchKeywords: [
+      'african american herbalism review',
+      'african american herbalism book review',
+      'lucretia vandyke herbalism book',
+      'healing plants and folk traditions review',
+      'culturally grounded herbal book'
+    ],
+    sections: [
+      {
+        heading: 'Why This Book Stands Out',
+        paragraphs: [
+          'If you are looking for an herbal book that goes beyond simple remedy lists and explores the deeper cultural roots of plant medicine, African American Herbalism: A Practical Guide to Healing Plants and Folk Traditions stands out as a compelling option. Written by Lucretia VanDyke, this book is presented as a practical and culturally grounded introduction to herbal traditions connected to African American history and lived experience.',
+          'What makes this title especially interesting is that it appears to combine herbal education with heritage, storytelling, and folk tradition. Many herbal books teach the uses of plants, but this one seems to place strong emphasis on the people, practices, and historical wisdom behind those uses. That gives it a distinctive voice and may make it especially meaningful for readers who want a more rooted and human approach to herbal learning.'
+        ]
+      },
+      {
+        heading: 'What This Book Seems to Offer',
+        paragraphs: [
+          'Based on publisher and retailer descriptions, this book introduces herbal practices rooted in African American tradition while also serving as a practical guide to healing plants and natural wellness. It appears to include discussion of commonly used herbs such as aloe, lavender, sage, and sassafras, along with botanical illustrations and broader context around plant-based healing. That combination of practical plant knowledge and cultural framing may make it more engaging than a standard beginner herb manual.',
+          'For many readers, that is a major strength. Herbalism is not only about recipes and preparations. It is also about tradition, memory, community, and the ways people have cared for one another across generations. A guide that honors those dimensions can feel more alive, more respectful, and more relevant than a purely mechanical reference book.'
+        ]
+      },
+      {
+        heading: 'Who This Book May Be Best For',
+        paragraphs: [
+          'This book may be a strong fit for the following readers:'
+        ],
+        bullets: [
+          'Beginners who want a more approachable entry into herbal medicine.',
+          'Readers interested in the cultural and historical roots of plant healing.',
+          'People building a thoughtful home herbal library.',
+          'Readers looking for herbal education that feels personal and grounded.',
+          'Anyone interested in folk traditions alongside practical plant use.'
+        ]
+      },
+      {
+        heading: 'Potential Strengths',
+        paragraphs: [
+          'One likely strength of this book is its perspective. Retailer and review materials describe it as a distinctive contribution that brings together herbal medicine and African American history and experience in a way that is not commonly represented in mainstream herbal publishing. That alone may make it valuable for readers seeking a broader and more inclusive view of herbal traditions.',
+          'Another likely strength is accessibility. The descriptions suggest that the book is written for a general audience rather than only for advanced practitioners, which can make it a strong starting point for readers who want to learn without feeling overwhelmed by clinical detail or technical jargon.'
+        ]
+      },
+      {
+        heading: 'Things to Keep in Mind',
+        paragraphs: [
+          'As with any herbal medicine book, readers should keep expectations balanced. A practical herbal guide can be inspiring and educational, but it should not replace qualified medical care, responsible plant identification, or deeper study of herb safety, contraindications, and preparation methods. Herbal books are often best used as part of a broader learning journey.',
+          'It is also worth approaching a book like this with the understanding that its value may lie as much in its cultural perspective as in its remedy content. Readers seeking a dense clinical materia medica may want to pair it with more technical references. But readers who want a thoughtful, heritage-centered introduction may find that this is exactly where the book shines.'
+        ]
+      },
+      {
+        heading: 'Final Verdict',
+        paragraphs: [
+          'African American Herbalism looks like a meaningful and worthwhile addition to a modern herbal library, especially for readers who want more than a basic list of herbs and uses. Its blend of practical plant knowledge, folk tradition, and cultural context gives it a distinctive place among beginner-friendly herbal books.',
+          'If your goal is to explore herbalism through a lens of tradition, story, and lived healing knowledge, this book may be well worth considering. For readers who value both accessible herbal education and deeper cultural context, it appears to offer something genuinely special.'
+        ]
+      },
+      {
+        heading: 'Suggested CTA',
+        paragraphs: [
+          'If you value herbal books that connect practical learning with history, identity, and lived tradition, African American Herbalism may be worth exploring alongside other beginner-friendly references.'
+        ],
+        cta: {
+          label: 'Check price and read more on Amazon',
+          href: 'https://www.amazon.com/African-American-Herbalism-Practical-Traditions/dp/1646043529?linkCode=ll2&tag=sacredseed-20&linkId=235d726b2b10816b65ebbab8cf0a857f&language=en_US&ref_=as_li_ss_tl'
+        }
+      }
+    ],
+    disclaimer:
+      'This article is for educational purposes only and is not medical advice. Herbal books should not replace individualized medical care, careful plant identification, or professional guidance on herb safety, medication interactions, pregnancy, or serious symptoms.',
+    relatedHerbSlugs: ['aloe-vera', 'lavandula-angustifolia', 'salvia-officinalis', 'sassafras-albidum'],
+    relatedRoutes: [
+      { label: 'Best herbal books for beginners', href: '#/best-herbal-books' },
+      { label: 'How to build a simple home apothecary shelf', href: '#/buyer-guides/how-to-build-a-simple-home-apothecary-shelf' },
+      { label: 'What Is Herbalism?', href: '#/articles/what-is-herbalism' }
+    ]
+  },
+
+  {
     slug: 'native-american-herbalists-bible-review',
     title: 'Native American Herbalist’s Bible Review: A Beginner-Friendly Herbal Medicine Companion?',
     summary:
