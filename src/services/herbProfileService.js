@@ -10,6 +10,83 @@ import {
 import { fetchPubchemProfileForHerb } from './pubchemService.js';
 import { getNormalizedMedicinalProfile } from './medicinalProfileService.js';
 
+const PROFILE_CACHE_TTL_MS = 1000 * 60 * 30;
+const SOURCE_TIMEOUT_MS = 3500;
+const MEMORY_PROFILE_CACHE = new Map();
+
+function getCacheKey(slug) {
+  return `sacredseed.herbProfile.${slug}`;
+}
+
+function readBrowserCache(slug) {
+  if (typeof window === 'undefined' || !window.localStorage) {
+    return null;
+  }
+
+  try {
+    const rawValue = window.localStorage.getItem(getCacheKey(slug));
+    if (!rawValue) {
+      return null;
+    }
+
+    const parsed = JSON.parse(rawValue);
+    if (Date.now() - parsed.cachedAt > PROFILE_CACHE_TTL_MS) {
+      window.localStorage.removeItem(getCacheKey(slug));
+      return null;
+    }
+
+    return parsed.data;
+  } catch {
+    return null;
+  }
+}
+
+function writeBrowserCache(slug, data) {
+  if (typeof window === 'undefined' || !window.localStorage) {
+    return;
+  }
+
+  try {
+    window.localStorage.setItem(
+      getCacheKey(slug),
+      JSON.stringify({ cachedAt: Date.now(), data })
+    );
+  } catch {
+    // Ignore storage write failures (private mode, quota, etc.).
+  }
+}
+
+function readMemoryCache(slug) {
+  const cached = MEMORY_PROFILE_CACHE.get(slug);
+  if (!cached) {
+    return null;
+  }
+
+  if (Date.now() - cached.cachedAt > PROFILE_CACHE_TTL_MS) {
+    MEMORY_PROFILE_CACHE.delete(slug);
+    return null;
+  }
+
+  return cached.data;
+}
+
+function writeMemoryCache(slug, data) {
+  MEMORY_PROFILE_CACHE.set(slug, {
+    cachedAt: Date.now(),
+    data
+  });
+}
+
+function withTimeout(promise, label) {
+  const timeoutPromise = new Promise((_, reject) => {
+    setTimeout(() => {
+      reject(new Error(`${label} timed out after ${SOURCE_TIMEOUT_MS}ms`));
+    }, SOURCE_TIMEOUT_MS);
+  });
+
+  return Promise.race([promise, timeoutPromise]);
+}
+
 /**
  * Source registry for phase 2.
  *
@@ -24,14 +101,28 @@ export async function getHerbProfile(slug) {
     throw new Error(`Unknown herb slug: ${slug}`);
   }
 
+  const memoryCached = readMemoryCache(slug);
+  if (memoryCached) {
+    return memoryCached;
+  }
+
+  const browserCached = readBrowserCache(slug);
+  if (browserCached) {
+    writeMemoryCache(slug, browserCached);
+    return browserCached;
+  }
+
   const [inaturalistResult, gbifResult, pubchemResult] = await Promise.allSettled([
-    fetchTaxonByBotanicalName(fallback.botanicalName),
-    fetchGbifProfileByBotanicalName(fallback.botanicalName),
-    fetchPubchemProfileForHerb({
-      slug,
-      botanicalName: fallback.botanicalName,
-      commonName: fallback.commonName
-    })
+    withTimeout(fetchTaxonByBotanicalName(fallback.botanicalName), 'iNaturalist'),
+    withTimeout(fetchGbifProfileByBotanicalName(fallback.botanicalName), 'GBIF'),
+    withTimeout(
+      fetchPubchemProfileForHerb({
+        slug,
+        botanicalName: fallback.botanicalName,
+        commonName: fallback.commonName
+      }),
+      'PubChem'
+    )
   ]);
 
   const inaturalistTaxon = inaturalistResult.status === 'fulfilled' ? inaturalistResult.value : null;
@@ -50,7 +141,7 @@ export async function getHerbProfile(slug) {
     herb.dataSources = ['Fallback dataset'];
   }
 
-  return {
+  const response = {
     herb,
     sourceMeta: {
       usedApi: Boolean(inaturalistTaxon || gbifProfile?.available || pubchemProfile?.available),
@@ -74,4 +165,9 @@ export async function getHerbProfile(slug) {
       }
     }
   };
+
+  writeMemoryCache(slug, response);
+  writeBrowserCache(slug, response);
+
+  return response;
 }
