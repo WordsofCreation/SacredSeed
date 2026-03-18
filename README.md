@@ -1,235 +1,126 @@
-# Heavens — Modern Observatory Experience for the Web
+# SacredSeed — Materia Medica Index Foundation (Phase 5)
 
-Heavens is a static-first astronomy platform built for **GitHub Pages compatibility**, elegant visual exploration, and modular long-term growth.
+This phase extends SacredSeed with a **site-wide compliance and attribution layer** while preserving the existing unified herb object architecture.
 
-This phase evolves the project into a richer observatory-style experience that combines:
+## What was added
 
-- **Observatory Mode** for immersive sky exploration
-- lightweight interactive sky discovery
-- guided journeys and “Tonight’s Journey” prompts
-- premium object focus panels
-- integrated science storytelling modules
-- constellation and sky-region discovery
-- upgraded homepage invitation and editorial discovery surfaces
+- Reusable compliance registry for source attribution, licensing notes, disclaimer text, and internal API/commercial-use notes.
+- Reusable compliance service that normalizes source metadata into consistent UI-ready attribution entries.
+- Shared compliance UI components for subtle disclaimer and source-attribution presentation.
+- Herb profile integration for source badges, expandable provider details, and context-sensitive educational/medical disclaimers.
+- Materia medica page integration for platform-level educational-use notice and attribution framework communication.
+- New About page with polished copy covering mission, offerings, data approach, educational use, and transparency expectations.
+- Header navigation updates to support modular routing between core pages.
 
-The result is designed to feel like **a modern observatory for the web**: atmospheric, educational, approachable, and performant — without becoming a heavy planetarium engine.
+## Internal herb object contract
 
-## What Observatory Mode is
+The profile contract remains the source-of-truth object shape. The compliance layer reads from the same unified object model and additional metadata (`dataSources`, `chemistrySources`, `medicinalSources`).
 
-Observatory Mode is the new flagship experience under `#/observatory`.
+```js
+{
+  commonName,
+  botanicalName,
+  family,
+  synonyms,
+  description,
+  distribution,
+  habitat,
+  medicinalProperties,
+  preparations,
+  safetyNotes,
+  image,
+  taxonomyStatus,
+  kingdom,
+  phylum,
+  class,
+  order,
+  genus,
+  species,
+  nativeRange,
+  occurrenceNotes,
+  activeCompounds,
+  phytochemicals,
+  compoundDetails,
+  compoundNames,
+  compoundSummaries,
+  chemistryNotes,
+  chemistrySources,
+  dataSources,
 
-It combines:
+  // optional index-oriented fields
+  slug,
+  summary,
+  medicinalActions,
+  bodySystems,
+  safetyCategory,
+  safetySummary
+}
+```
 
-- a stylized full-width sky canvas
-- highlighted major stars and famous objects
-- constellation-region focus cards
-- guided discovery journeys
-- an object focus panel that updates in place
-- lightweight depth, glow, and motion treatments
-- object deep-linking via routes like `#/observatory/sirius`
+## Compliance architecture
 
-Observatory Mode is intentionally curated rather than physically exhaustive. It does **not** try to simulate the full night sky in real time. Instead, it offers a premium educational exploration layer powered by local structured data and modular vanilla JavaScript.
+- `src/data/complianceRegistry.js`
+  - Canonical source/license metadata (`dataSources`)
+  - Disclaimer taxonomy (`disclaimerType`, `disclaimerContent`)
+  - Page-level compliance configuration (`complianceByPageType`)
+  - Internal operational notes for API/attribution/commercial thresholds (`complianceNotes`)
+- `src/services/complianceService.js`
+  - Builds normalized attribution records from herb data and source metadata.
+  - Resolves context-sensitive disclaimer bundles by page type.
+- `src/components/complianceBlocks.js`
+  - Renders reusable, subtle compliance cards suitable for herb pages, formula pages, regional guides, and educational content.
+# SacredSeed — Materia Medica + Preparation Library (Phase 5)
 
-## How the immersive sky experience is structured
+This phase introduces a structured **Herbal Preparations and Remedies layer** while preserving SacredSeed's unified herb profile architecture, searchable Materia Medica index, and regional-ready expansion model.
 
-The immersive sky experience is split into local data, service resolution, rendering, and browser behavior.
+## What was added
 
-### Data layer
+- Dedicated `#/preparations` experience for:
+  - SacredSeed Preparations (single-herb guides)
+  - Tea Formulas (single- and multi-herb formulas)
+  - Remedy Collections (curated formula groupings)
+- Structured preparation data model with reusable fields for:
+  - `preparationType`, `preparationDescription`, `methodSteps`
+  - `ingredientHerbs`, `ingredientAmounts`
+  - `dosageGuidance`, `safetyNotes`, `duration`, `storageNotes`
+  - `preparationTags`, `formulaCategory`
+- Formula and guide linking to the existing unified herb object via herb slug references.
+- Modular service and taxonomy helpers for normalization, filtering, and grouped browsing.
+- UI filters for preparation type, formula category, and formula tags.
 
-- `src/data/astronomyObjects.js`
-  - Core object records for stars and clusters used across the site.
-- `src/data/observatoryContent.js`
-  - Observatory-specific coordinates, prominence markers, guided journeys, constellation regions, and science storytelling modules.
+## Architecture notes
 
-### Service layer
+The herb profile contract remains intact and unchanged. Preparation and formula modules extend—not replace—the existing data system.
 
-- `src/services/astronomyContentService.js`
-  - Resolves base object, topic, pathway, and discover relationships.
-- `src/services/observatoryService.js`
-  - Merges base astronomy objects with observatory coordinates and curated experience metadata.
+New modules:
 
-### Rendering layer
+- `src/data/preparationTaxonomy.js`
+- `src/data/preparationLibrary.js`
+- `src/utils/preparationTaxonomy.js`
+- `src/services/preparationLibraryService.js`
+- `src/components/preparationLibrary.js`
+- `src/pages/preparationLibraryPage.js`
 
-- `src/pages/observatoryPage.js`
-  - Renders Observatory Mode.
-- `src/pages/homePage.js`
-  - Upgrades the homepage with Observatory Mode invitations, tonight’s route, and storytelling panels.
-- `src/pages/discoverPage.js`
-  - Expands Discover into the editorial companion to the observatory experience.
-- `src/pages/objectPage.js`
-  - Adds a richer object focus experience and observatory deep links.
+These modules are intentionally small and reusable to support future recipe libraries, seasonal protocols, and educational pathways.
 
-### Browser interaction layer
+## Initial preparation guides and formulas
 
-- `src/components/observatoryExperience.js`
-  - Draws the starfield canvas, syncs focused objects, updates region/journey panels, and keeps interactions lightweight.
+Preparation guides include:
 
-## How guided journeys are modeled
+- Nettle Infusion
+- Yarrow Tea
+- Oregon Grape Decoction
 
-Guided journeys live in `src/data/observatoryContent.js` as reusable objects.
+Formula/remedy examples include:
 
-Each journey includes:
+- Nutritive Mineral Tea
+- Calming Evening Tea
+- Seasonal Immune Support Tea
 
-- `slug`
-- `title`
-- `summary`
-- `duration`
-- `objectSlugs[]`
-- `primaryTopicSlug`
-- `steps[]`
+Collections include:
 
-The observatory service resolves these into:
-
-- `objectsDetailed[]`
-- `primaryTopic`
-
-This keeps the architecture static-friendly while making it easy to add:
-
-- beginner onboarding routes
-- seasonal star tours
-- naked-eye-only journeys
-- science-specific sequences like “follow the light”
-
-## How object focus panels work
-
-Object focus behavior is driven by local object metadata plus observatory-specific presentation fields.
-
-When a user selects an object in Observatory Mode:
-
-1. the focused object is highlighted in the canvas
-2. the detail panel updates in place
-3. badges and profile markers reinforce the object’s role
-4. the panel surfaces related science context and deep links
-5. the route can update to `#/observatory/<slug>` for direct entry
-
-Each focused object can display:
-
-- object name
-- type
-- constellation
-- distance
-- spectral class
-- color/temperature note
-- why the object matters
-- what its light reveals
-- fame/prominence badges
-- naked-eye labeling where relevant
-
-## How constellation and sky regions are modeled
-
-Constellation and sky-region cards also live in `src/data/observatoryContent.js`.
-
-Each region includes:
-
-- `slug`
-- `name`
-- `title`
-- `note`
-- `culturalNote`
-- `objects[]`
-- `points[]` for stylized region shapes in the sky canvas
-
-These regions are intentionally simplified so the site stays:
-
-- fast
-- legible
-- educational
-- mobile-friendly
-
-## How to add a new featured object
-
-1. Add the base astronomy record to `src/data/astronomyObjects.js`.
-2. Add observatory-specific position and storytelling fields to `src/data/observatoryContent.js` under `observatoryObjects`.
-3. Link the object to related topics and related objects.
-4. Optionally place it into one or more:
-   - `constellationRegions`
-   - `observatoryJourneys`
-   - homepage or discover features through service-layer usage
-
-## How to add a new constellation or sky region
-
-1. Create a new region object in `src/data/observatoryContent.js` under `constellationRegions`.
-2. Provide:
-   - a unique `slug`
-   - visible `title`
-   - descriptive notes
-   - object slugs
-   - normalized `points[]` for the stylized region shape
-3. The region will become available to Observatory Mode through `src/services/observatoryService.js`.
-
-## How to add a new guided experience
-
-1. Add a new record to `observatoryJourneys` in `src/data/observatoryContent.js`.
-2. Reference existing object slugs and a related science topic slug.
-3. Write concise `steps[]` that feel like a guided route, not a textbook outline.
-4. Observatory Mode will automatically surface the new journey in the guided discovery layer.
-
-## Homepage upgrade highlights
-
-The homepage now emphasizes:
-
-- **Enter Observatory Mode**
-- **Featured object of the night**
-- **Tonight’s Journey**
-- **Explore the sky**
-- **Understand starlight**
-- **Guided journeys**
-- **Science storytelling modules**
-
-This makes the product vision clear immediately: Heavens is not just a reading site or a raw viewer, but a premium educational observatory experience.
-
-## Performance and accessibility considerations
-
-The experience remains lightweight and static-friendly by design.
-
-### Performance
-
-- No server-side infrastructure is required.
-- All experience data is local and bundled as JavaScript modules.
-- The sky layer uses a lightweight browser canvas instead of a heavy visualization dependency.
-- No heavy SPA framework was introduced.
-- Hash routing preserves GitHub Pages compatibility.
-
-### Accessibility
-
-- Interactive controls are implemented with semantic buttons and links.
-- Observatory controls remain keyboard reachable where practical.
-- Motion remains subtle and respects `prefers-reduced-motion`.
-- Content remains readable even if optional interactive scripts fail.
-- Object pages and discover pages still provide non-canvas entry points into the same content.
-
-## Major new files/modules
-
-- `src/data/observatoryContent.js`
-- `src/services/observatoryService.js`
-- `src/components/observatoryExperience.js`
-- `src/pages/observatoryPage.js`
-
-## Updated files of note
-
-- `src/data/astronomyObjects.js`
-- `src/pages/homePage.js`
-- `src/pages/discoverPage.js`
-- `src/pages/objectPage.js`
-- `src/main.js`
-- `src/utils/pageSeo.js`
-- `styles.css`
-- `index.html`
-
-## Routes
-
-The site uses static hash routing so it remains publishable on GitHub Pages without server-side routing:
-
-- `#/home` — upgraded homepage
-- `#/observatory` — Observatory Mode
-- `#/observatory/<slug>` — deep-linked focused observatory object
-- `#/objects` — object directory
-- `#/objects/<slug>` — dedicated object pages
-- `#/discover` — editorial discovery hub
-- `#/learn` — learning pathway index
-- `#/learn/<slug>` — guided pathway detail page
-- `#/topics/<slug>` — science topic pages
-- `#/about` — platform overview
+- Seasonal Wellness Basics
+- Calm and Restore Evening Collection
 
 ## Local run
 
@@ -237,40 +128,83 @@ The site uses static hash routing so it remains publishable on GitHub Pages with
 python3 -m http.server 4173
 ```
 
-Then open `http://localhost:4173` and navigate with hash routes such as:
+Then open `http://localhost:4173`.
 
-- `http://localhost:4173/#/home`
-- `http://localhost:4173/#/observatory`
-- `http://localhost:4173/#/observatory/sirius`
-- `http://localhost:4173/#/discover`
-- `http://localhost:4173/#/objects/betelgeuse`
+## Future extension notes
 
-## How the new immersive experience fits the existing site
+- Add new guides/formulas in `src/data/preparationLibrary.js`.
+- Reuse `herbSlug` references to auto-link ingredients to existing herb profiles.
+- Extend taxonomy dictionaries in `src/data/preparationTaxonomy.js` as new categories emerge.
+- Add educational article routes and glossary cross-links using the preparation collection IDs.
 
-The observatory layer does not replace the rest of Heavens.
+## Image asset workflow
 
-Instead it acts as the premium front door:
+SacredSeed now includes a dedicated image architecture under `assets/images/`:
 
-- **Homepage** invites visitors into observatory exploration.
-- **Observatory Mode** creates focused emotional engagement and discovery.
-- **Object pages** deepen the selected target with structured science context.
-- **Discover** provides editorial prompts and storytelling modules.
-- **Learn** keeps longer educational routes available for structured study.
+- Add originals to `assets/images/raw/<category>/`
+- Generate web-ready variants with `python3 scripts/process_images.py`
+- Use published site paths in `assets/images/<category>/`
 
-This means the site now supports both:
+Full usage instructions and naming conventions are documented in `assets/images/README.md`.
 
-- immediate, atmospheric exploration
-- deeper, connected science learning
+## Deployment (main branch)
 
-## Next best implementation phase
+SacredSeed is configured to auto-deploy to **GitHub Pages** whenever `main` receives a push. The workflow is defined in `.github/workflows/deploy-pages.yml`.
 
-The next strongest phase would be **Seasonal Observing and Personal Context**.
+Expected production URL:
 
-Recommended additions:
+- `https://wordsofcreation.github.io/SacredSeed/`
 
-- seasonal sky packs and rotating monthly observatory scenes
-- local-time or hemisphere-aware featured journeys with graceful fallbacks
-- visibility windows and “best seen in” guidance for objects
-- expanded object libraries covering planets, nebulae, and galaxies
-- deeper object comparison modules for stellar class, luminosity, and scale
-- optional richer cultural sky storytelling modules with careful sourcing
+If your GitHub org/user or repository name differs, use:
+
+- `https://<owner>.github.io/<repo>/`
+
+## Cache busting for GitHub Pages assets
+
+SacredSeed uses a centralized asset version string to bust browser caches for static files served by GitHub Pages.
+
+- Version source: `<meta name="sacredseed-asset-version" ...>` in `index.html`
+- Core loader behavior:
+  - `styles.css` is loaded with `?v=<version>`
+  - `src/main.js` is dynamically imported with `?v=<version>`
+- Reusable helper: `src/utils/assetVersion.js`
+  - `withAssetVersion(url)` appends the current version to local/static asset URLs.
+  - Used by image resolution helpers so herb images/placeholders also receive versioned URLs.
+
+### How to bump cache version
+
+1. Open `index.html`.
+2. Update `sacredseed-asset-version` (for example from `2026.03.15.1` to `2026.03.20.1`).
+3. Deploy to GitHub Pages.
+
+After bumping the version, browsers request fresh copies of CSS, JavaScript, and local image assets without requiring users to hard refresh.
+
+## Sitemap and robots automation
+
+SacredSeed generates `sitemap.xml` and `robots.txt` from route/content sources rather than a hardcoded URL list.
+
+- Generator script: `scripts/generate-sitemap.mjs`
+- Canonical URL configuration: `src/config/siteConfig.js` (`canonicalBaseUrl`)
+- Build-time override: set `SACREDSEED_CANONICAL_BASE_URL` when generating sitemap files (used by GitHub Actions to match owner/repo automatically).
+- Automatic deploy integration: `.github/workflows/deploy-pages.yml` runs sitemap generation before uploading the Pages artifact.
+
+### Included URLs
+
+The generator includes only canonical public routes:
+
+- Static sections (home, materia medica, collections, pathways, seasons, articles, preparations, about)
+- Herb detail routes from herb batch data files
+- Collection/pathway/season/article detail routes from their data definitions
+
+It excludes hash/query variants, duplicate URLs, localhost URLs, and noindex utility pages (search, privacy policy, terms, 404).
+
+### Regenerate locally
+
+```bash
+npm run generate:sitemap
+```
+
+This rewrites:
+
+- `sitemap.xml`
+- `robots.txt`
