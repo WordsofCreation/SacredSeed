@@ -33,6 +33,7 @@ import { renderDiscoverPage } from './pages/discoverPage.js';
 import { renderLearnPage } from './pages/learnPage.js';
 import { renderLearnPathPage } from './pages/learnPathPage.js';
 import { renderScienceTopicPage } from './pages/scienceTopicPage.js';
+import { renderObservatoryPage } from './pages/observatoryPage.js';
 import { applyPageSeo } from './utils/seo.js';
 import { initializeImageFallbackHandling } from './utils/imageAssets.js';
 import { initializeDeviceLayoutClass } from './utils/deviceLayout.js';
@@ -68,6 +69,7 @@ import {
   getObjectsSeo,
   getObjectSeo,
   getDiscoverSeo,
+  getObservatorySeo,
   getLearnSeo,
   getLearnPathSeo,
   getScienceTopicSeo
@@ -180,6 +182,20 @@ async function renderRoute() {
   if (section === 'discover') {
     renderDiscoverPage(app);
     applyPageSeo(getDiscoverSeo());
+    syncActiveNav();
+    return;
+  }
+
+  if (section === 'observatory' && !slug) {
+    const observatory = renderObservatoryPage(app);
+    applyPageSeo(getObservatorySeo(observatory));
+    syncActiveNav();
+    return;
+  }
+
+  if (section === 'observatory' && slug) {
+    const observatory = renderObservatoryPage(app, decodeURIComponent(slug));
+    applyPageSeo(getObservatorySeo(observatory));
     syncActiveNav();
     return;
   }
