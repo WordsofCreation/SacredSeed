@@ -1,41 +1,47 @@
+import { renderDisclaimerBlock, renderSourceAttributionBlock } from '../components/complianceBlocks.js';
+import { getComplianceContext } from '../services/complianceService.js';
+import { dataSources } from '../data/complianceRegistry.js';
+
 const pillars = [
   {
-    title: 'Why Heavens exists',
+    title: 'Our Mission',
     body:
-      'Heavens is designed to help people move from admiration to understanding. The platform treats astronomy as both an aesthetic experience and a science of evidence, interpretation, and long-term curiosity.'
+      'We are building a transparent herbal reference environment where practitioners, students, and curious learners can explore plants with scholarly clarity. SacredSeed emphasizes careful language, data provenance, and elegant information design so complex botanical material remains approachable without sacrificing rigor.'
   },
   {
-    title: 'What the platform now includes',
+    title: 'What SacredSeed Offers',
     body:
-      'This phase adds dedicated object pages, a Discover hub, science topic pages, guided learning pathways, and a stronger web of internal links so each visit can lead naturally into deeper study.'
+      'SacredSeed currently offers a growing materia medica index and modular herb profiles with taxonomy, preparation traditions, chemistry context, and safety-oriented reference notes. The platform architecture is intentionally unified so future regional guides, formula pages, and educational essays can share the same source-aware and compliance-aware data model.'
   },
   {
-    title: 'Local-first content architecture',
+    title: 'Our Data Approach',
     body:
-      'Objects, learning pathways, discovery modules, and related reading panels are powered by structured local content. That keeps the experience stable on GitHub Pages while creating clean seams for future research integrations.'
+      'Plant, taxonomy, chemistry, and related safety context may combine curated editorial monographs with third-party data providers. We normalize this information into a consistent internal herb object to keep presentation stable while preserving source attribution and license awareness.'
   },
   {
-    title: 'How research integrations fit later',
+    title: 'Educational Use and Medical Disclaimer',
     body:
-      'Future integrations with archives, bibliographic services, or live astronomical feeds should attach at the service layer, enriching existing cards and panels without becoming a hard dependency for browsing the site.'
+      'SacredSeed is an educational herbal reference, not a medical diagnosis or treatment service. Content should not replace care from licensed healthcare professionals, particularly in cases involving chronic illness, medications, pregnancy, lactation, or complex safety considerations.'
   },
   {
-    title: 'Design principles',
+    title: 'Transparency and Attribution',
     body:
-      'Heavens aims to be premium, calm, accessible, and readable. Long-form pages are written for clarity, internal links are intentional, and the interface respects the difference between delightful exploration and visual clutter.'
+      'Source-specific attribution and licensing requirements matter. SacredSeed is designed to display provider-aware attribution notes across herb profiles and future formula, regional, and educational modules, while keeping the interface calm, readable, and professional.'
   }
 ];
 
 export function renderAboutPage(rootElement) {
+  const compliance = getComplianceContext('about');
+
   rootElement.innerHTML = `
     <section class="card about-page">
       <div class="section-header">
-        <p class="eyebrow">About Heavens</p>
-        <h1>An astronomy platform built for discovery, literacy, and future research depth</h1>
+        <p class="eyebrow">About SacredSeed</p>
+        <h1>Professional botanical learning, designed with integrity</h1>
         <p>
-          Heavens is a polished static astronomy experience that combines visual exploration with scientific context.
-          The platform is intentionally modular so object pages, learning systems, and future data integrations can grow together
-          without sacrificing elegance, speed, or GitHub Pages compatibility.
+          SacredSeed is a professional botanical knowledge platform designed to support thoughtful herbal education.
+          Our goal is to make traditional herbal knowledge, modern plant science, and structured materia medica architecture
+          available in one refined, readable experience.
         </p>
       </div>
 
@@ -51,6 +57,20 @@ export function renderAboutPage(rootElement) {
           )
           .join('')}
       </div>
+    </section>
+
+    <section class="compliance-stack">
+      ${renderSourceAttributionBlock({
+        title: 'Current Data Source Registry',
+        sourceAttribution: Object.values(dataSources),
+        showLicenseNotes: true
+      })}
+      ${renderDisclaimerBlock({
+        title: 'Educational & Medical Position',
+        educationalUseNotice: compliance.educationalUseNotice,
+        medicalDisclaimer: compliance.medicalDisclaimer,
+        disclaimers: compliance.disclaimers
+      })}
     </section>
   `;
 }

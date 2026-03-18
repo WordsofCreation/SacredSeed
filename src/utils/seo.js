@@ -1,18 +1,18 @@
 import { getCanonicalBaseUrl, getCanonicalPageUrl } from '../config/siteConfig.js';
 
 const SITE_SEO = {
-  siteName: 'Heavens',
-  baseTitle: 'Heavens | Science Discovery and Research Experience',
-  defaultTitle: 'Heavens | Astronomy Discovery Platform',
+  siteName: 'SacredSeed',
+  baseTitle: 'SacredSeed | Professional Herbal Knowledge Platform',
+  defaultTitle: 'SacredSeed Materia Medica | Professional Herbal Reference',
   defaultDescription:
-    'Heavens is a premium astronomy platform for dedicated object pages, science discovery, and guided learning pathways.',
+    'SacredSeed is a professional herbal medicine learning platform with materia medica profiles, preparation guidance, and transparent sourcing.',
   defaultImage: 'https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=1200&q=80',
   basePath: '/',
   organization: {
-    name: 'Heavens',
+    name: 'SacredSeed',
     url: '/',
     description:
-      'Heavens is a refined educational astronomy platform for object pages, discovery modules, and science learning.'
+      'SacredSeed is a refined educational herbal reference platform for materia medica, preparations, and transparent botanical sourcing.'
   }
 };
 

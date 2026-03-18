@@ -27,13 +27,6 @@ import { renderLearningPathwayPage } from './pages/learningPathwayPage.js';
 import { renderSeasonalCollectionsPage } from './pages/seasonalCollectionsPage.js';
 import { renderSeasonalCollectionPage } from './pages/seasonalCollectionPage.js';
 import { renderEditorialArticlesPage } from './pages/editorialArticlesPage.js';
-import { renderObjectsIndexPage } from './pages/objectsIndexPage.js';
-import { renderObjectPage } from './pages/objectPage.js';
-import { renderDiscoverPage } from './pages/discoverPage.js';
-import { renderLearnPage } from './pages/learnPage.js';
-import { renderLearnPathPage } from './pages/learnPathPage.js';
-import { renderScienceTopicPage } from './pages/scienceTopicPage.js';
-import { renderObservatoryPage } from './pages/observatoryPage.js';
 import { applyPageSeo } from './utils/seo.js';
 import { initializeImageFallbackHandling } from './utils/imageAssets.js';
 import { initializeDeviceLayoutClass } from './utils/deviceLayout.js';
@@ -64,15 +57,7 @@ import {
   getBestDropperBottlesSeo,
   getBestToolsBeginnerHomeApothecarySeo,
   getHowToBuildSimpleHomeApothecaryShelfSeo,
-  getSearchSeo,
-  getHomeSeo,
-  getObjectsSeo,
-  getObjectSeo,
-  getDiscoverSeo,
-  getObservatorySeo,
-  getLearnSeo,
-  getLearnPathSeo,
-  getScienceTopicSeo
+  getSearchSeo
 } from './utils/pageSeo.js';
 
 
@@ -159,64 +144,6 @@ async function renderRoute() {
 
   if (section === 'home' || !section) {
     renderHomePage(app);
-    applyPageSeo(getHomeSeo());
-    syncActiveNav();
-    return;
-  }
-
-
-  if (section === 'objects' && !slug) {
-    renderObjectsIndexPage(app);
-    applyPageSeo(getObjectsSeo());
-    syncActiveNav();
-    return;
-  }
-
-  if (section === 'objects' && slug) {
-    const object = renderObjectPage(app, decodeURIComponent(slug));
-    applyPageSeo(object ? getObjectSeo(object) : getNotFoundSeo());
-    syncActiveNav();
-    return;
-  }
-
-  if (section === 'discover') {
-    renderDiscoverPage(app);
-    applyPageSeo(getDiscoverSeo());
-    syncActiveNav();
-    return;
-  }
-
-  if (section === 'observatory' && !slug) {
-    const observatory = renderObservatoryPage(app);
-    applyPageSeo(getObservatorySeo(observatory));
-    syncActiveNav();
-    return;
-  }
-
-  if (section === 'observatory' && slug) {
-    const observatory = renderObservatoryPage(app, decodeURIComponent(slug));
-    applyPageSeo(getObservatorySeo(observatory));
-    syncActiveNav();
-    return;
-  }
-
-  if (section === 'learn' && !slug) {
-    renderLearnPage(app);
-    applyPageSeo(getLearnSeo());
-    syncActiveNav();
-    return;
-  }
-
-  if (section === 'learn' && slug) {
-    const path = renderLearnPathPage(app, decodeURIComponent(slug));
-    applyPageSeo(path ? getLearnPathSeo(path) : getNotFoundSeo());
-    syncActiveNav();
-    return;
-  }
-
-  if (section === 'topics' && slug) {
-    const topic = renderScienceTopicPage(app, decodeURIComponent(slug));
-    applyPageSeo(topic ? getScienceTopicSeo(topic) : getNotFoundSeo());
     syncActiveNav();
     return;
   }
