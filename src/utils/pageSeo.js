@@ -284,6 +284,124 @@ export function getEditorialArticleSeo(article) {
   const title = `${article.title} | SacredSeed Editorial Guide`;
   const description = article.summary || article.intro;
   const canonicalUrl = getCanonicalPageUrl(`/articles/${encodeURIComponent(article.slug)}`);
+  const schemaEntries = [
+    buildBaseSchema({
+      pageType: 'Article',
+      title,
+      description,
+      canonicalUrl
+    }),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: title,
+      description,
+      url: canonicalUrl,
+      author: {
+        '@type': 'Organization',
+        name: 'SacredSeed'
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'SacredSeed'
+      },
+      isPartOf: {
+        '@type': 'WebSite',
+        name: site.siteName,
+        url: getCanonicalPageUrl('/')
+      }
+    }
+  ];
+
+  if (article.review?.itemReviewed) {
+    const product = article.review.itemReviewed;
+    const productSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: product.name,
+      description: product.description || description,
+      brand: product.brand
+        ? {
+          '@type': 'Brand',
+          name: product.brand
+        }
+        : undefined,
+      category: product.category,
+      sku: product.sku,
+      size: product.size,
+      url: product.url,
+      aggregateRating: product.aggregateRating
+        ? {
+          '@type': 'AggregateRating',
+          ratingValue: product.aggregateRating.ratingValue,
+          ratingCount: product.aggregateRating.ratingCount,
+          bestRating: product.aggregateRating.bestRating
+        }
+        : undefined,
+      offers: product.offers
+        ? {
+          '@type': 'Offer',
+          url: product.url,
+          availability: product.offers.availability,
+          seller: product.offers.seller
+            ? {
+              '@type': 'Organization',
+              name: product.offers.seller
+            }
+            : undefined
+        }
+        : undefined,
+      additionalProperty: product.ingredients?.length
+        ? [
+          {
+            '@type': 'PropertyValue',
+            name: 'Ingredients',
+            value: product.ingredients.join(', ')
+          }
+        ]
+        : undefined
+    };
+
+    schemaEntries.push(productSchema);
+    schemaEntries.push({
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      name: article.title,
+      reviewBody: article.summary || article.intro,
+      reviewRating: article.review.reviewRating
+        ? {
+          '@type': 'Rating',
+          ratingValue: article.review.reviewRating,
+          bestRating: article.review.bestRating ?? 5
+        }
+        : undefined,
+      itemReviewed: {
+        '@type': 'Product',
+        name: product.name,
+        sku: product.sku,
+        url: product.url,
+        brand: product.brand
+          ? {
+            '@type': 'Brand',
+            name: product.brand
+          }
+          : undefined
+      },
+      author: {
+        '@type': 'Organization',
+        name: 'SacredSeed'
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'SacredSeed'
+      },
+      isPartOf: {
+        '@type': 'Article',
+        headline: title,
+        url: canonicalUrl
+      }
+    });
+  }
 
   return {
     title,
@@ -319,6 +437,7 @@ export function getEditorialArticleSeo(article) {
       },
       ...buildEditorialReviewSchema(article, canonicalUrl)
     ]
+    schemaEntries
   };
 }
 
