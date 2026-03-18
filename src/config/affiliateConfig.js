@@ -211,6 +211,20 @@ export const affiliateProductCatalog = {
       'https://www.amazon.com/s?k=apothecary+supplies&crid=2A9OW6YG6ID4K&sprefix=apothecary+sup%2Caps%2C593&linkCode=ll2&tag=sacredseed-20&linkId=030e62f4f39e50005110e06c8650331b&language=en_US&ref_=as_li_ss_tl',
     note: 'Start small and choose only the containers and tools you can maintain consistently.'
   },
+  herbamamaBrainSupportCapsules: {
+    key: 'herbamamaBrainSupportCapsules',
+    title: 'HERBAMAMA Brain Support Capsules',
+    description:
+      'Plant-based brain support capsules positioned around a multi-herb formula with Bacopa, Panax ginseng, Ashwagandha, and Ginkgo Biloba.',
+    image: '/assets/images/site/placeholders/herb-fallback-card.svg',
+    imageAlt: 'Botanical illustration placeholder for HERBAMAMA Brain Support Capsules',
+    ctaLabel: 'View on Amazon',
+    whyWeRecommend:
+      'Useful for readers comparing capsule-based herbal cognitive-support blends against single-herb options and other supplement formats.',
+    affiliateUrl:
+      'https://www.amazon.com/HERBAMAMA-Brain-Health-Capsules-Supplements/dp/B07VKDD8ZT?th=1&linkCode=ll2&tag=sacredseed-20&linkId=2a98130bdddde537a1ff39a7824a3982&language=en_US&ref_=as_li_ss_tl',
+    note: 'Verify the current ingredient panel, capsule count, and price on Amazon before purchasing.'
+  },
   herbalReferenceBook: {
     key: 'herbalReferenceBook',
     title: 'Best Herbal Books',

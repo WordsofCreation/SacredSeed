@@ -215,6 +215,71 @@ export function getEditorialArticlesSeo() {
   };
 }
 
+
+function buildEditorialReviewSchema(article, canonicalUrl) {
+  const review = article.reviewSchema;
+
+  if (!review?.productName) {
+    return [];
+  }
+
+  const productUrl = review.productUrl || canonicalUrl;
+  const product = {
+    '@type': 'Product',
+    name: review.productName,
+    description: review.description || article.summary || article.intro,
+    url: productUrl,
+    brand: review.brand
+      ? {
+        '@type': 'Brand',
+        name: review.brand
+      }
+      : undefined,
+    sku: review.sku,
+    category: review.category,
+    offers: review.price || review.availability
+      ? {
+        '@type': 'Offer',
+        url: productUrl,
+        priceCurrency: review.priceCurrency || 'USD',
+        price: review.price,
+        availability: review.availability,
+        itemCondition: review.itemCondition || 'https://schema.org/NewCondition'
+      }
+      : undefined
+  };
+
+  Object.keys(product).forEach((key) => product[key] === undefined && delete product[key]);
+  if (product.offers) {
+    Object.keys(product.offers).forEach((key) => product.offers[key] === undefined && delete product.offers[key]);
+  }
+
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      headline: article.title,
+      name: article.title,
+      description: article.summary || article.intro,
+      url: canonicalUrl,
+      author: {
+        '@type': 'Organization',
+        name: 'SacredSeed'
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'SacredSeed'
+      },
+      itemReviewed: product,
+      reviewBody: article.summary || article.intro
+    },
+    {
+      '@context': 'https://schema.org',
+      ...product
+    }
+  ];
+}
+
 export function getEditorialArticleSeo(article) {
   const title = `${article.title} | SacredSeed Editorial Guide`;
   const description = article.summary || article.intro;
@@ -251,7 +316,8 @@ export function getEditorialArticleSeo(article) {
           name: site.siteName,
           url: getCanonicalPageUrl('/')
         }
-      }
+      },
+      ...buildEditorialReviewSchema(article, canonicalUrl)
     ]
   };
 }
