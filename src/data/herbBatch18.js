@@ -926,7 +926,7 @@ export const herbBatch18 = [
   {
     slug: 'atractylodes-blue',
     commonName: 'Atractylodes Blue',
-    botanicalName: 'Atractylodes lancea',
+    botanicalName: 'Atractylodes lancea rhizome',
     family: 'Not assigned',
     synonyms: [],
     description: 'A traditionally used medicinal and culinary species documented in regional materia medica traditions.',

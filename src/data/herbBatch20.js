@@ -618,7 +618,7 @@ export const herbBatch20 = [
   {
     slug: 'guanabana-leaf',
     commonName: 'Guanabana Leaf',
-    botanicalName: 'Annona muricata leaf',
+    botanicalName: 'Annona muricata mature leaf',
     family: 'Not assigned',
     synonyms: [],
     description: 'A traditionally used medicinal and culinary species documented in regional materia medica traditions.',
