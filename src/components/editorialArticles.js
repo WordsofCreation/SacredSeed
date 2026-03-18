@@ -19,11 +19,24 @@ function toAnchorId(value) {
 
 function renderArticleSection(section) {
   const anchorId = `section-${toAnchorId(section.heading)}`;
+  const paragraphs = (section.paragraphs ?? []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('');
+  const bullets = section.bullets?.length
+    ? `
+      <ul>
+        ${section.bullets.map((bullet) => `<li>${escapeHtml(bullet)}</li>`).join('')}
+      </ul>`
+    : '';
+  const cta = section.cta
+    ? `
+      <p><a href="${escapeHtml(section.cta.href)}" target="_blank" rel="sponsored nofollow noopener noreferrer">${escapeHtml(section.cta.label)}</a></p>`
+    : '';
 
   return `
     <section class="article-section" aria-labelledby="${anchorId}">
       <h2 id="${anchorId}">${escapeHtml(section.heading)}</h2>
-      ${(section.paragraphs ?? []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}
+      ${paragraphs}
+      ${bullets}
+      ${cta}
     </section>
   `;
 }
