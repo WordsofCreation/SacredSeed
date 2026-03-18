@@ -437,7 +437,6 @@ export function getEditorialArticleSeo(article) {
       },
       ...buildEditorialReviewSchema(article, canonicalUrl)
     ]
-    schemaEntries
   };
 }
 
