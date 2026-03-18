@@ -450,7 +450,7 @@ export const herbBatch17 = [
   {
     slug: 'isatis-root',
     commonName: 'Isatis Root',
-    botanicalName: 'Isatis tinctoria',
+    botanicalName: 'Isatis tinctoria root',
     family: 'Not assigned',
     synonyms: [],
     description: 'A traditionally used medicinal and culinary species documented in regional materia medica traditions.',
@@ -1122,7 +1122,7 @@ export const herbBatch17 = [
   {
     slug: 'bitterleaf-african',
     commonName: 'Bitterleaf African',
-    botanicalName: 'Vernonia amygdalina',
+    botanicalName: 'Vernonia amygdalina leaf',
     family: 'Not assigned',
     synonyms: [],
     description: 'A traditionally used medicinal and culinary species documented in regional materia medica traditions.',

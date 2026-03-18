@@ -9,11 +9,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -37,11 +33,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -65,11 +57,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -93,11 +81,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -121,11 +105,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -149,11 +129,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -177,11 +153,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -205,11 +177,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -233,11 +201,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -261,11 +225,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -289,11 +249,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -317,11 +273,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -345,11 +297,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -373,11 +321,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -401,11 +345,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -429,11 +369,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -457,11 +393,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -485,11 +417,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -513,11 +441,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -541,11 +465,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -569,11 +489,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -597,11 +513,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -625,11 +537,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -653,11 +561,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -681,11 +585,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -709,11 +609,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -737,11 +633,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -765,11 +657,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -793,11 +681,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -821,11 +705,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -849,11 +729,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -877,11 +753,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -905,11 +777,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -933,11 +801,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -961,11 +825,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -989,11 +849,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -1017,11 +873,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -1045,11 +897,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -1073,39 +921,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
-    medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
-    bodySystems: ['Digestive', 'Nervous', 'Immune'],
-    preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
-    regionTags: ['Traditional materia medica', 'Global herbal practice'],
-    safetyCategory: 'General Caution',
-    safetySummary: 'Use individualized guidance for concentrated preparations, medication overlap, and life-stage considerations.',
-    safetyNotes: 'Educational profile only; verify preparation-specific safety, interactions, and contraindications with qualified clinicians.',
-    chemistryNotes: 'Constituent chemistry varies by cultivar, plant part, harvest timing, and extraction method.',
-    chemistrySources: ['Curated fallback monograph'],
-    activeCompounds: ['Polyphenols', 'Flavonoids', 'Volatile constituents'],
-    sourceAttribution: ['Curated fallback monograph'],
-    image: '/assets/images/site/placeholders/herb-fallback-profile.svg'
-  },
-  {
-    slug: 'andrographis-paniculata',
-    commonName: 'Andrographis',
-    botanicalName: 'Andrographis paniculata',
-    family: 'Acanthaceae',
-    synonyms: ['Kalmegh'],
-    description: 'A traditionally used medicinal and culinary species documented in regional materia medica traditions.',
-    summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
-    distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
-    habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -1129,11 +945,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -1157,11 +969,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -1185,11 +993,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -1213,11 +1017,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -1241,11 +1041,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -1269,11 +1065,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -1297,11 +1089,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -1325,11 +1113,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -1353,11 +1137,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],
@@ -1381,11 +1161,7 @@ export const herbBatch6 = [
     summary: 'A reference herb used in traditional wellness practices with context-dependent preparation and safety considerations.',
     distribution: 'Cultivated, naturalized, or regionally distributed depending on climate and local growing traditions.',
     habitat: 'Varies by species; include wild or cultivated habitats where this plant is traditionally gathered or grown.',
-    medicinalProperties: [
-      'Traditionally used in food and herbal preparation contexts within regional systems',
-      'Historically prepared as teas, decoctions, or tinctures depending on plant part',
-      'Used in practitioner-informed protocols with individualized safety review'
-    ],
+    medicinalProperties: ['Traditionally used in food and herbal preparation contexts within regional systems', 'Historically prepared as teas, decoctions, or tinctures depending on plant part', 'Used in practitioner-informed protocols with individualized safety review'],
     medicinalActions: ['Traditional tonic support', 'Digestive support', 'Constitutional support'],
     bodySystems: ['Digestive', 'Nervous', 'Immune'],
     preparations: ['Infusion or decoction', 'Tincture', 'Topical or culinary preparation'],

@@ -26,6 +26,8 @@ import { herbBatch16 } from '../src/data/herbBatch16.js';
 import { herbBatch17 } from '../src/data/herbBatch17.js';
 import { herbBatch18 } from '../src/data/herbBatch18.js';
 import { herbBatch19 } from '../src/data/herbBatch19.js';
+import { herbBatch20 } from '../src/data/herbBatch20.js';
+import { herbBatch21 } from '../src/data/herbBatch21.js';
 
 const REPO_ROOT = path.resolve(new URL('..', import.meta.url).pathname);
 const SITEMAP_PATH = path.join(REPO_ROOT, 'sitemap.xml');
@@ -73,7 +75,9 @@ const herbBatches = [
   { sourceFile: 'src/data/herbBatch16.js', herbs: herbBatch16 },
   { sourceFile: 'src/data/herbBatch17.js', herbs: herbBatch17 },
   { sourceFile: 'src/data/herbBatch18.js', herbs: herbBatch18 },
-  { sourceFile: 'src/data/herbBatch19.js', herbs: herbBatch19 }
+  { sourceFile: 'src/data/herbBatch19.js', herbs: herbBatch19 },
+  { sourceFile: 'src/data/herbBatch20.js', herbs: herbBatch20 },
+  { sourceFile: 'src/data/herbBatch21.js', herbs: herbBatch21 }
 ];
 
 function escapeXml(value) {
