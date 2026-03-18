@@ -83,6 +83,15 @@ export function renderSeasonalCollectionDetail(collection) {
       </section>
     ` : ''}
 
+    ${collection.herbConsiderations?.length ? `
+      <section class="section-shell collection-notes" aria-labelledby="season-considerations-title">
+        <h2 id="season-considerations-title">Seasonal herb considerations</h2>
+        <ul class="subtle-list">
+          ${collection.herbConsiderations.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
+        </ul>
+      </section>
+    ` : ''}
+
     ${collection.regionalNotes?.length ? `
       <section class="section-shell collection-notes" aria-labelledby="season-regional-title">
         <h2 id="season-regional-title">Regional context</h2>
