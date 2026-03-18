@@ -1,126 +1,164 @@
-# SacredSeed — Materia Medica Index Foundation (Phase 5)
+# Heavens — Science Discovery and Research Experience
 
-This phase extends SacredSeed with a **site-wide compliance and attribution layer** while preserving the existing unified herb object architecture.
+Heavens is a static-first astronomy platform designed for **GitHub Pages compatibility**, elegant reading, and modular long-term growth.
 
-## What was added
+This phase evolves the site from a visual astronomy experience into a connected knowledge platform with:
 
-- Reusable compliance registry for source attribution, licensing notes, disclaimer text, and internal API/commercial-use notes.
-- Reusable compliance service that normalizes source metadata into consistent UI-ready attribution entries.
-- Shared compliance UI components for subtle disclaimer and source-attribution presentation.
-- Herb profile integration for source badges, expandable provider details, and context-sensitive educational/medical disclaimers.
-- Materia medica page integration for platform-level educational-use notice and attribution framework communication.
-- New About page with polished copy covering mission, offerings, data approach, educational use, and transparency expectations.
-- Header navigation updates to support modular routing between core pages.
-
-## Internal herb object contract
-
-The profile contract remains the source-of-truth object shape. The compliance layer reads from the same unified object model and additional metadata (`dataSources`, `chemistrySources`, `medicinalSources`).
-
-```js
-{
-  commonName,
-  botanicalName,
-  family,
-  synonyms,
-  description,
-  distribution,
-  habitat,
-  medicinalProperties,
-  preparations,
-  safetyNotes,
-  image,
-  taxonomyStatus,
-  kingdom,
-  phylum,
-  class,
-  order,
-  genus,
-  species,
-  nativeRange,
-  occurrenceNotes,
-  activeCompounds,
-  phytochemicals,
-  compoundDetails,
-  compoundNames,
-  compoundSummaries,
-  chemistryNotes,
-  chemistrySources,
-  dataSources,
-
-  // optional index-oriented fields
-  slug,
-  summary,
-  medicinalActions,
-  bodySystems,
-  safetyCategory,
-  safetySummary
-}
-```
-
-## Compliance architecture
-
-- `src/data/complianceRegistry.js`
-  - Canonical source/license metadata (`dataSources`)
-  - Disclaimer taxonomy (`disclaimerType`, `disclaimerContent`)
-  - Page-level compliance configuration (`complianceByPageType`)
-  - Internal operational notes for API/attribution/commercial thresholds (`complianceNotes`)
-- `src/services/complianceService.js`
-  - Builds normalized attribution records from herb data and source metadata.
-  - Resolves context-sensitive disclaimer bundles by page type.
-- `src/components/complianceBlocks.js`
-  - Renders reusable, subtle compliance cards suitable for herb pages, formula pages, regional guides, and educational content.
-# SacredSeed — Materia Medica + Preparation Library (Phase 5)
-
-This phase introduces a structured **Herbal Preparations and Remedies layer** while preserving SacredSeed's unified herb profile architecture, searchable Materia Medica index, and regional-ready expansion model.
+- dedicated object pages
+- a science-driven Discover hub
+- guided astronomy learning pathways
+- stronger internal linking between objects, topics, and lessons
+- reusable content modules for future research integrations
 
 ## What was added
 
-- Dedicated `#/preparations` experience for:
-  - SacredSeed Preparations (single-herb guides)
-  - Tea Formulas (single- and multi-herb formulas)
-  - Remedy Collections (curated formula groupings)
-- Structured preparation data model with reusable fields for:
-  - `preparationType`, `preparationDescription`, `methodSteps`
-  - `ingredientHerbs`, `ingredientAmounts`
-  - `dosageGuidance`, `safetyNotes`, `duration`, `storageNotes`
-  - `preparationTags`, `formulaCategory`
-- Formula and guide linking to the existing unified herb object via herb slug references.
-- Modular service and taxonomy helpers for normalization, filtering, and grouped browsing.
-- UI filters for preparation type, formula category, and formula tags.
+- Dedicated astronomy object pages under `#/objects/<slug>`.
+- A new `#/discover` exploration hub with curated science/discovery modules.
+- A new `#/learn` section with guided pathways and a `#/learn/start-here` beginner route.
+- Science topic pages under `#/topics/<slug>` that connect concepts back to example objects.
+- Reusable premium content modules for key facts, science insights, related objects, Q&A callouts, and “observe this next” links.
+- A homepage refresh that surfaces featured objects, learning entry points, discovery prompts, and mission framing.
+- A local structured content model that supports related objects, related science topics, further reading, research inspiration, tags, and featured content.
 
-## Architecture notes
+## New page architecture
 
-The herb profile contract remains intact and unchanged. Preparation and formula modules extend—not replace—the existing data system.
+The site uses static hash routing so it remains publishable on GitHub Pages without server-side routing:
 
-New modules:
+- `#/home` — upgraded homepage
+- `#/objects` — object directory
+- `#/objects/<slug>` — dedicated object pages
+- `#/discover` — research/discovery hub
+- `#/learn` — learning pathway index
+- `#/learn/<slug>` — guided pathway detail page
+- `#/topics/<slug>` — science topic pages
+- `#/about` — platform overview
 
-- `src/data/preparationTaxonomy.js`
-- `src/data/preparationLibrary.js`
-- `src/utils/preparationTaxonomy.js`
-- `src/services/preparationLibraryService.js`
-- `src/components/preparationLibrary.js`
-- `src/pages/preparationLibraryPage.js`
+## How object pages work
 
-These modules are intentionally small and reusable to support future recipe libraries, seasonal protocols, and educational pathways.
+Object pages are generated from local structured data in `src/data/astronomyObjects.js`.
 
-## Initial preparation guides and formulas
+Each object record supports:
 
-Preparation guides include:
+- `slug`
+- `name`
+- `type`
+- `constellation`
+- `distance`
+- `spectralClass`
+- `colorTemperature`
+- `intro`
+- `description`
+- `lightLearning`
+- `universeContext`
+- `astronomerInterest`
+- `skyViewerNote`
+- `tags`
+- `relatedObjects`
+- `relatedTopics`
+- `furtherReading`
+- `researchInspiration`
+- `relatedReadingTopics`
 
-- Nettle Infusion
-- Yarrow Tea
-- Oregon Grape Decoction
+The service layer in `src/services/astronomyContentService.js` resolves those relationships into UI-ready collections for object pages, science topics, homepage features, and learning pathways.
 
-Formula/remedy examples include:
+## How learning pathways are structured
 
-- Nutritive Mineral Tea
-- Calming Evening Tea
-- Seasonal Immune Support Tea
+Learning pathways live in `src/data/astronomyLearningPaths.js`.
 
-Collections include:
+Each pathway includes:
 
-- Seasonal Wellness Basics
-- Calm and Restore Evening Collection
+- `slug`
+- `title`
+- `intro`
+- `estimatedDuration`
+- `difficulty`
+- `sections[]`
+  - `title`
+  - `body`
+  - `links[]`
+- `relatedObjects`
+- `relatedTopics`
+
+The service resolves each `links[]` entry into either an object route or topic route, which keeps the system static-friendly while still feeling interconnected.
+
+## How related content is modeled
+
+Related content is intentionally local-first.
+
+### Objects
+
+Objects connect to:
+
+- related objects
+- related science topics
+- further reading cards
+- research inspiration prompts
+- related reading topics
+- topic tags
+
+### Science topics
+
+Science topics in `src/data/scienceTopics.js` connect concepts to:
+
+- structured explanatory sections
+- example object slugs
+- related topic slugs
+
+### Discover
+
+Discovery modules in `src/data/discoveryContent.js` provide:
+
+- featured star
+- spectral spotlight
+- stellar lifecycle focus
+- cosmic question of the day
+- deep sky feature
+- research spotlight
+- rotating “Today in the Heavens” prompts
+
+## Reusable UI modules
+
+Reusable astronomy content components live in `src/components/astronomyContent.js`.
+
+They include:
+
+- key fact panels
+- science insight cards
+- related object cards
+- Q&A callouts
+- observe-next recommendations
+- explore-more modules
+- generic content cards for future local or live research content
+
+## Where future research/data integrations should connect
+
+Future live integrations should attach at the **service layer**, not directly in page rendering:
+
+- `src/services/astronomyContentService.js`
+
+Recommended future additions:
+
+- bibliographic enrichment from ADS-like or archive-like providers
+- live observing/event feeds
+- catalog cross-links for object identifiers
+- data freshness metadata for research panels
+
+The page/components layer is already prepared to consume richer card data without changing the route architecture.
+
+## Major new files/modules
+
+- `src/data/astronomyObjects.js`
+- `src/data/scienceTopics.js`
+- `src/data/discoveryContent.js`
+- `src/data/astronomyLearningPaths.js`
+- `src/services/astronomyContentService.js`
+- `src/components/astronomyContent.js`
+- `src/pages/objectsIndexPage.js`
+- `src/pages/objectPage.js`
+- `src/pages/discoverPage.js`
+- `src/pages/learnPage.js`
+- `src/pages/learnPathPage.js`
+- `src/pages/scienceTopicPage.js`
 
 ## Local run
 
@@ -128,83 +166,18 @@ Collections include:
 python3 -m http.server 4173
 ```
 
-Then open `http://localhost:4173`.
+Then open `http://localhost:4173` and navigate with hash routes such as:
 
-## Future extension notes
+- `http://localhost:4173/#/home`
+- `http://localhost:4173/#/discover`
+- `http://localhost:4173/#/objects/sirius`
 
-- Add new guides/formulas in `src/data/preparationLibrary.js`.
-- Reuse `herbSlug` references to auto-link ingredients to existing herb profiles.
-- Extend taxonomy dictionaries in `src/data/preparationTaxonomy.js` as new categories emerge.
-- Add educational article routes and glossary cross-links using the preparation collection IDs.
+## Next best implementation phase
 
-## Image asset workflow
+The next strongest phase would be **Observational Tools and Live Data Enrichment**:
 
-SacredSeed now includes a dedicated image architecture under `assets/images/`:
-
-- Add originals to `assets/images/raw/<category>/`
-- Generate web-ready variants with `python3 scripts/process_images.py`
-- Use published site paths in `assets/images/<category>/`
-
-Full usage instructions and naming conventions are documented in `assets/images/README.md`.
-
-## Deployment (main branch)
-
-SacredSeed is configured to auto-deploy to **GitHub Pages** whenever `main` receives a push. The workflow is defined in `.github/workflows/deploy-pages.yml`.
-
-Expected production URL:
-
-- `https://wordsofcreation.github.io/SacredSeed/`
-
-If your GitHub org/user or repository name differs, use:
-
-- `https://<owner>.github.io/<repo>/`
-
-## Cache busting for GitHub Pages assets
-
-SacredSeed uses a centralized asset version string to bust browser caches for static files served by GitHub Pages.
-
-- Version source: `<meta name="sacredseed-asset-version" ...>` in `index.html`
-- Core loader behavior:
-  - `styles.css` is loaded with `?v=<version>`
-  - `src/main.js` is dynamically imported with `?v=<version>`
-- Reusable helper: `src/utils/assetVersion.js`
-  - `withAssetVersion(url)` appends the current version to local/static asset URLs.
-  - Used by image resolution helpers so herb images/placeholders also receive versioned URLs.
-
-### How to bump cache version
-
-1. Open `index.html`.
-2. Update `sacredseed-asset-version` (for example from `2026.03.15.1` to `2026.03.20.1`).
-3. Deploy to GitHub Pages.
-
-After bumping the version, browsers request fresh copies of CSS, JavaScript, and local image assets without requiring users to hard refresh.
-
-## Sitemap and robots automation
-
-SacredSeed generates `sitemap.xml` and `robots.txt` from route/content sources rather than a hardcoded URL list.
-
-- Generator script: `scripts/generate-sitemap.mjs`
-- Canonical URL configuration: `src/config/siteConfig.js` (`canonicalBaseUrl`)
-- Build-time override: set `SACREDSEED_CANONICAL_BASE_URL` when generating sitemap files (used by GitHub Actions to match owner/repo automatically).
-- Automatic deploy integration: `.github/workflows/deploy-pages.yml` runs sitemap generation before uploading the Pages artifact.
-
-### Included URLs
-
-The generator includes only canonical public routes:
-
-- Static sections (home, materia medica, collections, pathways, seasons, articles, preparations, about)
-- Herb detail routes from herb batch data files
-- Collection/pathway/season/article detail routes from their data definitions
-
-It excludes hash/query variants, duplicate URLs, localhost URLs, and noindex utility pages (search, privacy policy, terms, 404).
-
-### Regenerate locally
-
-```bash
-npm run generate:sitemap
-```
-
-This rewrites:
-
-- `sitemap.xml`
-- `robots.txt`
+- connect the Sky Viewer to object routes directly
+- add object visibility/seasonality panels
+- add observational planning widgets
+- enrich research cards with live archive metadata while keeping local fallbacks
+- expand the object library with planets, nebulae, galaxies, and exoplanet systems

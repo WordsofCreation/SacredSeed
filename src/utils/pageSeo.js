@@ -437,7 +437,6 @@ export function getEditorialArticleSeo(article) {
       },
       ...buildEditorialReviewSchema(article, canonicalUrl)
     ]
-    schemaEntries
   };
 }
 
@@ -799,6 +798,148 @@ export function getNotFoundSeo() {
         title,
         description,
         canonicalUrl: getCanonicalPageUrl(window.location.pathname || '/')
+      })
+    ]
+  };
+}
+
+export function getHomeSeo() {
+  const title = 'Heavens | Science Discovery and Research Experience';
+  const description =
+    'Heavens is a premium static astronomy platform with dedicated object pages, discovery modules, guided learning pathways, and connected science topics.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/home',
+    schemaEntries: [
+      buildSiteSchema(),
+      buildBaseSchema({
+        pageType: 'WebSite',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl('/')
+      })
+    ]
+  };
+}
+
+export function getObjectsSeo() {
+  const title = 'Astronomy Object Pages | Heavens';
+  const description = 'Browse dedicated astronomy object pages built from local structured data and connected to learning and discovery content.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/objects',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'CollectionPage',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl('/objects')
+      })
+    ]
+  };
+}
+
+export function getObjectSeo(object) {
+  const title = `${object.name} | Heavens Object Page`;
+  const description = object.intro || object.description;
+
+  return {
+    title,
+    description,
+    pageType: 'article',
+    canonicalPath: `#/objects/${encodeURIComponent(object.slug)}`,
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'Article',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl(`/objects/${encodeURIComponent(object.slug)}`)
+      })
+    ]
+  };
+}
+
+export function getDiscoverSeo() {
+  const title = 'Discover | Heavens Science Exploration Hub';
+  const description = 'Explore featured stars, spectral spotlights, stellar lifecycle stories, cosmic questions, and research-inspired astronomy modules.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/discover',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'CollectionPage',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl('/discover')
+      })
+    ]
+  };
+}
+
+export function getLearnSeo() {
+  const title = 'Learn Astronomy | Heavens Guided Pathways';
+  const description = 'Progress through astronomy with self-guided learning pathways on starlight, stellar classification, stellar lifecycles, distance, and sky navigation.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: '#/learn',
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'CollectionPage',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl('/learn')
+      })
+    ]
+  };
+}
+
+export function getLearnPathSeo(path) {
+  const title = `${path.title} | Heavens Learning Pathway`;
+  const description = path.intro;
+
+  return {
+    title,
+    description,
+    pageType: 'article',
+    canonicalPath: `#/learn/${encodeURIComponent(path.slug)}`,
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'Article',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl(`/learn/${encodeURIComponent(path.slug)}`)
+      })
+    ]
+  };
+}
+
+export function getScienceTopicSeo(topic) {
+  const title = `${topic.title} | Heavens Science Topic`;
+  const description = topic.summary || topic.intro;
+
+  return {
+    title,
+    description,
+    pageType: 'article',
+    canonicalPath: `#/topics/${encodeURIComponent(topic.slug)}`,
+    schemaEntries: [
+      buildBaseSchema({
+        pageType: 'Article',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl(`/topics/${encodeURIComponent(topic.slug)}`)
       })
     ]
   };
