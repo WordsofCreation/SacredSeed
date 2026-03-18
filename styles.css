@@ -1325,3 +1325,192 @@ select:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+:root {
+  --color-bg: #07111f;
+  --color-surface: #0d1a2d;
+  --color-primary: #7eb6ff;
+  --color-primary-dark: #4468b1;
+  --color-secondary: #78d4c3;
+  --color-moss: #5e6ea6;
+  --color-accent: #ffd36a;
+  --color-accent-dark: #e5ab37;
+  --color-border: rgba(148, 180, 255, 0.24);
+  --color-text: #ecf3ff;
+  --color-text-soft: #b7c5e0;
+  --bg: #07111f;
+  --bg-alt: #0c1830;
+  --panel: rgba(10, 23, 42, 0.84);
+  --panel-strong: rgba(13, 26, 45, 0.94);
+  --ink: #ecf3ff;
+  --muted: #b7c5e0;
+  --forest: #7eb6ff;
+  --forest-deep: #4468b1;
+  --sage: #78d4c3;
+  --moss: #5e6ea6;
+  --gold: #ffd36a;
+  --leaf-tint: rgba(18, 30, 52, 0.9);
+  --border: rgba(148, 180, 255, 0.24);
+  --line-soft: rgba(148, 180, 255, 0.18);
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.28);
+  --shadow-hover: 0 28px 56px rgba(0, 0, 0, 0.34);
+}
+
+body {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(104, 165, 255, 0.16), rgba(104, 165, 255, 0) 30%),
+    radial-gradient(circle at 82% 4%, rgba(120, 212, 195, 0.13), rgba(120, 212, 195, 0) 26%),
+    radial-gradient(circle at 50% -10%, rgba(255, 211, 106, 0.08), rgba(255, 211, 106, 0) 28%),
+    linear-gradient(180deg, #050d19 0%, #07111f 55%, #0c1830 100%);
+}
+
+.site-header {
+  border: 1px solid rgba(126, 182, 255, 0.26);
+  background: linear-gradient(145deg, rgba(10, 19, 38, 0.97), rgba(16, 29, 56, 0.95));
+  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.36);
+}
+
+.site-header::after {
+  background: radial-gradient(circle, rgba(126, 182, 255, 0.28), rgba(126, 182, 255, 0));
+}
+
+.site-logo-cosmos {
+  width: 168px;
+  height: 68px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 28% 44%, rgba(255,255,255,0.95) 0, rgba(255,255,255,0.95) 2px, transparent 3px),
+    radial-gradient(circle at 56% 38%, rgba(255,211,106,0.95) 0, rgba(255,211,106,0.95) 3px, transparent 4px),
+    radial-gradient(circle at 72% 56%, rgba(126,182,255,0.92) 0, rgba(126,182,255,0.92) 2px, transparent 3px),
+    linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+  border: 1px solid rgba(126, 182, 255, 0.22);
+}
+
+.page-hero,
+.astronomy-home-hero,
+.object-hero {
+  background: linear-gradient(145deg, rgba(10, 22, 40, 0.95), rgba(14, 30, 54, 0.92));
+}
+
+.hero-subtitle,
+.meta-note,
+.reading-section p,
+.science-content-card p,
+.science-insight-card p,
+.related-object-card p,
+.qa-callout p,
+.pathway-step-card p,
+.about-card p,
+.object-hero p,
+.longform-page p {
+  color: var(--muted);
+}
+
+.astronomy-hero-panel {
+  padding: 1.2rem;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-md);
+  background: rgba(7, 17, 31, 0.56);
+}
+
+.card-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.two-up-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.three-up-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(126, 182, 255, 0.28);
+  background: rgba(126, 182, 255, 0.08);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.88rem;
+}
+
+.static-tag { cursor: default; }
+.key-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+}
+.key-facts-grid dt {
+  color: var(--gold);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.key-facts-grid dd {
+  margin: 0.35rem 0 0;
+  color: var(--ink);
+}
+
+.reading-stack,
+.pathway-sections {
+  display: grid;
+  gap: 1rem;
+}
+
+.profile-link,
+.primary-link,
+.secondary-link {
+  text-decoration: none;
+}
+
+.profile-link {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.primary-link {
+  background: linear-gradient(135deg, rgba(126, 182, 255, 0.28), rgba(120, 212, 195, 0.2));
+  color: var(--ink);
+}
+
+.secondary-link {
+  border-color: rgba(126, 182, 255, 0.28);
+  color: var(--ink);
+  background: rgba(255,255,255,0.03);
+}
+
+.qa-callout,
+.observe-next-panel,
+.explore-more-panel,
+.key-facts-panel,
+.research-panel,
+.reading-section,
+.related-object-card,
+.science-insight-card,
+.science-content-card,
+.pathway-step-card,
+.about-card {
+  background: linear-gradient(180deg, rgba(13, 26, 45, 0.96), rgba(9, 20, 35, 0.92));
+}
+
+.error-state { text-align: center; }
+
+@media (max-width: 900px) {
+  .two-up-grid,
+  .three-up-grid,
+  .key-facts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
