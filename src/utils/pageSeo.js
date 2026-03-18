@@ -865,6 +865,29 @@ export function getObjectSeo(object) {
   };
 }
 
+export function getObservatorySeo(object) {
+  const title = object ? `${object.name} | Heavens Observatory Mode` : 'Observatory Mode | Heavens';
+  const description = object
+    ? `Explore ${object.name} in Heavens Observatory Mode with a stylized sky interface, guided discovery, and science storytelling.`
+    : 'Enter Heavens Observatory Mode for immersive sky exploration, guided journeys, constellation regions, and approachable science storytelling.';
+
+  return {
+    title,
+    description,
+    pageType: 'website',
+    canonicalPath: object ? `#/observatory/${encodeURIComponent(object.slug)}` : '#/observatory',
+    schemaEntries: [
+      buildSiteSchema(),
+      buildBaseSchema({
+        pageType: 'CollectionPage',
+        title,
+        description,
+        canonicalUrl: getCanonicalPageUrl(object ? `/observatory/${encodeURIComponent(object.slug)}` : '/observatory')
+      })
+    ]
+  };
+}
+
 export function getDiscoverSeo() {
   const title = 'Discover | Heavens Science Exploration Hub';
   const description = 'Explore featured stars, spectral spotlights, stellar lifecycle stories, cosmic questions, and research-inspired astronomy modules.';

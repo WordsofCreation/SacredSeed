@@ -153,4 +153,149 @@ export const astronomyObjects = [
     ],
     relatedReadingTopics: ['stellar-lifecycle', 'distances-in-space']
   }
+,
+  {
+    slug: 'rigel',
+    name: 'Rigel',
+    type: 'Blue supergiant star system',
+    constellation: 'Orion',
+    distance: 'About 860 light-years',
+    spectralClass: 'B8 Ia',
+    colorTemperature: 'Blue-white light from a hot surface near 12,000 K.',
+    intro:
+      'Rigel is one of the great blue-white beacons of the winter sky. Its presence in Orion makes it an immediate comparison target for red Betelgeuse and an approachable lesson in stellar temperature.',
+    description:
+      'Rigel is a luminous blue supergiant whose apparent brightness hides the fact that it lies much farther away than many nearby benchmark stars. It demonstrates how a star can dominate the sky through true power rather than proximity alone.',
+    lightLearning:
+      'Its spectrum reveals a hot atmosphere and high luminosity, helping astronomers identify it as an evolved massive star. In Orion, that blue-white light becomes a vivid visual contrast against cooler stars.',
+    universeContext:
+      'Rigel represents a more massive and more short-lived path through stellar evolution than the Sun. It shows how stellar mass transforms both brightness and fate.',
+    astronomerInterest:
+      'Astronomers use stars like Rigel to study massive-star atmospheres, luminosity classes, and the physical consequences of high mass on stellar structure and lifespan.',
+    skyViewerNote:
+      'Compare Rigel directly with Betelgeuse in Orion to build intuition for stellar color, temperature, and luminosity class without leaving a single familiar constellation.',
+    tags: ['bright-stars', 'supergiants', 'winter-sky', 'stellar-classification'],
+    relatedObjects: ['betelgeuse', 'sirius', 'aldebaran'],
+    relatedTopics: ['stellar-classification', 'stellar-lifecycle', 'constellations-and-sky-navigation'],
+    furtherReading: [
+      {
+        title: 'Reading blue supergiants',
+        description: 'See how temperature and luminosity combine in stars much more massive than the Sun.',
+        href: '#/topics/stellar-classification'
+      }
+    ],
+    researchInspiration: [
+      'How do observations of blue supergiants help constrain the late lives of massive stars?',
+      'What does Rigel reveal about the gap between apparent brightness and intrinsic luminosity?'
+    ],
+    relatedReadingTopics: ['stellar-classification', 'stellar-lifecycle']
+  },
+  {
+    slug: 'aldebaran',
+    name: 'Aldebaran',
+    type: 'Orange giant star',
+    constellation: 'Taurus',
+    distance: 'About 65 light-years',
+    spectralClass: 'K5 III',
+    colorTemperature: 'Warm orange light from a cooler giant-star surface near 3,900 K.',
+    intro:
+      'Aldebaran is an orange giant that gives Taurus a steady eye-catching glow. It is an excellent guide star for learning how giant stars differ from hotter blue-white beacons.',
+    description:
+      'Although it appears among the Hyades line of sight, Aldebaran is not actually a core member of that cluster. This makes it useful for teaching both stellar evolution and the difference between sky pattern and physical association.',
+    lightLearning:
+      'Its orange color reflects a cooler photosphere than stars like Sirius or Vega. Combined with its giant-star classification, that light reveals a star that has expanded beyond the main sequence.',
+    universeContext:
+      'Aldebaran shows what happens when a star evolves off the main sequence and swells into a giant. It brings stellar aging into the realm of easy naked-eye observation.',
+    astronomerInterest:
+      'Astronomers use stars like Aldebaran to study evolved stellar atmospheres, giant-star structure, and the interpretive gap between apparent sky proximity and real physical grouping.',
+    skyViewerNote:
+      'Sweep from Aldebaran to the Pleiades to compare a single evolved orange giant with a youthful blue cluster in nearly the same area of sky.',
+    tags: ['giant-stars', 'winter-sky', 'sky-navigation', 'naked-eye'],
+    relatedObjects: ['pleiades', 'betelgeuse', 'rigel'],
+    relatedTopics: ['stellar-lifecycle', 'constellations-and-sky-navigation', 'understanding-starlight'],
+    furtherReading: [
+      {
+        title: 'Giants versus clusters',
+        description: 'Use Taurus to compare one evolved star with a whole family of younger stars.',
+        href: '#/topics/constellations-and-sky-navigation'
+      }
+    ],
+    researchInspiration: [
+      'How do giant stars change the relationship between temperature, radius, and visible brightness?',
+      'What observing mistakes become less likely once you learn that line-of-sight neighbors may not be physically related?'
+    ],
+    relatedReadingTopics: ['stellar-lifecycle', 'distances-in-space']
+  },
+  {
+    slug: 'deneb',
+    name: 'Deneb',
+    type: 'Blue-white supergiant star',
+    constellation: 'Cygnus',
+    distance: 'About 2,600 light-years',
+    spectralClass: 'A2 Ia',
+    colorTemperature: 'Blue-white supergiant light from a hot atmosphere around 8,500 K.',
+    intro:
+      'Deneb is one of the three stars of the Summer Triangle and a dramatic reminder that even a gentle-looking point of light can represent extraordinary true luminosity.',
+    description:
+      'Because Deneb is so distant yet still easy to see, it is a powerful teaching object for the difference between apparent and intrinsic brightness. It turns cosmic scale into something emotionally intuitive.',
+    lightLearning:
+      'Its spectrum and luminosity class reveal a supergiant star whose true output is immense. Distance is what softens that power into a modest-looking point in our sky.',
+    universeContext:
+      'Deneb helps connect local sky navigation with the larger architecture of the Milky Way. It sits far beyond nearby bright stars yet remains a major seasonal landmark.',
+    astronomerInterest:
+      'Astronomers care about Deneb because luminous supergiants help test stellar atmosphere models and calibrate understanding of high-luminosity stars at large distances.',
+    skyViewerNote:
+      'Trace Deneb with Vega and Altair to anchor the Summer Triangle, then use its distance story to deepen the meaning of that familiar pattern.',
+    tags: ['summer-sky', 'supergiants', 'distance-scale', 'bright-stars'],
+    relatedObjects: ['vega', 'altair', 'sirius'],
+    relatedTopics: ['distances-in-space', 'stellar-classification', 'constellations-and-sky-navigation'],
+    furtherReading: [
+      {
+        title: 'Why distance changes everything',
+        description: 'Deneb is a perfect example of why apparent brightness is only the start of the story.',
+        href: '#/topics/distances-in-space'
+      }
+    ],
+    researchInspiration: [
+      'How do supergiants like Deneb challenge precise distance and luminosity estimates?',
+      'What makes distant bright stars so useful for teaching the difference between seeing and knowing?'
+    ],
+    relatedReadingTopics: ['distances-in-space', 'how-astronomers-know']
+  },
+  {
+    slug: 'altair',
+    name: 'Altair',
+    type: 'Main-sequence star',
+    constellation: 'Aquila',
+    distance: '16.7 light-years',
+    spectralClass: 'A7 V',
+    colorTemperature: 'White to blue-white light from a hot star near 7,600 K.',
+    intro:
+      'Altair is a nearby bright star that helps complete the Summer Triangle and gives observers a satisfying way to learn seasonal orientation in the northern sky.',
+    description:
+      'Altair rotates rapidly, making it more physically complex than its clean visual appearance suggests. It balances accessibility for beginners with genuinely interesting stellar physics.',
+    lightLearning:
+      'Its spectrum marks it as a hot A-type star, while its rapid rotation changes the distribution of temperature across its surface. Even familiar bright stars can be dynamically interesting.',
+    universeContext:
+      'Altair is part of our broader local stellar neighborhood, reminding us that nearby benchmark stars can support both navigation and serious physical study.',
+    astronomerInterest:
+      'Astronomers study Altair to understand rapid rotation, stellar shape distortion, and how these effects influence observed brightness and temperature patterns.',
+    skyViewerNote:
+      'Use Altair as the lower point of the Summer Triangle and a finishing anchor for seasonal navigation routes that begin with Vega or Deneb.',
+    tags: ['summer-sky', 'bright-stars', 'rotation', 'naked-eye'],
+    relatedObjects: ['vega', 'deneb', 'sirius'],
+    relatedTopics: ['constellations-and-sky-navigation', 'stellar-classification', 'understanding-starlight'],
+    furtherReading: [
+      {
+        title: 'Rotation changes the story',
+        description: 'Bright stars are not always simple spheres; rotation can reshape both structure and appearance.',
+        href: '#/topics/how-astronomers-know'
+      }
+    ],
+    researchInspiration: [
+      'How does rapid rotation complicate the interpretation of stellar temperature and luminosity?',
+      'Why do nearby bright stars remain valuable long after they become familiar to observers?'
+    ],
+    relatedReadingTopics: ['how-astronomers-know', 'stellar-classification']
+  }
 ];
