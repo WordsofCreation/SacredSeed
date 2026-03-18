@@ -1904,6 +1904,101 @@ export const editorialArticleDefinitions = [
 
 
   {
+    slug: 'native-american-herbalists-bible-review',
+    title: 'Native American Herbalist’s Bible Review: A Beginner-Friendly Herbal Medicine Companion?',
+    summary:
+      'A balanced review of The Native American Herbalist’s Bible, a 7-in-1 herbal guide positioned as a broad, beginner-friendly companion to herbal medicine and plant-based wellness.',
+    intro:
+      'The Native American Herbalist’s Bible appears designed for readers who want a wide, accessible introduction to herbal remedies, plant knowledge, and natural wellness topics in one all-in-one volume.',
+    estimatedReadMinutes: 7,
+    tags: [
+      'native american herbalists bible review',
+      'best herbal books',
+      'beginner herbal books',
+      'herbal medicine companion',
+      'home apothecary books'
+    ],
+    relatedCategories: ['Beginner herbal study', 'Home apothecary basics', 'Herbal book reviews'],
+    relatedTags: ['book review', 'home apothecary', 'beginner herbalism'],
+    searchKeywords: [
+      'native american herbalists bible review',
+      'native american herbalist bible review',
+      '7 in 1 companion to herbal medicine review',
+      'beginner herbal medicine companion book',
+      'home apothecary herbal book review'
+    ],
+    sections: [
+      {
+        heading: 'Why This Book Stands Out',
+        paragraphs: [
+          'If you are searching for a large, beginner-friendly herbal reference with a traditional healing focus, The Native American Herbalist’s Bible • 7-in-1 Companion to Herbal Medicine is a title that will likely catch your eye. With its broad presentation and 7-in-1 format, this book appears designed for readers who want a wide introduction to herbal remedies, plant knowledge, and natural wellness practices in one volume.',
+          'One of the main appeals of this book is its scope. Many herbal guides focus on only one angle, such as remedies, foraging, or apothecary basics. This title seems to position itself as a more comprehensive companion for readers who want several related topics gathered into one accessible resource. That can make it especially attractive for beginners who do not want to buy multiple herbal books right away.'
+        ]
+      },
+      {
+        heading: 'What This Book Seems to Offer',
+        paragraphs: [
+          'Based on how the book is presented, it appears to be aimed at readers who want a practical introduction to herbal medicine, including natural remedies, plant-based traditions, and a more self-reliant approach to wellness. The 7-in-1 structure suggests that the content may combine several related herbal subjects into a single guide, which can be helpful for readers looking for a broad overview rather than a narrow specialty text.',
+          'This kind of format can be especially useful for people building a home herbal library. Instead of jumping between several smaller books, readers may appreciate having one larger reference that introduces the foundations in a more streamlined way. For newer herbal learners, that convenience can be a major strength.'
+        ]
+      },
+      {
+        heading: 'Who This Book May Be Best For',
+        paragraphs: [
+          'This title may be a good fit for:'
+        ],
+        bullets: [
+          'Beginners exploring herbal medicine for the first time.',
+          'Readers who enjoy all-in-one herbal reference books.',
+          'People building a home apothecary library.',
+          'Those interested in traditional plant-based wellness topics.',
+          'Readers who prefer broad practical guides over highly technical texts.'
+        ]
+      },
+      {
+        heading: 'Potential Strengths',
+        paragraphs: [
+          'A major potential strength of this book is accessibility. Large herbal references often work well when they make a complex subject feel manageable, especially for readers who are just getting started. A broad companion guide can help reduce overwhelm and make it easier to begin learning about herbs, remedies, and traditional plant uses.',
+          'Another likely strength is convenience. Books marketed as multi-volume or books-in-one collections often appeal to readers who want stronger value from a single purchase. For someone who wants one herbal title to start with, that format may feel practical and budget-friendly.'
+        ]
+      },
+      {
+        heading: 'Things to Keep in Mind',
+        paragraphs: [
+          'As with any herbal medicine book, it is important to approach the content thoughtfully. A broad herbal guide can be inspiring and useful, but it should not replace professional medical advice, careful plant identification, or deeper research into safety, dosage, and herb interactions. Readers should use extra caution when applying any remedy information in real-world situations.',
+          'It is also worth noting that books using Native American framing can attract readers looking for traditional wisdom, but buyers may still want to evaluate how respectfully, accurately, and responsibly those traditions are presented. That makes this kind of book best approached as a starting point for learning, with room to supplement it using trusted herbal references and culturally grounded sources.'
+        ]
+      },
+      {
+        heading: 'Final Verdict',
+        paragraphs: [
+          'The Native American Herbalist’s Bible appears to be a solid option for readers who want a broad, accessible herbal guide in one volume. Its all-in-one presentation may be especially appealing to beginners, home herbal enthusiasts, and readers who want a practical introduction without diving immediately into dense clinical material.',
+          'If your goal is to find a user-friendly herbal companion that introduces multiple aspects of natural wellness and herbal learning, this book may be worth considering. For advanced herbalists or those seeking highly technical monographs, it will likely work best as a supplemental overview rather than a primary authority. Overall, it looks like a convenient and approachable herbal resource for readers beginning their journey into plant-based wellness.'
+        ]
+      },
+      {
+        heading: 'Suggested CTA',
+        paragraphs: [
+          'If you want an all-in-one herbal companion with a broad beginner-friendly approach, The Native American Herbalist’s Bible may be worth exploring alongside other trusted herbal references.'
+        ],
+        cta: {
+          label: 'Check price and read more on Amazon',
+          href: 'https://www.amazon.com/Native-American-Herbalists-Companion-Medicine/dp/B09QP55XZG?crid=1JTX0ZCROAWXJ&dib=eyJ2IjoiMSJ9.8EZSQRwy8oABW2JMFDwaBOFTUtYJvZ6NaFAH4Qa4qzEA-_ty5AQKrqlFYSVJ8nMNyj1410bPOAfYDj3n1_nEztH2qA0sekt3_BT4mbWRmQD4rZnn7dsj42fMWeu_CJLBFMHB9CTS7IKikqZccvJkCN5vw5VqYhGx8lZ-pndWeBv8bXCAs5MYdzkYmLAymdRPOyUntIc4mPvyATjd4var-l8S0Bq_8IUI34jDhx3xQAvGkkQvP4TFX6tIA8CNkDZWgmYCSbgzVN8oPQnkEbmS2I8ezJitprrtizp5_Lk-g64.m1T50k0NRufny2jjw6wuO4Mn4n9-KxzfVFAuACchVZc&dib_tag=se&keywords=herbal+medicine&qid=1773811102&sprefix=herbal+medicine%2Caps%2C464&sr=8-5-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=sacredseed-20&linkId=214d53ca714b3458a199d1b705e124aa&language=en_US&ref_=as_li_ss_tl'
+        }
+      }
+    ],
+    disclaimer:
+      'This article is for educational purposes only and is not medical advice. Herbal books should not replace individualized medical care, careful plant identification, or professional guidance on herb safety, medication interactions, pregnancy, or serious symptoms.',
+    relatedHerbSlugs: ['echinacea-purpurea', 'plantago-major', 'urtica-dioica'],
+    relatedRoutes: [
+      { label: 'Best herbal books for beginners', href: '#/best-herbal-books' },
+      { label: 'How to build a simple home apothecary shelf', href: '#/buyer-guides/how-to-build-a-simple-home-apothecary-shelf' },
+      { label: 'What Is Herbalism?', href: '#/articles/what-is-herbalism' }
+    ]
+  },
+
+
+  {
     slug: 'how-to-read-herb-profiles',
     title: 'How to Read Herb Profiles with Clinical Clarity',
     summary:
