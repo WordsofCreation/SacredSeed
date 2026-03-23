@@ -1,5 +1,6 @@
 import { renderAffiliateDisclosureBlock, renderAffiliateProductGrid } from './affiliate.js';
 import { getAffiliateProduct } from '../config/affiliateConfig.js';
+import { fallbackOnErrorAttr, getPlaceholderImagePath } from '../utils/imageAssets.js';
 
 function escapeHtml(value) {
   return String(value ?? '')
@@ -79,6 +80,10 @@ export function renderEditorialArticlesIndex(articles, startHereArticle, startHe
 
 export function renderEditorialArticleDetail(article) {
   const affiliateProducts = (article.affiliateProductKeys ?? []).map((key) => getAffiliateProduct(key)).filter(Boolean);
+  const articleImage = article.image?.trim() || '';
+  const articleImageAlt = article.imageAlt?.trim() || `${article.title} hero image`;
+  const articleImageCaption = article.imageCaption?.trim() || '';
+  const articleImageUploadPath = article.imageUploadPath?.trim() || '';
 
   return `
     <article class="section-shell editorial-article" aria-labelledby="article-title">
@@ -87,6 +92,33 @@ export function renderEditorialArticleDetail(article) {
         <h1 id="article-title">${escapeHtml(article.title)}</h1>
         <p>${escapeHtml(article.intro)}</p>
       </header>
+      ${articleImage ? `
+        <figure class="editorial-article-media">
+          <img
+            class="editorial-article-image"
+            src="${escapeHtml(articleImage)}"
+            alt="${escapeHtml(articleImageAlt)}"
+            loading="lazy"
+            decoding="async"
+            data-image-fallback="hero"
+            onerror="${fallbackOnErrorAttr('hero')}"
+          />
+          <figcaption class="meta-note editorial-article-image-note">
+            ${articleImageCaption ? escapeHtml(articleImageCaption) : 'Article image placeholder active until the final image is uploaded.'}
+            ${articleImageUploadPath ? ` Upload the final image to ${escapeHtml(articleImageUploadPath)} to replace the placeholder automatically.` : ''}
+          </figcaption>
+        </figure>
+      ` : `
+        <figure class="editorial-article-media">
+          <img
+            class="editorial-article-image"
+            src="${getPlaceholderImagePath('hero')}"
+            alt="${escapeHtml(articleImageAlt)}"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      `}
       ${affiliateProducts.length ? renderAffiliateDisclosureBlock({ compact: true, className: 'article-affiliate-disclosure' }) : ''}
       ${article.tags?.length ? `<div class="chip-row">${article.tags.map((tag) => `<span class="chip">${escapeHtml(tag)}</span>`).join('')}</div>` : ''}
       <div class="article-content">

@@ -2093,6 +2093,154 @@ export const editorialArticleDefinitions = [
 
 
   {
+    slug: 'cleavers-in-the-pacific-northwest',
+    title: 'Cleavers in the Pacific Northwest: Benefits, Uses, Identification, and How to Harvest This Early Spring Herb',
+    summary:
+      'Learn how to identify, harvest, and use cleavers in the Pacific Northwest, including traditional herbal benefits, seasonal timing, and safe foraging considerations.',
+    intro:
+      'Cleavers is one of the Pacific Northwest’s most abundant early spring herbs, valued in traditional herbalism for its cooling, gentle, and seasonally appropriate character.',
+    estimatedReadMinutes: 12,
+    image: '/assets/images/articles/cleavers-in-the-pacific-northwest-hero.jpg',
+    imageAlt:
+      'Cleavers growing fresh and green along a damp Pacific Northwest woodland edge in early spring',
+    imageUploadPath: '/assets/images/articles/cleavers-in-the-pacific-northwest-hero.jpg',
+    imageCaption:
+      'Upload your finished cleavers article image to the path shown below and it will replace this placeholder automatically.',
+    tags: [
+      'cleavers benefits',
+      'galium aparine',
+      'pacific northwest herbs',
+      'spring foraging',
+      'lymphatic herbs',
+      'early spring medicinal plants'
+    ],
+    relatedCategories: ['Regional herbalism', 'Spring foraging', 'Materia medica'],
+    relatedTags: ['cooling herbs', 'fresh herb use', 'seasonal harvesting'],
+    searchKeywords: [
+      'cleavers pacific northwest',
+      'cleavers benefits',
+      'how to identify cleavers',
+      'when to harvest cleavers',
+      'galium aparine uses',
+      'spring herbs pacific northwest'
+    ],
+    sections: [
+      {
+        heading: 'What Makes Cleavers a Spring Herb',
+        paragraphs: [
+          'When early spring arrives in the Pacific Northwest, woodland edges, hedgerows, garden margins, and disturbed ground begin filling with soft green growth. Cleavers is one of the plants that emerges right in step with that cool, wet seasonal pattern.',
+          'Often dismissed as a sticky weed, cleavers is a classic spring herb in traditional Western herbalism. It is valued for being cooling, moist, light, and gently moving—qualities that match the season especially well.'
+        ]
+      },
+      {
+        heading: 'What Is Cleavers?',
+        paragraphs: [
+          'Cleavers, or Galium aparine, is an annual herb in the coffee family, Rubiaceae. It grows with weak square stems and narrow leaves arranged in star-like whorls around each node.',
+          'The plant is covered in fine hooked hairs that cling to clothing, fur, and nearby vegetation. That texture is one of the fastest ways to recognize it in the field, and many foragers compare it to green Velcro.'
+        ]
+      },
+      {
+        heading: 'Where Cleavers Grows in the Pacific Northwest',
+        paragraphs: [
+          'Cleavers grows widely across Washington and Oregon and tends to favor moist, fertile, cool-season habitats. It commonly appears in woodland margins, thickets, fence lines, meadow edges, hedgerows, garden borders, and other damp places that stay lush in spring.',
+          'Once you learn the plant, you often start seeing it everywhere during the early part of the season. In the Pacific Northwest, it feels deeply tied to place because it thrives in the same wet conditions that define spring.'
+        ]
+      },
+      {
+        heading: 'Why Herbalists Value Cleavers',
+        paragraphs: [
+          'Cleavers has a long history in traditional herbalism and is commonly described as a lymphatic herb, a gentle diuretic, and a cooling spring tonic. It is often chosen in traditional practice when the goal is movement and support without harsh stimulation.',
+          'Rather than being fiery or forceful, cleavers is usually understood as subtle and moist in character. It has also been used traditionally for topical skin support and as a seasonal herb that helps the body transition out of winter.'
+        ]
+      },
+      {
+        heading: 'Traditional Benefits of Cleavers',
+        paragraphs: [
+          'When people describe cleavers benefits, they are usually referring to traditional herbal use rather than strong modern clinical evidence. That distinction matters, and the plant is best discussed honestly without exaggeration.'
+        ],
+        bullets: [
+          'supporting lymphatic movement',
+          'encouraging gentle urinary flow',
+          'cooling overheated or irritated tissue states',
+          'seasonal spring cleansing formulas',
+          'mild topical skin support',
+          'providing a fresh green herb for transitional seasonal wellness'
+        ]
+      },
+      {
+        heading: 'The Best Time to Harvest Cleavers',
+        paragraphs: [
+          'The best harvest window is early to mid-spring, when the plant is still young, tender, and full of moisture. At this stage it feels fresh and vibrant rather than coarse or stringy.',
+          'If you wait until stems are long, rough, and heavily seeded, much of the green quality that makes cleavers appealing is lost. In most cases, the tender top growth is the best part to gather.'
+        ]
+      },
+      {
+        heading: 'How to Identify Cleavers',
+        paragraphs: [
+          'Accurate identification is essential before using any wild herb. Cleavers is distinctive, but it is still best to confirm multiple features together rather than relying on just one.'
+        ],
+        bullets: [
+          'square or four-angled stems',
+          'leaves arranged in whorls around the stem',
+          'a sprawling, scrambling growth habit',
+          'hooked hairs that make the plant cling to clothing or skin',
+          'later in the season, small round clingy fruits'
+        ]
+      },
+      {
+        heading: 'How to Use Cleavers',
+        paragraphs: [
+          'Cleavers is usually considered best as a fresh herb because it tends to lose much of its vitality when dried. Many herbalists therefore prefer working with it fresh whenever possible.'
+        ],
+        bullets: [
+          'Cold infusion made by steeping chopped fresh herb in cool water for several hours or overnight',
+          'Fresh tea prepared as a light, gentle infusion',
+          'Fresh tincture to preserve the herb beyond its short seasonal window',
+          'Small amounts in green drinks or juices when the plant is correctly identified and clean',
+          'Topical use in washes, poultices, oils, and salves for traditional skin support'
+        ]
+      },
+      {
+        heading: 'How to Harvest Cleavers Safely',
+        paragraphs: [
+          'Because cleavers often grows in disturbed ground, harvest location matters as much as plant identification. Avoid roadsides, sprayed areas, dog-heavy paths, drainage ditches, industrial edges, or anywhere contamination is likely.',
+          'Use scissors or pinch off the young top growth from healthy patches. Since cleavers can grow abundantly, it is usually easy to gather enough while still harvesting selectively and respectfully.'
+        ]
+      },
+      {
+        heading: 'Cleavers Cautions',
+        paragraphs: [
+          'Cleavers is generally considered a mild herb, but it should still be approached thoughtfully. People with kidney conditions, significant fluid-balance concerns, or those taking diuretic medications should use extra caution.',
+          'Anyone who is pregnant, breastfeeding, or managing chronic conditions should consult an appropriate professional before using medicinal herbs regularly. The hooked texture can also irritate some people when handling large amounts of fresh material.'
+        ]
+      },
+      {
+        heading: 'Why Cleavers Belongs in a Pacific Northwest Herbal Practice',
+        paragraphs: [
+          'Cleavers is a strong example of place-based herbalism because it is common, seasonal, and deeply aligned with the Pacific Northwest spring landscape. Its medicine is not dramatic, but it is meaningful precisely because it reflects the season and climate so well.',
+          'For anyone building a regional materia medica or learning spring foraging plants, cleavers offers a clear lesson in timing, tenderness, and relationship to the land.'
+        ]
+      },
+      {
+        heading: 'Final Thoughts',
+        paragraphs: [
+          'Cleavers is accessible, distinctive, and rich with traditional herbal significance. Once you learn its texture, growth habit, and seasonal timing, it becomes one of the easiest early spring herbs to recognize and appreciate.',
+          'It reminds us that some of the most memorable medicines are common plants growing quietly along the edges, waiting for us to notice them.'
+        ]
+      }
+    ],
+    disclaimer:
+      'This article is for educational purposes only and is not medical advice. Correct wild plant identification, clean harvest conditions, pregnancy and breastfeeding precautions, medication interactions, and chronic health concerns all require appropriate professional guidance.',
+    relatedHerbSlugs: ['urtica-dioica', 'taraxacum-officinale', 'calendula-officinalis'],
+    relatedSeasonalCollectionSlugs: ['spring-herbs'],
+    relatedRoutes: [
+      { label: 'What Is Herbalism?', href: '#/articles/what-is-herbalism' },
+      { label: 'How to Start Learning Herbs Without Getting Overwhelmed', href: '#/articles/how-to-start-learning-herbs-without-getting-overwhelmed' },
+      { label: 'Learning pathways', href: '#/pathways' }
+    ]
+  },
+
+  {
     slug: 'how-to-read-herb-profiles',
     title: 'How to Read Herb Profiles with Clinical Clarity',
     summary:
