@@ -98,8 +98,25 @@ function renderSafetySection(herb) {
   `;
 }
 
+function deriveAutoimmuneConsiderations(herb) {
+  const explicitConsiderations = Array.isArray(herb.autoimmuneConsiderations)
+    ? herb.autoimmuneConsiderations
+    : herb.autoimmuneConsiderations
+      ? [herb.autoimmuneConsiderations]
+      : [];
+
+  const safetyDerivedConsiderations = [
+    ...(herb.safetyNotes ?? []),
+    ...(herb.cautions ?? []),
+    ...(herb.contraindications ?? [])
+  ].filter((note) => /auto[\s-]?immune|immune-modulating|immune condition/i.test(note));
+
+  return [...new Set([...explicitConsiderations, ...safetyDerivedConsiderations])];
+}
+
 export function renderHerbProfileCard(herb, sourceMeta) {
   const compliance = getComplianceContext('herbProfile', { herb, sourceMeta });
+  const autoimmuneConsiderations = deriveAutoimmuneConsiderations(herb);
 
   return `
     <article class="herb-profile">
@@ -148,6 +165,9 @@ export function renderHerbProfileCard(herb, sourceMeta) {
           ${herb.herbalCategories?.length ? `<p class="meta-note"><strong>Categories:</strong> ${herb.herbalCategories.join(', ')}.</p>` : ''}
           ${herb.bodySystems?.length ? `<p class="meta-note"><strong>Body systems:</strong> ${herb.bodySystems.join(', ')}.</p>` : ''}
           ${herb.energetics?.length ? `<p class="meta-note"><strong>Energetics:</strong> ${herb.energetics.join(', ')}.</p>` : ''}
+          ${autoimmuneConsiderations.length
+    ? `<p class="meta-note"><strong>Autoimmune considerations:</strong> ${autoimmuneConsiderations.join(' ')}</p>`
+    : ''}
         </div>
         <div class="grid-block">
           <h3>Traditional Uses</h3>
