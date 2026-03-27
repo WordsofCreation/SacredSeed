@@ -336,34 +336,6 @@ export const herbBatch4 = [
     image: '/assets/images/site/placeholders/herb-fallback-profile.svg'
   },
   {
-    slug: 'arnica-montana',
-    commonName: 'Arnica',
-    botanicalName: 'Arnica montana',
-    family: 'Asteraceae',
-    synonyms: ['Mountain Arnica'],
-    description: 'A mountain Asteraceae species primarily used in topical preparations in traditional and contemporary herbal practice.',
-    summary: 'A topical herb used for bruising and musculoskeletal discomfort support in external preparations only.',
-    distribution: 'Native to mountainous regions of central and northern Europe.',
-    habitat: 'Acidic mountain meadows and upland grasslands.',
-    medicinalProperties: [
-      'Traditionally used topically for bruised or overworked tissues',
-      'Historically used in salves and liniments for local comfort',
-      'Internal use is generally avoided in modern safety practice'
-    ],
-    medicinalActions: ['Topical anti-inflammatory', 'Vulnerary tradition'],
-    bodySystems: ['Musculoskeletal', 'Integumentary'],
-    preparations: ['Topical salve', 'Topical oil', 'Compress'],
-    regionTags: ['European mountains'],
-    safetyCategory: 'High Caution',
-    safetySummary: 'Use externally on intact skin only unless professionally directed; internal use is not recommended for self-care.',
-    safetyNotes: 'Avoid oral self-dosing and avoid topical use on broken skin.',
-    chemistryNotes: 'Contains sesquiterpene lactones including helenalin derivatives.',
-    chemistrySources: ['Curated fallback monograph'],
-    activeCompounds: ['Helenalin', 'Dihydrohelenalin', 'Flavonoids'],
-    sourceAttribution: ['Curated fallback monograph'],
-    image: '/assets/images/site/placeholders/herb-fallback-profile.svg'
-  },
-  {
     slug: 'hypericum-perforatum',
     commonName: "St. John's Wort",
     botanicalName: 'Hypericum perforatum',
