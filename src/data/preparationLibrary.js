@@ -1622,6 +1622,280 @@ export const formulas = [
     preparationTags: [formulaTagTaxonomy.warming, formulaTagTaxonomy.aromatic]
   },
   {
+    id: 'burdock-dandelion-root-decoction',
+    title: 'Burdock Dandelion Root Decoction',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    formulaCategory: formulaCategoryTaxonomy.digestiveSupport,
+    preparationDescription:
+      'A classic bitter-root decoction traditionally used before meals to support sluggish digestion and elimination rhythms.',
+    ingredientHerbs: [
+      { herbName: 'Burdock', botanicalName: 'Arctium lappa', herbPart: 'Root' },
+      { herbName: 'Dandelion', botanicalName: 'Taraxacum officinale', herbPart: 'Root' }
+    ],
+    ingredientAmounts: ['1 tablespoon burdock root', '1 tablespoon dandelion root', '16 ounces water'],
+    methodSteps: [
+      'Combine roots and cold water in a covered saucepan.',
+      'Bring to a gentle simmer and decoct for 25-30 minutes.',
+      'Strain and sip warm in small portions.'
+    ],
+    dosageGuidance: 'Traditionally used as 1/2 cup before meals, up to 2 times daily for short protocols.',
+    safetyNotes: 'Review with clinicians when taking diuretics, glucose-lowering medications, or with active gallbladder symptoms.',
+    duration: 'Preparation time: 30 minutes',
+    storageNotes: 'Refrigerate and use within 48 hours.',
+    preparationTags: [formulaTagTaxonomy.bitter]
+  },
+  {
+    id: 'reishi-cinnamon-decoction',
+    title: 'Reishi Cinnamon Decoction',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    formulaCategory: formulaCategoryTaxonomy.immuneSupport,
+    preparationDescription:
+      'A long-simmer mushroom and bark decoction used in traditional wellness routines for grounded resilience.',
+    ingredientHerbs: [
+      { herbName: 'Reishi', botanicalName: 'Ganoderma lucidum', herbPart: 'Fruiting body' },
+      { herbName: 'Cinnamon', botanicalName: 'Cinnamomum verum', herbPart: 'Bark' }
+    ],
+    ingredientAmounts: ['6-8 grams sliced reishi', '1 small cinnamon stick', '3 cups water'],
+    methodSteps: [
+      'Add reishi and cinnamon to cool water.',
+      'Simmer gently for 45-60 minutes with a lid partially on.',
+      'Strain and drink warm or use as a broth base.'
+    ],
+    dosageGuidance: 'Use 1/2 to 1 cup daily in practitioner-guided immune support plans.',
+    safetyNotes: 'Use caution with anticoagulants and before surgery; discontinue if digestive upset occurs.',
+    duration: 'Preparation time: 60 minutes',
+    storageNotes: 'Refrigerate up to 3 days.',
+    preparationTags: [formulaTagTaxonomy.warming]
+  },
+  {
+    id: 'chaga-cacao-decoction',
+    title: 'Chaga Cacao Decoction',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    formulaCategory: formulaCategoryTaxonomy.seasonalWellness,
+    preparationDescription:
+      'A rich, earthy decoction that combines chaga extraction with roasted cacao for a caffeine-light daily ritual.',
+    ingredientHerbs: [
+      { herbName: 'Chaga', botanicalName: 'Inonotus obliquus', herbPart: 'Sclerotium' },
+      { herbName: 'Cacao', botanicalName: 'Theobroma cacao', herbPart: 'Bean' }
+    ],
+    ingredientAmounts: ['1 tablespoon chaga chunks', '1 tablespoon cacao nibs', '2 cups water'],
+    methodSteps: [
+      'Simmer chaga in water for 35 minutes.',
+      'Add cacao nibs and continue simmering for 10 minutes.',
+      'Strain and serve plain or with milk.'
+    ],
+    dosageGuidance: 'Enjoy as 1 cup once daily.',
+    safetyNotes: 'Monitor use with kidney concerns, oxalate sensitivity, or anticoagulant therapy.',
+    duration: 'Preparation time: 45 minutes',
+    storageNotes: 'Refrigerate and use within 48 hours.',
+    preparationTags: [formulaTagTaxonomy.nutritive, formulaTagTaxonomy.warming]
+  },
+  {
+    id: 'turmeric-black-pepper-decoction',
+    title: 'Turmeric Black Pepper Decoction',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    formulaCategory: formulaCategoryTaxonomy.seasonalWellness,
+    preparationDescription:
+      'A bright, spicy kitchen decoction traditionally used for post-exertion recovery and cold-weather stiffness.',
+    ingredientHerbs: [
+      { herbName: 'Turmeric', botanicalName: 'Curcuma longa', herbPart: 'Rhizome' },
+      { herbName: 'Black Pepper', botanicalName: 'Piper nigrum', herbPart: 'Fruit' }
+    ],
+    ingredientAmounts: ['1 tablespoon sliced fresh turmeric', '4-5 whole black peppercorns', '14 ounces water'],
+    methodSteps: [
+      'Place turmeric and peppercorns in cool water.',
+      'Bring to a gentle simmer for 20 minutes.',
+      'Strain and add lemon or honey if desired.'
+    ],
+    dosageGuidance: 'Traditionally used as 1 warm cup once daily in short seasonal windows.',
+    safetyNotes: 'Use caution with reflux, anticoagulants, gallbladder obstruction, or pre-surgical care.',
+    duration: 'Preparation time: 20 minutes',
+    storageNotes: 'Best fresh; refrigerate leftovers for up to 24 hours.',
+    preparationTags: [formulaTagTaxonomy.warming, formulaTagTaxonomy.aromatic]
+  },
+  {
+    id: 'schisandra-rosehip-decoction',
+    title: 'Schisandra Rosehip Decoction',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    formulaCategory: formulaCategoryTaxonomy.immuneSupport,
+    preparationDescription:
+      'A tart-fruity berry decoction used in traditional tonic programs for endurance and seasonal support.',
+    ingredientHerbs: [
+      { herbName: 'Schisandra', botanicalName: 'Schisandra chinensis', herbPart: 'Berry' },
+      { herbName: 'Rosehip', botanicalName: 'Rosa canina', herbPart: 'Fruit' }
+    ],
+    ingredientAmounts: ['1 tablespoon dried schisandra berries', '1 tablespoon dried rosehips', '2 cups water'],
+    methodSteps: [
+      'Lightly crush berries and rosehips and add to water.',
+      'Simmer covered for 20-25 minutes.',
+      'Strain and cool slightly before drinking.'
+    ],
+    dosageGuidance: 'Take 1 cup daily or split into two servings.',
+    safetyNotes: 'Consult clinicians with reflux disorders, pregnancy, or when taking multiple prescription medications.',
+    duration: 'Preparation time: 25 minutes',
+    storageNotes: 'Refrigerate and consume within 36 hours.',
+    preparationTags: [formulaTagTaxonomy.aromatic]
+  },
+  {
+    id: 'hawthorn-berry-heart-tonic-decoction',
+    title: 'Hawthorn Berry Heart Tonic Decoction',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    formulaCategory: formulaCategoryTaxonomy.nutritiveBlends,
+    preparationDescription:
+      'A traditional berry decoction commonly used as a long-term tonic beverage for circulatory vitality.',
+    ingredientHerbs: [{ herbName: 'Hawthorn', botanicalName: 'Crataegus monogyna', herbPart: 'Berry' }],
+    ingredientAmounts: ['2 tablespoons dried hawthorn berries', '2 cups water'],
+    methodSteps: [
+      'Lightly crush berries and soak in water for 20 minutes.',
+      'Simmer gently for 30 minutes with lid on.',
+      'Strain and sip warm.'
+    ],
+    dosageGuidance: 'Traditionally consumed as 1 cup daily for longer-term routines.',
+    safetyNotes: 'Coordinate with clinicians if using heart or blood pressure medications.',
+    duration: 'Preparation time: 50 minutes including soak',
+    storageNotes: 'Refrigerate for up to 2 days.',
+    preparationTags: [formulaTagTaxonomy.nutritive]
+  },
+  {
+    id: 'elecampane-thyme-decoction',
+    title: 'Elecampane Thyme Decoction',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    formulaCategory: formulaCategoryTaxonomy.respiratorySupport,
+    preparationDescription:
+      'A pungent root-and-leaf decoction used in traditional respiratory routines during damp, congested seasons.',
+    ingredientHerbs: [
+      { herbName: 'Elecampane', botanicalName: 'Inula helenium', herbPart: 'Root' },
+      { herbName: 'Thyme', botanicalName: 'Thymus vulgaris', herbPart: 'Leaf' }
+    ],
+    ingredientAmounts: ['1 teaspoon elecampane root', '1 teaspoon thyme leaf', '12 ounces water'],
+    methodSteps: [
+      'Simmer elecampane root in water for 15 minutes.',
+      'Add thyme and simmer 5 more minutes.',
+      'Strain and serve warm.'
+    ],
+    dosageGuidance: 'Use 1/2 cup once or twice daily for short durations.',
+    safetyNotes: 'Avoid with Asteraceae sensitivity and use caution during pregnancy.',
+    duration: 'Preparation time: 20 minutes',
+    storageNotes: 'Use same day or refrigerate up to 24 hours.',
+    preparationTags: [formulaTagTaxonomy.warming, formulaTagTaxonomy.aromatic]
+  },
+  {
+    id: 'coriander-fennel-cumin-decoction',
+    title: 'Coriander Fennel Cumin Decoction',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    formulaCategory: formulaCategoryTaxonomy.digestiveSupport,
+    preparationDescription:
+      'A kitchen spice decoction inspired by traditional CCF blends for post-meal comfort and bloating support.',
+    ingredientHerbs: [
+      { herbName: 'Coriander', botanicalName: 'Coriandrum sativum', herbPart: 'Seed' },
+      { herbName: 'Fennel', botanicalName: 'Foeniculum vulgare', herbPart: 'Seed' },
+      { herbName: 'Cumin', botanicalName: 'Cuminum cyminum', herbPart: 'Seed' }
+    ],
+    ingredientAmounts: ['1 teaspoon coriander seed', '1 teaspoon fennel seed', '1 teaspoon cumin seed', '16 ounces water'],
+    methodSteps: [
+      'Lightly crush seeds and place in cool water.',
+      'Simmer for 12-15 minutes.',
+      'Strain and drink warm between or after meals.'
+    ],
+    dosageGuidance: 'Up to 1 cup twice daily as needed for occasional digestive discomfort.',
+    safetyNotes: 'Use caution with seed allergies or when using herbs that influence blood sugar.',
+    duration: 'Preparation time: 15 minutes',
+    storageNotes: 'Refrigerate and use within 24 hours.',
+    preparationTags: [formulaTagTaxonomy.aromatic, formulaTagTaxonomy.warming]
+  },
+  {
+    id: 'sarsaparilla-nettle-decoction',
+    title: 'Sarsaparilla Nettle Decoction',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    formulaCategory: formulaCategoryTaxonomy.nutritiveBlends,
+    preparationDescription:
+      'A mineral-forward root and leaf decoction used in traditional spring cleaning and rebuilding routines.',
+    ingredientHerbs: [
+      { herbName: 'Sarsaparilla', botanicalName: 'Smilax ornata', herbPart: 'Root' },
+      { herbName: 'Nettle', botanicalName: 'Urtica dioica', herbPart: 'Leaf' }
+    ],
+    ingredientAmounts: ['1 tablespoon sarsaparilla root', '1 tablespoon nettle leaf', '3 cups water'],
+    methodSteps: [
+      'Simmer sarsaparilla root in water for 25 minutes.',
+      'Add nettle during the last 5 minutes.',
+      'Strain and serve warm or chilled.'
+    ],
+    dosageGuidance: 'Commonly taken as 1 cup daily for 1-2 week routines.',
+    safetyNotes: 'Review use with renal disease, diuretics, or autoimmune conditions.',
+    duration: 'Preparation time: 30 minutes',
+    storageNotes: 'Refrigerate and use within 48 hours.',
+    preparationTags: [formulaTagTaxonomy.nutritive]
+  },
+  {
+    id: 'devils-claw-ginger-decoction',
+    title: 'Devil\'s Claw Ginger Decoction',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    formulaCategory: formulaCategoryTaxonomy.seasonalWellness,
+    preparationDescription:
+      'A deeply bitter-warming decoction traditionally used for occasional joint discomfort in cold, damp weather.',
+    ingredientHerbs: [
+      { herbName: 'Devil\'s Claw', botanicalName: 'Harpagophytum procumbens', herbPart: 'Root' },
+      { herbName: 'Ginger', botanicalName: 'Zingiber officinale', herbPart: 'Rhizome' }
+    ],
+    ingredientAmounts: ['1 teaspoon devil\'s claw root', '1 teaspoon sliced fresh ginger', '12 ounces water'],
+    methodSteps: [
+      'Add herbs to cold water and bring slowly to a simmer.',
+      'Decoct gently for 20-25 minutes.',
+      'Strain and drink while warm.'
+    ],
+    dosageGuidance: 'Use 1/2 to 1 cup once daily for short-term use only.',
+    safetyNotes: 'Avoid with peptic ulcers, gallstones, pregnancy, and certain cardiovascular medications without guidance.',
+    duration: 'Preparation time: 25 minutes',
+    storageNotes: 'Refrigerate and use within 24-36 hours.',
+    preparationTags: [formulaTagTaxonomy.bitter, formulaTagTaxonomy.warming]
+  },
+  {
+    id: 'chamomile-oatstraw-rooted-decoction',
+    title: 'Chamomile Oatstraw Rooted Decoction',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    formulaCategory: formulaCategoryTaxonomy.sleepSupport,
+    preparationDescription:
+      'A gentle evening decoction that balances aromatic calm with nourishing grain support for bedtime routines.',
+    ingredientHerbs: [
+      { herbName: 'Chamomile', botanicalName: 'Matricaria chamomilla', herbPart: 'Flower' },
+      { herbName: 'Oatstraw', botanicalName: 'Avena sativa', herbPart: 'Straw' }
+    ],
+    ingredientAmounts: ['1 tablespoon oatstraw', '2 teaspoons chamomile flowers', '14 ounces water'],
+    methodSteps: [
+      'Simmer oatstraw in water for 15 minutes.',
+      'Turn off heat, add chamomile, and cover for 5 minutes.',
+      'Strain and sip 30-60 minutes before bed.'
+    ],
+    dosageGuidance: '1 cup in the evening as part of a wind-down ritual.',
+    safetyNotes: 'Avoid chamomile with Asteraceae allergy and use caution with sedative medications.',
+    duration: 'Preparation time: 20 minutes',
+    storageNotes: 'Best prepared fresh in the evening.',
+    preparationTags: [formulaTagTaxonomy.caffeineFree, formulaTagTaxonomy.nutritive]
+  },
+  {
+    id: 'roasted-dandelion-chicory-decoction',
+    title: 'Roasted Dandelion Chicory Decoction',
+    preparationType: preparationTypeTaxonomy.decoctions,
+    formulaCategory: formulaCategoryTaxonomy.digestiveSupport,
+    preparationDescription:
+      'A coffee-style bitter decoction made from roasted roots for morning digestive activation without caffeine.',
+    ingredientHerbs: [
+      { herbName: 'Dandelion', botanicalName: 'Taraxacum officinale', herbPart: 'Root' },
+      { herbName: 'Chicory', botanicalName: 'Cichorium intybus', herbPart: 'Root' }
+    ],
+    ingredientAmounts: ['1 tablespoon roasted dandelion root', '1 tablespoon roasted chicory root', '12 ounces water'],
+    methodSteps: [
+      'Combine roasted roots with water and bring to a simmer.',
+      'Decoct for 15 minutes on low heat.',
+      'Strain and serve plain or with milk.'
+    ],
+    dosageGuidance: 'Use as 1 morning cup or occasional substitute for coffee.',
+    safetyNotes: 'Use caution in ragweed allergy and with active bile duct obstruction.',
+    duration: 'Preparation time: 15 minutes',
+    storageNotes: 'Refrigerate for 24 hours if needed.',
+    preparationTags: [formulaTagTaxonomy.bitter, formulaTagTaxonomy.caffeineFree]
+  },
+  {
     id: 'focus-and-clarity-infusion',
     title: 'Focus and Clarity Infusion',
     preparationType: preparationTypeTaxonomy.infusions,
